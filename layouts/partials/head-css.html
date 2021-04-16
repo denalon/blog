@@ -1,0 +1,32 @@
+
+{{ $scssMain := "scss/main.scss"}}
+{{ if .Site.IsServer }}
+{{/* Note the missing postCSS. This makes it snappier to develop in Chrome, but makes it look sub-optimal in other browsers. */}}
+{{ $css := resources.Get $scssMain | toCSS (dict "enableSourceMap" true) }}
+<link href="{{ $css.RelPermalink }}" rel="stylesheet">
+{{ else }}
+{{ $css := resources.Get $scssMain | toCSS (dict "enableSourceMap" false) | postCSS | minify | fingerprint }}
+<link rel="preload" href="{{ $css.RelPermalink }}" as="style">
+<link href="{{ $css.RelPermalink }}" rel="stylesheet" integrity="{{ $css.Data.integrity }}">
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<!-- <link href="{{.Site.BaseURL}}css/custom-style.css" rel="stylesheet"> -->
+<!-- <link href="{{.Site.BaseURL}}css/NotoSerifSC.css" rel="stylesheet"> -->
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/css/zoomify.min.css">
+{{ end }}
+
+<!-- 全站灰色代码 -->
+<!-- <style type="text/css">
+
+  html {
+    -webkit-filter: grayscale(100%);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(graysale=1);
+  }
+
+   
+  .allGray {
+    -webkit-filter: grayscale(100%);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(graysale=1);
+  }
+</style> -->

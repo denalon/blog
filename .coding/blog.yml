@@ -1,0 +1,62 @@
+pipeline {
+  agent any
+  stages {
+    stage('检出') {
+      steps {
+        checkout([
+          $class: 'GitSCM',
+          branches: [[name: env.GIT_BUILD_REF]],
+          userRemoteConfigs: [[
+            url: env.GIT_REPO_URL,
+            credentialsId: env.CREDENTIALS_ID
+          ]]])
+        }
+      }
+      stage('改写ssh') {
+        steps {
+          sh 'ls -a'
+          sh 'mkdir -p ~/.ssh'
+          withCredentials([ sshUserPrivateKey(credentialsId:'d38bc1c4-01ae-49b7-9f21-46ae3433bb91',keyFileVariable:'SSH')
+                  ]) {
+            sh 'cat ${SSH} > ~/.ssh/id_rsa'
+          }
+
+          sh 'chmod 600 ~/.ssh/id_rsa'
+        }
+      }
+      stage('更新子模块') {
+        steps {
+          sh 'git submodule init'
+          sh 'git submodule update'
+          sh 'git submodule foreach \'git pull origin master\''
+        }
+      }
+      stage('npm') {
+        steps {
+          sh 'npm install -g cnpm --registry=https://registry.npm.taobao.org'
+          sh 'cnpm install'
+        }
+      }
+      stage('hugo') {
+        steps {
+          sh 'wget -P ./app https://ia.oribos.cn/app/hugo.tar.gz'
+          dir('./app') {
+            sh 'tar -zxvf hugo.tar.gz'
+            sh 'cp ./hugo /usr/local/bin/'
+          }
+
+          sh 'hugo'
+        }
+      }
+      stage('上传oss') {
+        steps {
+          sh 'wget http://gosspublic.alicdn.com/ossutil/1.6.14/ossutil64'
+          sh 'mv ossutil64 ossutil'
+          sh 'chmod 755 ossutil'
+          sh 'ls -a'
+          sh './ossutil config -e ${OSS_EP} -i ${OSS_ID} -k ${OSS_KEY}'
+          sh './ossutil cp ./public oss://blog1-web-holz/ -rf'
+        }
+      }
+    }
+  }

@@ -1,0 +1,461 @@
+$primary: #27496d !default;
+$primary-light: lighten($primary, 75%) !default;
+$secondary: #142850 !default;
+$success: #00CC33 !default;
+$info: #BA55D3 !default;
+$warning: #ff5722 !default;
+$danger: #B22222 !default;
+$white: #fff !default;
+$light: #eeeeee !default;
+
+$dark: #403F4C !default;
+$blue: 	#4169E1 !default;
+$orange: #BA5A31 !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #eee !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ccc !default;
+$gray-500: #adb5bd !default;
+$gray-600: #888 !default;
+$gray-700: #495057 !default;
+$gray-800: #333 !default;
+$gray-900: #222 !default;
+$black: #000 !default;
+
+.hr-colorful{
+  background: linear-gradient(90deg, rgb(247, 149, 51) 0, rgb(243, 112, 85) 15%, rgb(239, 78, 123) 30%, rgb(161, 102, 171) 44%, rgb(80, 115, 184) 58%, rgb(16, 152, 173) 72%, rgb(7, 179, 155) 86%, rgb(109, 186, 130) 100%);
+  height: 1px;
+}
+
+$code-color: darken($secondary, 20%) !default;
+
+// UI element colors
+
+$border-color: $gray-300 !default;
+$td-sidebar-bg-color: rgba($primary, 0.03) !default;
+$td-sidebar-border-color: $border-color !default;
+
+// Background colors for the sections on home page etc. It is a paint by number system, starting at 0, where the number is taken from the shortcode's ordinal
+// if not provided by the user.
+// These colors are all part of the theme palette, but the mix is fairly random to create variation. This can be overridden by the project if needed.
+$td-box-colors: $dark, $primary, $secondary, $info, $primary-light, $gray-600, $success, $warning, $dark, $danger, $primary, $secondary, $primary-light, $info !default;
+
+// .navbar-custom{
+//  background: linear-gradient(90deg, rgba(247, 149, 51, 0.1) 0, rgba(243, 112, 85, 0.1) 15%, rgba(239, 78, 123, 0.1) 30%, rgba(161, 102, 171, 0.1) 44%, rgba(80, 115, 184, 0.1) 58%, rgba(16, 152, 173, 0.1) 72%, rgba(7, 179, 155, 0.1) 86%, rgba(109, 186, 130, 0.1) 100%);
+//   }
+
+  .footer-bg{
+    background: linear-gradient(90deg, rgba(247, 149, 51, 0.1) 0, rgba(243, 112, 85, 0.1) 15%, rgba(239, 78, 123, 0.1) 30%, rgba(161, 102, 171, 0.1) 44%, rgba(80, 115, 184, 0.1) 58%, rgba(16, 152, 173, 0.1) 72%, rgba(7, 179, 155, 0.1) 86%, rgba(109, 186, 130, 0.1) 100%);
+  }
+
+//    body{
+//     background: linear-gradient(90deg, rgba(247, 149, 51, 0.1) 0, rgba(243, 112, 85, 0.1) 15%, rgba(239, 78, 123, 0.1) 30%, rgba(161, 102, 171, 0.1) 44%, rgba(80, 115, 184, 0.1) 58%, rgba(16, 152, 173, 0.1) 72%, rgba(7, 179, 155, 0.1) 86%, rgba(109, 186, 130, 0.1) 100%);
+// }
+
+  /* body{
+    font-family: "Noto Serif SC",Times, serif;
+    font-weight: 400;
+  } */
+
+   
+  // 彩色线段
+
+  .hr-text{
+    position:relative;
+    text-align:center;
+    font-weight:bold!important;
+    font-size: 26px;
+  }
+  .hr-text:before, .hr-text:after {
+    content: "";
+    width: 40%;
+    height: 2px;
+    position: absolute;
+    top: 50%; 
+  }
+  .hr-text:before {
+
+    background: linear-gradient(90deg, rgb(247, 149, 51) 0, rgb(243, 112, 85) 15%, rgb(239, 78, 123) 30%, rgb(161, 102, 171) 44%, rgb(80, 115, 184) 58%, rgb(16, 152, 173) 72%, rgb(7, 179, 155) 86%, rgb(109, 186, 130) 100%);
+    left: 1px;
+  }
+  .hr-text:after {
+
+    background: linear-gradient(90deg, rgb(247, 149, 51) 0, rgb(243, 112, 85) 15%, rgb(239, 78, 123) 30%, rgb(161, 102, 171) 44%, rgb(80, 115, 184) 58%, rgb(16, 152, 173) 72%, rgb(7, 179, 155) 86%, rgb(109, 186, 130) 100%);
+    right: 1px;
+  }
+
+
+
+#upBtn {
+  display: none; /* 默认隐藏 */
+}
+
+.shareBtn {
+margin: 2 auto;
+position: fixed; 
+z-index: 99; 
+cursor: pointer; 
+bottom: 70px; 
+right: 16px; 
+width: 52px;
+float: left;
+text-align: center;
+}
+
+
+/* 炫彩按钮 */
+
+.btn-colourful {
+position: relative;
+padding: 12px 30px;
+border-radius: 20px;
+font-size: 20px;
+color: #FFF;
+text-decoration: none;
+/* 使用linear-gradient生成一个线性渐变的“背景图” */
+background-image: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+/* 放大背景图 */
+background-size: 400%;
+/* 这里是为了让a标签的背景显示在a::before的下面 */
+z-index: 1;
+}
+
+.btn-colourful:hover {
+/* 创建动画
+    动画名称show
+    执行时间8秒
+    线性
+    循环执行
+*/
+animation: show 8s linear infinite;
+}
+
+/* 动画主体
+从初始到结束，移动背景图的位置
+*/
+
+@keyframes show {
+0% {
+    background-position: 0%;
+}
+100% {
+    background-position: 400%;
+}
+}
+
+/* 创建背景炫光效果 */
+.btn-colourful::before{
+position: absolute;
+content: "";
+top:-2px;
+left:-2px;
+right:-2px;
+bottom:-2px;
+/* 使用linear-gradient生成一个线性渐变的“背景图” */
+background-image: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+/* 放大背景图 */
+background-size: 400%;
+border-radius: 40px;
+z-index: -1;
+filter: blur(20px);
+/* 默认不显示 */
+opacity: 0;
+}
+.btn-colourful:hover::before{
+opacity: 1;
+/* 背景炫光增加动画 */
+/* 与按钮的动画保持一致 */
+/* 创建动画
+    动画名称show
+    执行时间8秒
+    线性
+    循环执行
+*/
+animation: show 8s linear infinite;
+}
+
+.right-important{
+  text-align: right!important;
+}
+
+
+div.static {
+  position: static;
+  color:red
+}
+
+.colorful{
+  background-image: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+}
+
+
+// .td-content {
+//   overflow: hidden;
+//   display: -webkit-box;
+//   -webkit-box-orient:vertical;
+//   -webkit-line-clamp:10;
+//   text-overflow:ellipsis;
+// }
+
+
+// 浮动文字
+.float-text {
+  position: relative;
+  padding: 50px;
+  background-color: var(--color1);
+  border-radius: 11px;
+  /* 投影 */
+  box-shadow: 20px 20px var(--color2);
+  /* 动画效果 50%的时候向上移动20px */
+  animation: animate1 4s ease-in-out infinite;
+}
+
+/* 实现底部横线与圆点 */
+
+.float-text::after, .float-text::before {
+  position: absolute;
+  content: '';
+  height: 11px;
+  left: 0px;
+  background-color: var(--color1);
+  border-radius: 11px;
+  /* 投影 */
+  box-shadow: 20px 20px var(--color2);
+}
+
+/* 单独定义底部横线的样式，宽度为50px */
+
+.float-text::after {
+  width: 50px;
+  bottom: -25px;
+  /* 动画效果 50%的时候向上移动10px 加上P元素向上移动20，真实移动像素为20+10px */
+  animation: animate2 4s ease-in-out infinite;
+}
+
+/* 单独定义底部圆点的样式，宽度为11px */
+
+.float-text::before {
+  width: 11px;
+  bottom: -50px;
+  /* 动画效果 50%的时候向上移动15px 加上P元素向上移动20，真实移动像素为20+15px */
+  animation: animate3 4s ease-in-out infinite;
+}
+
+@keyframes animate1 {
+  /* 初始化和结束状态为默认 */
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+@keyframes animate2 {
+  /* 初始化和结束状态为默认 */
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+@keyframes animate3 {
+  /* 初始化和结束状态为默认 */
+  50% {
+      transform: translateY(-15px);
+  }
+}
+
+
+// 彩带
+
+.ribbon {
+  width: 500px;
+  height: 400px;
+  /* background-color: var(--border-color); */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transform: rotateX(45deg);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.fence {
+  position: relative;
+  width: 6px;
+  height: 20%;
+  border-radius: 6px;
+  animation: animate 1s ease-in-out infinite alternate both;
+}
+
+.fence::before {
+  /* 原视频没有，后增加发光效果 */
+  content: '';
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  background-color: inherit;
+  filter: blur(5px);
+  opacity: 0.5;
+}
+
+.fence:nth-child(1) {
+  background-color: #33FF00;
+  animation-delay: 0s;
+}
+
+.fence:nth-child(2) {
+  background-color: #FF00FF;
+  animation-delay: 0.2s;
+}
+
+.fence:nth-child(3) {
+  background-color: blue;
+  animation-delay: 0.4s;
+}
+
+.fence:nth-child(4) {
+  background-color: yellow;
+  animation-delay: 0.6s;
+}
+
+.fence:nth-child(5) {
+  background-color: #9999CC;
+  animation-delay: 0.8s;
+}
+
+.fence:nth-child(6) {
+  background-color: #FF0000;
+  animation-delay: 1s;
+}
+
+.fence:nth-child(7) {
+  background-color: #8A2BE2;
+  animation-delay: 1.2s;
+}
+
+.fence:nth-child(8) {
+  background-color: #C0C0C0;
+  animation-delay: 1.4s;
+}
+
+.fence:nth-child(9) {
+  background-color: #00FF00;
+  animation-delay: 1.6s;
+}
+
+.fence:nth-child(10) {
+  background-color: #FF0099;
+  animation-delay: 1.8s;
+}
+
+.fence:nth-child(11) {
+  background-color: #99CC33;
+  animation-delay: 2.0s;
+}
+
+.fence:nth-child(12) {
+  background-color: #669999;
+  animation-delay: 2.2s;
+}
+
+.fence:nth-child(13) {
+  background-color: #9933FF;
+  animation-delay: 2.4s;
+}
+
+.fence:nth-child(14) {
+  background-color: #FFCC00;
+  animation-delay: 2.6s;
+}
+
+.fence:nth-child(15) {
+  background-color: #FF99CC;
+  animation-delay: 2.8s;
+}
+
+.fence:nth-child(16) {
+  background-color: green;
+  animation-delay: 3s;
+}
+
+@keyframes animate {
+  0% {
+      transform: translateZ(-30px);
+  }
+  100% {
+      transform: translateZ(30px);
+  }
+}
+
+
+.text-uppercase{
+  color: #03a9f4;
+}
+
+.nav-link{
+  span{
+    color:#f441a5;
+  }
+
+}
+
+.list-title{
+  color:#009966;
+}
+
+
+.CoatofArms{
+  position: fixed; 
+  z-index: -1; 
+  cursor: pointer; 
+  bottom: 270px; 
+  right: 270px; 
+}
+
+
+// We use pseudo-element instead of using
+// `background-attachment: fixed` directly,
+// since Safari on iOS doesn't support it.
+// https://caniuse.com/background-attachment
+html {
+  &::before {
+      content: ' ';
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-url) no-repeat center/cover;
+  }
+}
+
+// NO NEED FOR backdrop-filter
+// Commented out because of too much CPU/GPU usage,
+// though looks fantastic and smooth on iOS...
+// body {
+//     &::before {
+//         content: ' ';
+//         position: fixed;
+//         width: 100%;
+//         height: 100%;
+//         backdrop-filter: saturate(180%) blur(1em);
+//         -webkit-backdrop-filter: saturate(180%) blur(1em);
+//     }
+// }
+
+// Blur
+html {
+  &::before {
+      filter: blur(5em);
+  }
+}
+
+// Add a overlay layer to improve readability
+body {
+  &::before {
+      content: ' ';
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: alpha(var(--color-bg));
+      // transition: background-color $duration;
+  }
+}
