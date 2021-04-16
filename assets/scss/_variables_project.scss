@@ -188,6 +188,14 @@ div.static {
   background-image: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
 }
 
+.td-content pre {
+  word-wrap: normal;
+  background-color: #050505!important;;
+  padding: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+
 
 // .td-content {
 //   overflow: hidden;
