@@ -1,9 +1,9 @@
 ---
 title: "doc"
-linkTitle: "随笔"
+linkTitle: "文章"
 menu:
   main:
-    weight: 200
+    weight: 100
 ---
 
 
