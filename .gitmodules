@@ -7,3 +7,9 @@
 [submodule "content/unit/archive"]
 	path = content/unit/archive
 	url = https://e.coding.net/nierheim/dms/archive.git
+[submodule "content/story/korlys"]
+	path = content/story/korlys
+	url = https://e.coding.net/denalon/story/korlys.git
+[submodule "themes/docsy"]
+	path = themes/docsy
+	url = https://e.coding.net/denalon/asset/docsy.git
