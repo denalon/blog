@@ -16,3 +16,6 @@
 [submodule "content/pages/pages"]
 	path = content/pages/pages
 	url = https://denalon@dev.azure.com/denalon/pages/_git/pages
+[submodule "content/unit/fun"]
+	path = content/unit/fun
+	url = https://gitee.com/denalon/fun.git
