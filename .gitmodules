@@ -1,9 +1,6 @@
 [submodule "content/unit/lambda"]
 	path = content/unit/lambda
 	url = https://e.coding.net/nierheim/dms/lambda.git
-[submodule "content/unit/fun"]
-	path = content/unit/fun
-	url = https://gitee.com/denalon/fun.git
 [submodule "content/unit/archive"]
 	path = content/unit/archive
 	url = https://e.coding.net/nierheim/dms/archive.git
