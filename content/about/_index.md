@@ -52,7 +52,7 @@ Google提到，Docsy的特殊功能包括网站导览以及多语言支持等，
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fa fa-book" title="test" url="/test" %}}
+{{% blocks/feature icon="fa fa-book" title="test" url="/develop" %}}
 未发布的文章
 {{% /blocks/feature %}}
 

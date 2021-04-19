@@ -1,5 +1,5 @@
 ---
-title: "note"
+title: "unit"
 linkTitle: "随笔"
 menu:
   main:
