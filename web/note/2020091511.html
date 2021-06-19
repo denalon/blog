@@ -1,0 +1,1748 @@
+<!doctype html>
+<html lang="zh-Hans-CN" class="no-js">
+  <head>
+    <!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.82.0" />
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+
+<link rel="shortcut icon" href="/favicon.ico" >
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<title>learn-termux | 记事本</title><meta property="og:title" content="learn-termux" />
+<meta property="og:description" content="learn-termux" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/web/note/2020091511.html" /><meta property="article:section" content="tech" />
+<meta property="article:published_time" content="2020-09-15T09:01:40&#43;08:00" />
+<meta property="article:modified_time" content="2020-09-15T09:01:40&#43;08:00" /><meta property="og:site_name" content="记事本" />
+
+<meta itemprop="name" content="learn-termux">
+<meta itemprop="description" content="learn-termux"><meta itemprop="datePublished" content="2020-09-15T09:01:40&#43;08:00" />
+<meta itemprop="dateModified" content="2020-09-15T09:01:40&#43;08:00" />
+<meta itemprop="wordCount" content="274">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="learn-termux"/>
+<meta name="twitter:description" content="learn-termux"/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.c7c493d84fc5c6d6cc5a8188190d10f546e9cae7cb23c400dfc194a17091d981.css" as="style">
+<link href="/scss/main.min.c7c493d84fc5c6d6cc5a8188190d10f546e9cae7cb23c400dfc194a17091d981.css" rel="stylesheet" integrity="">
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/css/zoomify.min.css">
+
+
+
+
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  crossorigin="anonymous"></script>
+
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+<meta itemprop="name" content="云上记事本" />	
+
+<meta itemprop="image" content="https://base.oribos.city/images/avatar.png" />
+
+<meta name="description" itemprop="description" content="存放各类网络资源，素材，模板" />
+
+
+
+  </head>
+  <body class="td-page td-blog">
+    <header>
+      
+<nav class="navbar-custom js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span><span class="text-nav-head font-weight-bold">记事本</span>
+		</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/tech/" ><span class="active">技术</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/essay/" ><span>随笔</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/about/" ><span>关于</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; 站内搜索…"
+  aria-label="站内搜索…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.ac73ee7a3e67b17ecb8cabab12e37f63407be751474851fdfb2adf449db6d3d2f62036088f67808e3d73f1c43fab732379c870da71d927e6eb23a00d493ae867.json"
+  data-offline-search-base-href="/"
+>
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; 站内搜索…"
+  aria-label="站内搜索…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.ac73ee7a3e67b17ecb8cabab12e37f63407be751474851fdfb2adf449db6d3d2f62036088f67808e3d73f1c43fab732379c870da71d927e6eb23a00d493ae867.json"
+  data-offline-search-base-href="/"
+>
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/tech/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">技术</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="tech">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/tech/develop/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">develop</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="techdevelop">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/tech/develop/2021/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">2021</a>
+  </li>
+  <ul>
+    <li class="collapse " id="techdevelop2021">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021061601html" href="/web/note/2021/2021061601.html">github的api</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webshare2021061603html" href="/web/share/2021061603.html">一个mongodb的事例</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021061001html" href="/web/note/2021/2021061001.html">k8s安装和部署</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021053105html" href="/web/note/2021/2021053105.html">20210531</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021052701html" href="/web/note/2021/2021052701.html">docker构建和运行jar</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021052402html" href="/web/note/2021/2021052402.html">容器镜像加速</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021052406html" href="/web/note/2021/2021052406.html">零星的记录</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021051501html" href="/web/note/2021/2021051501.html">容器应用</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021051401html" href="/web/note/2021/2021051401.html">用于持续运行的数据库</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021051001html" href="/web/note/2021/2021051001.html">docker项目的配置文件备份</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webme20212021050801html" href="/web/me/2021/2021050801.html">一键导入iconfont</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webme20212021051301html" href="/web/me/2021/2021051301.html">docker部署hello图床</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webcoursegithtml" href="/web/course/git.html">入门git教程</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021041307html" href="/web/note/2021/2021041307.html">魔改主题</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webchip2021041102html" href="/web/chip/2021041102.html">适用于萌新的hexo自动部署</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webchip2021040903html" href="/web/chip/2021040903.html">易于分享的模块代码</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webchip2021040702html" href="/web/chip/2021040702.html">git隐藏文件</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webchip2021040701html" href="/web/chip/2021040701.html">github加速</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webchip2021040501html" href="/web/chip/2021040501.html">炫彩按键</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webchip2021040401html" href="/web/chip/2021040401.html">GitHub Actions 入门教程</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webchip2021040703html" href="/web/chip/2021040703.html">减少彩色的使用</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-websharemarkdownhtml" href="/web/share/markdown.html">Markdown</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021052507html" href="/web/note/2021/2021052507.html">SSH 容器直通</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/tech/develop/2020/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">2020</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="techdevelop2020">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090673html" href="/web/note/2020090673.html">0906归纳</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020081313html" href="/web/note/2020081313.html">0813</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020083143html" href="/web/note/2020083143.html">域名的充分使用</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020080503html" href="/web/note/2020080503.html">心理问题</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020080407html" href="/web/note/2020080407.html">忒修斯之船</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020081113html" href="/web/note/2020081113.html">操作系统</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020080401html" href="/web/note/2020080401.html">记录</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020080511html" href="/web/note/2020080511.html">防止信息泄露</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021043001html" href="/web/note/2021/2021043001.html">迁移asp.net项目</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021042901html" href="/web/note/2021/2021042901.html">20210429</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021041102html" href="/web/note/2021/2021041102.html">适用于萌新的hexo自动部署</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020120317html" href="/web/note/2020120317.html">https协议</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020112873html" href="/web/note/2020112873.html">前后端分离架构</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020111808html" href="/web/note/2020111808.html">日记2020-11-18</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020111714html" href="/web/note/2020111714html/">日记2020-11-17</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020111305html" href="/web/note/2020111305.html">日记20201115</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020111005html" href="/web/note/2020111005.html">腾讯云函数计算备案</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webprotest2020110502html" href="/web/pro/test/2020110502.html">wordpress测试</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020110101html" href="/web/note/2020110101.html">相册</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020102701html" href="/web/note/2020102701.html">收敛型和发散型知识</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020102705html" href="/web/note/2020102705.html">记录hugo配置</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020102117html" href="/web/note/2020102117.html">萌新专用hexo教程.</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020101303html" href="/web/note/2020101303.html">博客变更历程</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020101217html" href="/web/note/2020101217.html">引用文件</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote202020201011html" href="/web/note/2020/20201011.html">nodejs和git安装</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020101000html" href="/web/note/2020101000.html">连续更新的内容</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020100813html" href="/web/note/2020100813.html">博客撤销后端服务</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote202020201005html" href="/web/note/2020/20201005.html">hexo安装步骤</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020100573html" href="/web/note/2020100573.html">中文域名的尴尬</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020093073html" href="/web/note/2020093073.html">docker安装宝塔面板</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020092313html" href="/web/note/2020092313.html">使用docker运行hugo</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091919html" href="/web/note/2020091919.html">信息拆分</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091913html" href="/web/note/2020091913.html">概念</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091907html" href="/web/note/2020091907.html">网站分拆</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091801html" href="/web/note/2020091801.html">从零搭建Spring Boot的Hello World</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091871html" href="/web/note/2020091871.html">本地博客</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091607html" href="/web/note/2020091607.html">缘起性空</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091521html" href="/web/note/2020091521.html">heroku</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-webnote2020091511html" href="/web/note/2020091511.html">learn-termux</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091431html" href="/web/note/2020091431.html">hexo自动部署</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091417html" href="/web/note/2020091417.html">hugo自动部署</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091303html" href="/web/note/2020091303.html">资源分离</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090807html" href="/web/note/2020090807.html">github</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090803html" href="/web/note/2020090803.html">Travis CI</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090773html" href="/web/note/2020090773.html">360安全卫士</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090611html" href="/web/note/2020090611.html">神秘代码</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090343html" href="/web/note/2020090343.html">hugo主题配置</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090301html" href="/web/note/2020090301.html">photo代码</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090373html" href="/web/note/2020090373.html">进一步完善</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-techdevelop20202020-09-01-e58588e58699e4bba3e7a081e5908ee8a1a5e58585e58685e5aeb9" href="/tech/develop/2020/2020-09-01-%E5%85%88%E5%86%99%E4%BB%A3%E7%A0%81%E5%90%8E%E8%A1%A5%E5%85%85%E5%86%85%E5%AE%B9/">先写代码后补充内容</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020083103html" href="/web/note/2020083103.html">blog代码</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020083107html" href="/web/note/2020083107.html">index代码</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020083113html" href="/web/note/2020083113.html">分享呆萌头像</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020083003html" href="/web/note/2020083003.html">有限控制</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020083171html" href="/web/note/2020083171.html">此消彼长</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082801html" href="/web/note/2020082801.html">Cloudflare Workers 发起 http 请求</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082811html" href="/web/note/2020082811.html">web端被打压</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082891html" href="/web/note/2020082891.html">世界观</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082831html" href="/web/note/2020082831.html">大公司的恶行</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082817html" href="/web/note/2020082817.html">微信令人讨厌之处</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082897html" href="/web/note/2020082897.html">方法论</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082401html" href="/web/note/2020082401.html">字母解释法</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082431html" href="/web/note/2020082431.html">观看视频和文章的原则</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020081911html" href="/web/note/2020/2020081911.html">页面新规则</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020081713html" href="/web/note/2020081713.html">计算机的束缚</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020081501html" href="/web/note/2020081501.html">换位思考</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020081901html" href="/web/note/2020081901.html">数量级的差距</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020081301html" href="/web/note/2020081301.html">腾讯乱七八糟的登陆方式</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020073119html" href="/web/note/2020/2020073119.html">内容分拆和规划</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090203html" href="/web/note/2020090203.html">内容组件</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020202003151html" href="/web/note/2020/202003151.html">区分资源块</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020073111html" href="/web/note/2020/2020073111.html">博客内容划分</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082111html" href="/web/note/2020082111.html">博客架构</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082151html" href="/web/note/2020082151.html">字母表</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090103html" href="/web/note/2020090103.html">封闭的互联网</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020073191html" href="/web/note/2020/2020073191.html">日志</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020080613html" href="/web/note/2020080613.html">注意别人说法时的出发点</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020073017html" href="/web/note/2020/2020073017.html">jsdelivr403问题</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020072911html" href="/web/note/2020/2020072911.html">假如动物为人类投票</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020072717html" href="/web/note/2020/2020072717.html">黑暗森林法则</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020072111html" href="/web/note/2020/2020072111.html">记录</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020072001html" href="/web/note/2020/2020072001.html">域名调整</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020071717html" href="/web/note/2020/2020071717.html">内嵌页面</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020071731html" href="/web/note/2020071731.html">种植向日葵失败</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webvalue20202020071513html" href="/web/value/2020/2020071513.html">认识和看法2</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020071301html" href="/web/note/2020/2020071301.html">内容分离</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020071303html" href="/web/note/2020/2020071303.html">控制力</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020071319html" href="/web/note/2020/2020071319.html">各种设计2</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020071111html" href="/web/note/2020/2020071111.html">标准化的url地址</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020070911html" href="/web/note/2020/2020070911.html">新版本</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020070711html" href="/web/note/2020/2020070711.html">在coding构建计划里使用凭证</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070405html" href="/web/docs/2020/2020070405.html">004</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070411html" href="/web/docs/2020/2020070411.html">2020 07 04预期</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs2020202070471html" href="/web/docs/2020/202070471.html">文件管理</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs2020202070307html" href="/web/docs/2020/202070307.html">2020 07 03代码分散</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070313html" href="/web/docs/2020/2020070313.html">2020 07 03继承</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070201html" href="/web/docs/2020/2020070201.html">2020 07 02理念</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070283html" href="/web/docs/2020/2020070283.html">2020 07 02进步是无法回头的</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020063011html" href="/web/docs/2020/2020063011.html">2020 06 30 奇妙的空间</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020062907html" href="/web/note/2020/2020062907.html">最后生还者2</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/tech/develop/2019/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">2019</a>
+  </li>
+  <ul>
+    <li class="collapse " id="techdevelop2019">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019120601html" href="/web/raw/2019120601.html">形象比喻前后端分离</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2019112702html" href="/web/2019112702.html">Gitlab</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2019112602html" href="/web/2019112602.html">Hexo的固定链接</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111502html" href="/web/raw/2019111502.html">App域名的尴尬</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111402html" href="/web/raw/2019111402.html">多个git同步</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111401html" href="/web/raw/2019111401.html">Discuz归来</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111301html" href="/web/raw/2019111301.html">对象存储服务的选择</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111201html" href="/web/raw/2019111201.html">静态资源的引用</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111101html" href="/web/raw/2019111101.html">Coding和阿里云code的选择</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111102html" href="/web/raw/2019111102.html">部署点改变</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019103107html" href="/web/raw/2019103107.html">ZeroTier虚拟内网</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019103102html" href="/web/raw/2019103102.html">图床所在的服务器退订，图床网站撤销</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019102401html" href="/web/raw/2019102401.html">一个虚拟主机放多个网站</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019102406html" href="/web/raw/2019102406.html">centos 7.x-64x 安装 hugo</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019102203html" href="/web/raw/2019102203.html">新增frp服务器</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019102207html" href="/web/raw/2019102207.html">ubunut 安装go</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019102105html" href="/web/raw/2019102105.html">centos 7防火墙指令</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019101901html" href="/web/raw/2019101901.html">新增frp服务器</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webunc1369html" href="/web/unc/1369.html">对网站适当的规划</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019101601html" href="/web/raw/2019101601.html">宝塔上设置https，然后用阿里云的cdn，提示重定向过多</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019100103html" href="/web/raw/2019100103.html">git托管中心由转入国内</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019093003html" href="/web/raw/2019093003.html">阿里云CDN加速和全站加速的区别</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webunc1336html" href="/web/unc/1336.html">将两个站点内容互换</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2019092907html" href="/web/2019092907.html">git托管中心的变更</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019092501html" href="/web/raw/2019092501.html">centos 7.x-64x 安装 hugo</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webinfo1306html" href="/web/info/1306.html">为网站开启CDN</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webinfo1118html" href="/web/info/1118.html">建立个人仓库</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw20190903html" href="/web/raw/20190903.html">dns和网络异常</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019081301html" href="/web/raw/2019081301.html">服务器关闭数据库对外访问</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019080703html" href="/web/raw/2019080703.html">针对需要长期保存的文件，转移至云存储服务上。</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2019080201html" href="/web/note/2019080201.html">自建网站的意义</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019072901html" href="/web/raw/2019072901.html">内部资源同外部资源分开放置</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2019071001html" href="/web/note/2019071001.html">使用gitlab社区版自建git服务器</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/tech/develop/reuixiy/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">reuixiy</a>
+  </li>
+  <ul>
+    <li class="collapse " id="techdevelopreuixiy">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint001html" href="/web/reprint/001.html">一个简单的 Service Worker</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2020081802html" href="/web/reprint/2020081802.html">简化博客</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2020081605html" href="/web/reprint/2020081605.html">使用 GitHub Actions 部署 Hugo 博客到 GitHub Pages</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2020070206html" href="/web/reprint/2020070206.html">树莓派 &#43; 延时摄影</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint006html" href="/web/reprint/006.html">ENS 尝鲜</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2020030601html" href="/web/reprint/2020030601.html">一个更自然原生的渐变顶栏</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2020030501html" href="/web/reprint/2020030501.html">简单实现 Google Fonts 的异步加载</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2020022901html" href="/web/reprint/2020022901.html">可变字体（Variable Fonts）尝鲜</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2020022701" href="/web/reprint/2020022701/">三类优秀的程序员</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint002html" href="/web/reprint/002.html">引号的逻辑的哲学</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2019120306html" href="/web/reprint/2019120306.html">使用 GitHub Issues 持续写作</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint010html" href="/web/reprint/010.html">Hugo 与 Hexo 的异同</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint011html" href="/web/reprint/011.html">Hugo 主题 MemE 文档</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2019100704html" href="/web/reprint/2019100704.html">使用 SSH 连接到 GitHub（多帐号）</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2019100108html" href="/web/reprint/2019100108.html">利用 Workbox 实现博客的 PWA</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2019091804html" href="/web/reprint/2019091804.html">将博客部署到星际文件系统（IPFS）</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint004html" href="/web/reprint/004.html">在开发一个 Hugo 主题</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2019061205html" href="/web/reprint/2019061205.html">解决 Win10 下 DNS 问题导致的无法上网</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2019060903html" href="/web/reprint/2019060903.html">将 Hexo 静态博客部署到 Netlify</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2019060301html" href="/web/reprint/2019060301.html">博客重构：极简主义！</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint008html" href="/web/reprint/008.html">Google Fonts 已支持思源宋体！</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2018113007html" href="/web/reprint/2018113007.html">开源：创造世界！</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2018090503html" href="/web/reprint/2018090503.html">网页字体排版的哲学：段首缩排或段间距</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint007html" href="/web/reprint/007.html">GitHub Pages 绑定个人域名，免 Cloudflare 支持 HTTPS</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint003html" href="/web/reprint/003.html">在 NexT 中使用 Valine 评论系统</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2018053001html" href="/web/reprint/2018053001.html">加速 Hexo 博客</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint009html" href="/web/reprint/009.html">Hexo 中 MathJax 的静态显示（svg）</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2017121105html" href="/web/reprint/2017121105.html">浅谈博客文章的两种分类方式</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2017100206html" href="/web/reprint/2017100206.html">如何安装 GNOME Shell 插件？</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2017092301html" href="/web/reprint/2017092301.html">解决更新 Kali Linux 后网易云音乐歌词乱码的问题</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2017090105html" href="/web/reprint/2017090105.html">零网（ZeroNet）初探</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint005html" href="/web/reprint/005.html">重建博客：rm 的悲剧</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2017020204html" href="/web/reprint/2017020204.html">我的小 Web 服务器树莓派在搭建 WordPress 时遇到的问题</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#第一章-一切歧途自此而始">第一章 一切歧途，自此而始</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#第二章-写作与同步">第二章 写作与同步</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#第三章-进阶玩法">第三章 进阶玩法</a></li>
+  </ul>
+</nav>
+
+
+
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+    
+    
+    
+</div>
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role="main">
+            
+            
+<div class="td-content">
+	<h2 class="text-uppercase">learn-termux</h2>
+	<hr class="hr-colorful">
+	<div class="lead">learn-termux</div>
+	<div class="td-byline mb-4">
+		作者 <b>denalon</b> |
+		<time datetime="2020-09-15" class="text-muted">Tuesday, September 15, 2020</time>
+	</div>
+	<h1 id="learn-termux">learn-termux</h1>
+<!-- vim-markdown-toc GFM -->
+<ul>
+<li><a href="#learn-termux">learn-termux</a>
+<ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%B8%80%E5%88%87%E6%AD%A7%E9%80%94%E8%87%AA%E6%AD%A4%E8%80%8C%E5%A7%8B-">第一章 一切歧途，自此而始 ##</a>
+<ul>
+<li><a href="#11-termux%E7%9A%84%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85-">1.1 termux的下载与安装 ####</a></li>
+<li><a href="#12-%E9%A2%9C%E5%80%BC%E6%98%AF%E7%AC%AC%E4%B8%80%E7%94%9F%E4%BA%A7%E5%8A%9B-">1.2 颜值是第一生产力 ####</a></li>
+<li><a href="#13-%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C">1.3 简单操作</a></li>
+<li><a href="#14-%E7%AE%80%E5%8D%95%E6%98%93%E6%87%82%E7%9A%84zsh%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95">1.4 简单易懂的ZSH配置方法</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%86%99%E4%BD%9C%E4%B8%8E%E5%90%8C%E6%AD%A5">第二章 写作与同步</a>
+<ul>
+<li><a href="#21-vim-%E5%92%8C-emacs">2.1 vim 和 emacs</a></li>
+<li><a href="#22-git%E5%92%8Cgithub">2.2 git和github</a></li>
+<li><a href="#23-geeknote">2.3 geeknote</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%BF%9B%E9%98%B6%E7%8E%A9%E6%B3%95">第三章 进阶玩法</a></li>
+</ul>
+</li>
+</ul>
+<!-- vim-markdown-toc -->
+<p>RE:从零开始的 termux 学习生活</p>
+<h2 id="前言">前言</h2>
+<blockquote>
+<p>Termux 是一款强大的安卓终端模拟 APP，无需 root 直接启动，自动安装最小化 linux 系统，使用 APT 作为包管理工具并提供各种各样的软件包。
+高级终端 Termux 组合了强大的终端模拟和拓展 Linux 包收集支持。</p>
+</blockquote>
+<p>• 享受bash 和 zsh。</p>
+<p>• 使用nano 和 vim编辑文件。</p>
+<p>• 通过ssh访问服务器。</p>
+<p>• 使用gcc和clang编译代码。</p>
+<p>• 使用python控制台来作为口袋计算器。</p>
+<p>• 使用git 和 subversion检查项目。</p>
+<p>• 使用frotz运行基于文本的游戏。</p>
+<p><a href="https://termux.com/">官方网站</a><br>
+这个应用真的很有意思，不过对于新手而言不太友好。比如说我，可以说是完全从零开始学习相关的知识。在这里就把我折腾这个应用的经历写一写，做一个学习笔记吧。<br>
+目前我的水平是能够简单地使用这个软件，并使用它做一些简单的操作。比如说我的这篇文章就完全是在termux里完成、修改和上传的。那么我以一个萌新的身份来讲讲 termux 的一些基础使用以及用 termux 写文章的方法。顺带一提我现在对这个应用的理解依然不够深，之后还会不断地进行补充和修改。</p>
+<h2 id="第一章-一切歧途自此而始">第一章 一切歧途，自此而始</h2>
+<h4 id="11-termux的下载与安装">1.1 termux的下载与安装</h4>
+<p>软件的下载推荐去下面的三个地方。酷安基本上是国内最良心的应用市场了吧，如果出现问题在评论区里留言也有热心的酷友帮忙解决，真的很不错。当然如果你有条件翻墙的话也是很推荐去 Gogle play 下。搜索 termux 除了能找到本体，还有各种插件。可以根据介绍按需下载。f-droid 是开源应用的应用市场，同样可以下载插件，而且无需翻墙。</p>
+<ol>
+<li><a href="http://www.coolapk.com/apk/com.termux">酷安</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.termux">Google play</a></li>
+<li><a href="https://f-droid.org/repository/browse/?fdid=com.termux">f-droid</a></li>
+</ol>
+<p>下载后你会发现termux的安装包仅仅只有172.71K。那么这么小的体积是如何实现这么多功能的？其实除了基础的一些功能。上面提到的需要通过自带的包管理器来下载和安装。所以在初次配置时是必须要联网来下载的。当然现在我是有网络，所以直接安装就行了。</p>
+<p>现在先试试一些基本的操作。<br>
+比如说更新一下软件源以及升级一下软件。</p>
+<pre><code>apt update
+apt upgrade
+</code></pre>
+<p>这两步操作可以保证你的软件都是最新的。<br>
+输入clear命令清除上面的内容。<br>
+然后用一下这个指令</p>
+<pre><code>apt list
+</code></pre>
+<p>显示出来的都是可以直接用 apt install 命令进行安装的软件。你可以尝试自己安装看看。<br>
+下载与安装方面就讲的差不多了。这一节就这样结束吧。<br>
+对了，如果不是新手的话，在使用这个应用时是不是觉得少了几个关键的按键？比如说用来补全命令的 TAB 键。显然 termux 也考虑到了这种情况。所以在应用里是提供有这些这些按键的。只不过默认关闭，需要我们自己动手打开。<br>
+打开的方式也很简单。我们按音量上键+ Q 就可以看到，输入法的上方出现了一个按键条，上面就有使用命令行时频繁使用的几个键。<br>
+当然，除此之外也有其他的方法可以使用这几个按键的，比如说黑客键盘就自带有这些按键，但是我的目标是在 termux 里写东西，所以输入中文是必须的。而黑客键盘并不支持中文的输入。而频繁切换输入法显然也不是什么高效的方法。<br>
+所以还是自带的这个按键条更加符合我的要求。而且百度输入法虽然流氓，但经过修改的皮肤用起来确实很方便。或许可以自定义出一个更加方便在 termux 里试用的输入法。不过具体的方法我还在学习当中。只能之后再更新了。</p>
+<h4 id="12-颜值是第一生产力">1.2 颜值是第一生产力</h4>
+<p>一个赏心悦目(<del>逼格满满</del>)的外表是愉快地使用一个应用的必要前提，显然现在的 termux 颜值并不高。怎么样才能让我们的 termux 跟电影里的黑客那样呢……不要着急，我们现在就开始让 termux 的颜值上升。<br>
+首先我们要做的是去除每次打开termux都会出现的几行文字。方法在0.48版本的更新日志里有说明。</p>
+<blockquote>
+<p>Remove the dialog for new users in favour of an inline help message at startup (unless ~/.hushlogin exists).</p>
+</blockquote>
+<p>也就是说只要有 ~/.hushlogin 文件存在就不会显示了。要创建文件方法也很简单。因为现在的目录就是 ~ ，所以只要直接用创建命令就好了。我误以为需要创建的是文件夹，所以我当时的操作是这样的。</p>
+<pre><code>mkdir .hushlogin
+</code></pre>
+<p>结果自然是不行……接着我尝试创建一个文件。</p>
+<pre><code>vi .hushlogin
+</code></pre>
+<p>然后输入 :wq 保存退出。<br>
+输入 exit 退出，重新打开。可以看到那几行字已经消失不见了。这就清爽多了。<br>
+之后就是安装 ZSH 以及用来配置 ZSH 的 oh-my-zsh。不过这个下载和安装酷友给出了一个比较方便的方法。具体介绍可以看<a href="https://github.com/Cabbagec/termux-ohmyzsh">这里</a><br>
+那么根据README.md的介绍我们首先要安装的是curl工具。很简单，直接apt install curl就可以了。在滚完之后就可以安装termux-ohmyzsh了。</p>
+<pre><code>sh -c &quot;$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&quot;
+</code></pre>
+<p>接着一路确认、回车就好了。不需要修改，因为默认的主题我还挺喜欢的。当然如果不喜欢在之后可以进行更改。<br>
+完成后可以看到，终端已经变成了彩色。<br>
+<img src=".pic/3.jpg" alt="这是一个图片"></p>
+<p>一款简单美化过的应用就这样完成了。</p>
+<h4 id="13-简单操作">1.3 简单操作</h4>
+<p>首先是文件的基本操作</p>
+<p>路径的输入zsh有个方便的操作，路径可以只输入部分特征然后按TAB就可以补全。比如 /root/bash 写成 /r/b 然后按 TAB 键就能变成完整的。</p>
+<p>还有可以使用 d 然后选择对应的数字来直接跳到经过的某一位置。</p>
+<p>这里推荐一个tree命令，他可以以树形结构显示文件目录结构。输入tree 回车。因为这时候我们并没有安装，所以会有这样的一个提示。<img src="./pic/2" alt="假装这里有图片">提示上写的很清楚，我们需要先进行安装。而
+且还很贴心地给出了安装的命令。我们对照着打就是了。</p>
+<pre><code>apt install tree
+</code></pre>
+<p>这时候试试tree命令。可以看到有一个storage文件夹以及它的子文件夹所链接的文件夹<img src=".pic/3%E3%80%82png" alt="假装又有一张图片"></p>
+<p>最后再来个小玩意</p>
+<pre><code>apt install cmatrix
+</code></pre>
+<p>然后运行一下这个命令</p>
+<pre><code>cmatrix
+</code></pre>
+<p><img src=".pic/4" alt="这是一个动态图片"></p>
+<p>这里来个小提示:在命令后加上-h可以查看命令的一些简单的提醒。</p>
+<p>试试cmatrix -h命令会有下面的提示</p>
+<p>可以看到各种可添加的后缀的作用。这是学习一个陌生命令很好的一个方式。除此之外还有man命令：只要在一个命令前加上个man，就能看到这个命令的详细介绍。（当然，全都是英文）</p>
+<h4 id="14-简单易懂的zsh配置方法">1.4 简单易懂的ZSH配置方法</h4>
+<blockquote>
+<p>Zsh 是一款功能强大终端（shell）软件，既可以作为一个交互式终端，也可以作为一个脚本解释器。它在兼容 Bash 的同时 (默认不兼容，除非设置成 emulate sh) 还有提供了很多改进，例如：更高效、更好的自动补全、更好的文件名展开（通配符展开）、更好的数组处理、可定制性高.——<a href="https://wiki.archlinux.org/index.php/Zsh">archwiki</a></p>
+</blockquote>
+<p>更详细的说明推荐去zsh的<a href="https://wiki.archlinux.org/index.php/Zsh">Wiki</a>。在这里就不做详细介绍了。</p>
+<p>除了Zsh还需要一个方便配置Zsh的强大工具，oh-my-zsh。除了可以提高颜值，它还拥有很多的提高效率的插件。真的非常重要。(不过这两个在安装termux-ohmyzsh时已经安装好了，学会使用即可#(二哈))</p>
+<p>zsh的配置需要用到用户目录下 .zshrc 隐藏文件</p>
+<p>编辑配置文件</p>
+<pre><code>vi .zshrc
+</code></pre>
+<p>我们可以在里面添加几行配置比如说我的有</p>
+<pre><code>alias c='clear'
+alias e='exit'
+alias ll='ls -l'
+alias la='ls -a'
+alias vi='nvim'
+</code></pre>
+<p>这些是关于别名的设置。当你在zsh里输入&quot;=&ldquo;前面的内容时，zsh会认为你输入的是后面的内容。这可以让一些常用的长命令变短。从而提高效率。</p>
+<p>lugins=(git)  //zsh 使用的插件，默认开启了git插件。</p>
+<p>这个插件是.oh-my-zsh/plugins/git/里的一个后缀为.zsh的文件，我们打开看看会发现是一大堆的alias……<img src=".pic/6" alt="依然没图"></p>
+<p>zsh的tab补全是相当的强大。输入部分命令后双击tab可以看见待补全的列表，再按tab键就可以在选项中进行选择。而且这个选项的选择是支持用方向键来选取的。</p>
+<p>但是，这并不是最终形态，通过之后的配置可以做到更加强大的补全。</p>
+<p>千言万语不如一张图:<img src="http://mimosa-pudica.net/img/zsh.gif" alt="这次是真的有图了"></p>
+<p>在这里我使用了 incr-0.2.zsh 具体介绍可以看<a href="http://mimosa-pudica.net/zsh-incremental.html">这里</a>。</p>
+<h2 id="第二章-写作与同步">第二章 写作与同步</h2>
+<p>在termux里写东西体验其实非常优秀，有它独特的优势。在配置好后完全不输任何的写作应用。比如说方便的版本控制，还有相当优秀的补全(不仅仅是代码)，以及很棒的代码高亮。</p>
+<p>除了写作，还可以做到更多。比如说 GTD 也是可以在这里做的(不过相对其他的 GTD 应用可能不够方便)</p>
+<h4 id="21-vim-和-emacs">2.1 vim 和 emacs</h4>
+<p>提到文本编辑器 vim 和 emacs 就是不得不提的存在，两个编辑器间党争也相当激烈。在PC上可能各有优势。但是在手机上使用 Emacs 时，每次打开都需要等待很久的一段时间。</p>
+<h4 id="22-git和github">2.2 git和github</h4>
+<h4 id="23-geeknote">2.3 geeknote</h4>
+<h2 id="第三章-进阶玩法">第三章 进阶玩法</h2>
+
+
+	
+
+	<div>
+    <p class="hr-text text-warning">END</p>
+</div>
+
+<div>
+  <p class="text-warning col-12 text-center">此文章版权归原作者  denalon 所有，内容为作者个人观点</p>
+  
+</div>
+	
+
+
+
+	
+	
+  
+	
+	
+	
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <div class="container-fluid">
+    <div class="shareBtn">
+            <a  id="upBtn"  href="javascript:topFunction()" title="向上"> <i class="fa fa-arrow-up fa-2x text-warning"></i></a>
+    </div>
+</div>
+
+      
+<footer class="bg-dark py-5 row d-print-none footer-bg">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="联系" aria-label="联系">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="mailto:denalon@qq.com">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="备用站点" aria-label="备用站点">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://denalon.js.org">
+      <i class="fa fa-paperclip"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="本站源码" aria-label="本站源码">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://denalon.coding.net/public/code/blog/git/files">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="反馈" aria-label="反馈">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://github.com/denalon/denalon/issues">
+      <i class="fa fa-commenting"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2021 denalon 版权所有</small>
+        <br>
+        <small class="text-white"><a class="theme-link text-white" href="http://beian.miit.gov.cn/">ICP备案号：豫ICP备2020027870号-2</a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://style.oribos.city/unit/files/iconfont.js"></script>
+    <script src="https://style.oribos.city/unit/vsc/iconfont.js"></script>
+    <script src="/js/zoomify.min.js"></script>
+<script src="/js/app.js"></script>
+<link rel="stylesheet" href="https://base.oribos.city/css/monokai_sublime.min.css">
+<script src="https://style.oribos.city/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.3b172c13b62c2bea8b1c9d2599cddc8cf89718a92d792c680871c81ba43d8c85.js" integrity="sha256-OxcsE7YsK&#43;qLHJ0lmc3cjPiXGKkteSxoCHHIG6Q9jIU=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

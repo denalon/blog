@@ -1,0 +1,3264 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>记事本 – tech</title>
+    <link>/tech/</link>
+    <description>Recent content in tech on 记事本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 16 Jun 2021 11:55:45 +0800</lastBuildDate>
+    
+	  <atom:link href="/tech/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Tech: 0906归纳</title>
+      <link>/web/note/2020090673.html</link>
+      <pubDate>Sun, 06 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020090673.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;阴谋论&#34;&gt;阴谋论&lt;/h2&gt;
+&lt;p&gt;相信阴谋论，怀疑意味着能力欠缺。不确定地球是不是圆的，不确定美国有没有登月，不知道苏美尔文明来源，因为这些阴谋论者没能力飞向太空，穿越回古代。&lt;/p&gt;
+&lt;p&gt;对于远古时期，史前时期，遥远的地方，漫长的时间这些超出人类控制的内容，既要有所怀疑又需要有所相信。无论是否相信是陨石造成的恐龙灭绝，恐龙已经消失不见，没有能力挽回。古代文明已经消散，准确找到何年何月并没有实际意义。直立人智人的联系，人类起源无论是否完全研究出来，对当前的人类并没有多大影响。人类不缺真相。&lt;/p&gt;
+&lt;h3 id=&#34;知识阶级&#34;&gt;知识阶级&lt;/h3&gt;
+&lt;p&gt;富有阶层可以有时间学习艺术，哲学，文化，考古，经济，政治。而穷人只能学赚钱，打工，出力，技能。并非某学科“无用“而是是否能为自己提供有“有价值” “有意义”的成果。&lt;/p&gt;
+&lt;h3 id=&#34;设身处地&#34;&gt;设身处地&lt;/h3&gt;
+&lt;p&gt;设身处地，换位思考，为他人着想，听上去很有道理。但人是有局限性的，根本不能完全互换位置，不同的环境不同的条件造就了不同的行为和决定。&lt;/p&gt;
+&lt;p&gt;人不轻身经历，身入其境某些事情，根本理解不了很多东西。所以要多万卷书，行万里路。&lt;/p&gt;
+&lt;h3 id=&#34;神明&#34;&gt;神明&lt;/h3&gt;
+&lt;p&gt;敬神而不信神&lt;/p&gt;
+&lt;p&gt;神意味着未知的，远超自身理解的东西。对待未知我们要保持敬畏，恐惧。但不能受此影响。因为接触不到，认识不到才是未知，一旦接触到，看到听到那他就是必然的存在，就不再是未知。&lt;/p&gt;
+&lt;p&gt;未知就是不可知，知道了就不是不可知了，就应该研究知道的里面的不可知情况。神明最好就是永远不为人知，因为一旦神明现身，那就要思考，谁创造了“这个“神明？（神明未现身时“这个“就无法用来描述）&lt;/p&gt;
+&lt;h3 id=&#34;生命&#34;&gt;生命&lt;/h3&gt;
+&lt;p&gt;无论人类是不是从低级生命演化而来，宇宙生命体必然是从无到有，由简到繁。一个固定的环境却存在各式各样生命体，这必然不是一蹴而就的。加入将整套地球生态采用一定样本完全丢到一个固定环境的星球，那么，必然会存在大型动植物或特殊生命体因为环境变化而灭绝。这是正常的，把南极的企鹅放到非洲必然会影响生存，同理把非洲的大象丢到南极也如此。也就是说，一个固定环境下，适应性强的物种生存和繁衍下来。&lt;/p&gt;
+&lt;p&gt;这意味着，假如上帝创造了世界，那上帝必然是创造了简单的结构，这些简单结构慢慢发展，演化，逐渐变成复杂的。如果上帝直接将全套现有的生态系统扔到世间。那么最开始必然存在大量不适应的情况导致大范围灭绝。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 0813</title>
+      <link>/web/note/2020081313.html</link>
+      <pubDate>Thu, 13 Aug 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020081313.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;日志&#34;&gt;日志&lt;/h2&gt;
+&lt;p&gt;在ci里运行代码,将生成的文件推送到该仓库的gh-pages分支&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;推送本地分支local_branch到远程分支 remote_branch并建立关联关系
+
+      a.远程已有remote_branch分支并且已经关联本地分支local_branch且本地已经切换到local_branch
+
+          git push
+
+     b.远程已有remote_branch分支但未关联本地分支local_branch且本地已经切换到local_branch
+
+         git push -u origin/remote_branch
+
+     c.远程没有remote_branch分支并，本地已经切换到local_branch
+
+        git push origin local_branch:remote_branch
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;git-push--u-origin-master和git-push-远程主机名-本地分支名远程分支名作用&#34;&gt;git push -u origin master和git push &amp;lt;远程主机名&amp;gt; &amp;lt;本地分支名&amp;gt;:&amp;lt;远程分支名&amp;gt;作用&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;git push&lt;/code&gt;
+git push命令用于将本地分支的更新，推送到远程主机。它的格式与git pull命令相仿。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push &amp;lt;远程主机名&amp;gt; &amp;lt;本地分支名&amp;gt;:&amp;lt;远程分支名&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;注意：这里的:前后是必须没有空格的。&lt;/p&gt;
+&lt;p&gt;注意，分支推送顺序的写法是&amp;lt;来源地&amp;gt;:&amp;lt;目的地&amp;gt;，&lt;/p&gt;
+&lt;p&gt;所以git pull是&amp;lt;远程分支&amp;gt;:&amp;lt;本地分支&amp;gt;，而git push是&amp;lt;本地分支&amp;gt;:&amp;lt;远程分支&amp;gt;。&lt;/p&gt;
+&lt;p&gt;如果省略远程分支名，则表示将本地分支推送与之存在&amp;quot;追踪关系&amp;quot;的远程分支（通常两者同名），如果该远程分支不存在，则会被新建。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面命令表示，将本地的master分支推送到origin主机的master分支。如果后者不存在，则会被新建。&lt;/p&gt;
+&lt;p&gt;如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push origin :master
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;等同于&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push origin --delete master
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面命令表示删除origin主机的master分支。&lt;/p&gt;
+&lt;p&gt;如果当前分支与远程分支之间存在追踪关系，则本地分支和远程分支都可以省略。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push origin
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面命令表示，将当前分支推送到origin主机的对应分支。&lt;/p&gt;
+&lt;p&gt;如果当前分支只有一个追踪分支，那么主机名都可以省略。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果当前分支与多个主机存在追踪关系，则可以使用-u选项指定一个默认主机，这样后面就可以不加任何参数使用git push。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面命令将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 域名的充分使用</title>
+      <link>/web/note/2020083143.html</link>
+      <pubDate>Fri, 31 Jul 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020083143.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;减少域名持有量&#34;&gt;减少域名持有量&lt;/h3&gt;
+&lt;h3 id=&#34;充分利用已有域名&#34;&gt;充分利用已有域名&lt;/h3&gt;
+&lt;h3 id=&#34;增加子域名使用&#34;&gt;增加子域名使用&lt;/h3&gt;
+&lt;p&gt;server,develop,app,config,static等作为子域名使用&lt;/p&gt;
+&lt;h3 id=&#34;多服务商&#34;&gt;多服务商&lt;/h3&gt;
+&lt;p&gt;减少使用腾讯产品，不使用腾讯云dns&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 心理问题</title>
+      <link>/web/note/2020080503.html</link>
+      <pubDate>Fri, 31 Jul 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020080503.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;心理&#34;&gt;心理&lt;/h3&gt;
+&lt;p&gt;心理医生会有意无意的将患者的心理问题夸大化，会将症状归为一种难听难懂的词汇比如口欲期、肛欲期、俄狄浦斯期。这些名词无法准确的描述症状却让人感觉不适。&lt;/p&gt;
+&lt;h3 id=&#34;严重性&#34;&gt;严重性&lt;/h3&gt;
+&lt;p&gt;大部分人都存在或多或少的心理问题,这跟童年生活环境有关,特别是保守,封闭,教育程度低的地区.而大部分人的心理问题并不会对社会造成多大伤害.&lt;/p&gt;
+&lt;p&gt;反而心理医生会借助各类相关技术,夸大表现.就好比一个世界名厨要教人怎么品味食物,钢琴师音乐家教大家欣赏音乐.而大部分人只是在唱歌房吼几嗓子,不需要那么专业.&lt;/p&gt;
+&lt;p&gt;但是心理医生对人的心理问题的分析是有很大的借鉴的,心理医生通过科学方法对日常生活中的表现,个人行为习惯分析,得出的结论可能是普通人半辈子才能理解的知识.&lt;/p&gt;
+&lt;h3 id=&#34;资本家的伎俩&#34;&gt;资本家的伎俩&lt;/h3&gt;
+&lt;p&gt;某些资本家为了利益所常使用的伎俩&lt;/p&gt;
+&lt;p&gt;锚定效应&lt;/p&gt;
+&lt;p&gt;价格歧视&lt;/p&gt;
+&lt;p&gt;免费营销&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 忒修斯之船</title>
+      <link>/web/note/2020080407.html</link>
+      <pubDate>Fri, 31 Jul 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020080407.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;忒修斯之船&#34;&gt;忒修斯之船&lt;/h3&gt;
+&lt;p&gt;公元1世纪的时候普鲁塔克提出一个问题：如果忒修斯的船上的木头被逐渐替换，直到所有的木头都不是原来的木头，那这艘船还是原来的那艘船吗？因此这类问题现在被称作“忒修斯之船”的问题。有些哲学家认为是同一物体，有些哲学家认为不是。在普鲁塔克之前，赫拉克利特、苏格拉底、柏拉图都曾经讨论过相似的问题。近代霍布斯和洛克也讨论过该问题。这个问题的有许多变种，如“祖父的旧斧头”。&lt;/p&gt;
+&lt;p&gt;哲学家托马斯·霍布斯后来对此进行了延伸，如果用特修斯之船上取下来的老部件来重新建造一艘新的船，那么两艘船中哪艘才是真正的特修斯之船？&lt;/p&gt;
+&lt;h3 id=&#34;类似的悖论&#34;&gt;类似的悖论&lt;/h3&gt;
+&lt;p&gt;人体组织细胞更新的周期大致为120至200天左右（神经组织细胞除外），大约每6到7年就可以全部更新为新的细胞。&lt;/p&gt;
+&lt;p&gt;赫拉克利特之河 人们虽然同样渡过相同的河，但流经身旁的水却是不同的。普鲁塔克亦引用赫拉克利特的观点，提出无法再次渡过相同的河流的假说。&lt;/p&gt;
+&lt;p&gt;祖父的旧斧头英文的口语，指某物每次都残留了本来的一部分；但更换了另一部分，逐渐所有的部分都换过的意思。斧头的刀刃换了3次，刀柄也换了4次，可是还是同一把旧斧头。&lt;/p&gt;
+&lt;h3 id=&#34;个人认识&#34;&gt;个人认识&lt;/h3&gt;
+&lt;p&gt;在我看来，&lt;strong&gt;概念本身就不是真正的客观的存在。概念是人类认识事物的一种表述，是抽象的，不固定的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;比如 一张钞票，今天上午能拿去买1kg黄金，然后下午爆出消息经济崩溃，钞票不值钱了成垃圾了。买不到任何东西了，钞票本身一点没变，但它的价值变了不能称为钞票了，成废纸了。所以，钞票或者说钱这个概念，跟其物理属性的关系不是固定的，钞票破损一点仍能使用。破损一半仍是钞票，只不过价值可能有所损失，但仍是钞票。&lt;/p&gt;
+&lt;p&gt;忒修斯之船哪怕是换掉了所有的材料，只有有一个人认为这个船还是忒修斯之船，那么这艘船在这个人心目中仍然是忒修斯之船。这是根据人的认识的，不是明确的客观的。许多人不认可换掉大部分材料的船不再是忒修斯之船，那也是这个概念在这些人心目中的概念，这个概念本身就是抽象的，不固定的。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 操作系统</title>
+      <link>/web/note/2020081113.html</link>
+      <pubDate>Fri, 31 Jul 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020081113.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;操作系统内置ssl证书&#34;&gt;操作系统内置SSL证书&lt;/h3&gt;
+&lt;p&gt;由于在网络传输中，传递ssl加密证书公钥是不可靠的。所以，一直相对完善的https信息往往将内容使用可信赖的CA机构的ssl证书加密。而客户端用来内置的CA证书公钥对内容解密。这就保证了信息的可信任性。&lt;/p&gt;
+&lt;p&gt;对于国家机构，不应使用国外操作系统的CA机构证书。因为无法避免数据被窃听的风险。但对于国内用户而言，信息被海外企业窃听的风险较低，反而为了防止数据被盗用，必要的审查等考虑。使用有别于国家机构的第三方CA机构证书是有必要的。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 记录</title>
+      <link>/web/note/2020080401.html</link>
+      <pubDate>Fri, 31 Jul 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020080401.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;英语跟汉语区别&#34;&gt;英语跟汉语区别&lt;/h2&gt;
+&lt;p&gt;表音文字和表意文字区别&lt;/p&gt;
+&lt;p&gt;英语作为表音文字，用少量的字母记录语言中的语音，从而记录语言的文字。字母是表音文字的基础，字母的数量较其他语言较少。文字的复杂程度跟使用的字母数量有关，存在不同的读音变异。不同文字之间用空格隔开。&lt;/p&gt;
+&lt;p&gt;汉语作为表意文字，用象征性书写符号记录信息的文字体系，不直接或不单纯表示语音。从象形文字发展而来，历史悠久。&lt;/p&gt;
+&lt;h2 id=&#34;局限性&#34;&gt;局限性&lt;/h2&gt;
+&lt;p&gt;随着人类对世界的认识，用象征性的符号无法有效的表达不断增长的信息。使用表意文字就会不断表现出局限性。一些抽象的概念，复杂的实物是无法使用表意文字有效的表达的。由于文字之间较少使用空格类似的分隔符来短句短词，词语语句会存在一些歧义的误解。&lt;/p&gt;
+&lt;p&gt;随着计算机的出现，表意文字较难使用计算机录入和处理。对表意文字的处理需要耗费更多的资源。&lt;/p&gt;
+&lt;h2 id=&#34;发展的眼光&#34;&gt;发展的眼光&lt;/h2&gt;
+&lt;p&gt;不能因为表意文字的局限性就对此嗤之以鼻，未来世界的语言形式会超出人类现有的理解，单纯使用以表音文字或表意文字是片面的。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 防止信息泄露</title>
+      <link>/web/note/2020080511.html</link>
+      <pubDate>Fri, 31 Jul 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020080511.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;互联网id&#34;&gt;互联网id&lt;/h3&gt;
+&lt;p&gt;不会只使用一个互联网id,也不会在一个账号上捆绑太多的服务.&lt;/p&gt;
+&lt;p&gt;有计划的区分多个邮箱账户id&lt;/p&gt;
+&lt;p&gt;有计划的区分微信，微博，qq等sns账号。&lt;/p&gt;
+&lt;h3 id=&#34;密码和私钥&#34;&gt;密码和私钥&lt;/h3&gt;
+&lt;p&gt;密码分级别,私钥需要全部备份.密码和私钥不保存在git仓库里&lt;/p&gt;
+&lt;h3 id=&#34;博客网站&#34;&gt;博客网站&lt;/h3&gt;
+&lt;p&gt;为了区分内容,博客网站将被拆分成不同的域名,分别展示不同级别的内容.&lt;/p&gt;
+&lt;h3 id=&#34;多个git仓库&#34;&gt;多个git仓库&lt;/h3&gt;
+&lt;p&gt;github多账号，资源权限区分，git仓库多服务商，及时备份。&lt;/p&gt;
+&lt;h3 id=&#34;多个手机号码&#34;&gt;多个手机号码&lt;/h3&gt;
+&lt;p&gt;使用海外服务的手机号码和虚拟账号&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: github的api</title>
+      <link>/web/note/2021/2021061601.html</link>
+      <pubDate>Wed, 16 Jun 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021061601.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;api地址&#34;&gt;api地址&lt;/h3&gt;
+&lt;p&gt;例如以下地址&lt;a href=&#34;https://api.github.com/repos/Hello-hao/Tbed/releases/latest&#34;&gt;https://api.github.com/repos/Hello-hao/Tbed/releases/latest&lt;/a&gt;,github提供一个对上传到github仓库的文件进行详细统计的数据。通过查询相应的数据可以获取该仓库的最新地址或指定地址。&lt;/p&gt;
+&lt;p&gt;以以下项目为例，使用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -s https://api.github.com/repos/Hello-hao/Tbed/releases/latest | grep &amp;quot;browser_download_url.*zip&amp;quot; | cut -d &#39;&amp;quot;&#39; -f 4
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;返回一个最新编译包的完整url地址&lt;/p&gt;
+&lt;p&gt;通过使用以下命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -s https://api.github.com/repos/Hello-hao/Tbed/releases/latest | grep &amp;quot;browser_download_url.*zip&amp;quot; | cut -d &#39;&amp;quot;&#39; -f 4 | wget -i -
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;自动下载该最新编译包&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 一个mongodb的事例</title>
+      <link>/web/share/2021061603.html</link>
+      <pubDate>Wed, 16 Jun 2021 09:01:40 +0800</pubDate>
+      
+      <guid>/web/share/2021061603.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;一个mongodb的事例&#34;&gt;一个mongodb的事例&lt;/h2&gt;
+&lt;p&gt;通过以下代码，并&lt;strong&gt;不能正常运行&lt;/strong&gt;该项目，先做记录，后续调整。&lt;/p&gt;
+&lt;h1 id=&#34;docker-composeyml&#34;&gt;docker-compose.yml&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;3&#39;
+
+networks:
+  waline:
+    external: false
+
+services:
+  waline:
+    container_name: waline
+    image: lizheming/waline:latest
+    restart: always
+    ports:
+      - 8360:8360
+    # volumes:
+    #   - ./data:/app/data
+    networks:
+      - waline
+    environment:
+      TZ: Asia/Shanghai
+      MONGO_HOST: mongo
+      MONGO_PORT: &amp;quot;27017&amp;quot;
+      MONGO_DB: waline
+      MONGO_USER: root
+      MONGO_PASSWORD: example
+      # MONGO_REPLICASET: atlas-12cebf-shard-0
+      MONGO_AUTHSOURCE: root
+      MONGO_OPT_SSL: &amp;quot;false&amp;quot;
+      # JWT_TOKEN: &#39;Your token&#39;
+      # SITE_NAME: &#39;Your site name&#39;
+      # SITE_URL: &#39;http://129.211.208.41&#39;
+      # SECURE_DOMAINS: &#39;example.com&#39;
+      # AUTHOR_EMAIL: &#39;mail@example.com&#39;
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    networks:
+      - waline
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    networks:
+      - waline
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: k8s安装和部署</title>
+      <link>/web/note/2021/2021061001.html</link>
+      <pubDate>Thu, 10 Jun 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021061001.html</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;p&gt;引用自阿良的博客 &lt;a href=&#34;http://blog.ctnrs.com/post/k8s-kubeadm-install/&#34;&gt;http://blog.ctnrs.com/post/k8s-kubeadm-install/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;安装要求&#34;&gt;安装要求&lt;/h3&gt;
+&lt;p&gt;在开始之前，部署Kubernetes集群机器需要满足以下几个条件：&lt;/p&gt;
+&lt;p&gt;一台或多台机器，操作系统 CentOS7.x-86_x64&lt;/p&gt;
+&lt;p&gt;硬件配置：2GB或更多RAM，2个CPU或更多CPU，硬盘30GB或更多&lt;/p&gt;
+&lt;p&gt;集群中所有机器之间网络互通&lt;/p&gt;
+&lt;p&gt;可以访问外网，需要拉取镜像&lt;/p&gt;
+&lt;p&gt;禁止swap分区&lt;/p&gt;
+&lt;h3 id=&#34;准备环境&#34;&gt;准备环境&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/06/single-master.jpg&#34; alt=&#34;k8s架构图&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;角色&lt;/th&gt;
+&lt;th&gt;IP&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;k8s-master&lt;/td&gt;
+&lt;td&gt;192.168.31.63&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;k8s-node1&lt;/td&gt;
+&lt;td&gt;192.168.31.65&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;k8s-node2&lt;/td&gt;
+&lt;td&gt;192.168.31.66&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;操作步骤&#34;&gt;操作步骤&lt;/h3&gt;
+&lt;h4 id=&#34;准备系统环境&#34;&gt;准备系统环境&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;关闭防火墙：
+$ systemctl stop firewalld
+$ systemctl disable firewalld
+
+关闭selinux：
+$ sed -i &#39;s/enforcing/disabled/&#39; /etc/selinux/config 
+$ setenforce 0
+
+关闭swap：
+$ swapoff -a  # 临时
+$ sed -ri &#39;s/.*swap.*/#&amp;amp;/&#39; /etc/fstab # 永久
+
+根据规划设置主机名：
+hostnamectl set-hostname &amp;lt;hostname&amp;gt;
+
+在Master添加Hosts：
+$ cat /etc/hosts
+192.168.31.62 k8s-master
+192.168.31.63 k8s-node1
+192.168.31.65 k8s-node2
+
+将桥接的IPv4流量传递到iptables的链：
+$ cat &amp;gt; /etc/sysctl.d/k8s.conf &amp;lt;&amp;lt; EOF
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF
+$ sysctl --system
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;所有节点安装dockerkubeadmkubelet&#34;&gt;所有节点安装Docker/kubeadm/kubelet&lt;/h3&gt;
+&lt;p&gt;Kubernetes默认CRI（容器运行时）为Docker，因此先安装Docker。&lt;/p&gt;
+&lt;h4 id=&#34;安装docker&#34;&gt;安装Docker&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;wget https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker-ce.repo
+yum -y install docker-ce-18.06.1.ce-3.el7
+systemctl enable docker &amp;amp;&amp;amp; systemctl start docker
+docker --version
+Docker version 18.06.1-ce, build e68fc7a
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;添加阿里云yum软件源&#34;&gt;添加阿里云YUM软件源&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;$ cat &amp;gt; /etc/yum.repos.d/kubernetes.repo &amp;lt;&amp;lt; EOF
+[kubernetes]
+name=Kubernetes
+baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64
+enabled=1
+gpgcheck=0
+repo_gpgcheck=1
+gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
+EOF
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;安装kubeadmkubelet和kubectl&#34;&gt;安装kubeadm，kubelet和kubectl&lt;/h4&gt;
+&lt;p&gt;由于版本更新频繁，这里指定版本号部署：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ yum install -y kubelet-1.18.0 kubeadm-1.18.0 kubectl-1.18.0
+$ systemctl enable kubelet
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;部署kubernetes-master&#34;&gt;部署Kubernetes Master&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;kubeadm init \
+  --apiserver-advertise-address=192.168.31.63 \
+  --image-repository registry.aliyuncs.com/google_containers \
+  --kubernetes-version v1.18.0 \
+  --service-cidr=10.1.0.0/16\
+  --pod-network-cidr=10.244.0.0/16
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;由于默认拉取镜像地址k8s.gcr.io国内无法访问，这里指定阿里云镜像仓库地址。&lt;/p&gt;
+&lt;p&gt;拷贝kubectl连接集群用的配置文件：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+kubectl get nodes
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;部署cni网络&#34;&gt;部署CNI网络&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+sed -i -r &amp;quot;s#quay.io/coreos/flannel:.*-amd64#lizhenliang/flannel:v0.12.0-amd64#g&amp;quot; kube-flannel.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;默认镜像地址无法访问，修改为docker hub镜像仓库。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kubectl apply -f kube-flannel.yml
+
+kubectl get pods -n kube-system
+NAME                          READY   STATUS    RESTARTS   AGE
+kube-flannel-ds-amd64-2pc95   1/1     Running   0          72s
+
+kubectl get node
+NAME         STATUS   ROLES    AGE   VERSION
+k8s-master   Ready    &amp;lt;none&amp;gt;   41m   v1.18.3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;部署好网络插件，Node准备就绪。&lt;/p&gt;
+&lt;h4 id=&#34;加入kubernetes-node&#34;&gt;加入Kubernetes Node&lt;/h4&gt;
+&lt;p&gt;向集群添加新节点，使用在Master执行kubeadm init最后输出的kubeadm join命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kubeadm join 192.168.31.63:6443 --token l79g5t.6ov4jkddwqki1dxe --discovery-token-ca-cert-hash sha256:4f07f9068c543130461c9db368d62b4aabc22105451057f887defa35f47fa076
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;测试kubernetes集群&#34;&gt;测试kubernetes集群&lt;/h4&gt;
+&lt;p&gt;在Kubernetes集群中创建一个pod，验证是否正常运行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kubectl create deployment nginx --image=nginx
+kubectl expose deployment nginx --port=80 --type=NodePort
+kubectl get pod,svc
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;访问地址：http://NodeIP:Port&lt;/p&gt;
+&lt;h4 id=&#34;部署-dashboard&#34;&gt;部署 Dashboard&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;wget https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;默认Dashboard只能集群内部访问，修改Service为NodePort类型，暴露到外部：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;vi recommended.yaml
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard
+  namespace: kubernetes-dashboard
+spec:
+  ports:
+    - port: 443
+      targetPort: 8443
+      nodePort: 30001
+  type: NodePort
+  selector:
+    k8s-app: kubernetes-dashboard
+
+kubectl apply -f recommended.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;kubectl get pods,svc -n kubernetes-dashboard
+NAME                                             READY   STATUS              RESTARTS   AGE
+pod/dashboard-metrics-scraper-694557449d-z8gfb   1/1     Running             0          2m18s
+pod/kubernetes-dashboard-9774cc786-q2gsx         1/1     Running		     0          2m19s
+
+NAME                                TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)         AGE
+service/dashboard-metrics-scraper   ClusterIP   10.1.0.141   &amp;lt;none&amp;gt;        8000/TCP        2m19s
+service/kubernetes-dashboard        NodePort    10.1.0.239   &amp;lt;none&amp;gt;        443:30001/TCP   2m19s
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;访问地址：https://NodeIP:30001&lt;/p&gt;
+&lt;p&gt;创建service account并绑定默认cluster-admin管理员集群角色：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kubectl create serviceaccount dashboard-admin -n kube-system
+kubectl create clusterrolebinding dashboard-admin --clusterrole=cluster-admin --serviceaccount=kube-system:dashboard-admin
+kubectl describe secrets -n kube-system $(kubectl -n kube-system get secret | awk &#39;/dashboard-admin/{print $1}&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;使用输出的token登录Dashboard。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/06/single-master.jpg&#34; alt=&#34;Dashboard&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 20210531</title>
+      <link>/web/note/2021/2021053105.html</link>
+      <pubDate>Mon, 31 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021053105.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;k8s的应用&#34;&gt;k8s的应用&lt;/h3&gt;
+&lt;h3 id=&#34;k8s的概念&#34;&gt;k8s的概念&lt;/h3&gt;
+&lt;p&gt;k8s概念&lt;/p&gt;
+&lt;p&gt;k8s集群&lt;/p&gt;
+&lt;p&gt;k8s安装和部署&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;一．环境准备
+二．部署前操作&lt;/p&gt;
+&lt;p&gt;借助ntp服务设置各节点的时间同步
+通过DNS完成各节点名称解析，测试环境主机，测试用hosts文件代替
+配置ssh免密登入
+关闭各节点iptables和firewalld服务
+禁用SELinux
+禁用Swap设备
+打开iptables桥接功能及路由转发
+三．部署k8s集群&lt;/p&gt;
+&lt;p&gt;部署docker
+部署kubernetes
+配置Master节点初始化
+在master安装flannel插入
+Node节点加入
+在master上查看&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;部署应用程序&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: docker构建和运行jar</title>
+      <link>/web/note/2021/2021052701.html</link>
+      <pubDate>Thu, 27 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021052701.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
+&lt;p&gt;使用一个java相册开源项目，奈何不想在本地安装和运行java环境，通过docker进行maven打包和项目运行&lt;/p&gt;
+&lt;h3 id=&#34;文件列表&#34;&gt;文件列表&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/05/20210527001.png&#34; alt=&#34;文件列表&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;构建&#34;&gt;构建&lt;/h3&gt;
+&lt;p&gt;使用以下代码构建&lt;/p&gt;
+&lt;p&gt;Dockerfile 文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;FROM maven:3.3-jdk-8
+ADD ./app /usr/src/mymaven
+WORKDIR /usr/src/mymaven
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;docker-compose.yml文件的内容&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;3&#39;  
+services:
+  maven:
+    build: .
+    container_name: maven
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: &amp;quot;no&amp;quot;
+    privileged: true
+    volumes:
+      - ./app:/usr/src/mymaven
+      - /etc/localtime:/etc/localtime
+    command: [
+      &#39;mvn&#39;,
+      &#39;clean&#39;,
+      &#39;package&#39;
+    ]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将java项目放入&lt;code&gt;app&lt;/code&gt;目录，然后执行&lt;code&gt;docker-compose up&lt;/code&gt;构建项目&lt;/p&gt;
+&lt;h3 id=&#34;运行&#34;&gt;运行&lt;/h3&gt;
+&lt;p&gt;docker-compose.yml&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;3&#39;
+
+networks:
+  springboot:
+    external: false
+    
+services:
+  springboot:
+    image: openjdk:8u292-jdk-oraclelinux7
+    container_name: springboot
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    privileged: true
+    networks:
+      - springboot
+    volumes:
+      - ./hellowallpaper-0.0.1-SNAPSHOT.jar:/app.jar
+      - ./application.properties:/application.properties
+      - /etc/localtime:/etc/localtime
+    ports:
+      - &amp;quot;9770:8089&amp;quot;
+    command: [
+        &#39;java&#39;,
+        &#39;-jar&#39;,
+        &#39;app.jar&#39;
+        ]
+
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 容器镜像加速</title>
+      <link>/web/note/2021/2021052402.html</link>
+      <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021052402.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;镜像加速器&#34;&gt;镜像加速器&lt;/h3&gt;
+&lt;p&gt;加速器地址 &lt;code&gt;https://0ijzpgpi.mirror.aliyuncs.com&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json &amp;lt;&amp;lt;-&#39;EOF&#39;
+{
+  &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://0ijzpgpi.mirror.aliyuncs.com&amp;quot;]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;容器化&#34;&gt;容器化&lt;/h3&gt;
+&lt;p&gt;只有面板和用于反向代理的nginx需要安装在本地，其他应用均部署为容器化，目前使用docker部署&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 零星的记录</title>
+      <link>/web/note/2021/2021052406.html</link>
+      <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021052406.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;阿里云企业邮箱地址&#34;&gt;阿里云企业邮箱地址&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;企业邮箱的POP3、SMTP、IMAP地址是什么？
+企业邮箱POP、SMTP、IMAP地址列表如下：
+
+（阿里云邮箱web端通用访问地址：https://qiye.aliyun.com/），客户端推荐以下参数配置：
+
+协议	服务器地址	服务器端口号（常规）	服务器端口号（加密）
+POP3	pop.qiye.aliyun.com	110	995
+IMAP	imap.qiye.aliyun.com	143	993
+SMTP	smtp.qiye.aliyun.com	25	465
+以下老地址和上面新地址一样可以正常使用：
+
+ 协议	 服务器地址	 服务器端口号（常规）	 服务器端口号（加密）
+ POP3	 pop3.mxhichina.com	 110	 995
+ SMTP	 smtp.mxhichina.com	 25	 465
+ IMAP	 imap.mxhichina.com	 143	 993
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;git三连&#34;&gt;git三连&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;git add . &amp;amp;&amp;amp; git commit -m &amp;quot;up&amp;quot; &amp;amp;&amp;amp; git push
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;关于使用docker构建通用运行环境&#34;&gt;关于使用docker构建通用运行环境&lt;/h3&gt;
+&lt;p&gt;拉取一个简单的linux环境
+安装go环境或者java环境 python环境
+配置目录关联app到运行目录
+将程序放放到app
+执行docker运行命令，在docker构建的运行环境了运行相应程序
+配置插件目录，使用额外的运行命令安装和配置插件
+配置外部配置文件，自定义运行配置文件&lt;/p&gt;
+&lt;h3 id=&#34;docker里的文件&#34;&gt;docker里的文件&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;    &amp;amp;&amp;amp; git clone https://e.coding.net/frednab/dev/hexo-blog.git blog \
+    &amp;amp;&amp;amp; cd blog \
+    &amp;amp;&amp;amp; npm ci \
+    &amp;amp;&amp;amp; hexo g
+
+FROM debian
+RUN sed -i s@/deb.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
+    &amp;amp;&amp;amp; apt-get clean \
+    &amp;amp;&amp;amp; apt-get update \
+    &amp;amp;&amp;amp; apt-get install -y curl \
+    &amp;amp;&amp;amp; curl -fsSL https://deb.nodesource.com/setup_14.x | bash - \
+    &amp;amp;&amp;amp; apt-get install -y nodejs
+    &amp;amp;&amp;amp; npm install hexo-cli -g \
+    &amp;amp;&amp;amp; apt-get install -y git \
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 容器应用</title>
+      <link>/web/note/2021/2021051501.html</link>
+      <pubDate>Sat, 15 May 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021051501.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;容器应用仓库&#34;&gt;容器应用仓库&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://denalon.coding.net/public/asset/docker-app/git/files&#34;&gt;容器应用仓库&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;部署了几个docker应用事例，保留备用。后期计划使用容器部署mysql和jar运行&lt;/p&gt;
+&lt;h4 id=&#34;环境简洁&#34;&gt;环境简洁&lt;/h4&gt;
+&lt;p&gt;在本地服务器上安装尽可能少的应用，避免环境复杂和配置冲突&lt;/p&gt;
+&lt;h4 id=&#34;易于移植&#34;&gt;易于移植&lt;/h4&gt;
+&lt;p&gt;在不同系统，不同服务器环境下可以轻松转移数据和应用&lt;/p&gt;
+&lt;h3 id=&#34;后续配置&#34;&gt;后续配置&lt;/h3&gt;
+&lt;p&gt;服务器只安装基本的git docker docker-compose 文件管理，不再配置mysql java php等开发环境，这些开发环境均在docker里运行&lt;/p&gt;
+&lt;h3 id=&#34;编写dockerfile最佳实践&#34;&gt;编写Dockerfile最佳实践&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;减少镜像层
+一次RUN指令形成新的一层，尽量Shell命令都写在一行，减少镜像层。 例如：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;FROM centos:7
+MAINTAINER www.ctnrs.com
+RUN yum install epel-release -y 
+RUN yum install -y gcc gcc-c++ make -y
+RUN wget http://docs.php.net/distributions/php-5.6.36.tar.gz
+RUN tar zxf php-5.6.36.tar.gz
+RUN cd php-5.6.36
+RUN ./configure --prefix=/usr/local/php 
+RUN make -j 4 
+RUN make install
+EXPOSE 9000
+CMD [&amp;quot;php-fpm&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;应该写成：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;FROM centos:7
+MAINTAINER www.ctnrs.com
+RUN yum install epel-release -y &amp;amp;&amp;amp; \
+    yum install -y gcc gcc-c++ make
+
+RUN wget http://docs.php.net/distributions/php-5.6.36.tar.gz &amp;amp;&amp;amp; \
+    tar zxf php-5.6.36.tar.gz &amp;amp;&amp;amp; \
+    cd php-5.6.36 &amp;amp;&amp;amp; \
+    ./configure --prefix=/usr/local/php &amp;amp;&amp;amp; \
+    make -j 4 &amp;amp;&amp;amp; make install
+EXPOSE 9000
+CMD [&amp;quot;php-fpm&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;结果：12层 -&amp;gt; 6层&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;优化镜像大小：清理无用数据
+一次RUN形成新的一层，如果没有在同一层删除，无论文件是否最后删除，都会带到下一层，所以要在每一层清理对应的残留数据，减小镜像大小。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;FROM centos:7
+MAINTAINER www.ctnrs.com
+RUN yum install epel-release -y &amp;amp;&amp;amp; \
+    yum install -y gcc gcc-c++ make gd-devel libxml2-devel \
+    libcurl-devel libjpeg-devel libpng-devel openssl-devel \
+    libmcrypt-devel libxslt-devel libtidy-devel autoconf \
+    iproute net-tools telnet wget curl &amp;amp;&amp;amp; \
+    yum clean all &amp;amp;&amp;amp; \
+    rm -rf /var/cache/yum/*
+
+RUN wget http://docs.php.net/distributions/php-5.6.36.tar.gz &amp;amp;&amp;amp; \
+    tar zxf php-5.6.36.tar.gz &amp;amp;&amp;amp; \
+    cd php-5.6.36 &amp;amp;&amp;amp; \
+    ./configure --prefix=/usr/local/php \
+    make -j 4 &amp;amp;&amp;amp; make install &amp;amp;&amp;amp; \
+    cd / &amp;amp;&amp;amp; rm -rf php*
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;至少能节省几十M，甚至几百M。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;减少网络传输时间
+最好在内部有一个存放软件包的地方，类似于上述的PHP官方下载地址：http://docs.php.net/distributions/php-5.6.36.tar.gz ，如果用到maven构建这样的操作，同时也更改为私有maven仓库，减少网络传输时间，提高镜像构建速度。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多阶段进行镜像构建
+如果运行一个项目，根据咱们上面的做法，是直接把代码拷贝到基础镜像里，如果是一个需要预先代码编译的项目呢？例如JAVA语言，如何代码编译、部署在一起完成呢！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;上面做法需要事先在一个Dockerfile构建一个基础镜像，包括项目运行时环境及依赖库，再写一个Dockerfile将项目拷贝到运行环境中，有点略显复杂了。&lt;/p&gt;
+&lt;p&gt;像JAVA这类语言如果代码编译是在Dockerfile里操作，还需要把源代码构建进去，但实际运行时只需要构建出的包，这种把源代码放进去有一定安全风险，并且也增加了镜像体积。 为了解决上述问题，Docker 17.05开始支持多阶段构建（multi-stage builds），可以简化Dockerfile，减少镜像大小。&lt;/p&gt;
+&lt;p&gt;例如，构建JAVA项目镜像：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/lizhenliang/tomcat-java-demo
+$ cd tomcat-java-demo
+$ vi Dockerfile
+FROM maven AS build
+ADD ./pom.xml pom.xml
+ADD ./src src/
+RUN mvn clean package
+
+FROM lizhenliang/tomcat
+RUN rm -rf /usr/local/tomcat/webapps/ROOT
+COPY --from=build target/*.war /usr/local/tomcat/webapps/ROOT.war
+
+$ docker build -t demo:v1 .
+$ docker container run -d -v demo:v1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;首先，第一个FROM 后边多了个 AS 关键字，可以给这个阶段起个名字。 然后，第二部分FROM用的我们上面构建的Tomcat镜像，COPY关键字增加了—from参数，用于拷贝某个阶段的文件到当前阶段。这样一个Dockerfile就都搞定了。&lt;/p&gt;
+&lt;p&gt;小结
+镜像小有很多好处，例如:&lt;/p&gt;
+&lt;p&gt;快速部署;
+快速回滚, 减少服务中断时间;
+同时镜像仓库占用磁盘空间也少了。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 用于持续运行的数据库</title>
+      <link>/web/note/2021/2021051401.html</link>
+      <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021051401.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;mysql&#34;&gt;mysql&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;3.1&#39;
+
+networks:
+  app:
+    external: false
+
+services:
+  db:
+    image: mysql:5.7.22
+    restart: always
+    container_name: mysql
+    networks:
+      - app
+    ports:
+      - 9036:3306
+    privileged: true
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: 123456
+    command:
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+      --lower_case_table_names=1
+      --max_allowed_packet=128M
+      --sql-mode=
+      --default-authentication-plugin=mysql_native_password
+      --sql-mode=&amp;quot;STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO&amp;quot;
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/conf/my.cnf:/etc/my.cnf
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;phpmyadmin&#34;&gt;phpmyadmin&lt;/h3&gt;
+&lt;p&gt;用来图形化访问mysql数据库的管理界面&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;3.1&#39;
+
+networks:
+  phpmyadmin:
+    external: false
+
+services:
+  db:
+    image: mariadb:10.3
+    restart: always
+    networks:
+      - phpmyadmin
+    environment:
+      MYSQL_ROOT_PASSWORD: notSecureChangeMe
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    networks:
+      - phpmyadmin
+    ports:
+      - 9018:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=XXXX
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: docker项目的配置文件备份</title>
+      <link>/web/note/2021/2021051001.html</link>
+      <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021051001.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;wiz&#34;&gt;wiz&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;3&#39;
+
+services:
+  bitwarden:
+    image: wiznote/wizserver:latest
+    container_name: wiz
+    restart: always
+    volumes:
+      - /denalon/app/wiz/wizdata:/wiz/storage
+      - /etc/localtime:/etc/localtime
+    ports:
+      - &amp;quot;9060:80&amp;quot;
+      - &amp;quot;9269:9269&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;halo&#34;&gt;halo&lt;/h3&gt;
+&lt;h4 id=&#34;使用docker数据库的halo&#34;&gt;使用docker数据库的halo&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;3&#39;
+
+networks:
+  halo:
+    external: false
+    
+services:
+  server:
+    image: openjdk
+    container_name: halo
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    privileged: true
+    networks:
+      - halo
+    volumes:
+      - ./halo-1.4.8.jar:/halo.jar
+      - ./application.yaml:/application.yaml
+      - /etc/localtime:/etc/localtime
+    ports:
+      - &amp;quot;9030:8090&amp;quot;
+    depends_on:
+      - db
+    command: [
+          &#39;java&#39;,
+          &#39;-jar&#39;,
+          &#39;halo.jar&#39;
+        ]
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=halo
+      - MYSQL_USER=halo
+      - MYSQL_PASSWORD=passwd
+      - MYSQL_DATABASE=halodb
+    networks:
+      - halo
+    ports:
+      - &amp;quot;9036:3306&amp;quot;
+    volumes:
+      - ./mysql:/var/lib/mysql
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;applicationyaml-内容&#34;&gt;application.yaml 内容&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;server:
+  port: 8090
+
+  # Response data gzip.
+  compression:
+    enabled: false
+spring:
+  datasource:
+
+    # MySQL database configuration.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://db:3306/halodb?characterEncoding=utf8&amp;amp;useSSL=false&amp;amp;serverTimezone=Asia/Shanghai&amp;amp;allowPublicKeyRetrieval=true
+    username: halo
+    password: passwd
+
+halo:
+
+  # Your admin client path is https://your-domain/{admin-path}
+  admin-path: admin
+
+  # memory or level
+  cache: memory
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;vaultwarden&#34;&gt;vaultwarden&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;3&#39;
+
+services:
+  bitwarden:
+    image: vaultwarden/server:latest #使用 vaultwarden/server 最新镜像（2021年5月 Bitwarden_rs 更名为 vaultwarden。）
+    container_name: bitwarden
+    restart: always
+    volumes:
+      - ./data:/data  #容器内的 /data 目录挂载到宿主机的当前目录下的 data 目录；
+    env_file:
+      - config.env
+    ports:
+      - &amp;quot;9050:80&amp;quot; #将容器内的 80 端口映射到了宿主机的 47878 端口；
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;codimd&#34;&gt;codimd&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;version: &amp;quot;3&amp;quot;
+services:
+  database:
+    image: postgres:11.6-alpine
+    environment:
+      - POSTGRES_USER=codimd
+      - POSTGRES_PASSWORD=change_password
+      - POSTGRES_DB=codimd
+    volumes:
+      - &amp;quot;database-data:/var/lib/postgresql/data&amp;quot;
+    restart: always
+  codimd:
+    image: hackmdio/hackmd:2.3.2
+    environment:
+      - CMD_DB_URL=postgres://codimd:change_password@database/codimd
+      - CMD_USECDN=false
+    depends_on:
+      - database
+    ports:
+      - &amp;quot;9040:3000&amp;quot;
+    volumes:
+      - upload-data:/home/hackmd/app/public/uploads
+    restart: always
+volumes:
+  database-data: {}
+  upload-data: {}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;nginx&#34;&gt;nginx&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;3&#39;
+
+services: 
+  nginx:
+    image: nginx:1.16-alpine
+    ports:
+      - 9020:80
+    volumes: 
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/log:/var/log/nginx
+      - ./nginx/public:/usr/share/nginx/html
+    restart: always
+    environment: 
+      - TZ=Asia/Shanghai
+    networks: 
+      - default
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;hellohao-test&#34;&gt;hellohao-test&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;version: &amp;quot;2&amp;quot;
+services:
+  eid-service:
+    # 指定容器名称
+    container_name: hellohao-test
+    # 重启机制
+    restart: always
+    # hub地址，image版本
+    image: openjdk:8u292-jdk-oraclelinux7
+    volumes:
+      # 本地jar包路径
+      - /denalon/app/hello/Tbed.jar:/root/Tbed.jar
+      - /denalon/app/hello/data:/data/upload_tmp
+      - /denalon/app/hello/hellodata:/HellohaoData
+      - /denalon/app/hello/application.properties:/root/application.properties
+      # 指定容器时间为宿主机时间
+      - /etc/localtime:/etc/localtime
+    # 访问端口
+    ports:
+      - &amp;quot;9010:8088&amp;quot;
+    environment:
+      # 指定时区
+      - TZ=&amp;quot;Asia/Shanghai&amp;quot;
+    # 其他参数
+    command: [
+          &#39;java&#39;,
+          &#39;-jar&#39;,
+          &#39;Tbed.jar&#39;
+        ]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;mysql&#34;&gt;mysql&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;3&#39;
+services:
+  mysql:
+    restart: always
+    image: mysql:5.7.16
+    container_name: my_mysql
+    volumes:
+      - ./data/mydir:/mydir
+      - ./data/datadir:/var/lib/mysql
+      - ./conf/my.cnf:/etc/my.cnf
+      #      数据库还原目录 可将需要还原的sql文件放在这里
+      - ./mysql/source:/docker-entrypoint-initdb.d
+    environment:
+      - &amp;quot;MYSQL_ROOT_PASSWORD=mysql&amp;quot;
+      - &amp;quot;MYSQL_DATABASE=mydb&amp;quot;
+      - &amp;quot;TZ=Asia/Shanghai&amp;quot;
+    ports:
+      - 9906:3306
+
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[mysqld]
+user=mysql
+default-storage-engine=INNODB
+#character-set-server=utf8
+character-set-client-handshake=FALSE
+character-set-server=utf8mb4
+collation-server=utf8mb4_unicode_ci
+init_connect=&#39;SET NAMES utf8mb4&#39;
+[client]
+#utf8mb4字符集可以存储emoji表情字符
+#default-character-set=utf8
+default-character-set=utf8mb4
+[mysql]
+#default-character-set=utf8
+default-character-set=utf8mb4
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;halo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;3&#39;
+
+networks:
+  halo:
+    external: false
+    
+services:
+  server:
+    image: halohub/halo
+    container_name: halo
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    privileged: true
+    networks:
+      - halo
+    volumes:
+      - ./data:/root/.halo
+      - ./application.yaml:/root/application.yaml
+      - /etc/localtime:/etc/localtime
+    ports:
+      - &amp;quot;9030:8090&amp;quot;
+    depends_on:
+      - db
+    
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=halo
+      - MYSQL_USER=halo
+      - MYSQL_PASSWORD=halopasswd
+      - MYSQL_DATABASE=halodb
+    networks:
+      - halo
+    volumes:
+      - ./mysql:/var/lib/mysql
+
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;version: &#39;3&#39;
+
+networks:
+  halo:
+    external: false
+    
+services:
+  server:
+    image: openjdk
+    container_name: halo
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    privileged: true
+    networks:
+      - halo
+    volumes:
+      - ./halo-1.4.8.jar:/halo.jar
+      - ./application.yaml:/application.yaml
+      - /etc/localtime:/etc/localtime
+    ports:
+      - &amp;quot;9030:8090&amp;quot;
+    depends_on:
+      - db
+    command: [
+          &#39;java&#39;,
+          &#39;-jar&#39;,
+          &#39;halo.jar&#39;
+        ]
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=halo
+      - MYSQL_USER=halo
+      - MYSQL_PASSWORD=123456
+      - MYSQL_DATABASE=halodb
+    networks:
+      - halo
+    ports:
+      - &amp;quot;9036:3306&amp;quot;
+    volumes:
+      - ./mysql:/var/lib/mysql
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 一键导入iconfont</title>
+      <link>/web/me/2021/2021050801.html</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/me/2021/2021050801.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;进入iconfont官网后，进入需要下载图标页面，打开控制台（F12）,输入一下两段js代码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var j = document.createElement(&#39;script&#39;);
+j.setAttribute(&amp;quot;src&amp;quot;, &#39;https://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js&#39;);
+document.getElementsByTagName(&amp;quot;head&amp;quot;)[0].appendChild(j);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;回车后再输入&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$(&amp;quot;span[title=&#39;添加入库&#39;]&amp;quot;).each(function(){
+    $(this).delay(100).click();
+    console.log($(this).parent().prev().children().eq(0).html());
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;回车后，等待执行完毕后，点击右上角或者右侧的购物车图标，发现已经将所有图标添加入库，此时点击下载即可。&lt;/p&gt;
+&lt;h3 id=&#34;halo&#34;&gt;halo&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;sudo docker run -it -d --name halo -p 9030:8090 -v /denalon/app/halo:/root/.halo --restart=always halohub/halo
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;docker和docker-compose&#34;&gt;docker和docker-compose&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;version: &amp;quot;2&amp;quot;
+services:
+  eid-service:
+    # 指定容器名称
+    container_name: halotest
+    # 重启机制
+    restart: always
+    # hub地址，image版本
+    image: halohub/halo
+    volumes:
+      # 本地jar包路径
+      - /denalon/app/halo:/root/.halo
+      - /denalon/app/dev/application.properties:/application.properties
+      # 指定容器时间为宿主机时间
+      - /etc/localtime:/etc/localtime
+    # 访问端口
+    ports:
+      - &amp;quot;9030:8090&amp;quot;
+    environment:
+      # 指定时区
+      - TZ=&amp;quot;Asia/Shanghai&amp;quot;
+    # 其他参数
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: docker部署hello图床</title>
+      <link>/web/me/2021/2021051301.html</link>
+      <pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/me/2021/2021051301.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
+&lt;h4 id=&#34;不需要在本地安装jdk&#34;&gt;不需要在本地安装jdk&lt;/h4&gt;
+&lt;h4 id=&#34;需要数据库和docker环境&#34;&gt;需要数据库和docker环境&lt;/h4&gt;
+&lt;p&gt;安装docker和docker-compose&lt;/p&gt;
+&lt;p&gt;安装数据库（本项目没有在docker里运行数据库，需要在宿主机安装数据库）&lt;/p&gt;
+&lt;p&gt;新建&lt;code&gt;docker-compose.yml&lt;/code&gt;修改&lt;code&gt;application.properties&lt;/code&gt;和其他配置文件&lt;/p&gt;
+&lt;h2 id=&#34;docker-composeyml源码&#34;&gt;docker-compose.yml源码&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;version: &amp;quot;2&amp;quot;
+services:
+  eid-service:
+    # 指定容器名称
+    container_name: hellohao
+    # 重启机制
+    restart: always
+    # hub地址，image版本
+    image: openjdk:8u292-jdk-oraclelinux7
+    volumes:
+      # 本地jar包路径
+      - ./hellohao:/hellohao
+      - ./Tbedmain:/Tbedmain
+      - ./data:/data/upload_tmp
+      - ./hellodata:/HellohaoData
+      - ./application.properties:/application.properties
+      # 指定容器时间为宿主机时间
+      - /etc/localtime:/etc/localtime
+    # 访问端口
+    ports:
+      - &amp;quot;8088:8088&amp;quot;
+    environment:
+      # 指定时区
+      - TZ=&amp;quot;Asia/Shanghai&amp;quot;
+    # 其他参数
+    command: [
+          &#39;./hellohao&#39;,
+          &#39;java&#39;,
+          &#39;-jar&#39;,
+          &#39;Tbedmain&#39;
+        ]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;其他内容&#34;&gt;其他内容&lt;/h4&gt;
+&lt;p&gt;另一个版本的源码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;3&#39;
+
+networks:
+  hello:
+    external: false
+    
+services:
+  server:
+    image: openjdk:8u292-jdk-oraclelinux7
+    container_name: hello
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    privileged: true
+    networks:
+      - hello
+    volumes:
+      - ./hellohao:/hellohao
+      - ./Tbedmain:/Tbedmain
+      - ./data:/data/upload_tmp
+      - ./hellodata:/HellohaoData
+      - ./application.properties:/application.properties
+      - /etc/localtime:/etc/localtime
+    ports:
+      - &amp;quot;8088:8088&amp;quot;
+    command: [
+        &#39;./hellohao&#39;,
+        &#39;java&#39;,
+        &#39;-jar&#39;,
+        &#39;Tbedmain&#39;
+        ]
+
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 迁移asp.net项目</title>
+      <link>/web/note/2021/2021043001.html</link>
+      <pubDate>Fri, 30 Apr 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021043001.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;迁移aspnet项目&#34;&gt;迁移asp.net项目&lt;/h3&gt;
+&lt;p&gt;正常使用的CRM软件，部署在云服务器上，由于已经用了三年，当初打折价购买的服务器现在续费要一个月200元&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;
+&lt;h4 id=&#34;安装环境&#34;&gt;安装环境&lt;/h4&gt;
+&lt;p&gt;安装.net环境，iis，asp&lt;/p&gt;
+&lt;p&gt;安装sqlserver数据库&lt;/p&gt;
+&lt;h4 id=&#34;转移文件&#34;&gt;转移文件&lt;/h4&gt;
+&lt;p&gt;关闭旧应用，将数据库文件转移到新服务器&lt;/p&gt;
+&lt;p&gt;将旧应用文件转移到新服务器&lt;/p&gt;
+&lt;p&gt;新建服务器站点&lt;/p&gt;
+&lt;h4 id=&#34;应用程序因程序配置&#34;&gt;应用程序因程序配置&lt;/h4&gt;
+&lt;p&gt;修改为&lt;code&gt;.NET CLR V2.0.50727&lt;/code&gt;  &lt;code&gt;托管管道模式 经典&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;启用32位应用程序：&lt;code&gt;False&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;安装 ajax&lt;/p&gt;
+&lt;h4 id=&#34;配置sqlserver&#34;&gt;配置sqlserver&lt;/h4&gt;
+&lt;p&gt;连接数据库，新建应用登录用户名&lt;/p&gt;
+&lt;h4 id=&#34;启动应用&#34;&gt;启动应用&lt;/h4&gt;
+&lt;p&gt;正式访问&lt;/p&gt;
+&lt;h3 id=&#34;问题&#34;&gt;问题&lt;/h3&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 20210429</title>
+      <link>/web/note/2021/2021042901.html</link>
+      <pubDate>Thu, 29 Apr 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021042901.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;登录失败&#34;&gt;登录失败&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429101023.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429101058.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429101102.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429101105.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;以上错误均来自腾讯手机管家一款app&lt;/p&gt;
+&lt;p&gt;那么为什么要使用这样如此垃圾的app？还不是因为qq邮箱解绑英文名强制要求绑定这个垃圾app。&lt;/p&gt;
+&lt;h3 id=&#34;设计简陋的app&#34;&gt;设计简陋的app&lt;/h3&gt;
+&lt;p&gt;上传图片没有缩略图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429101228.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;阿里云手机app&lt;/p&gt;
+&lt;h3 id=&#34;强制要求&#34;&gt;强制要求&lt;/h3&gt;
+&lt;p&gt;强制安全问题&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429001.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;强制学习步骤&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429002.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;莫名其妙的网络异常&#34;&gt;莫名其妙的网络异常&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429003.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429004.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;文字和视频，app都可以打开，唯独个别软件的登录和读取信息出现缓存过久的情况。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 入门git教程</title>
+      <link>/web/course/git.html</link>
+      <pubDate>Wed, 14 Apr 2021 08:20:45 +0800</pubDate>
+      
+      <guid>/web/course/git.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;此教程指导入门者初步接触git和使用git从代码托管服务商下载和推送代码，并不系统性介绍git各种概念和原理。&lt;/p&gt;
+&lt;p&gt;本教程的目录是为了让入门者初步使用代码。参考&lt;a href=&#34;https://www.runoob.com/manual/git-guide/&#34;&gt;Git 简明指南&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;下载项目代码&#34;&gt;下载项目代码&lt;/h2&gt;
+&lt;div&gt;
+    &lt;span class=&#34;form-inline &#34;&gt;&lt;p&gt;如果你只是为了&lt;/p&gt;&lt;p class=&#34;text-success&#34;&gt;获取&lt;/p&gt;&lt;p&gt;项目代码，可以使用下载工具直接下载zip包&lt;/p&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;在github下载缓慢可以选择coding或gitee下载&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/202104140001.png&#34; alt=&#34;直接下载zip包&#34;&gt;&lt;/p&gt;
+&lt;div&gt;
+    &lt;span class=&#34;form-inline &#34;&gt;&lt;p&gt;如果你需要&lt;/p&gt;&lt;p class=&#34;text-warning&#34;&gt;推送代码&lt;/p&gt;&lt;p&gt;到github就需要以下操作:&lt;/p&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;git的作用&#34;&gt;git的作用&lt;/h2&gt;
+&lt;p&gt;Git（读音为/gɪt/）是一个开源的分布式版本控制系统，hexo的代码可以通过git命令实现代码管理,并通过github actions自动构建。&lt;/p&gt;
+&lt;p class=&#34;text-success&#34;&gt;通过git clone命令你可以从github获取项目代码&lt;/p&gt;
+&lt;p class=&#34;text-warning&#34;&gt;通过git push 命令你可以将自己代码推送到github&lt;/p&gt;
+&lt;h2 id=&#34;git使用&#34;&gt;git使用&lt;/h2&gt;
+&lt;p&gt;推送代码到github或使用项目的自动构建需要下列操作:&lt;/p&gt;
+&lt;h4 id=&#34;安装git&#34;&gt;安装git&lt;/h4&gt;
+&lt;p&gt;访问&lt;a href=&#34;https://git-scm.com/&#34;&gt;git官网&lt;/a&gt;下载git，然后按照提示安装(一直下一步什么都不需要改)&lt;/p&gt;
+&lt;h4 id=&#34;配置本地git用户信息&#34;&gt;配置本地git用户信息&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;git config --global user.name &amp;quot;用户名&amp;quot;
+git config --global user.email &amp;quot;邮箱&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;配置github仓库&#34;&gt;配置github仓库&lt;/h4&gt;
+&lt;h5 id=&#34;1-注册github账户&#34;&gt;1 注册github账户&lt;/h5&gt;
+&lt;p&gt;在github官方注册github用户，获得用户名和密码&lt;/p&gt;
+&lt;p&gt;如果github无法访问，可以使用coding或gitee进行代码托管。&lt;/p&gt;
+&lt;h5 id=&#34;2-任选一种方式连接github&#34;&gt;2 任选一种方式连接github&lt;/h5&gt;
+&lt;p&gt;2.1 选择 https方式连接 推送代码时需要提供用户名和密码&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/202104140003.png&#34; alt=&#34;https方式&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2.2 ssh免密方式连接，需要使用密钥对&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/202104140004.png&#34; alt=&#34;ssh方式&#34;&gt;&lt;/p&gt;
+&lt;p&gt;需要在本地电脑上使用以下命令生成密钥对
+ &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ssh-keygen -t rsa -C &amp;quot;GitHub 邮箱&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后一路回车。生成的两个文件中，后缀名为.pub的文件为公钥，无后缀名或后缀名为.key的文件为私钥。&lt;/p&gt;
+&lt;p&gt;2.3 提交公钥给github，&lt;/p&gt;
+&lt;p&gt;使用记事本打开.pub文件，将文件内代码复制然后在github网站&lt;code&gt;settings&lt;/code&gt;-&lt;code&gt;SSH and GPG keys&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/202104140002.png&#34; alt=&#34;ssh方式&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;私钥需要妥善保管&lt;/strong&gt;，系统对私钥有严格要求，用于验证时权限不能太大，避免文件被改写影响验证。&lt;/p&gt;
+&lt;p&gt;私钥：当前系统的SYSTEM，Administrators用户组，拥有该文件的完全控制权限；该文件的所有者拥有修改权限。&lt;strong&gt;删除其他用户或Everyone读取和执行权限&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;公钥：除去私钥的所有权限设置外，可以允许Everyone拥有读取和执行权限&lt;/p&gt;
+&lt;h3 id=&#34;下载代码到本地&#34;&gt;下载代码到本地&lt;/h3&gt;
+&lt;p&gt;使用zip下载不会携带.git文件， 使用git clone方式下载的代码需要删掉项目根目录下的.git文件夹再执行如下操作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;进阶操作：你可以通过git remote github xxx.git 配置github仓库而不需要删除.git&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;推送代码到github&#34;&gt;推送代码到github&lt;/h3&gt;
+&lt;p&gt;修改项目根目录下的文件，比如config.yml和CNAME文件，通过以下代码将整个仓库代码推送到github。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git init //初始化仓库。 
+git add . //添加文件到暂存区。(注意有点号.) 
+git commit -m &amp;quot;更新说明&amp;quot; //将暂存区内容添加到仓库中。标识“更新说明” 
+git remote add origin XXXX.git  //添加到远程仓库操作，将xxxx.git设置为远程仓库origin 
+git push -u origin master  //推送master分支到origin仓库
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;注意&#34;&gt;注意&lt;/h2&gt;
+&lt;p&gt;使用git 方式部署代码是将整个博客项目上传到github，如果你的仓库是开源的，这就会导致&lt;strong&gt;源码公开&lt;/strong&gt;，请根据自己需要决定是否将仓库设置私有。&lt;/p&gt;
+&lt;h2 id=&#34;进阶操作&#34;&gt;进阶操作&lt;/h2&gt;
+&lt;p&gt;私有仓库使用pages可以购买github 会员或者修改项目目录.github/workflows的代码，在段修改仓库地址到其他开源仓库。这样只有生成的html文件才会开源。&lt;/p&gt;
+&lt;p&gt;假如你的仓库开源。.github/workflows的代码和项目的文件&lt;strong&gt;绝不要填写私钥信息或密码&lt;/strong&gt;，这些内容会被泄露。你可以在workflows文件使用变量名，然后在github项目管理里填入密码信息。&lt;/p&gt;
+&lt;p&gt;你可以将仓库的基本文件公开，使用&lt;code&gt;git submodule&lt;/code&gt;引入私有仓库的内容和私密配置文件以保密自己的文章源码。此时需要在workflows文件里配置访问私有仓库的密码信息。这些密码信息应使用变量调用。&lt;/p&gt;
+&lt;p&gt;使用git submodule 调用文章仓库，可以使文章的撰写同服务器环境脱离，适合后台撰写，手机客户端，自动转载，自动搜集文章等复杂功能。&lt;/p&gt;
+&lt;p&gt;使用.gitignore忽略node_modules或resources文件，避免源码仓库过大。这些被忽略的文件会再自动构建中重新生成。&lt;/p&gt;
+&lt;hr&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 魔改主题</title>
+      <link>/web/note/2021/2021041307.html</link>
+      <pubDate>Tue, 13 Apr 2021 09:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021041307.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;魔改主题&#34;&gt;魔改主题&lt;/h3&gt;
+&lt;p&gt;将&lt;a href=&#34;https://github.com/google/docsy&#34;&gt;docsy主题&lt;/a&gt;魔改成自己的，然后换成自己的名字，放到自己的仓库里。&lt;/p&gt;
+&lt;p&gt;经过一番折腾，成功运行。😄&lt;/p&gt;
+&lt;h3 id=&#34;过程曲折&#34;&gt;过程曲折&lt;/h3&gt;
+&lt;p&gt;由于我在日常修改配置文件的时候，并没有改动原主题的js目录下文件，所以自定义的主题目录里并没有复制js目录。导致第一次运行失败。&lt;/p&gt;
+&lt;p&gt;面对茫茫报错，反复修改（看不懂的注释掉），结果成功摸不着头脑。&lt;/p&gt;
+&lt;p&gt;然后就重新下载 主题 &lt;a href=&#34;https://github.com/google/docsy.git&#34;&gt;https://github.com/google/docsy.git&lt;/a&gt;（我采用的coding代码 &lt;a href=&#34;https://e.coding.net/denalon/asset/docsy.git&#34;&gt;https://e.coding.net/denalon/asset/docsy.git&lt;/a&gt;）。然后逐个目录替换，直到发现之前并没有是缺少整个js目录。&lt;/p&gt;
+&lt;h3 id=&#34;记录对主题的修改&#34;&gt;记录：对主题的修改&lt;/h3&gt;
+&lt;h4 id=&#34;导航栏&#34;&gt;导航栏&lt;/h4&gt;
+&lt;p&gt;修改原样式的&lt;code&gt;.td-navbar-cover{background: transparent;}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;彩色背景使用自定义css类&lt;code&gt;.navbar-custom&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.navbar-custom{
+                background: linear-gradient(90deg, rgba(247, 149, 51, 0.1) 0, rgba(243, 112, 85, 0.1) 15%, rgba(239, 78, 123, 0.1) 30%, rgba(161, 102, 171, 0.1) 44%, rgba(80, 115, 184, 0.1) 58%, rgba(16, 152, 173, 0.1) 72%, rgba(7, 179, 155, 0.1) 86%, rgba(109, 186, 130, 0.1) 100%);
+ }
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;主体&#34;&gt;主体&lt;/h4&gt;
+&lt;p&gt;使用下来代码对主体和页脚颜色进行彩色过渡&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  .footer-bg{
+    background: linear-gradient(90deg, rgba(247, 149, 51, 0.1) 0, rgba(243, 112, 85, 0.1) 15%, rgba(239, 78, 123, 0.1) 30%, rgba(161, 102, 171, 0.1) 44%, rgba(80, 115, 184, 0.1) 58%, rgba(16, 152, 173, 0.1) 72%, rgba(7, 179, 155, 0.1) 86%, rgba(109, 186, 130, 0.1) 100%);
+  }
+
+   body{
+    background: linear-gradient(90deg, rgba(247, 149, 51, 0.1) 0, rgba(243, 112, 85, 0.1) 15%, rgba(239, 78, 123, 0.1) 30%, rgba(161, 102, 171, 0.1) 44%, rgba(80, 115, 184, 0.1) 58%, rgba(16, 152, 173, 0.1) 72%, rgba(7, 179, 155, 0.1) 86%, rgba(109, 186, 130, 0.1) 100%);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;使用以下代码新建一个彩色分割线&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.hr-colorful{
+  background: linear-gradient(90deg, rgb(247, 149, 51) 0, rgb(243, 112, 85) 15%, rgb(239, 78, 123) 30%, rgb(161, 102, 171) 44%, rgb(80, 115, 184) 58%, rgb(16, 152, 173) 72%, rgb(7, 179, 155) 86%, rgb(109, 186, 130) 100%);
+  height: 1px;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;使用以下代码新增一个打赏按钮,该功能需要vuejs&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; &amp;lt;div class=&amp;quot;text-center&amp;quot;&amp;gt;
+  &amp;lt;style&amp;gt;
+    #img-donate-alipay{
+    max-width: 31%;
+    height: auto;
+    margin: 25px 60px 25px;
+    }
+    #img-donate-wechatpay{
+    max-width: 31%;
+    height: auto;
+    margin: 25px 60px 25px;
+    }
+  &amp;lt;/style&amp;gt;
+
+&amp;lt;div id = &amp;quot;databinding&amp;quot;&amp;gt;
+&amp;lt;button class=&amp;quot;btn btn-default btn-colourful btn-lg text-white&amp;quot;  v-on:click = &amp;quot;show = !show&amp;quot;&amp;gt;打赏&amp;lt;/button&amp;gt;
+&amp;lt;transition name = &amp;quot;fade&amp;quot;&amp;gt;
+    &amp;lt;div v-show = &amp;quot;show&amp;quot;&amp;gt;
+      &amp;lt;div&amp;gt;
+        &amp;lt;img id=&amp;quot;img-donate-alipay&amp;quot; src=&amp;quot;/image/alipay.jpg&amp;quot;  alt=&amp;quot;打赏&amp;quot;  /&amp;gt;
+        &amp;lt;img id=&amp;quot;img-donate-wechatpay&amp;quot; src=&amp;quot;/image/wechatpay.jpg&amp;quot;  alt=&amp;quot;打赏&amp;quot; /&amp;gt;
+      &amp;lt;/div&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+&amp;lt;/transition&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;script type = &amp;quot;text/javascript&amp;quot;&amp;gt;
+var vm = new Vue({
+el: &#39;#databinding&#39;,
+    data: {
+        show:false,
+    },
+    methods : {
+    }
+});
+&amp;lt;/script&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;修改了list页面的标题颜色和内容页面的标题颜色&lt;/p&gt;
+&lt;p&gt;使用以下代码给页面添加一个返回按钮&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;
+
+#upBtn {
+  display: none; /* 默认隐藏 */
+}
+
+.shareBtn {
+margin: 2 auto;
+position: fixed; 
+z-index: 99; 
+cursor: pointer; 
+bottom: 70px; 
+right: 16px; 
+width: 52px;
+float: left;
+text-align: center;
+}
+
+&amp;lt;/style&amp;gt;
+
+&amp;lt;div class=&amp;quot;container-fluid&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;shareBtn&amp;quot;&amp;gt;
+            &amp;lt;a  id=&amp;quot;upBtn&amp;quot;  href=&amp;quot;javascript:topFunction()&amp;quot; title=&amp;quot;向上&amp;quot;&amp;gt; &amp;lt;i class=&amp;quot;fa fa-arrow-up fa-2x text-warning&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;新增的单独页面，此类页面没有导航栏且无法通过首页和导航栏的链接进入。只能通过完整url进入。&lt;/p&gt;
+&lt;p&gt;通过使用&lt;a href=&#34;https://github.com/indrimuska/zoomify&#34;&gt;zoomify github&lt;/a&gt; &lt;a href=&#34;http://indrimuska.github.io/zoomify/&#34;&gt;zoomify介绍&lt;/a&gt;实现图片的缩放&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1、引入文件
+&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;css/zoomify.min.css&amp;quot;&amp;gt;
+&amp;lt;script src=&amp;quot;js/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;js/zoomify.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+2、JavaScript
+$(&#39;.zoomify&#39;).zoomify();
+
+3、HTML
+&amp;lt;img class=&amp;quot;zoomify&amp;quot; src=&amp;quot;images/img1.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 适用于萌新的hexo自动部署</title>
+      <link>/web/note/2021/2021041102.html</link>
+      <pubDate>Sun, 11 Apr 2021 09:10:40 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021041102.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;适用于萌新的hexo自动部署&#34;&gt;适用于萌新的hexo自动部署&lt;/h1&gt;
+&lt;h3 id=&#34;简述&#34;&gt;简述&lt;/h3&gt;
+&lt;p&gt;下载本仓库代码，修改CNAME文件，添加自己的文章，将本仓库代码推送github&lt;/p&gt;
+&lt;h3 id=&#34;使用步骤&#34;&gt;使用步骤&lt;/h3&gt;
+&lt;h4 id=&#34;第一步-使用代码&#34;&gt;第一步 使用代码&lt;/h4&gt;
+&lt;p&gt;git 下载&lt;a href=&#34;https://frednab.coding.net/public/dev/hexo-blog/git/files&#34;&gt;coding仓库&lt;/a&gt;代码&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://e.coding.net/frednab/dev/hexo-blog.git&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第二步-修改配置&#34;&gt;第二步 修改配置&lt;/h4&gt;
+&lt;p&gt;修改 &lt;strong&gt;source/CNAME&lt;/strong&gt;文件里的域名&lt;/p&gt;
+&lt;p&gt;安装主题&lt;/p&gt;
+&lt;p&gt;方法一、下载主题目录，然后解压缩到themes目录下&lt;/p&gt;
+&lt;p&gt;方法二、使用npm安装主题&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;npm i hexo-theme-butterfly&lt;/code&gt;方式安装自己需要的主题（请参照自己需要主题的安装说明）&lt;/p&gt;
+&lt;p&gt;方法三、通过git submodule安装主题&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;其他文件不需要配置&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第三步-更新文章&#34;&gt;第三步 更新文章&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;hexo new page 文章.md&lt;/code&gt;新建文档&lt;/p&gt;
+&lt;p&gt;或者在source/_posts目录下撰写自己的文章&lt;/p&gt;
+&lt;h4 id=&#34;第四步-将源码推送到github&#34;&gt;第四步 将源码推送到github&lt;/h4&gt;
+&lt;p&gt;通过一下命令将该仓库里的源码推送到github仓库&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果你是使用git clone方式下载的代码，建议删掉目录下的.git目录再执行如下操作&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git init //初始化仓库。
+git add . //添加文件到暂存区。(注意有点号.)
+git commit -m &amp;quot;更新说明&amp;quot; //将暂存区内容添加到仓库中。标识“更新说明”
+git remote add origin XXXX.git  //添加到远程仓库操作，将xxxx.git设置为远程仓库origin
+git push -u origin master  //推送master分支到origin仓库
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;提示操作成功后，代码将推送到github上的master分支，github自动部署将启动，将hexo文件自动部署到gh-pages分支&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由于该仓库含有github自动构建文件，上传到github将触发自动部署&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;github自动构建文件为 &lt;code&gt;.github/workflows/hexodeploy.yml&lt;/code&gt;文件&lt;/p&gt;
+&lt;h4 id=&#34;第五步-开启pages&#34;&gt;第五步 开启pages&lt;/h4&gt;
+&lt;p&gt;在github仓库 “Settings”选择“GitHub Pages” source项选择Branch:gh-pages
+如图：
+&lt;img src=&#34;https://base.oribos.city/images/2020/10/20201022095332.png&#34; art=&#34;github pages 设置&#34; class=&#34;zoomify&#34; width=&#34;70%&#34;&gt;&lt;/p&gt;
+&lt;p&gt;即可使用由github自动部署的 pages 服务。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;请确保仓库里source/CNAME文件域名已经正确修改&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;进阶操作&#34;&gt;进阶操作&lt;/h3&gt;
+&lt;p&gt;完成以上部署就可以正常使用由hexo生成，github自动部署的pages。你也可以通过以下操作扩展hexo进阶操作&lt;/p&gt;
+&lt;h4 id=&#34;安装更多的hexo插件&#34;&gt;安装更多的hexo插件&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;npm i XXX --save&lt;/code&gt;插件安装适用于hexo的插件，使用&amp;ndash;save可以将插件添加到项目依赖，这样在github自动部署时就能直接使用。&lt;/p&gt;
+&lt;h4 id=&#34;使用github子模块&#34;&gt;使用github子模块&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;git submodule add xxxx.git source/_posts &lt;/code&gt; 可以将你其他git仓库文章。github自动部署时会自动更新子模块里的文章。&lt;/p&gt;
+&lt;h4 id=&#34;使用其他主题&#34;&gt;使用其他主题&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;npm i xxx主题 --save&lt;/code&gt;安装其他主题，然后再执行如下操作：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用npm uninstall 主题名将旧主题卸载&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1 将新主题的配置文件&lt;code&gt;_config.yml&lt;/code&gt;改名为&lt;code&gt;_config.xxx主题.yml&lt;/code&gt;，复制到根目录下&lt;/p&gt;
+&lt;p&gt;2 修改根目录下的&lt;code&gt;_config.yml&lt;/code&gt;文件里的&lt;code&gt;theme: butterfly&lt;/code&gt; 为&lt;code&gt;theme: xxx&lt;/code&gt;主题&lt;/p&gt;
+&lt;p&gt;hexo会组合&lt;code&gt;_config.yml&lt;/code&gt;和&lt;code&gt;_config.xxx主题.yml&lt;/code&gt;里的内容实现相应的效果。&lt;/p&gt;
+&lt;h4 id=&#34;其他操作请参照hexo教程&#34;&gt;其他操作请参照hexo教程&lt;/h4&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 适用于萌新的hexo自动部署</title>
+      <link>/web/chip/2021041102.html</link>
+      <pubDate>Sun, 11 Apr 2021 09:10:40 +0800</pubDate>
+      
+      <guid>/web/chip/2021041102.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;适用于萌新的hexo自动部署&#34;&gt;适用于萌新的hexo自动部署&lt;/h1&gt;
+&lt;h3 id=&#34;简述&#34;&gt;简述&lt;/h3&gt;
+&lt;p&gt;下载本仓库代码，修改CNAME文件，添加自己的文章，将本仓库代码推送github&lt;/p&gt;
+&lt;h3 id=&#34;使用步骤&#34;&gt;使用步骤&lt;/h3&gt;
+&lt;h4 id=&#34;第一步-使用代码&#34;&gt;第一步 使用代码&lt;/h4&gt;
+&lt;p&gt;git 下载&lt;a href=&#34;https://frednab.coding.net/public/dev/hexo-blog/git/files&#34;&gt;coding仓库&lt;/a&gt;代码&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://e.coding.net/frednab/dev/hexo-blog.git&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第二步-修改配置&#34;&gt;第二步 修改配置&lt;/h4&gt;
+&lt;p&gt;修改 &lt;strong&gt;source/CNAME&lt;/strong&gt;文件里的域名&lt;/p&gt;
+&lt;p&gt;安装主题&lt;/p&gt;
+&lt;p&gt;方法一、下载主题目录，然后解压缩到themes目录下&lt;/p&gt;
+&lt;p&gt;方法二、使用npm安装主题&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;npm i hexo-theme-butterfly&lt;/code&gt;方式安装自己需要的主题（请参照自己需要主题的安装说明）&lt;/p&gt;
+&lt;p&gt;方法三、通过git submodule安装主题&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;其他文件不需要配置&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第三步-更新文章&#34;&gt;第三步 更新文章&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;hexo new page 文章.md&lt;/code&gt;新建文档&lt;/p&gt;
+&lt;p&gt;或者在source/_posts目录下撰写自己的文章&lt;/p&gt;
+&lt;h4 id=&#34;第四步-将源码推送到github&#34;&gt;第四步 将源码推送到github&lt;/h4&gt;
+&lt;p&gt;通过一下命令将该仓库里的源码推送到github仓库&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果你是使用git clone方式下载的代码，建议删掉目录下的.git目录再执行如下操作&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git init //初始化仓库。
+git add . //添加文件到暂存区。(注意有点号.)
+git commit -m &amp;quot;更新说明&amp;quot; //将暂存区内容添加到仓库中。标识“更新说明”
+git remote add origin XXXX.git  //添加到远程仓库操作，将xxxx.git设置为远程仓库origin
+git push -u origin master  //推送master分支到origin仓库
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;提示操作成功后，代码将推送到github上的master分支，github自动部署将启动，将hexo文件自动部署到gh-pages分支&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由于该仓库含有github自动构建文件，上传到github将触发自动部署&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;github自动构建文件为 &lt;code&gt;.github/workflows/hexodeploy.yml&lt;/code&gt;文件&lt;/p&gt;
+&lt;h4 id=&#34;第五步-开启pages&#34;&gt;第五步 开启pages&lt;/h4&gt;
+&lt;p&gt;在github仓库 “Settings”选择“GitHub Pages” source项选择Branch:gh-pages
+如图：
+&lt;img src=&#34;https://base.oribos.city/images/2020/10/20201022095332.png&#34; art=&#34;github pages 设置&#34; class=&#34;zoomify&#34; width=&#34;70%&#34;&gt;&lt;/p&gt;
+&lt;p&gt;即可使用由github自动部署的 pages 服务。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;请确保仓库里source/CNAME文件域名已经正确修改&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;进阶操作&#34;&gt;进阶操作&lt;/h3&gt;
+&lt;p&gt;完成以上部署就可以正常使用由hexo生成，github自动部署的pages。你也可以通过以下操作扩展hexo进阶操作&lt;/p&gt;
+&lt;h4 id=&#34;安装更多的hexo插件&#34;&gt;安装更多的hexo插件&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;npm i XXX --save&lt;/code&gt;插件安装适用于hexo的插件，使用&amp;ndash;save可以将插件添加到项目依赖，这样在github自动部署时就能直接使用。&lt;/p&gt;
+&lt;h4 id=&#34;使用github子模块&#34;&gt;使用github子模块&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;git submodule add xxxx.git source/_posts &lt;/code&gt; 可以将你其他git仓库文章。github自动部署时会自动更新子模块里的文章。&lt;/p&gt;
+&lt;h4 id=&#34;使用其他主题&#34;&gt;使用其他主题&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;npm i xxx主题 --save&lt;/code&gt;安装其他主题，然后再执行如下操作：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用npm uninstall 主题名将旧主题卸载&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1 将新主题的配置文件&lt;code&gt;_config.yml&lt;/code&gt;改名为&lt;code&gt;_config.xxx主题.yml&lt;/code&gt;，复制到根目录下&lt;/p&gt;
+&lt;p&gt;2 修改根目录下的&lt;code&gt;_config.yml&lt;/code&gt;文件里的&lt;code&gt;theme: butterfly&lt;/code&gt; 为&lt;code&gt;theme: xxx&lt;/code&gt;主题&lt;/p&gt;
+&lt;p&gt;hexo会组合&lt;code&gt;_config.yml&lt;/code&gt;和&lt;code&gt;_config.xxx主题.yml&lt;/code&gt;里的内容实现相应的效果。&lt;/p&gt;
+&lt;h4 id=&#34;其他操作请参照hexo教程&#34;&gt;其他操作请参照hexo教程&lt;/h4&gt;
+&lt;h2 id=&#34;使用coding代码托管&#34;&gt;使用coding代码托管&lt;/h2&gt;
+&lt;p&gt;如果github访问异常，可以选择使用coding进行代码托管和自动构建
+在coding上的hexo有两种部署方式&lt;/p&gt;
+&lt;p&gt;方式一: 使用coding的静态网站部署&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由于使用的hexo和npm版本过高，coding的静态网站部署并无法正常使用该项目文件。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;方式二：使用项目里的.coding/ci.yml自动构建文件,将自己的账户密码和仓库https地址对应以下变量&lt;/p&gt;
+&lt;p&gt;https://${USER}:${TOKRN}@${HTTP_URL}&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/202104140005.png&#34; alt=&#34;ssh方式&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/202104140006.png&#34; alt=&#34;ssh方式&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/202104140007.png&#34; alt=&#34;ssh方式&#34;&gt;&lt;/p&gt;
+&lt;p&gt;构建完成后，手动在静态网站部署选择该项目的pages分支&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 易于分享的模块代码</title>
+      <link>/web/chip/2021040903.html</link>
+      <pubDate>Fri, 09 Apr 2021 09:55:45 +0800</pubDate>
+      
+      <guid>/web/chip/2021040903.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;开源的代码&#34;&gt;开源的代码&lt;/h3&gt;
+&lt;p&gt;摘抄自&lt;a href=&#34;https://e.coding.net/dishiduo/hcj/hcj.git&#34;&gt;某开源的代码&lt;/a&gt;诸如以下代码：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;代码示例链接：&lt;a href=&#34;https://dishiduo.coding.net/public/hcj/hcj/git&#34;&gt;https://dishiduo.coding.net/public/hcj/hcj/git&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: &#39;Montserrat&#39;, sans-serif, Arial, &#39;Microsoft Yahei&#39;;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container * {
+    margin-bottom: 30px;
+    color: #FFF;
+}
+
+h1 {
+    width: 60%;
+    text-align: center;
+}
+
+.bt {
+    padding: 12px 40px;
+    background-color: #EC3E27;
+}
+
+.content {
+    width: 60%;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;此处的css样式均以html的基本元素定义，诸如&lt;code&gt;html&lt;/code&gt; &lt;code&gt;h1&lt;/code&gt; &lt;code&gt;content&lt;/code&gt;尽管可以在模板文件里展示正确的效果。但代码用于其他项目使用需要修改元素命名。&lt;/p&gt;
+&lt;p&gt;推荐的开源的代码里，应使用诸如&lt;a href=&#34;https://getbootstrap.com/&#34;&gt;bootstrap&lt;/a&gt; &lt;a href=&#34;https://fontawesome.com/&#34;&gt;font awesome&lt;/a&gt;的代码一样。&lt;code&gt;col-sm-4&lt;/code&gt;  &lt;code&gt;fa fa-address-book-o&lt;/code&gt; 易于在各种项目中使用的&lt;strong&gt;独特&lt;/strong&gt;的命名。&lt;/p&gt;
+&lt;p&gt;并且，避免对&lt;code&gt;html&lt;/code&gt; &lt;code&gt;body&lt;/code&gt; 等作用面过大的元素进行定义，一旦对这些元素进行独特的定义，可能影响页面其他地方的效果。&lt;/p&gt;
+&lt;h3 id=&#34;操作习惯&#34;&gt;操作习惯&lt;/h3&gt;
+&lt;p&gt;命名要易于分享和转移，进行独特性质的命名可以确保效果的显示。&lt;/p&gt;
+&lt;p&gt;使用局限性的定义，避免超出控制范围的变化。&lt;/p&gt;
+&lt;p&gt;使用语义化标签和语义化命名规则。&lt;/p&gt;
+&lt;p&gt;过于繁琐的命名尽管不方便阅读，但对于程序运行并无影响。且能易于检索，修改。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: git隐藏文件</title>
+      <link>/web/chip/2021040702.html</link>
+      <pubDate>Wed, 07 Apr 2021 10:20:45 +0800</pubDate>
+      
+      <guid>/web/chip/2021040702.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;使用git切换目录内容&#34;&gt;使用git切换目录内容&lt;/h3&gt;
+&lt;p&gt;1、使用&lt;code&gt;git init&lt;/code&gt;新建一个git仓库&lt;/p&gt;
+&lt;p&gt;2、向仓库目录下方式文件a.md&lt;/p&gt;
+&lt;p&gt;3、使用&lt;code&gt;git add .``git commit -m&amp;quot;说明&amp;quot;&lt;/code&gt;命令将文件加入暂存区&lt;/p&gt;
+&lt;p&gt;4、使用&lt;code&gt;git branch test&lt;/code&gt;命令 创建一个git仓库 test分支&lt;/p&gt;
+&lt;p&gt;5、向仓库目录下放入文件 hide.md&lt;/p&gt;
+&lt;p&gt;6、使用&lt;code&gt;git add .``git commit -m&amp;quot;说明&amp;quot;&lt;/code&gt;命令将文件加入暂存区&lt;/p&gt;
+&lt;p&gt;7、使用&lt;code&gt;git checkout master&lt;/code&gt;或者&lt;code&gt;git checkout main&lt;/code&gt;切换到git仓库主分支&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: github加速</title>
+      <link>/web/chip/2021040701.html</link>
+      <pubDate>Wed, 07 Apr 2021 09:55:45 +0800</pubDate>
+      
+      <guid>/web/chip/2021040701.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;加速地址&#34;&gt;加速地址&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210407095602.jpg&#34; alt=&#34;加速地址&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;加速功能&#34;&gt;加速功能&lt;/h3&gt;
+&lt;p&gt;cdn 代码下载加速，&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 炫彩按键</title>
+      <link>/web/chip/2021040501.html</link>
+      <pubDate>Mon, 05 Apr 2021 09:55:45 +0800</pubDate>
+      
+      <guid>/web/chip/2021040501.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;效果&#34;&gt;效果&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210405163429.png&#34; alt=&#34;炫彩按键&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;代码&#34;&gt;代码&lt;/h3&gt;
+&lt;p&gt;html部分&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;a class=&amp;quot;btn btn-colourful&amp;gt; &amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;css部分&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/* 炫彩按钮 */
+
+.btn-colourful {
+  position: relative;
+  padding: 12px 30px;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none;
+  /* 使用linear-gradient生成一个线性渐变的“背景图” */
+  background-image: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  /* 放大背景图 */
+  background-size: 400%;
+  /* 这里是为了让a标签的背景显示在a::before的下面 */
+  z-index: 1;
+}
+
+.btn-colourful:hover {
+  /* 创建动画
+      动画名称show
+      执行时间8秒
+      线性
+      循环执行
+  */
+  animation: show 8s linear infinite;
+}
+
+/* 动画主体
+  从初始到结束，移动背景图的位置
+*/
+
+@keyframes show {
+  0% {
+      background-position: 0%;
+  }
+  100% {
+      background-position: 400%;
+  }
+}
+
+/* 创建背景炫光效果 */
+.btn-colourful::before{
+  position: absolute;
+  content: &amp;quot;&amp;quot;;
+  top:-2px;
+  left:-2px;
+  right:-2px;
+  bottom:-2px;
+  /* 使用linear-gradient生成一个线性渐变的“背景图” */
+  background-image: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  /* 放大背景图 */
+  background-size: 400%;
+  border-radius: 40px;
+  z-index: -1;
+  filter: blur(20px);
+  /* 默认不显示 */
+  opacity: 0;
+}
+.btn-colourful:hover::before{
+  opacity: 1;
+  /* 背景炫光增加动画 */
+  /* 与按钮的动画保持一致 */
+  /* 创建动画
+      动画名称show
+      执行时间8秒
+      线性
+      循环执行
+  */
+  animation: show 8s linear infinite;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: GitHub Actions 入门教程</title>
+      <link>/web/chip/2021040401.html</link>
+      <pubDate>Sun, 04 Apr 2021 09:55:45 +0800</pubDate>
+      
+      <guid>/web/chip/2021040401.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;github-actions-入门教程&#34;&gt;GitHub Actions 入门教程&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;引用自&lt;a href=&#34;http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html&#34;&gt;阮一峰的网络日志&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;GitHub Actions 是 GitHub 的持续集成服务，于2018年10月推出。&lt;/p&gt;
+&lt;p&gt;这些天，我一直在试用，觉得它非常强大，有创意，比 Travis CI 玩法更多。&lt;/p&gt;
+&lt;p&gt;本文是一个简单教程，演示如何使用 GitHub Actions 自动发布一个 React 应用到 GitHub Pages。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/bg2019091201.jpg&#34; alt=&#34;actions&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;一github-actions-是什么&#34;&gt;一、GitHub Actions 是什么？&lt;/h4&gt;
+&lt;p&gt;大家知道，持续集成由很多操作组成，比如抓取代码、运行测试、登录远程服务器，发布到第三方服务等等。GitHub 把这些操作就称为 actions。&lt;/p&gt;
+&lt;p&gt;很多操作在不同项目里面是类似的，完全可以共享。GitHub 注意到了这一点，想出了一个很妙的点子，允许开发者把每个操作写成独立的脚本文件，存放到代码仓库，使得其他开发者可以引用。&lt;/p&gt;
+&lt;p&gt;如果你需要某个 action，不必自己写复杂的脚本，直接引用他人写好的 action 即可，整个持续集成过程，就变成了一个 actions 的组合。这就是 GitHub Actions 最特别的地方。&lt;/p&gt;
+&lt;p&gt;GitHub 做了一个&lt;a href=&#34;https://github.com/marketplace?type=actions&#34;&gt;官方市场&lt;/a&gt;，可以搜索到他人提交的 actions。另外，还有一个 &lt;a href=&#34;https://github.com/sdras/awesome-actions&#34;&gt;awesome actions&lt;/a&gt; 的仓库，也可以找到不少 action。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/bg2019091105.jpg&#34; alt=&#34;actions官方市场&#34;&gt;&lt;/p&gt;
+&lt;p&gt;上面说了，每个 action 就是一个独立脚本，因此可以做成代码仓库，使用userName/repoName的语法引用 action。比如，actions/setup-node就表示github.com/actions/setup-node这个仓库，它代表一个 action，作用是安装 Node.js。事实上，GitHub 官方的 actions 都放在 github.com/actions 里面。&lt;/p&gt;
+&lt;p&gt;既然 actions 是代码仓库，当然就有版本的概念，用户可以引用某个具体版本的 action。下面都是合法的 action 引用，用的就是 Git 的指针概念，详见官方文档。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;actions/setup-node@74bc508 # 指向一个 commit
+actions/setup-node@v1.0    # 指向一个标签
+actions/setup-node@master  # 指向一个分支
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;二基本概念&#34;&gt;二、基本概念&lt;/h4&gt;
+&lt;p&gt;GitHub Actions 有一些自己的术语。&lt;/p&gt;
+&lt;p&gt;（1）workflow （工作流程）：持续集成一次运行的过程，就是一个 workflow。&lt;/p&gt;
+&lt;p&gt;（2）job （任务）：一个 workflow 由一个或多个 jobs 构成，含义是一次持续集成的运行，可以完成多个任务。&lt;/p&gt;
+&lt;p&gt;（3）step（步骤）：每个 job 由多个 step 构成，一步步完成。&lt;/p&gt;
+&lt;p&gt;（4）action （动作）：每个 step 可以依次执行一个或多个命令（action）。&lt;/p&gt;
+&lt;h4 id=&#34;三workflow-文件&#34;&gt;三、workflow 文件&lt;/h4&gt;
+&lt;p&gt;GitHub Actions 的配置文件叫做 workflow 文件，存放在代码仓库的.github/workflows目录。&lt;/p&gt;
+&lt;p&gt;workflow 文件采用 YAML 格式，文件名可以任意取，但是后缀名统一为.yml，比如foo.yml。一个库可以有多个 workflow 文件。GitHub 只要发现.github/workflows目录里面有.yml文件，就会自动运行该文件。&lt;/p&gt;
+&lt;p&gt;workflow 文件的配置字段非常多，详见官方文档。下面是一些基本字段。&lt;/p&gt;
+&lt;p&gt;（1）name&lt;/p&gt;
+&lt;p&gt;name字段是 workflow 的名称。如果省略该字段，默认为当前 workflow 的文件名。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;name: GitHub Actions Demo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（2）on&lt;/p&gt;
+&lt;p&gt;on字段指定触发 workflow 的条件，通常是某些事件。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;on: push
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面代码指定，push事件触发 workflow。&lt;/p&gt;
+&lt;p&gt;on字段也可以是事件的数组。&lt;/p&gt;
+&lt;p&gt;on: [push, pull_request]
+上面代码指定，push事件或pull_request事件都可以触发 workflow。&lt;/p&gt;
+&lt;p&gt;完整的事件列表，请查看官方文档。除了代码库事件，GitHub Actions 也支持外部事件触发，或者定时运行。&lt;/p&gt;
+&lt;p&gt;（3）on.&amp;lt;push|pull_request&amp;gt;.&amp;lt;tags|branches&amp;gt;&lt;/p&gt;
+&lt;p&gt;指定触发事件时，可以限定分支或标签。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;on:
+  push:
+    branches:    
+      - master
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面代码指定，只有master分支发生push事件时，才会触发 workflow。&lt;/p&gt;
+&lt;p&gt;（4）jobs.&amp;lt;job_id&amp;gt;.name&lt;/p&gt;
+&lt;p&gt;workflow 文件的主体是jobs字段，表示要执行的一项或多项任务。&lt;/p&gt;
+&lt;p&gt;jobs字段里面，需要写出每一项任务的job_id，具体名称自定义。job_id里面的name字段是任务的说明。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;jobs:
+  my_first_job:
+    name: My first job
+  my_second_job:
+    name: My second job
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面代码的jobs字段包含两项任务，job_id分别是my_first_job和my_second_job。&lt;/p&gt;
+&lt;p&gt;（5）jobs.&amp;lt;job_id&amp;gt;.needs&lt;/p&gt;
+&lt;p&gt;needs字段指定当前任务的依赖关系，即运行顺序。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;jobs:
+  job1:
+  job2:
+    needs: job1
+  job3:
+    needs: [job1, job2]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面代码中，job1必须先于job2完成，而job3等待job1和job2的完成才能运行。因此，这个 workflow 的运行顺序依次为：job1、job2、job3。&lt;/p&gt;
+&lt;p&gt;（6）jobs.&amp;lt;job_id&amp;gt;.runs-on&lt;/p&gt;
+&lt;p&gt;runs-on字段指定运行所需要的虚拟机环境。它是必填字段。目前可用的虚拟机如下。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ubuntu-latest，ubuntu-18.04或ubuntu-16.04
+windows-latest，windows-2019或windows-2016
+macOS-latest或macOS-10.14
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;下面代码指定虚拟机环境为ubuntu-18.04。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;runs-on: ubuntu-18.04
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（7）jobs.&amp;lt;job_id&amp;gt;.steps&lt;/p&gt;
+&lt;p&gt;steps字段指定每个 Job 的运行步骤，可以包含一个或多个步骤。每个步骤都可以指定以下三个字段。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;jobs.&amp;lt;job_id&amp;gt;.steps.name：步骤名称。
+jobs.&amp;lt;job_id&amp;gt;.steps.run：该步骤运行的命令或者 action。
+jobs.&amp;lt;job_id&amp;gt;.steps.env：该步骤所需的环境变量。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;下面是一个完整的 workflow 文件的范例。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;name: Greeting from Mona
+on: push
+
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print a greeting
+      env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: Mona
+        MIDDLE_NAME: The
+        LAST_NAME: Octocat
+      run: |
+        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面代码中，steps字段只包括一个步骤。该步骤先注入四个环境变量，然后执行一条 Bash 命令。&lt;/p&gt;
+&lt;h4 id=&#34;四实例react-项目发布到-github-pages&#34;&gt;四、实例：React 项目发布到 GitHub Pages&lt;/h4&gt;
+&lt;p&gt;下面是一个实例，通过 GitHub Actions 构建一个 React 项目，并发布到 GitHub Pages。最终代码都在这个仓库里面，发布后的参考网址为ruanyf.github.io/github-actions-demo。&lt;/p&gt;
+&lt;p&gt;第一步，在github仓库顶部的菜单会找到Actions选项。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/bg2019091106.jpg&#34; alt=&#34;actions选项&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第二步，这个示例需要将构建成果发到 GitHub 仓库，因此需要 GitHub 密钥。按照官方文档，生成一个密钥。然后，将这个密钥储存到当前仓库的Settings/Secrets里面。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.wangbase.com/blogimg/asset/201909/bg2019091107.jpg&#34; alt=&#34;GitHub 密钥&#34;&gt;&lt;/p&gt;
+&lt;p&gt;上图是储存秘密的环境变量的地方。环境变量的名字可以随便起，这里用的是ACCESS_TOKEN。如果你不用这个名字，后面脚本里的变量名也要跟着改。&lt;/p&gt;
+&lt;p&gt;第三步，本地计算机使用create-react-app，生成一个标准的 React 应用。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ npx create-react-app github-actions-demo
+$ cd github-actions-demo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后，打开package.json文件，加一个homepage字段，表示该应用发布后的根目录（参见官方文档）。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;homepage&amp;quot;: &amp;quot;https://[username].github.io/github-actions-demo&amp;quot;,
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面代码中，将[username]替换成你的 GitHub 用户名，参见范例。&lt;/p&gt;
+&lt;p&gt;第四步，在这个仓库的.github/workflows目录，生成一个 workflow 文件，名字可以随便取，这个示例是ci.yml。&lt;/p&gt;
+&lt;p&gt;我们选用一个别人已经写好的 action：JamesIves/github-pages-deploy-action，它提供了 workflow 的范例文件，直接拷贝过来就行了（查看源码）。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;name: GitHub Actions Build and Deploy Demo
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: build
+        BUILD_SCRIPT: npm install &amp;amp;&amp;amp; npm run build
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面这个 workflow 文件的要点如下。&lt;/p&gt;
+&lt;p&gt;整个流程在master分支发生push事件时触发。&lt;/p&gt;
+&lt;p&gt;只有一个job，运行在虚拟机环境ubuntu-latest。&lt;/p&gt;
+&lt;p&gt;第一步是获取源码，使用的 action 是actions/checkout。&lt;/p&gt;
+&lt;p&gt;第二步是构建和部署，使用的 action 是JamesIves/github-pages-deploy-action。&lt;/p&gt;
+&lt;p&gt;第二步需要四个环境变量，分别为 GitHub 密钥、发布分支、构建成果所在目录、构建脚本。其中，只有 GitHub 密钥是秘密变量，需要写在双括号里面，其他三个都可以直接写在文件里。&lt;/p&gt;
+&lt;p&gt;第五步，保存上面的文件后，将整个仓库推送到 GitHub。&lt;/p&gt;
+&lt;p&gt;GitHub 发现了 workflow 文件以后，就会自动运行。你可以在网站上实时查看运行日志，日志默认保存30天。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.wangbase.com/blogimg/asset/201909/bg2019091108.jpg&#34; alt=&#34;workflow运行日志&#34;&gt;&lt;/p&gt;
+&lt;p&gt;等到 workflow 运行结束，访问 GitHub Page，会看到构建成果已经发上网了。&lt;/p&gt;
+&lt;p&gt;以后，每次修改后推送源码，GitHub Actions 都会自动运行，将构建产物发布到网页。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.wangbase.com/blogimg/asset/201909/bg2019091109.jpg&#34; alt=&#34;构建发布&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;五参考链接&#34;&gt;五、参考链接&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://help.github.com/en/categories/automating-your-workflow-with-github-actions&#34;&gt;GitHub Pages 官方文档&lt;/a&gt;
+&lt;a href=&#34;https://lukeboyle.com/blog-posts/2019/08/github-actions-for-web-apps/&#34;&gt;Github Actions for web apps, Luke Boyle&lt;/a&gt;
+&lt;a href=&#34;https://medium.com/@adam.zolyak/my-first-week-with-github-actions-5d92de4c4851&#34;&gt;My First Week With GitHub Actions, Adam Zolyak&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 减少彩色的使用</title>
+      <link>/web/chip/2021040703.html</link>
+      <pubDate>Sun, 04 Apr 2021 09:55:45 +0800</pubDate>
+      
+      <guid>/web/chip/2021040703.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;简化页面&#34;&gt;简化页面&lt;/h3&gt;
+&lt;p&gt;减少不必要的装饰，炫彩背景，彩色字体&lt;/p&gt;
+&lt;h3 id=&#34;易于阅读&#34;&gt;易于阅读&lt;/h3&gt;
+&lt;p&gt;减少不必要的阅读干扰，突出内容&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: Markdown</title>
+      <link>/web/share/markdown.html</link>
+      <pubDate>Thu, 01 Apr 2021 09:01:40 +0800</pubDate>
+      
+      <guid>/web/share/markdown.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markdown是一种轻量级标记语言，以纯文本格式编写文档，然后转换成有效的XHTML/HTML内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;语法简洁明了、易读易写&lt;/li&gt;
+&lt;li&gt;轻量、纯文本、跨平台、兼容性极强&lt;/li&gt;
+&lt;li&gt;可以转换为HTML/XHTML、EPUB、PDF、Word、纂写Gitbook&lt;/li&gt;
+&lt;li&gt;广泛使用：
+&lt;ul&gt;
+&lt;li&gt;Github&lt;/li&gt;
+&lt;li&gt;简书&lt;/li&gt;
+&lt;li&gt;Typecho&lt;/li&gt;
+&lt;li&gt;WordPress（需编辑器插件）&lt;/li&gt;
+&lt;li&gt;Reddit&lt;/li&gt;
+&lt;li&gt;Diaspora&lt;/li&gt;
+&lt;li&gt;Apollo&lt;/li&gt;
+&lt;li&gt;Moodle&lt;/li&gt;
+&lt;li&gt;more &amp;hellip;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;创造者：&lt;a href=&#34;http://www.aaronsw.com/&#34;&gt;&lt;strong&gt;Aaron Swartz&lt;/strong&gt;&lt;/a&gt;和&lt;a href=&#34;https://daringfireball.net/&#34;&gt;&lt;strong&gt;John Gruber&lt;/strong&gt;&lt;/a&gt;共同设计&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Aaron Swartz&lt;/strong&gt;（1986年11月8日－2013年1月11日）&lt;/p&gt;
+&lt;p&gt;Markdown主要贡献者，Aaron Hillel Swartz（全名）的维基百科介绍为：美国程序员、企业家、作者、政治活动者、互联网黑客主义者，点击查看更多关于这位天才的&lt;a href=&#34;%5Bhttps://zh.wikipedia.org/zh-hans/%E4%BA%9A%E4%BC%A6%C2%B7%E6%96%AF%E6%B2%83%E8%8C%A8#%5D(https://zh.wikipedia.org/zh-hans/%E4%BA%9A%E4%BC%A6%C2%B7%E6%96%AF%E6%B2%83%E8%8C%A8#)&#34;&gt;完整生平&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;开始使用&#34;&gt;开始使用&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;编辑器：Typora、Sublime Text、VS code&amp;hellip;&lt;/li&gt;
+&lt;li&gt;首推跨平台、所见即所得的&lt;a href=&#34;https://typora.io/&#34;&gt;Typora&lt;/a&gt;编辑器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;标题&#34;&gt;标题&lt;/h4&gt;
+&lt;p&gt;一般的，Markdown使用&lt;code&gt;#&lt;/code&gt;可以表示1-6级标题&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 这是一级标题
+## 这是二级标题
+### 这是三级标题
+#### 这是四级标题
+##### 这是五级标题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对于一级和二级标题，还可以使用&lt;code&gt;-&lt;/code&gt;和·&lt;code&gt;=&lt;/code&gt;来标记&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-MarkDown&#34; data-lang=&#34;MarkDown&#34;&gt;这是一级标题
+=====
+这是二级标题
+----------
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;列表&#34;&gt;列表&lt;/h4&gt;
+&lt;h5 id=&#34;无序列表&#34;&gt;无序列表&lt;/h5&gt;
+&lt;p&gt;使用&lt;code&gt;-&lt;/code&gt;、&lt;code&gt;*&lt;/code&gt;、&lt;code&gt;+&lt;/code&gt;来标记无序列表，下面以&lt;code&gt;-&lt;/code&gt;为例&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-MarkDown&#34; data-lang=&#34;MarkDown&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;-&lt;/span&gt; 这是第一项
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;-&lt;/span&gt; 这是第二项
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;-&lt;/span&gt; 这是第三项
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;显示效果：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;这是第一项&lt;/li&gt;
+&lt;li&gt;这是第二项&lt;/li&gt;
+&lt;li&gt;这是第三项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;有序列表&#34;&gt;有序列表&lt;/h5&gt;
+&lt;p&gt;在阿拉伯数字后面加上&lt;code&gt;.&lt;/code&gt;来标记&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-MarkDown&#34; data-lang=&#34;MarkDown&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;1.&lt;/span&gt; 这是第一项
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;2.&lt;/span&gt; 这是第二项
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;3.&lt;/span&gt; 这是第三项
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;显示效果：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;这是第一项&lt;/li&gt;
+&lt;li&gt;这是第二项&lt;/li&gt;
+&lt;li&gt;这是第三项&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;列表嵌套&#34;&gt;列表嵌套&lt;/h5&gt;
+&lt;p&gt;在子级列表前加4个&lt;kbd&gt;空格&lt;/kbd&gt;来标记&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-MarkDown&#34; data-lang=&#34;MarkDown&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;1.&lt;/span&gt; 第一项：
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;-&lt;/span&gt; 第一项嵌套的第一个元素
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;-&lt;/span&gt; 第一项嵌套的第二个元素
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;-&lt;/span&gt; 第一项嵌套的第三个元素
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;2.&lt;/span&gt; 第二项：
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;-&lt;/span&gt; 第二项嵌套的第一个元素
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;-&lt;/span&gt; 第二项嵌套的第二个元素
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;-&lt;/span&gt; 第二项嵌套的第三个元素
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;3.&lt;/span&gt; 第三项：
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;-&lt;/span&gt; 第三项嵌套的第一个元素
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;-&lt;/span&gt; 第三项嵌套的第二个元素
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;-&lt;/span&gt; 第三项嵌套的第三个元素
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;显示效果：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;第一项：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;第一项嵌套的第一个元素&lt;/li&gt;
+&lt;li&gt;第一项嵌套的第二个元素&lt;/li&gt;
+&lt;li&gt;第一项嵌套的第三个元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;第二项：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;第二项嵌套的第一个元素&lt;/li&gt;
+&lt;li&gt;第二项嵌套的第二个元素&lt;/li&gt;
+&lt;li&gt;第二项嵌套的第三个元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;第三项：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;第三项嵌套的第一个元素&lt;/li&gt;
+&lt;li&gt;第三项嵌套的第二个元素&lt;/li&gt;
+&lt;li&gt;第三项嵌套的第三个元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;段落&#34;&gt;段落&lt;/h4&gt;
+&lt;p&gt;一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行，对于大部分现代的Markdown编辑器（比如Typora），你完全不用关心，写作怎么换行就这么换行就好&lt;/p&gt;
+&lt;h4 id=&#34;反转义&#34;&gt;反转义&lt;/h4&gt;
+&lt;p&gt;使用反斜杠&lt;code&gt;\&lt;/code&gt;使标记符号成为普通符号&lt;/p&gt;
+&lt;p&gt;可以在以下符号前加上&lt;code&gt;\&lt;/code&gt;来标识&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;\   反斜线&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;` 反引号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;* 星号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;_  底线&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;{}  花括号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[]  方括号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;()  括弧&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;#   井字号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;+ 加号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;- 减号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;.  英文句点&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;!   惊叹号&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;字体格式&#34;&gt;字体格式&lt;/h4&gt;
+&lt;h5 id=&#34;粗体&#34;&gt;粗体&lt;/h5&gt;
+&lt;p&gt;使用&lt;code&gt;**&lt;/code&gt;或&lt;code&gt;__&lt;/code&gt;来标记被加粗的文本&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;**这是被加粗的文本**
+__这也是被加粗的文本__&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;显示效果：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;这是被加粗的文本&lt;/strong&gt;
+&lt;strong&gt;这也是被加粗的文本&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;斜体&#34;&gt;斜体&lt;/h5&gt;
+&lt;p&gt;使用&lt;code&gt;*&lt;/code&gt;或&lt;code&gt;_&lt;/code&gt;来标记倾斜的文本&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;*这是倾斜的文本*
+_这也是倾斜的文本_&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;显示效果：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;这是倾斜的文本&lt;/em&gt;
+&lt;em&gt;这也是倾斜的文本&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;粗斜体&#34;&gt;粗斜体&lt;/h5&gt;
+&lt;p&gt;使用&lt;code&gt;***&lt;/code&gt;或&lt;code&gt;___&lt;/code&gt;来标记粗斜体文本&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;***这是一段粗斜体***
+___这也是一段粗斜体___&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;显示效果：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;这是一段粗斜体&lt;/strong&gt;&lt;/em&gt;
+&lt;em&gt;&lt;strong&gt;这也是一段粗斜体&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;删除线&#34;&gt;删除线&lt;/h4&gt;
+&lt;p&gt;使用两个&lt;code&gt;~&lt;/code&gt;来标记删除线文本&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;~~这是加删除线的文本~~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;显示效果：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;del&gt;这是加删除线的文本&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;分割线&#34;&gt;分割线&lt;/h4&gt;
+&lt;p&gt;在单独的一行使用三个或三个以上的&lt;code&gt;*&lt;/code&gt;或&lt;code&gt;-&lt;/code&gt;来标记分割线&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;***&lt;/p&gt;
+&lt;p&gt;我被夹在分割线里&lt;/p&gt;
+&lt;p&gt;***&lt;/p&gt;
+&lt;p&gt;-&amp;ndash;&lt;/p&gt;
+&lt;p&gt;我被夹在另一条分割线里&lt;/p&gt;
+&lt;p&gt;-&amp;ndash;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;显示效果：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;我被夹在分割线里&lt;/p&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;我被夹在另一条分割线里&lt;/p&gt;
+&lt;hr&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;下划线&#34;&gt;下划线&lt;/h4&gt;
+&lt;p&gt;使用两个&lt;code&gt;&amp;lt;u&amp;gt;&lt;/code&gt;标记添加下划线的文本&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;lt;u&amp;gt;这是被下划线标记的文本&amp;lt;/u&amp;gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;显示效果：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;u&gt;这是被下划线标记的文本&lt;/u&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;脚注&#34;&gt;脚注&lt;/h4&gt;
+&lt;p&gt;使用&lt;code&gt;[^这是注明的信息]&lt;/code&gt;来标记脚注&lt;/p&gt;
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是一段文字&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;区块引用&#34;&gt;区块引用&lt;/h4&gt;
+&lt;p&gt;Markdown 标记区块引用是使用类似 email 中用 &lt;code&gt;&amp;gt;&lt;/code&gt; 的引用方式&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-MarkDown&#34; data-lang=&#34;MarkDown&#34;&gt;&amp;gt;这是一段被引用的内容
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;显示效果：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是一段被引用的内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;嵌套引用&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; 最外层
+&amp;gt; &amp;gt; 第一层嵌套
+&amp;gt; &amp;gt; &amp;gt; 第二层嵌套&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;显示效果：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最外层&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第一层嵌套&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第二层嵌套&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;代码区块&#34;&gt;代码区块&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;短代码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;对于短代码，使用&lt;kbd&gt;`&lt;/kbd&gt;包裹住&lt;/p&gt;
+&lt;p&gt;比如：&lt;code&gt;printf&lt;/code&gt;、&lt;code&gt;scanf&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;代码块&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一般的在代码块前使用4个空格或者一个TAB键：&lt;/p&gt;
+&lt;p&gt;&lt;kbd&gt;Space&lt;/kbd&gt;&lt;kbd&gt;Space&lt;/kbd&gt;&lt;kbd&gt;Space&lt;/kbd&gt;&lt;kbd&gt;Space&lt;/kbd&gt;或者&lt;kbd&gt;TAB&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;但是比较常用的是使用```包住代码块，在开头的```后还可以标记代码的语言类型，比如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;```JavaScript
+$(document).ready(function () {
+alert(&amp;lsquo;RUNOOB&amp;rsquo;);
+});
+```&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;显示效果为&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JavaScript&#34; data-lang=&#34;JavaScript&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;document&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ready&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;alert&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;RUNOOB&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;链接&#34;&gt;链接&lt;/h4&gt;
+&lt;p&gt;一般的，Markdown链接有两种：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[这是链接名称](这是链接地址)&lt;/p&gt;
+&lt;p&gt;&amp;lt;这是自动链接&amp;gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是我的博客&lt;a href=&#34;https://spoience.com&#34;&gt;Spoience&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这是Spoience的博客&lt;a href=&#34;https://spoience.com&#34;&gt;https://spoience.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这是邮箱：&lt;a href=&#34;mailto:example@mail.com&#34;&gt;example@mail.com&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;稍微复杂一点的高级链接有点类似于Markdown的脚注,实际注明的链接类似于脚注在文末引用，比如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是[谷歌]&lt;a href=&#34;https://www.google.com/&#34;&gt;2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这是[百度]&lt;a href=&#34;https://www.baidu.com/&#34;&gt;3&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;显示效果为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是&lt;a href=&#34;https://www.google.com/&#34;&gt;谷歌&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这是&lt;a href=&#34;https://www.baidu.com/&#34;&gt;百度&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;图片&#34;&gt;图片&lt;/h4&gt;
+&lt;p&gt;一般的，引用图片，其中&lt;code&gt;图片标题&lt;/code&gt;跟&lt;code&gt;alt属性文本&lt;/code&gt;可以不写&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;![alt 属性文本](图片地址 &amp;ldquo;图片标题&amp;rdquo;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;![](https://spoience.com/images/avatar.webp)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;显示为一张图片&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://spoience.com/images/avatar.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;表格&#34;&gt;表格&lt;/h4&gt;
+&lt;p&gt;对于最基础的表格，仅仅用到&lt;code&gt;|&lt;/code&gt;和&lt;code&gt;-&lt;/code&gt;来标记表格的基本结构&lt;/p&gt;
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;|表头1|表头2|
+|&amp;mdash;&amp;mdash;&amp;ndash;|&amp;mdash;&amp;mdash;&amp;ndash;|
+|单元格1|单元格2|
+|单元格3|单元格4|&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;显示为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;表头1&lt;/th&gt;
+&lt;th&gt;表头2&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;单元格1&lt;/td&gt;
+&lt;td&gt;单元格2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;单元格3&lt;/td&gt;
+&lt;td&gt;单元格4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;在基础的表格功能上，我们还可以使用&lt;code&gt;:&lt;/code&gt;和&lt;code&gt;-&lt;/code&gt;来设置表格的对齐方式&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-:&lt;/strong&gt; 设置内容和标题栏居右对齐&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;:-&lt;/strong&gt; 设置内容和标题栏居左对齐&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;:-:&lt;/strong&gt; 设置内容和标题栏居中对齐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面以表格居中为例，比如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;|表头1|表头2|
+|:&amp;mdash;&amp;mdash;&amp;ndash;:|:&amp;mdash;&amp;mdash;&amp;ndash;:|
+|单元格1|单元格2|
+|单元格3|单元格4|&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;显示为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;表头1&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;表头2&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单元格1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单元格2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单元格3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单元格4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;更多姿势&#34;&gt;更多姿势&lt;/h4&gt;
+&lt;p&gt;其实，上面就是Markdown一般技巧，也是最常使用的。一般的，Markdown写作最直接转换的就是HTML文本，所以，Markdown显然也可以支援一些HTML属性，比如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;lt;kdb&amp;gt; &amp;lt;b&amp;gt; &amp;lt;i&amp;gt; &amp;lt;em&amp;gt; &amp;lt;sup&amp;gt; &amp;lt;sub&amp;gt; &amp;lt;br&amp;gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;像有些网站的&lt;code&gt;html&lt;/code&gt;嵌入代码，有些在Markdown也是支持的，但不是全部，具体还要看Markdown的编辑器和渲染器是否支持，像网易云音乐的&lt;code&gt;HTML&lt;/code&gt;嵌入代码大部分使用MD解析的程序可以支持。&lt;/p&gt;
+&lt;p&gt;对于数学公式，Markdown支持使用两个&lt;code&gt;$$&lt;/code&gt;包裹&lt;code&gt;TeX&lt;/code&gt;、&lt;code&gt;LateX&lt;/code&gt;或&lt;code&gt;Mathjax&lt;/code&gt;的数学公式，因为个人使用不是很多，这里不做叙述😛&lt;/p&gt;
+&lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://younghz.github.io/Markdown/&#34;&gt;Markdown基本语法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jianshu.com/p/q81RER&#34;&gt;简书-献给写作者的 Markdown 新手指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.runoob.com/Markdown/md-tutorial.html&#34;&gt;菜鸟教程-Markdown教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/Markdown&#34;&gt;维基百科-Markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.appinn.com/Markdown/&#34;&gt;Markdown 语法说明 (简体中文版)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;看文末，这是一段注释 &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: SSH 容器直通</title>
+      <link>/web/note/2021/2021052507.html</link>
+      <pubDate>Thu, 01 Apr 2021 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021052507.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;ssh-容器直通&#34;&gt;SSH 容器直通&lt;/h3&gt;
+&lt;p&gt;由于 SSH 在容器内运行，因此，如果需要 SSH 支持，则需要将 SSH 从主机传递到容器。一种选择是在非标准端口上运行容器 SSH（或将主机端口移至非标准端口）。另一个可能更直接的选择是将 SSH 连接从主机转发到容器。下面将说明此设置。&lt;/p&gt;
+&lt;p&gt;本指南假定您已经在名为 git 的主机上创建了一个用户，该用户与容器值 USER_UID/USER_GID 共享相同的 UID/GID。这些值可以在 docker-compose.yml 中设置为环境变量：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;environment:
+  - USER_UID=1000
+  - USER_GID=1000
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;接下来将主机的 /home/git/.ssh 装入容器。否则，SSH 身份验证将无法在容器内运行。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;volumes:
+  - /home/git/.ssh/:/data/git/.ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;现在，需要在主机上创建 SSH 密钥对。该密钥对将用于向主机验证主机上的 git 用户。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo -u git ssh-keygen -t rsa -b 4096 -C &amp;quot;Gitea Host Key&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在下一步中，需要在主机上创建一个名为 /app/gitea/gitea 的文件（具有可执行权限）。该文件将发出从主机到容器的 SSH 转发。将以下内容添加到 /app/gitea/gitea：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ssh -p 2222 -o StrictHostKeyChecking=no git@127.0.0.1 &amp;quot;SSH_ORIGINAL_COMMAND=\&amp;quot;$SSH_ORIGINAL_COMMAND\&amp;quot; $0 $@&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;为了使转发正常工作，需要将容器（22）的 SSH 端口映射到 docker-compose.yml 中的主机端口 2222。由于此端口不需要暴露给外界，因此可以将其映射到主机的 localhost：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ports:
+  # [...]
+  - &amp;quot;127.0.0.1:2222:22&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;另外，主机上的 /home/git/.ssh/authorized_keys 需要修改。它需要以与 Gitea 容器内的 authorized_keys 相同的方式进行操作。因此，将您在上面创建的密钥（“Gitea 主机密钥”）的公共密钥添加到 ~/git/.ssh/authorized_keys。这可以通过 echo &amp;ldquo;$(cat /home/git/.ssh/id_rsa.pub)&amp;rdquo; &amp;raquo; /home/git/.ssh/authorized_keys 完成。重要提示：来自 git 用户的公钥需要“按原样”添加，而通过 Gitea 网络界面添加的所有其他公钥将以 command=&amp;quot;/app [&amp;hellip;] 作为前缀。&lt;/p&gt;
+&lt;p&gt;该文件应该看起来像：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# SSH pubkey from git user
+ssh-rsa &amp;lt;Gitea Host Key&amp;gt;
+
+# other keys from users
+command=&amp;quot;/app/gitea/gitea --config=/data/gitea/conf/app.ini serv key-1&amp;quot;,no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty &amp;lt;user pubkey&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这是详细的说明，当发出 SSH 请求时会发生什么：&lt;/p&gt;
+&lt;p&gt;使用 git 用户向主机发出 SSH 请求，例如 git clone git@domain:user/repo.git。
+在 /home/git/.ssh/authorized_keys 中，该命令执行 /app/gitea/gitea 脚本。
+/app/gitea/gitea 将 SSH 请求转发到端口 2222，该端口已映射到容器的 SSH 端口（22）。
+由于 /home/git/.ssh/authorized_keys 中存在 git 用户的公钥，因此身份验证主机 → 容器成功，并且 SSH 请求转发到在 docker 容器中运行的 Gitea。
+如果在 Gitea Web 界面中添加了新的 SSH 密钥，它将以与现有密钥相同的方式附加到 .ssh/authorized_keys 中。&lt;/p&gt;
+&lt;h4 id=&#34;注意&#34;&gt;注意&lt;/h4&gt;
+&lt;p&gt;SSH 容器直通仅在以下情况下有效&lt;/p&gt;
+&lt;p&gt;在容器中使用 opensshd&lt;/p&gt;
+&lt;p&gt;如果未将 AuthorizedKeysCommand 与 SSH_CREATE_AUTHORIZED_KEYS_FILE = false 结合使用以禁用授权文件密钥生成LOCAL_ROOT_URL 不变&lt;/p&gt;
+&lt;h3 id=&#34;事例配置文件&#34;&gt;事例：配置文件&lt;/h3&gt;
+&lt;h4 id=&#34;文件-confappini&#34;&gt;文件 conf/app.ini&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;[server]
+APP_DATA_PATH    = /data/gitea
+DOMAIN           = code.oribos.cn
+SSH_DOMAIN       = code.oribos.cn
+HTTP_PORT        = 3000
+ROOT_URL         = http://code.oribos.cn:9003/
+DISABLE_SSH      = false
+SSH_PORT         = 9022
+SSH_LISTEN_PORT  = 22
+LFS_START_SERVER = true
+LFS_CONTENT_PATH = /data/git/lfs
+LFS_JWT_SECRET   = 90bIcfT6-NX3rtMai3VF3EBNaD2jtLq05e7JLCA67nw
+OFFLINE_MODE     = false
+
+[database]
+PATH     = /data/gitea/gitea.db
+DB_TYPE  = postgres
+HOST     = db:5432
+NAME     = gitea
+USER     = gitea
+PASSWD   = gitea
+LOG_SQL  = false
+SCHEMA   = 
+SSL_MODE = disable
+CHARSET  = utf8
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;管理里加入vsc公钥,访问主机加入vsc私钥&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: https协议</title>
+      <link>/web/note/2020120317.html</link>
+      <pubDate>Thu, 03 Dec 2020 10:20:45 +0800</pubDate>
+      
+      <guid>/web/note/2020120317.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;httphttps协议&#34;&gt;http&amp;amp;https协议&lt;/h1&gt;
+&lt;p&gt;参考博客：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/xiaoming100001/article/details/81109617&#34;&gt;HTTP和HTTPS协议，看一篇就够了&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;什么是http&#34;&gt;什么是http&lt;/h2&gt;
+&lt;p&gt;超文本传输协议，是一个基于请求与响应，&lt;strong&gt;无状态的&lt;/strong&gt;，应用层的协议，常基于TCP/IP协议传输数据，互联网上应用最为广泛的一种网络协议,所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种发布和接收HTML页面的方法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;默认端口80， 如果 一台主机上有多个服务器呢?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;http报文格式&#34;&gt;http报文格式&lt;/h2&gt;
+&lt;p&gt;http的请求报文由：请求行、首部、空行、主体四个部分组成。
+其中请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔
+&lt;img src=&#34;https://base.oribos.city/images/2020/12/https/1.png&#34; alt=&#34;报文格式&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;http通信流程&#34;&gt;http通信流程&lt;/h2&gt;
+&lt;p&gt;web客户端tcp连接到Web服务器-&amp;gt;发送Http请求-&amp;gt;服务器接受请求并返回HTTP响应-&amp;gt;释放连接TCP连接-&amp;gt;客户端浏览器解析HTML内容&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD
+A(web客户端tcp连接到Web服务器) --&amp;gt;B(发送Http请求)
+B --&amp;gt;C(服务器接受请求并返回HTTP响应)
+C--&amp;gt;D(释放连接TCP连接)
+D--&amp;gt;E(客户端浏览器解析HTML内容)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/12/https/2.png&#34; alt=&#34;http通信流程&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;什么是https&#34;&gt;什么是https&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;图解HTTP》这本书中曾提过HTTPS是身披SSL外壳的HTTP。HTTPS是一种通过计算机网络进行安全通信的传输协议，&lt;strong&gt;经由HTTP进行通信，利用SSL/TLS建立全信道，加密数据包&lt;/strong&gt;。&lt;strong&gt;HTTPS使用的主要目的是提供对网站服务器的身份认证，同时保护交换数据的隐私与完整性&lt;/strong&gt;。PS:TLS是传输层加密协议，前身是SSL协议，由网景公司1995年发布，有时候两者不区分。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;成本考虑&#34;&gt;成本考虑&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SSL证书需要购买申请，功能越强大的证书费用越高&lt;/li&gt;
+&lt;li&gt;SSL证书通常需要绑定IP，不能在同一IP上绑定多个域名，IPv4资源不可能支撑这个消耗（SSL有扩展可以部分解决这个问题，但是比较麻烦，而且要求浏览器、操作系统支持，Windows XP就不支持这个扩展，考虑到XP的装机量，这个特性几乎没用）。&lt;/li&gt;
+&lt;li&gt;根据ACM CoNEXT数据显示，使用HTTPS协议会使页面的加载时间延长近50%，增加10%到20%的耗电。&lt;/li&gt;
+&lt;li&gt;HTTPS连接缓存不如HTTP高效，流量成本高。&lt;/li&gt;
+&lt;li&gt;HTTPS连接服务器端资源占用高很多，支持访客多的网站需要投入更大的成本。&lt;/li&gt;
+&lt;li&gt;HTTPS协议握手阶段比较费时，对网站的响应速度有影响，影响用户体验。比较好的方式是采用分而治之，类似12306网站的主页使用HTTP协议，有关于用户信息等方面使用HTTPS。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 前后端分离架构</title>
+      <link>/web/note/2020112873.html</link>
+      <pubDate>Sat, 28 Nov 2020 09:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2020112873.html</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;p&gt;引用自&lt;a href=&#34;https://gitee.com/Meloor/blog&#34;&gt;meloor&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参考：
+&lt;a href=&#34;https://www.zhihu.com/answer/547205270&#34;&gt;到底什么是前后端分离 1&lt;/a&gt;
+&lt;a href=&#34;https://www.zhihu.com/answer/557406666&#34;&gt;到底什么是前后端分离 2&lt;/a&gt;
+&lt;a href=&#34;https://www.zhihu.com/answer/542961677&#34;&gt;到底什么是前后端分离 3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;前后端分离是个&lt;strong&gt;架构设计问题&lt;/strong&gt;。所谓架构设计，实际上是如何合理的对现实的人力架构进行系统映射，以便最大限度的提高整个公司的运行效率。&lt;/p&gt;
+&lt;h2 id=&#34;前后端的定义&#34;&gt;前后端的定义&lt;/h2&gt;
+&lt;p&gt;前后端定义，不应该是以语言来定义，而是应该以它的&lt;strong&gt;运行环境&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Html+CSS+JS，都是&lt;strong&gt;在浏览器端执行，统一称之为前端&lt;/strong&gt;。(用户能看到)&lt;/li&gt;
+&lt;li&gt;Java，C，Python，PHP 这些&lt;strong&gt;在服务器端运行，统一称之为后端&lt;/strong&gt;。(用户看不到）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;前后端不分离&#34;&gt;前后端不分离&lt;/h2&gt;
+&lt;h3 id=&#34;架构设计&#34;&gt;架构设计&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/fabs/1.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;交互方式&#34;&gt;交互方式&lt;/h3&gt;
+&lt;p&gt;浏览器发请求，服务器端给出一个完整的网页，浏览器再发请求，服务器端再给出一个完整的网页
+&lt;img src=&#34;https://base.oribos.city/images/2020/11/fabs/3.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;缺点&#34;&gt;缺点&lt;/h3&gt;
+&lt;p&gt;传输的重复数据比较多，网络又会有延迟。所以有没有办法，只传送必要的数据？这是 Ajax 的起源。&lt;/p&gt;
+&lt;h3 id=&#34;ajax&#34;&gt;Ajax&lt;/h3&gt;
+&lt;p&gt;Ajax 就是只传递数据，不传递整个网页。这也是被用来在翻页，注册，发送验证码等场景，但也仅仅止布于此了。&lt;/p&gt;
+&lt;h2 id=&#34;前后端分离&#34;&gt;前后端分离&lt;/h2&gt;
+&lt;h3 id=&#34;架构设计-1&#34;&gt;架构设计&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/fabs/2.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;交互方式通过浏览器测试&#34;&gt;交互方式(通过浏览器测试)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;页面跳转(浏览器地址栏 url 会变)时浏览器先发送请求给前端服务器&lt;/li&gt;
+&lt;li&gt;浏览器得到响应数据前端代码(html+css+js, 响应数据)并渲染。(地址栏输入后端服务器的 url 会直接显示 json 格式数据, 是 html 就会渲染)&lt;/li&gt;
+&lt;li&gt;渲染时会执行 js 代码，这时 js 代码向后端服务器发送请求得到数据并动态更新 html 元素得到最终页面。
+&lt;img src=&#34;https://base.oribos.city/images/2020/11/fabs/4.png&#34; alt=&#34;图片&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;区分前后端的原因&#34;&gt;区分前后端的原因&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;第一个，是可以并行开发。前后端的进度互不影响，在过去，前后端不分离的情况下，前端的工作量相对较少，一个前端可以对四个后端。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二个，是成本问题。在过去，后端的成本还是比前端要高一些。同样的工作，如果能拆给两个人做，一个成本高一点，一个成本低一点，能接受。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第三个，CSS 太难了。JS 还好，和后端语言在对技能的训练上相差不大，可是。。CSS 是什么鬼？记住那么多的属性，和 Hash 算法有关系吗？&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;优点&#34;&gt;优点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;前端人员和后端人员只需约定好接口，大大降低了前后端耦合性&lt;/li&gt;
+&lt;li&gt;前端人员彻底不用再关心业务处理是怎么回事，他只需要把界面做好就可以了&lt;/li&gt;
+&lt;li&gt;后端人员也不用再关系前端界面是什么样的，他只需要做好业务逻辑处理即可。&lt;/li&gt;
+&lt;li&gt;服务的切离，代码管理，服务部署也都独立出来分别管理，系统的灵活性也获得了极大的提升。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 日记2020-11-18</title>
+      <link>/web/note/2020111808.html</link>
+      <pubDate>Wed, 18 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020111808.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;同样的代码不同的效果&#34;&gt;同样的代码，不同的效果&lt;/h3&gt;
+&lt;p&gt;在国内服务器上，由于以下内容的下载和安装问题，执行&lt;code&gt;npm install&lt;/code&gt;会出现错误。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/20201118160831.png&#34; alt=&#34;libvips&#34;&gt;&lt;/p&gt;
+&lt;p&gt;而同样的代码，在香港服务器上，执行&lt;code&gt;npm install&lt;/code&gt;尽管依然需要下载，但速度相对快，也没有文件丢失或无法访问。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 日记2020-11-17</title>
+      <link>/web/note/2020111714html/</link>
+      <pubDate>Tue, 17 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020111714html/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;cloudflare的kv存储免费计划&#34;&gt;cloudflare的kv存储免费计划&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/2020111701.png&#34; alt=&#34;kv存储免费计划&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Cloudflare Workers简单地说就是一个可以让你运行Javascript的平台，因为它免费，不需要域名，不需要维护服务器，在线率高。最简单的例子就是通过使用以下代码显示一个普通html页面&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const html = `&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;Hello World&amp;lt;/h1&amp;gt;
+  &amp;lt;p&amp;gt;This markup was generated by a Cloudflare Worker.&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;`
+
+async function handleRequest(request) {
+  return new Response(html, {
+    headers: {
+      &amp;quot;content-type&amp;quot;: &amp;quot;text/html;charset=UTF-8&amp;quot;,
+    },
+  })
+}
+
+addEventListener(&amp;quot;fetch&amp;quot;, event =&amp;gt; {
+  return event.respondWith(handleRequest(event.request))
+})
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;其他使用workers的方法可以通过&lt;a href=&#34;https://developers.cloudflare.com/workers/examples&#34;&gt;Examples&lt;/a&gt; 获得。&lt;/p&gt;
+&lt;p&gt;workers有免费计划，包括 100,000 个请求/天 。然后令人意外的是，cloudflare也将kv存储加入免费计划（之前使用kv存储需要5美元/月)。这样workers可以做的事情就多了。&lt;/p&gt;
+&lt;p&gt;比如使用workers不但可以部署一个静态页面，还能部署一个静态网站。&lt;/p&gt;
+&lt;h3 id=&#34;wrangler&#34;&gt;wrangler&lt;/h3&gt;
+&lt;p&gt;npm安装wrangler&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm i @cloudflare/wrangler -g
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后使用&lt;code&gt;wrangler login&lt;/code&gt; 登录，&lt;code&gt;wrangler config&lt;/code&gt;配置api-key，通过&lt;code&gt;wrangler publish&lt;/code&gt;部署&lt;/p&gt;
+&lt;p&gt;通过&lt;a href=&#34;https://developers.cloudflare.com/workers/cli-wrangler&#34;&gt;教程&lt;/a&gt;进一步了解使用wrangler&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 日记20201115</title>
+      <link>/web/note/2020111305.html</link>
+      <pubDate>Sun, 15 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020111305.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;使用gatsby错误提示&#34;&gt;使用gatsby错误提示&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/20201115154223.png&#34; alt=&#34;gatsby错误提示&#34;&gt;&lt;/p&gt;
+&lt;p&gt;原本在hugo使用的html代码，在gatsby上并不识别，导致出现错误提示。但问题是这是数百个旧文件中的一个，可以识别的md文档先渲染出来显示，不能识别的md文档不显示不就可以了。如此到每个错误就停下来，不进行渲染部署。那我需要将hugo的数百个文章转而使用gatsby生成，需要多长时间？&lt;/p&gt;
+&lt;p&gt;由于过于繁多的不兼容，识别问题，阻碍了使用gatsby。导致想变换静态部署工具的想法无法实现。&lt;/p&gt;
+&lt;h3 id=&#34;gatsby的博客模板&#34;&gt;gatsby的博客模板&lt;/h3&gt;
+&lt;p&gt;没有配置分页，由于gatsby的配置过于复杂，而且对于主题的支持并没有使用完善的git子模块，导致主题更新复杂。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 腾讯云函数计算备案</title>
+      <link>/web/note/2020111005.html</link>
+      <pubDate>Tue, 10 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020111005.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;云开发域名备案服务&#34;&gt;云开发域名备案服务&lt;/h3&gt;
+&lt;p&gt;腾讯云上使用云函数，需要申请备案，备案本身并没有问题，但是在云函数上没有固定的服务器和ip，就无法安装一般的云服务器申请备案。事实上，在其他平台上申请的备案本应该完全可以在腾讯云上使用，只要你在腾讯云上接入备案。奈何云函数的特殊性，没有服务器和ip无从接入备案。&lt;/p&gt;
+&lt;p&gt;如果按照规定，正常在腾讯云上使用云函数的话，你需要在腾讯云上购买云服务器。然后通过服务器，接入备案。而如果你只是使用腾讯云的云函数的，就会需要一个空壳的云服务器提供备案申请。当然，你可以使用备案授权码而使用其他用户的服务器，但是2019年10月20日起，仅企业实名认证的腾讯云账号可生成备案授权码。&lt;/p&gt;
+&lt;p&gt;如此麻烦，腾讯云“人性化”的提供了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/2020111101.png&#34; alt=&#34;云开发域名备案服务&#34;&gt;&lt;/p&gt;
+&lt;p&gt;即：提供一个环境和ip方便用户备案。&lt;/p&gt;
+&lt;h3 id=&#34;其实&#34;&gt;其实&lt;/h3&gt;
+&lt;p&gt;早期的云函数是可以使用已经备案的域名的，后来腾讯云撤销了未在腾讯云上接入备案的域名访问云函数，然后不久提供了专用的云函数备案付费服务。即，通过政策赚钱。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: wordpress测试</title>
+      <link>/web/pro/test/2020110502.html</link>
+      <pubDate>Thu, 05 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/pro/test/2020110502.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;问题&#34;&gt;问题&lt;/h3&gt;
+&lt;p&gt;发现wordpress的css和js文件并不全部会自动设置为https，由于wordpress是服务端渲染，页面效果应环境而出现不同。导致设置了https://app.holz.pub，页面显示仍然引用的http&lt;/p&gt;
+&lt;p&gt;如下图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/2020110503.png&#34; alt=&#34;https和http混搭&#34;&gt;&lt;/p&gt;
+&lt;p&gt;导致页面效果出现问题。&lt;/p&gt;
+&lt;p&gt;而另一方面，wordpress自带的编辑器并不能很好的解决css和js文件的配置，导致此处配置必须修改主题文件。&lt;/p&gt;
+&lt;h3 id=&#34;结论&#34;&gt;结论&lt;/h3&gt;
+&lt;p&gt;wordpress 糟糕的前端页面编辑器（或者说wordpress作为服务端渲染应用，前端页面根本不重要），在后台配置里即便设置了站点为https，仍然不会完全生效。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 相册</title>
+      <link>/web/note/2020110101.html</link>
+      <pubDate>Sun, 01 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020110101.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;创建了一个展示相册&#34;&gt;创建了一个展示相册&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.oribos.cn/photo&#34;&gt;相册站点&lt;/a&gt; ，用来集中展示分享的图片。&lt;/p&gt;
+&lt;h3 id=&#34;子站点&#34;&gt;子站点&lt;/h3&gt;
+&lt;p&gt;项目的部署站点在 /photo ，即博客的子目录里，尽管使用的主题完全跟blog主题不一样。用子目录可以使得站点内容集中在一个域名下。原本使用photo.holz.pub域名，但是考虑到cdn，文件存放等等需要更多的设置，还是不如子目录方便。&lt;/p&gt;
+&lt;p&gt;后续新增友链，其他内容也会使用子目录的形式集中部署在blog.oribos.cn之下。(2020-11-20变更:由blog.holz.pub变更为blog.oribos.cn)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 收敛型和发散型知识</title>
+      <link>/web/note/2020102701.html</link>
+      <pubDate>Tue, 27 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020102701.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;知识的收敛和发散&#34;&gt;知识的收敛和发散&lt;/h3&gt;
+&lt;h3 id=&#34;收敛型知识&#34;&gt;“收敛型知识”&lt;/h3&gt;
+&lt;p&gt;收敛 是指会聚于一点，向某一值靠近。&lt;/p&gt;
+&lt;p&gt;“收敛型知识” 表现在越来越集中到某一些内容，某一部或几部著作。将某些内容视为最终的，全知全能的知识，解开宇宙万事万物奥秘的钥匙。&lt;/p&gt;
+&lt;p&gt;收敛型知识在起初会出现多种表现，他们的理论和依据在他们自身的性质决定下，集中成唯一的目标。这个唯一的目标可能是一本书，也可能是一个人，也可能是传说。&lt;/p&gt;
+&lt;h3 id=&#34;发散型知识&#34;&gt;“发散型知识”&lt;/h3&gt;
+&lt;p&gt;“发散型知识”表现在越来越广泛，复杂。对某一个点的研究就能开拓出许多未知的课题。对课题的研究越来越复杂，内容越来越多。无法使用一个或有限个内容来解答所有问题。甚至出现相互矛盾，互相不相容的情况。&lt;/p&gt;
+&lt;p&gt;发散型知识在起初体现在一个简单的现象，基于理论之下会将此现象分析成多种因素，对不同因素的研究又能探索出更多内容，周而复始。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 记录hugo配置</title>
+      <link>/web/note/2020102705.html</link>
+      <pubDate>Tue, 27 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020102705.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;日记&#34;&gt;日记&lt;/h2&gt;
+&lt;p&gt;使用config.yml的&lt;code&gt;publishDir&lt;/code&gt;自定义hugo生成的目录&lt;/p&gt;
+&lt;p&gt;使用&lt;code&gt;baseURL = &amp;quot;/dir/&amp;quot;&lt;/code&gt;修改网页使用的根目录&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 萌新专用hexo教程.</title>
+      <link>/web/note/2020102117.html</link>
+      <pubDate>Wed, 21 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020102117.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;萌新专用hexo教程&#34;&gt;萌新专用hexo教程&lt;/h3&gt;
+&lt;p&gt;介绍&lt;/p&gt;
+&lt;h1 id=&#34;适用于萌新的hexo自动部署&#34;&gt;适用于萌新的hexo自动部署&lt;/h1&gt;
+&lt;h3 id=&#34;使用步骤&#34;&gt;使用步骤&lt;/h3&gt;
+&lt;h4 id=&#34;第一步-使用代码&#34;&gt;第一步 使用代码&lt;/h4&gt;
+&lt;p&gt;git 下载&lt;a href=&#34;https://github.com/denalon/product/&#34;&gt;github上的源码&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/denalon/product.git&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;也可以使用&lt;a href=&#34;https://frednab.coding.net/public/test/product/git/files&#34;&gt;coding仓库&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://e.coding.net/frednab/test/product.git&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第二步-修改配置&#34;&gt;第二步 修改配置&lt;/h4&gt;
+&lt;p&gt;修改 项目目录下的CNAME文件里的域名&lt;/p&gt;
+&lt;p&gt;原文使用&lt;a href=&#34;https://github.com/jerryc127/hexo-theme-butterfly&#34;&gt;butterfly&lt;/a&gt;,你可以通过hexo 5.0之后的新的安装主题方式使用&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;npm i hexo-theme-butterfly&lt;/code&gt;方式安装自己需要的主题（请参照自己需要主题的安装说明）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;其他文件不需要配置&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第三步-更新文章&#34;&gt;第三步 更新文章&lt;/h4&gt;
+&lt;p&gt;撰写自己的文章&lt;/p&gt;
+&lt;h4 id=&#34;第四步-git推送到github&#34;&gt;第四步 git推送到github&lt;/h4&gt;
+&lt;p&gt;通过一下命令将代码推送到github仓库&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果你是使用git clone方式下载的代码，建议删掉目录下的.git目录再执行如下操作&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git init //初始化仓库。
+git add . //添加文件到暂存区。(注意有点号.)
+git commit -m &amp;quot;更新说明&amp;quot; //将暂存区内容添加到仓库中。标识“更新说明”
+git remote add origin XXXX.git  //添加到远程仓库操作，将xxxx.git设置为远程仓库origin
+git push -u origin master  //推送master分支到origin仓库
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;提示操作成功后，代码将推送到github上的master分支，github自动部署将启动，将hexo文件自动部署到gh-pages分支&lt;/p&gt;
+&lt;h4 id=&#34;第五步-开启pages&#34;&gt;第五步 开启pages&lt;/h4&gt;
+&lt;p&gt;在github仓库 “Settings”选择“GitHub Pages” source项选择Branch:gh-pages
+如图：&lt;img src=&#34;https://base.oribos.city/images/2020/10/20201022095332.png&#34; alt=&#34;github pages设置&#34;&gt;&lt;/p&gt;
+&lt;p&gt;即可使用由github自动部署的 pages 服务。&lt;/p&gt;
+&lt;p&gt;以下是需要用到的内容&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;nodejs安装&#34;&gt;nodejs安装&lt;/h3&gt;
+&lt;h3 id=&#34;ubuntu&#34;&gt;ubuntu&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Installation instructions
+Node.js v15.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_15.x | bash -
+apt-get install -y nodejs
+Node.js v14.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_14.x | bash -
+apt-get install -y nodejs
+Node.js v12.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_12.x | bash -
+apt-get install -y nodejs
+Node.js v10.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_10.x | bash -
+apt-get install -y nodejs
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;centos&#34;&gt;centos&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;
+Installation instructions
+NOTE: If you are using RHEL 6 or CentOS 6, you might want to read about running Node.js on older distros.
+
+Run as root on RHEL, CentOS, CloudLinux or Fedora:
+
+Node.js v15.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_15.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_15.x | sudo bash -
+Node.js v14.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_14.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
+Node.js v12.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
+Node.js v10.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_10.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;git安装&#34;&gt;git安装&lt;/h3&gt;
+&lt;h1 id=&#34;安装git&#34;&gt;安装git&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;yum install -y wget
+
+wget -O /tmp/git-2.21.0.tar.gz https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.21.0.tar.gz
+
+# 安装编译依赖
+yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
+
+# 解压
+tar -zxf /tmp/git-2.21.0.tar.gz -C /tmp/
+
+cd /tmp/git-2.21.0
+
+# 检验相关依赖，设置安装路径
+./configure --prefix=/usr/local/git
+
+# 编译安装
+make &amp;amp;&amp;amp; make install
+
+
+# 删除已有的 git
+yum remove git
+
+# 配置环境变量
+vim /etc/profile
+
+# GIT_HOME
+GIT_HOME=/usr/local/git
+export PATH=$PATH:$GIT_HOME/bin
+
+# 刷新
+source /etc/profile
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;查看防火墙状态
+
+firewall-cmd --state
+1
+停止firewall
+
+systemctl stop firewalld.service
+1
+禁止firewall开机启动
+
+systemctl disable firewalld.service
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
+&lt;p&gt;集成hexo主题，自动部署的源码，萌新可以拿去用，secrets.GITHUB_TOKEN 也不需要自己生成和设置&lt;/p&gt;
+&lt;p&gt;总之，更改CNAME文件里的域名，推送，在github上开启pages就可以了。极其简单的使用由github自动部署的 pages 服务。&lt;/p&gt;
+&lt;p&gt;适合于萌新想用hexo不知道怎么配置的，直接扒源码就可以快速部署自己的hexo博客了&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 博客变更历程</title>
+      <link>/web/note/2020101303.html</link>
+      <pubDate>Tue, 13 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020101303.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;博客变更&#34;&gt;博客变更&lt;/h3&gt;
+&lt;p&gt;记录博客部署的过程&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 引用文件</title>
+      <link>/web/note/2020101217.html</link>
+      <pubDate>Mon, 12 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020101217.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;连续更新的内容&#34;&gt;连续更新的内容&lt;/h3&gt;
+&lt;p&gt;使用&lt;code&gt;https://github.com/Rheaheim/content&lt;/code&gt;的内容作为日常引用文件，一些临时撰写的文章会上传到github，生成&lt;code&gt;https://content.uns.pub/&lt;/code&gt;的页面。并根据需要引入到博客页面。&lt;/p&gt;
+&lt;h3 id=&#34;使用代码&#34;&gt;使用代码：&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;left&amp;quot;&amp;gt;
+      &amp;lt;div id=&amp;quot;div1&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+      &amp;lt;script&amp;gt;
+            $(&amp;quot;#div1&amp;quot;).load(&amp;quot;https://content.uns.pub/test/1.html&amp;quot;);
+      &amp;lt;/script&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: nodejs和git安装</title>
+      <link>/web/note/2020/20201011.html</link>
+      <pubDate>Sun, 11 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020/20201011.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;nodejs安装&#34;&gt;nodejs安装&lt;/h1&gt;
+&lt;h3 id=&#34;ubuntu&#34;&gt;ubuntu&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Installation instructions
+Node.js v15.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_15.x | bash -
+apt-get install -y nodejs
+Node.js v14.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_14.x | bash -
+apt-get install -y nodejs
+Node.js v12.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_12.x | bash -
+apt-get install -y nodejs
+Node.js v10.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_10.x | bash -
+apt-get install -y nodejs
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;centos&#34;&gt;centos&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;
+Installation instructions
+NOTE: If you are using RHEL 6 or CentOS 6, you might want to read about running Node.js on older distros.
+
+Run as root on RHEL, CentOS, CloudLinux or Fedora:
+
+Node.js v15.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_15.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_15.x | sudo bash -
+Node.js v14.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_14.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
+Node.js v12.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
+Node.js v10.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_10.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 连续更新的内容</title>
+      <link>/web/note/2020101000.html</link>
+      <pubDate>Sat, 10 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020101000.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;连续更新的内容&#34;&gt;连续更新的内容&lt;/h3&gt;
+&lt;p&gt;连续更新，内容引用github&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 博客撤销后端服务</title>
+      <link>/web/note/2020100813.html</link>
+      <pubDate>Thu, 08 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020100813.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;撤销后端服务&#34;&gt;撤销后端服务&lt;/h3&gt;
+&lt;p&gt;撤销了测试用的halo ghost等服务端渲染应用&lt;/p&gt;
+&lt;p&gt;关闭所有使用php的服务端渲染站点,包括测试用的wordpress,typecho.和函数计算上的php应用.&lt;/p&gt;
+&lt;h3 id=&#34;博客和单页摒弃web服务器&#34;&gt;博客和单页摒弃web服务器&lt;/h3&gt;
+&lt;p&gt;用来记录和展示日常文章的博客,将不再部署在云服务器,物理服务器,树莓派,NAS上.将以hugo生成html托管在静态站点上或者对象存储服务上.简单的js或功能性页面将在cf的worker或者对象存储上使用.&lt;/p&gt;
+&lt;p&gt;关闭个人云服务器的web服务,关闭个人功能的后端服务.&lt;/p&gt;
+&lt;h3 id=&#34;文章以文件形式部署&#34;&gt;文章以文件形式部署&lt;/h3&gt;
+&lt;p&gt;博客的文章更新以文章的形式保存在git托管上,博客的项目托管在github或coding上,通过定时运行部署,或者api触发 .&lt;/p&gt;
+&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
+&lt;p&gt;由于部署一个前后端分离的应用需要前端服务器和后端服务器同时持续运行,虽然前端服务可以托管在静态服务上,但需要考虑静态服务的托管费用和流量问题.还要关注后端服务的持续运行和维护.这些在项目运行中是有必要的,但博客的作用有限.投入过多的资源并不明智.&lt;/p&gt;
+&lt;p&gt;采用git托管和静态页面部署,配置简单的自动部署和cdn,维持一个长期的网页在线.其他的服务器运行和维护不需要担心.这是必要的.&lt;/p&gt;
+&lt;p&gt;不采用落后的wordpress,typecho等应用,不采用java,python,go项目的服务端渲染应用.一个简单长期的博客,应当尽可能的结构简单,稳定运行.&lt;/p&gt;
+&lt;h3 id=&#34;测试项目另外部署&#34;&gt;测试项目另外部署&lt;/h3&gt;
+&lt;p&gt;之前的博客作用是用来测试项目代码的效果,现在博客作为一个长期维护的项目,就不再作为一个临时的测试的运行状态.所以,不必要的内容应当被剥离.&lt;/p&gt;
+&lt;p&gt;用来测试的项目将另外安排域名和服务器,使博客尽可能不受干扰 .&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,2018 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>记事本 – 2020</title>
+    <link>/tech/develop/2020/</link>
+    <description>Recent content in 2020 on 记事本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 30 Apr 2021 11:55:45 +0800</lastBuildDate>
+    
+	  <atom:link href="/tech/develop/2020/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Tech: 0906归纳</title>
+      <link>/web/note/2020090673.html</link>
+      <pubDate>Sun, 06 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020090673.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;阴谋论&#34;&gt;阴谋论&lt;/h2&gt;
+&lt;p&gt;相信阴谋论，怀疑意味着能力欠缺。不确定地球是不是圆的，不确定美国有没有登月，不知道苏美尔文明来源，因为这些阴谋论者没能力飞向太空，穿越回古代。&lt;/p&gt;
+&lt;p&gt;对于远古时期，史前时期，遥远的地方，漫长的时间这些超出人类控制的内容，既要有所怀疑又需要有所相信。无论是否相信是陨石造成的恐龙灭绝，恐龙已经消失不见，没有能力挽回。古代文明已经消散，准确找到何年何月并没有实际意义。直立人智人的联系，人类起源无论是否完全研究出来，对当前的人类并没有多大影响。人类不缺真相。&lt;/p&gt;
+&lt;h3 id=&#34;知识阶级&#34;&gt;知识阶级&lt;/h3&gt;
+&lt;p&gt;富有阶层可以有时间学习艺术，哲学，文化，考古，经济，政治。而穷人只能学赚钱，打工，出力，技能。并非某学科“无用“而是是否能为自己提供有“有价值” “有意义”的成果。&lt;/p&gt;
+&lt;h3 id=&#34;设身处地&#34;&gt;设身处地&lt;/h3&gt;
+&lt;p&gt;设身处地，换位思考，为他人着想，听上去很有道理。但人是有局限性的，根本不能完全互换位置，不同的环境不同的条件造就了不同的行为和决定。&lt;/p&gt;
+&lt;p&gt;人不轻身经历，身入其境某些事情，根本理解不了很多东西。所以要多万卷书，行万里路。&lt;/p&gt;
+&lt;h3 id=&#34;神明&#34;&gt;神明&lt;/h3&gt;
+&lt;p&gt;敬神而不信神&lt;/p&gt;
+&lt;p&gt;神意味着未知的，远超自身理解的东西。对待未知我们要保持敬畏，恐惧。但不能受此影响。因为接触不到，认识不到才是未知，一旦接触到，看到听到那他就是必然的存在，就不再是未知。&lt;/p&gt;
+&lt;p&gt;未知就是不可知，知道了就不是不可知了，就应该研究知道的里面的不可知情况。神明最好就是永远不为人知，因为一旦神明现身，那就要思考，谁创造了“这个“神明？（神明未现身时“这个“就无法用来描述）&lt;/p&gt;
+&lt;h3 id=&#34;生命&#34;&gt;生命&lt;/h3&gt;
+&lt;p&gt;无论人类是不是从低级生命演化而来，宇宙生命体必然是从无到有，由简到繁。一个固定的环境却存在各式各样生命体，这必然不是一蹴而就的。加入将整套地球生态采用一定样本完全丢到一个固定环境的星球，那么，必然会存在大型动植物或特殊生命体因为环境变化而灭绝。这是正常的，把南极的企鹅放到非洲必然会影响生存，同理把非洲的大象丢到南极也如此。也就是说，一个固定环境下，适应性强的物种生存和繁衍下来。&lt;/p&gt;
+&lt;p&gt;这意味着，假如上帝创造了世界，那上帝必然是创造了简单的结构，这些简单结构慢慢发展，演化，逐渐变成复杂的。如果上帝直接将全套现有的生态系统扔到世间。那么最开始必然存在大量不适应的情况导致大范围灭绝。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 0813</title>
+      <link>/web/note/2020081313.html</link>
+      <pubDate>Thu, 13 Aug 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020081313.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;日志&#34;&gt;日志&lt;/h2&gt;
+&lt;p&gt;在ci里运行代码,将生成的文件推送到该仓库的gh-pages分支&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;推送本地分支local_branch到远程分支 remote_branch并建立关联关系
+
+      a.远程已有remote_branch分支并且已经关联本地分支local_branch且本地已经切换到local_branch
+
+          git push
+
+     b.远程已有remote_branch分支但未关联本地分支local_branch且本地已经切换到local_branch
+
+         git push -u origin/remote_branch
+
+     c.远程没有remote_branch分支并，本地已经切换到local_branch
+
+        git push origin local_branch:remote_branch
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;git-push--u-origin-master和git-push-远程主机名-本地分支名远程分支名作用&#34;&gt;git push -u origin master和git push &amp;lt;远程主机名&amp;gt; &amp;lt;本地分支名&amp;gt;:&amp;lt;远程分支名&amp;gt;作用&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;git push&lt;/code&gt;
+git push命令用于将本地分支的更新，推送到远程主机。它的格式与git pull命令相仿。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push &amp;lt;远程主机名&amp;gt; &amp;lt;本地分支名&amp;gt;:&amp;lt;远程分支名&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;注意：这里的:前后是必须没有空格的。&lt;/p&gt;
+&lt;p&gt;注意，分支推送顺序的写法是&amp;lt;来源地&amp;gt;:&amp;lt;目的地&amp;gt;，&lt;/p&gt;
+&lt;p&gt;所以git pull是&amp;lt;远程分支&amp;gt;:&amp;lt;本地分支&amp;gt;，而git push是&amp;lt;本地分支&amp;gt;:&amp;lt;远程分支&amp;gt;。&lt;/p&gt;
+&lt;p&gt;如果省略远程分支名，则表示将本地分支推送与之存在&amp;quot;追踪关系&amp;quot;的远程分支（通常两者同名），如果该远程分支不存在，则会被新建。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面命令表示，将本地的master分支推送到origin主机的master分支。如果后者不存在，则会被新建。&lt;/p&gt;
+&lt;p&gt;如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push origin :master
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;等同于&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push origin --delete master
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面命令表示删除origin主机的master分支。&lt;/p&gt;
+&lt;p&gt;如果当前分支与远程分支之间存在追踪关系，则本地分支和远程分支都可以省略。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push origin
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面命令表示，将当前分支推送到origin主机的对应分支。&lt;/p&gt;
+&lt;p&gt;如果当前分支只有一个追踪分支，那么主机名都可以省略。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果当前分支与多个主机存在追踪关系，则可以使用-u选项指定一个默认主机，这样后面就可以不加任何参数使用git push。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面命令将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 域名的充分使用</title>
+      <link>/web/note/2020083143.html</link>
+      <pubDate>Fri, 31 Jul 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020083143.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;减少域名持有量&#34;&gt;减少域名持有量&lt;/h3&gt;
+&lt;h3 id=&#34;充分利用已有域名&#34;&gt;充分利用已有域名&lt;/h3&gt;
+&lt;h3 id=&#34;增加子域名使用&#34;&gt;增加子域名使用&lt;/h3&gt;
+&lt;p&gt;server,develop,app,config,static等作为子域名使用&lt;/p&gt;
+&lt;h3 id=&#34;多服务商&#34;&gt;多服务商&lt;/h3&gt;
+&lt;p&gt;减少使用腾讯产品，不使用腾讯云dns&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 心理问题</title>
+      <link>/web/note/2020080503.html</link>
+      <pubDate>Fri, 31 Jul 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020080503.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;心理&#34;&gt;心理&lt;/h3&gt;
+&lt;p&gt;心理医生会有意无意的将患者的心理问题夸大化，会将症状归为一种难听难懂的词汇比如口欲期、肛欲期、俄狄浦斯期。这些名词无法准确的描述症状却让人感觉不适。&lt;/p&gt;
+&lt;h3 id=&#34;严重性&#34;&gt;严重性&lt;/h3&gt;
+&lt;p&gt;大部分人都存在或多或少的心理问题,这跟童年生活环境有关,特别是保守,封闭,教育程度低的地区.而大部分人的心理问题并不会对社会造成多大伤害.&lt;/p&gt;
+&lt;p&gt;反而心理医生会借助各类相关技术,夸大表现.就好比一个世界名厨要教人怎么品味食物,钢琴师音乐家教大家欣赏音乐.而大部分人只是在唱歌房吼几嗓子,不需要那么专业.&lt;/p&gt;
+&lt;p&gt;但是心理医生对人的心理问题的分析是有很大的借鉴的,心理医生通过科学方法对日常生活中的表现,个人行为习惯分析,得出的结论可能是普通人半辈子才能理解的知识.&lt;/p&gt;
+&lt;h3 id=&#34;资本家的伎俩&#34;&gt;资本家的伎俩&lt;/h3&gt;
+&lt;p&gt;某些资本家为了利益所常使用的伎俩&lt;/p&gt;
+&lt;p&gt;锚定效应&lt;/p&gt;
+&lt;p&gt;价格歧视&lt;/p&gt;
+&lt;p&gt;免费营销&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 忒修斯之船</title>
+      <link>/web/note/2020080407.html</link>
+      <pubDate>Fri, 31 Jul 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020080407.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;忒修斯之船&#34;&gt;忒修斯之船&lt;/h3&gt;
+&lt;p&gt;公元1世纪的时候普鲁塔克提出一个问题：如果忒修斯的船上的木头被逐渐替换，直到所有的木头都不是原来的木头，那这艘船还是原来的那艘船吗？因此这类问题现在被称作“忒修斯之船”的问题。有些哲学家认为是同一物体，有些哲学家认为不是。在普鲁塔克之前，赫拉克利特、苏格拉底、柏拉图都曾经讨论过相似的问题。近代霍布斯和洛克也讨论过该问题。这个问题的有许多变种，如“祖父的旧斧头”。&lt;/p&gt;
+&lt;p&gt;哲学家托马斯·霍布斯后来对此进行了延伸，如果用特修斯之船上取下来的老部件来重新建造一艘新的船，那么两艘船中哪艘才是真正的特修斯之船？&lt;/p&gt;
+&lt;h3 id=&#34;类似的悖论&#34;&gt;类似的悖论&lt;/h3&gt;
+&lt;p&gt;人体组织细胞更新的周期大致为120至200天左右（神经组织细胞除外），大约每6到7年就可以全部更新为新的细胞。&lt;/p&gt;
+&lt;p&gt;赫拉克利特之河 人们虽然同样渡过相同的河，但流经身旁的水却是不同的。普鲁塔克亦引用赫拉克利特的观点，提出无法再次渡过相同的河流的假说。&lt;/p&gt;
+&lt;p&gt;祖父的旧斧头英文的口语，指某物每次都残留了本来的一部分；但更换了另一部分，逐渐所有的部分都换过的意思。斧头的刀刃换了3次，刀柄也换了4次，可是还是同一把旧斧头。&lt;/p&gt;
+&lt;h3 id=&#34;个人认识&#34;&gt;个人认识&lt;/h3&gt;
+&lt;p&gt;在我看来，&lt;strong&gt;概念本身就不是真正的客观的存在。概念是人类认识事物的一种表述，是抽象的，不固定的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;比如 一张钞票，今天上午能拿去买1kg黄金，然后下午爆出消息经济崩溃，钞票不值钱了成垃圾了。买不到任何东西了，钞票本身一点没变，但它的价值变了不能称为钞票了，成废纸了。所以，钞票或者说钱这个概念，跟其物理属性的关系不是固定的，钞票破损一点仍能使用。破损一半仍是钞票，只不过价值可能有所损失，但仍是钞票。&lt;/p&gt;
+&lt;p&gt;忒修斯之船哪怕是换掉了所有的材料，只有有一个人认为这个船还是忒修斯之船，那么这艘船在这个人心目中仍然是忒修斯之船。这是根据人的认识的，不是明确的客观的。许多人不认可换掉大部分材料的船不再是忒修斯之船，那也是这个概念在这些人心目中的概念，这个概念本身就是抽象的，不固定的。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 操作系统</title>
+      <link>/web/note/2020081113.html</link>
+      <pubDate>Fri, 31 Jul 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020081113.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;操作系统内置ssl证书&#34;&gt;操作系统内置SSL证书&lt;/h3&gt;
+&lt;p&gt;由于在网络传输中，传递ssl加密证书公钥是不可靠的。所以，一直相对完善的https信息往往将内容使用可信赖的CA机构的ssl证书加密。而客户端用来内置的CA证书公钥对内容解密。这就保证了信息的可信任性。&lt;/p&gt;
+&lt;p&gt;对于国家机构，不应使用国外操作系统的CA机构证书。因为无法避免数据被窃听的风险。但对于国内用户而言，信息被海外企业窃听的风险较低，反而为了防止数据被盗用，必要的审查等考虑。使用有别于国家机构的第三方CA机构证书是有必要的。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 记录</title>
+      <link>/web/note/2020080401.html</link>
+      <pubDate>Fri, 31 Jul 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020080401.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;英语跟汉语区别&#34;&gt;英语跟汉语区别&lt;/h2&gt;
+&lt;p&gt;表音文字和表意文字区别&lt;/p&gt;
+&lt;p&gt;英语作为表音文字，用少量的字母记录语言中的语音，从而记录语言的文字。字母是表音文字的基础，字母的数量较其他语言较少。文字的复杂程度跟使用的字母数量有关，存在不同的读音变异。不同文字之间用空格隔开。&lt;/p&gt;
+&lt;p&gt;汉语作为表意文字，用象征性书写符号记录信息的文字体系，不直接或不单纯表示语音。从象形文字发展而来，历史悠久。&lt;/p&gt;
+&lt;h2 id=&#34;局限性&#34;&gt;局限性&lt;/h2&gt;
+&lt;p&gt;随着人类对世界的认识，用象征性的符号无法有效的表达不断增长的信息。使用表意文字就会不断表现出局限性。一些抽象的概念，复杂的实物是无法使用表意文字有效的表达的。由于文字之间较少使用空格类似的分隔符来短句短词，词语语句会存在一些歧义的误解。&lt;/p&gt;
+&lt;p&gt;随着计算机的出现，表意文字较难使用计算机录入和处理。对表意文字的处理需要耗费更多的资源。&lt;/p&gt;
+&lt;h2 id=&#34;发展的眼光&#34;&gt;发展的眼光&lt;/h2&gt;
+&lt;p&gt;不能因为表意文字的局限性就对此嗤之以鼻，未来世界的语言形式会超出人类现有的理解，单纯使用以表音文字或表意文字是片面的。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 防止信息泄露</title>
+      <link>/web/note/2020080511.html</link>
+      <pubDate>Fri, 31 Jul 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020080511.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;互联网id&#34;&gt;互联网id&lt;/h3&gt;
+&lt;p&gt;不会只使用一个互联网id,也不会在一个账号上捆绑太多的服务.&lt;/p&gt;
+&lt;p&gt;有计划的区分多个邮箱账户id&lt;/p&gt;
+&lt;p&gt;有计划的区分微信，微博，qq等sns账号。&lt;/p&gt;
+&lt;h3 id=&#34;密码和私钥&#34;&gt;密码和私钥&lt;/h3&gt;
+&lt;p&gt;密码分级别,私钥需要全部备份.密码和私钥不保存在git仓库里&lt;/p&gt;
+&lt;h3 id=&#34;博客网站&#34;&gt;博客网站&lt;/h3&gt;
+&lt;p&gt;为了区分内容,博客网站将被拆分成不同的域名,分别展示不同级别的内容.&lt;/p&gt;
+&lt;h3 id=&#34;多个git仓库&#34;&gt;多个git仓库&lt;/h3&gt;
+&lt;p&gt;github多账号，资源权限区分，git仓库多服务商，及时备份。&lt;/p&gt;
+&lt;h3 id=&#34;多个手机号码&#34;&gt;多个手机号码&lt;/h3&gt;
+&lt;p&gt;使用海外服务的手机号码和虚拟账号&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 迁移asp.net项目</title>
+      <link>/web/note/2021/2021043001.html</link>
+      <pubDate>Fri, 30 Apr 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021043001.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;迁移aspnet项目&#34;&gt;迁移asp.net项目&lt;/h3&gt;
+&lt;p&gt;正常使用的CRM软件，部署在云服务器上，由于已经用了三年，当初打折价购买的服务器现在续费要一个月200元&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;
+&lt;h4 id=&#34;安装环境&#34;&gt;安装环境&lt;/h4&gt;
+&lt;p&gt;安装.net环境，iis，asp&lt;/p&gt;
+&lt;p&gt;安装sqlserver数据库&lt;/p&gt;
+&lt;h4 id=&#34;转移文件&#34;&gt;转移文件&lt;/h4&gt;
+&lt;p&gt;关闭旧应用，将数据库文件转移到新服务器&lt;/p&gt;
+&lt;p&gt;将旧应用文件转移到新服务器&lt;/p&gt;
+&lt;p&gt;新建服务器站点&lt;/p&gt;
+&lt;h4 id=&#34;应用程序因程序配置&#34;&gt;应用程序因程序配置&lt;/h4&gt;
+&lt;p&gt;修改为&lt;code&gt;.NET CLR V2.0.50727&lt;/code&gt;  &lt;code&gt;托管管道模式 经典&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;启用32位应用程序：&lt;code&gt;False&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;安装 ajax&lt;/p&gt;
+&lt;h4 id=&#34;配置sqlserver&#34;&gt;配置sqlserver&lt;/h4&gt;
+&lt;p&gt;连接数据库，新建应用登录用户名&lt;/p&gt;
+&lt;h4 id=&#34;启动应用&#34;&gt;启动应用&lt;/h4&gt;
+&lt;p&gt;正式访问&lt;/p&gt;
+&lt;h3 id=&#34;问题&#34;&gt;问题&lt;/h3&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 20210429</title>
+      <link>/web/note/2021/2021042901.html</link>
+      <pubDate>Thu, 29 Apr 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021042901.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;登录失败&#34;&gt;登录失败&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429101023.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429101058.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429101102.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429101105.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;以上错误均来自腾讯手机管家一款app&lt;/p&gt;
+&lt;p&gt;那么为什么要使用这样如此垃圾的app？还不是因为qq邮箱解绑英文名强制要求绑定这个垃圾app。&lt;/p&gt;
+&lt;h3 id=&#34;设计简陋的app&#34;&gt;设计简陋的app&lt;/h3&gt;
+&lt;p&gt;上传图片没有缩略图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429101228.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;阿里云手机app&lt;/p&gt;
+&lt;h3 id=&#34;强制要求&#34;&gt;强制要求&lt;/h3&gt;
+&lt;p&gt;强制安全问题&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429001.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;强制学习步骤&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429002.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;莫名其妙的网络异常&#34;&gt;莫名其妙的网络异常&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429003.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/04/20210429004.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;文字和视频，app都可以打开，唯独个别软件的登录和读取信息出现缓存过久的情况。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 适用于萌新的hexo自动部署</title>
+      <link>/web/note/2021/2021041102.html</link>
+      <pubDate>Sun, 11 Apr 2021 09:10:40 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021041102.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;适用于萌新的hexo自动部署&#34;&gt;适用于萌新的hexo自动部署&lt;/h1&gt;
+&lt;h3 id=&#34;简述&#34;&gt;简述&lt;/h3&gt;
+&lt;p&gt;下载本仓库代码，修改CNAME文件，添加自己的文章，将本仓库代码推送github&lt;/p&gt;
+&lt;h3 id=&#34;使用步骤&#34;&gt;使用步骤&lt;/h3&gt;
+&lt;h4 id=&#34;第一步-使用代码&#34;&gt;第一步 使用代码&lt;/h4&gt;
+&lt;p&gt;git 下载&lt;a href=&#34;https://frednab.coding.net/public/dev/hexo-blog/git/files&#34;&gt;coding仓库&lt;/a&gt;代码&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://e.coding.net/frednab/dev/hexo-blog.git&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第二步-修改配置&#34;&gt;第二步 修改配置&lt;/h4&gt;
+&lt;p&gt;修改 &lt;strong&gt;source/CNAME&lt;/strong&gt;文件里的域名&lt;/p&gt;
+&lt;p&gt;安装主题&lt;/p&gt;
+&lt;p&gt;方法一、下载主题目录，然后解压缩到themes目录下&lt;/p&gt;
+&lt;p&gt;方法二、使用npm安装主题&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;npm i hexo-theme-butterfly&lt;/code&gt;方式安装自己需要的主题（请参照自己需要主题的安装说明）&lt;/p&gt;
+&lt;p&gt;方法三、通过git submodule安装主题&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;其他文件不需要配置&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第三步-更新文章&#34;&gt;第三步 更新文章&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;hexo new page 文章.md&lt;/code&gt;新建文档&lt;/p&gt;
+&lt;p&gt;或者在source/_posts目录下撰写自己的文章&lt;/p&gt;
+&lt;h4 id=&#34;第四步-将源码推送到github&#34;&gt;第四步 将源码推送到github&lt;/h4&gt;
+&lt;p&gt;通过一下命令将该仓库里的源码推送到github仓库&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果你是使用git clone方式下载的代码，建议删掉目录下的.git目录再执行如下操作&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git init //初始化仓库。
+git add . //添加文件到暂存区。(注意有点号.)
+git commit -m &amp;quot;更新说明&amp;quot; //将暂存区内容添加到仓库中。标识“更新说明”
+git remote add origin XXXX.git  //添加到远程仓库操作，将xxxx.git设置为远程仓库origin
+git push -u origin master  //推送master分支到origin仓库
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;提示操作成功后，代码将推送到github上的master分支，github自动部署将启动，将hexo文件自动部署到gh-pages分支&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由于该仓库含有github自动构建文件，上传到github将触发自动部署&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;github自动构建文件为 &lt;code&gt;.github/workflows/hexodeploy.yml&lt;/code&gt;文件&lt;/p&gt;
+&lt;h4 id=&#34;第五步-开启pages&#34;&gt;第五步 开启pages&lt;/h4&gt;
+&lt;p&gt;在github仓库 “Settings”选择“GitHub Pages” source项选择Branch:gh-pages
+如图：
+&lt;img src=&#34;https://base.oribos.city/images/2020/10/20201022095332.png&#34; art=&#34;github pages 设置&#34; class=&#34;zoomify&#34; width=&#34;70%&#34;&gt;&lt;/p&gt;
+&lt;p&gt;即可使用由github自动部署的 pages 服务。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;请确保仓库里source/CNAME文件域名已经正确修改&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;进阶操作&#34;&gt;进阶操作&lt;/h3&gt;
+&lt;p&gt;完成以上部署就可以正常使用由hexo生成，github自动部署的pages。你也可以通过以下操作扩展hexo进阶操作&lt;/p&gt;
+&lt;h4 id=&#34;安装更多的hexo插件&#34;&gt;安装更多的hexo插件&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;npm i XXX --save&lt;/code&gt;插件安装适用于hexo的插件，使用&amp;ndash;save可以将插件添加到项目依赖，这样在github自动部署时就能直接使用。&lt;/p&gt;
+&lt;h4 id=&#34;使用github子模块&#34;&gt;使用github子模块&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;git submodule add xxxx.git source/_posts &lt;/code&gt; 可以将你其他git仓库文章。github自动部署时会自动更新子模块里的文章。&lt;/p&gt;
+&lt;h4 id=&#34;使用其他主题&#34;&gt;使用其他主题&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;npm i xxx主题 --save&lt;/code&gt;安装其他主题，然后再执行如下操作：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用npm uninstall 主题名将旧主题卸载&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1 将新主题的配置文件&lt;code&gt;_config.yml&lt;/code&gt;改名为&lt;code&gt;_config.xxx主题.yml&lt;/code&gt;，复制到根目录下&lt;/p&gt;
+&lt;p&gt;2 修改根目录下的&lt;code&gt;_config.yml&lt;/code&gt;文件里的&lt;code&gt;theme: butterfly&lt;/code&gt; 为&lt;code&gt;theme: xxx&lt;/code&gt;主题&lt;/p&gt;
+&lt;p&gt;hexo会组合&lt;code&gt;_config.yml&lt;/code&gt;和&lt;code&gt;_config.xxx主题.yml&lt;/code&gt;里的内容实现相应的效果。&lt;/p&gt;
+&lt;h4 id=&#34;其他操作请参照hexo教程&#34;&gt;其他操作请参照hexo教程&lt;/h4&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: https协议</title>
+      <link>/web/note/2020120317.html</link>
+      <pubDate>Thu, 03 Dec 2020 10:20:45 +0800</pubDate>
+      
+      <guid>/web/note/2020120317.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;httphttps协议&#34;&gt;http&amp;amp;https协议&lt;/h1&gt;
+&lt;p&gt;参考博客：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/xiaoming100001/article/details/81109617&#34;&gt;HTTP和HTTPS协议，看一篇就够了&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;什么是http&#34;&gt;什么是http&lt;/h2&gt;
+&lt;p&gt;超文本传输协议，是一个基于请求与响应，&lt;strong&gt;无状态的&lt;/strong&gt;，应用层的协议，常基于TCP/IP协议传输数据，互联网上应用最为广泛的一种网络协议,所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种发布和接收HTML页面的方法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;默认端口80， 如果 一台主机上有多个服务器呢?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;http报文格式&#34;&gt;http报文格式&lt;/h2&gt;
+&lt;p&gt;http的请求报文由：请求行、首部、空行、主体四个部分组成。
+其中请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔
+&lt;img src=&#34;https://base.oribos.city/images/2020/12/https/1.png&#34; alt=&#34;报文格式&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;http通信流程&#34;&gt;http通信流程&lt;/h2&gt;
+&lt;p&gt;web客户端tcp连接到Web服务器-&amp;gt;发送Http请求-&amp;gt;服务器接受请求并返回HTTP响应-&amp;gt;释放连接TCP连接-&amp;gt;客户端浏览器解析HTML内容&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD
+A(web客户端tcp连接到Web服务器) --&amp;gt;B(发送Http请求)
+B --&amp;gt;C(服务器接受请求并返回HTTP响应)
+C--&amp;gt;D(释放连接TCP连接)
+D--&amp;gt;E(客户端浏览器解析HTML内容)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/12/https/2.png&#34; alt=&#34;http通信流程&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;什么是https&#34;&gt;什么是https&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;图解HTTP》这本书中曾提过HTTPS是身披SSL外壳的HTTP。HTTPS是一种通过计算机网络进行安全通信的传输协议，&lt;strong&gt;经由HTTP进行通信，利用SSL/TLS建立全信道，加密数据包&lt;/strong&gt;。&lt;strong&gt;HTTPS使用的主要目的是提供对网站服务器的身份认证，同时保护交换数据的隐私与完整性&lt;/strong&gt;。PS:TLS是传输层加密协议，前身是SSL协议，由网景公司1995年发布，有时候两者不区分。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;成本考虑&#34;&gt;成本考虑&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SSL证书需要购买申请，功能越强大的证书费用越高&lt;/li&gt;
+&lt;li&gt;SSL证书通常需要绑定IP，不能在同一IP上绑定多个域名，IPv4资源不可能支撑这个消耗（SSL有扩展可以部分解决这个问题，但是比较麻烦，而且要求浏览器、操作系统支持，Windows XP就不支持这个扩展，考虑到XP的装机量，这个特性几乎没用）。&lt;/li&gt;
+&lt;li&gt;根据ACM CoNEXT数据显示，使用HTTPS协议会使页面的加载时间延长近50%，增加10%到20%的耗电。&lt;/li&gt;
+&lt;li&gt;HTTPS连接缓存不如HTTP高效，流量成本高。&lt;/li&gt;
+&lt;li&gt;HTTPS连接服务器端资源占用高很多，支持访客多的网站需要投入更大的成本。&lt;/li&gt;
+&lt;li&gt;HTTPS协议握手阶段比较费时，对网站的响应速度有影响，影响用户体验。比较好的方式是采用分而治之，类似12306网站的主页使用HTTP协议，有关于用户信息等方面使用HTTPS。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 前后端分离架构</title>
+      <link>/web/note/2020112873.html</link>
+      <pubDate>Sat, 28 Nov 2020 09:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2020112873.html</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;p&gt;引用自&lt;a href=&#34;https://gitee.com/Meloor/blog&#34;&gt;meloor&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参考：
+&lt;a href=&#34;https://www.zhihu.com/answer/547205270&#34;&gt;到底什么是前后端分离 1&lt;/a&gt;
+&lt;a href=&#34;https://www.zhihu.com/answer/557406666&#34;&gt;到底什么是前后端分离 2&lt;/a&gt;
+&lt;a href=&#34;https://www.zhihu.com/answer/542961677&#34;&gt;到底什么是前后端分离 3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;前后端分离是个&lt;strong&gt;架构设计问题&lt;/strong&gt;。所谓架构设计，实际上是如何合理的对现实的人力架构进行系统映射，以便最大限度的提高整个公司的运行效率。&lt;/p&gt;
+&lt;h2 id=&#34;前后端的定义&#34;&gt;前后端的定义&lt;/h2&gt;
+&lt;p&gt;前后端定义，不应该是以语言来定义，而是应该以它的&lt;strong&gt;运行环境&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Html+CSS+JS，都是&lt;strong&gt;在浏览器端执行，统一称之为前端&lt;/strong&gt;。(用户能看到)&lt;/li&gt;
+&lt;li&gt;Java，C，Python，PHP 这些&lt;strong&gt;在服务器端运行，统一称之为后端&lt;/strong&gt;。(用户看不到）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;前后端不分离&#34;&gt;前后端不分离&lt;/h2&gt;
+&lt;h3 id=&#34;架构设计&#34;&gt;架构设计&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/fabs/1.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;交互方式&#34;&gt;交互方式&lt;/h3&gt;
+&lt;p&gt;浏览器发请求，服务器端给出一个完整的网页，浏览器再发请求，服务器端再给出一个完整的网页
+&lt;img src=&#34;https://base.oribos.city/images/2020/11/fabs/3.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;缺点&#34;&gt;缺点&lt;/h3&gt;
+&lt;p&gt;传输的重复数据比较多，网络又会有延迟。所以有没有办法，只传送必要的数据？这是 Ajax 的起源。&lt;/p&gt;
+&lt;h3 id=&#34;ajax&#34;&gt;Ajax&lt;/h3&gt;
+&lt;p&gt;Ajax 就是只传递数据，不传递整个网页。这也是被用来在翻页，注册，发送验证码等场景，但也仅仅止布于此了。&lt;/p&gt;
+&lt;h2 id=&#34;前后端分离&#34;&gt;前后端分离&lt;/h2&gt;
+&lt;h3 id=&#34;架构设计-1&#34;&gt;架构设计&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/fabs/2.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;交互方式通过浏览器测试&#34;&gt;交互方式(通过浏览器测试)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;页面跳转(浏览器地址栏 url 会变)时浏览器先发送请求给前端服务器&lt;/li&gt;
+&lt;li&gt;浏览器得到响应数据前端代码(html+css+js, 响应数据)并渲染。(地址栏输入后端服务器的 url 会直接显示 json 格式数据, 是 html 就会渲染)&lt;/li&gt;
+&lt;li&gt;渲染时会执行 js 代码，这时 js 代码向后端服务器发送请求得到数据并动态更新 html 元素得到最终页面。
+&lt;img src=&#34;https://base.oribos.city/images/2020/11/fabs/4.png&#34; alt=&#34;图片&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;区分前后端的原因&#34;&gt;区分前后端的原因&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;第一个，是可以并行开发。前后端的进度互不影响，在过去，前后端不分离的情况下，前端的工作量相对较少，一个前端可以对四个后端。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二个，是成本问题。在过去，后端的成本还是比前端要高一些。同样的工作，如果能拆给两个人做，一个成本高一点，一个成本低一点，能接受。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第三个，CSS 太难了。JS 还好，和后端语言在对技能的训练上相差不大，可是。。CSS 是什么鬼？记住那么多的属性，和 Hash 算法有关系吗？&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;优点&#34;&gt;优点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;前端人员和后端人员只需约定好接口，大大降低了前后端耦合性&lt;/li&gt;
+&lt;li&gt;前端人员彻底不用再关心业务处理是怎么回事，他只需要把界面做好就可以了&lt;/li&gt;
+&lt;li&gt;后端人员也不用再关系前端界面是什么样的，他只需要做好业务逻辑处理即可。&lt;/li&gt;
+&lt;li&gt;服务的切离，代码管理，服务部署也都独立出来分别管理，系统的灵活性也获得了极大的提升。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 日记2020-11-18</title>
+      <link>/web/note/2020111808.html</link>
+      <pubDate>Wed, 18 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020111808.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;同样的代码不同的效果&#34;&gt;同样的代码，不同的效果&lt;/h3&gt;
+&lt;p&gt;在国内服务器上，由于以下内容的下载和安装问题，执行&lt;code&gt;npm install&lt;/code&gt;会出现错误。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/20201118160831.png&#34; alt=&#34;libvips&#34;&gt;&lt;/p&gt;
+&lt;p&gt;而同样的代码，在香港服务器上，执行&lt;code&gt;npm install&lt;/code&gt;尽管依然需要下载，但速度相对快，也没有文件丢失或无法访问。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 日记2020-11-17</title>
+      <link>/web/note/2020111714html/</link>
+      <pubDate>Tue, 17 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020111714html/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;cloudflare的kv存储免费计划&#34;&gt;cloudflare的kv存储免费计划&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/2020111701.png&#34; alt=&#34;kv存储免费计划&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Cloudflare Workers简单地说就是一个可以让你运行Javascript的平台，因为它免费，不需要域名，不需要维护服务器，在线率高。最简单的例子就是通过使用以下代码显示一个普通html页面&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const html = `&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;Hello World&amp;lt;/h1&amp;gt;
+  &amp;lt;p&amp;gt;This markup was generated by a Cloudflare Worker.&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;`
+
+async function handleRequest(request) {
+  return new Response(html, {
+    headers: {
+      &amp;quot;content-type&amp;quot;: &amp;quot;text/html;charset=UTF-8&amp;quot;,
+    },
+  })
+}
+
+addEventListener(&amp;quot;fetch&amp;quot;, event =&amp;gt; {
+  return event.respondWith(handleRequest(event.request))
+})
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;其他使用workers的方法可以通过&lt;a href=&#34;https://developers.cloudflare.com/workers/examples&#34;&gt;Examples&lt;/a&gt; 获得。&lt;/p&gt;
+&lt;p&gt;workers有免费计划，包括 100,000 个请求/天 。然后令人意外的是，cloudflare也将kv存储加入免费计划（之前使用kv存储需要5美元/月)。这样workers可以做的事情就多了。&lt;/p&gt;
+&lt;p&gt;比如使用workers不但可以部署一个静态页面，还能部署一个静态网站。&lt;/p&gt;
+&lt;h3 id=&#34;wrangler&#34;&gt;wrangler&lt;/h3&gt;
+&lt;p&gt;npm安装wrangler&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm i @cloudflare/wrangler -g
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后使用&lt;code&gt;wrangler login&lt;/code&gt; 登录，&lt;code&gt;wrangler config&lt;/code&gt;配置api-key，通过&lt;code&gt;wrangler publish&lt;/code&gt;部署&lt;/p&gt;
+&lt;p&gt;通过&lt;a href=&#34;https://developers.cloudflare.com/workers/cli-wrangler&#34;&gt;教程&lt;/a&gt;进一步了解使用wrangler&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 日记20201115</title>
+      <link>/web/note/2020111305.html</link>
+      <pubDate>Sun, 15 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020111305.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;使用gatsby错误提示&#34;&gt;使用gatsby错误提示&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/20201115154223.png&#34; alt=&#34;gatsby错误提示&#34;&gt;&lt;/p&gt;
+&lt;p&gt;原本在hugo使用的html代码，在gatsby上并不识别，导致出现错误提示。但问题是这是数百个旧文件中的一个，可以识别的md文档先渲染出来显示，不能识别的md文档不显示不就可以了。如此到每个错误就停下来，不进行渲染部署。那我需要将hugo的数百个文章转而使用gatsby生成，需要多长时间？&lt;/p&gt;
+&lt;p&gt;由于过于繁多的不兼容，识别问题，阻碍了使用gatsby。导致想变换静态部署工具的想法无法实现。&lt;/p&gt;
+&lt;h3 id=&#34;gatsby的博客模板&#34;&gt;gatsby的博客模板&lt;/h3&gt;
+&lt;p&gt;没有配置分页，由于gatsby的配置过于复杂，而且对于主题的支持并没有使用完善的git子模块，导致主题更新复杂。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 腾讯云函数计算备案</title>
+      <link>/web/note/2020111005.html</link>
+      <pubDate>Tue, 10 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020111005.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;云开发域名备案服务&#34;&gt;云开发域名备案服务&lt;/h3&gt;
+&lt;p&gt;腾讯云上使用云函数，需要申请备案，备案本身并没有问题，但是在云函数上没有固定的服务器和ip，就无法安装一般的云服务器申请备案。事实上，在其他平台上申请的备案本应该完全可以在腾讯云上使用，只要你在腾讯云上接入备案。奈何云函数的特殊性，没有服务器和ip无从接入备案。&lt;/p&gt;
+&lt;p&gt;如果按照规定，正常在腾讯云上使用云函数的话，你需要在腾讯云上购买云服务器。然后通过服务器，接入备案。而如果你只是使用腾讯云的云函数的，就会需要一个空壳的云服务器提供备案申请。当然，你可以使用备案授权码而使用其他用户的服务器，但是2019年10月20日起，仅企业实名认证的腾讯云账号可生成备案授权码。&lt;/p&gt;
+&lt;p&gt;如此麻烦，腾讯云“人性化”的提供了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/2020111101.png&#34; alt=&#34;云开发域名备案服务&#34;&gt;&lt;/p&gt;
+&lt;p&gt;即：提供一个环境和ip方便用户备案。&lt;/p&gt;
+&lt;h3 id=&#34;其实&#34;&gt;其实&lt;/h3&gt;
+&lt;p&gt;早期的云函数是可以使用已经备案的域名的，后来腾讯云撤销了未在腾讯云上接入备案的域名访问云函数，然后不久提供了专用的云函数备案付费服务。即，通过政策赚钱。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: wordpress测试</title>
+      <link>/web/pro/test/2020110502.html</link>
+      <pubDate>Thu, 05 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/pro/test/2020110502.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;问题&#34;&gt;问题&lt;/h3&gt;
+&lt;p&gt;发现wordpress的css和js文件并不全部会自动设置为https，由于wordpress是服务端渲染，页面效果应环境而出现不同。导致设置了https://app.holz.pub，页面显示仍然引用的http&lt;/p&gt;
+&lt;p&gt;如下图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/2020110503.png&#34; alt=&#34;https和http混搭&#34;&gt;&lt;/p&gt;
+&lt;p&gt;导致页面效果出现问题。&lt;/p&gt;
+&lt;p&gt;而另一方面，wordpress自带的编辑器并不能很好的解决css和js文件的配置，导致此处配置必须修改主题文件。&lt;/p&gt;
+&lt;h3 id=&#34;结论&#34;&gt;结论&lt;/h3&gt;
+&lt;p&gt;wordpress 糟糕的前端页面编辑器（或者说wordpress作为服务端渲染应用，前端页面根本不重要），在后台配置里即便设置了站点为https，仍然不会完全生效。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 相册</title>
+      <link>/web/note/2020110101.html</link>
+      <pubDate>Sun, 01 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020110101.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;创建了一个展示相册&#34;&gt;创建了一个展示相册&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.oribos.cn/photo&#34;&gt;相册站点&lt;/a&gt; ，用来集中展示分享的图片。&lt;/p&gt;
+&lt;h3 id=&#34;子站点&#34;&gt;子站点&lt;/h3&gt;
+&lt;p&gt;项目的部署站点在 /photo ，即博客的子目录里，尽管使用的主题完全跟blog主题不一样。用子目录可以使得站点内容集中在一个域名下。原本使用photo.holz.pub域名，但是考虑到cdn，文件存放等等需要更多的设置，还是不如子目录方便。&lt;/p&gt;
+&lt;p&gt;后续新增友链，其他内容也会使用子目录的形式集中部署在blog.oribos.cn之下。(2020-11-20变更:由blog.holz.pub变更为blog.oribos.cn)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 收敛型和发散型知识</title>
+      <link>/web/note/2020102701.html</link>
+      <pubDate>Tue, 27 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020102701.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;知识的收敛和发散&#34;&gt;知识的收敛和发散&lt;/h3&gt;
+&lt;h3 id=&#34;收敛型知识&#34;&gt;“收敛型知识”&lt;/h3&gt;
+&lt;p&gt;收敛 是指会聚于一点，向某一值靠近。&lt;/p&gt;
+&lt;p&gt;“收敛型知识” 表现在越来越集中到某一些内容，某一部或几部著作。将某些内容视为最终的，全知全能的知识，解开宇宙万事万物奥秘的钥匙。&lt;/p&gt;
+&lt;p&gt;收敛型知识在起初会出现多种表现，他们的理论和依据在他们自身的性质决定下，集中成唯一的目标。这个唯一的目标可能是一本书，也可能是一个人，也可能是传说。&lt;/p&gt;
+&lt;h3 id=&#34;发散型知识&#34;&gt;“发散型知识”&lt;/h3&gt;
+&lt;p&gt;“发散型知识”表现在越来越广泛，复杂。对某一个点的研究就能开拓出许多未知的课题。对课题的研究越来越复杂，内容越来越多。无法使用一个或有限个内容来解答所有问题。甚至出现相互矛盾，互相不相容的情况。&lt;/p&gt;
+&lt;p&gt;发散型知识在起初体现在一个简单的现象，基于理论之下会将此现象分析成多种因素，对不同因素的研究又能探索出更多内容，周而复始。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 记录hugo配置</title>
+      <link>/web/note/2020102705.html</link>
+      <pubDate>Tue, 27 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020102705.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;日记&#34;&gt;日记&lt;/h2&gt;
+&lt;p&gt;使用config.yml的&lt;code&gt;publishDir&lt;/code&gt;自定义hugo生成的目录&lt;/p&gt;
+&lt;p&gt;使用&lt;code&gt;baseURL = &amp;quot;/dir/&amp;quot;&lt;/code&gt;修改网页使用的根目录&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 萌新专用hexo教程.</title>
+      <link>/web/note/2020102117.html</link>
+      <pubDate>Wed, 21 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020102117.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;萌新专用hexo教程&#34;&gt;萌新专用hexo教程&lt;/h3&gt;
+&lt;p&gt;介绍&lt;/p&gt;
+&lt;h1 id=&#34;适用于萌新的hexo自动部署&#34;&gt;适用于萌新的hexo自动部署&lt;/h1&gt;
+&lt;h3 id=&#34;使用步骤&#34;&gt;使用步骤&lt;/h3&gt;
+&lt;h4 id=&#34;第一步-使用代码&#34;&gt;第一步 使用代码&lt;/h4&gt;
+&lt;p&gt;git 下载&lt;a href=&#34;https://github.com/denalon/product/&#34;&gt;github上的源码&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/denalon/product.git&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;也可以使用&lt;a href=&#34;https://frednab.coding.net/public/test/product/git/files&#34;&gt;coding仓库&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://e.coding.net/frednab/test/product.git&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第二步-修改配置&#34;&gt;第二步 修改配置&lt;/h4&gt;
+&lt;p&gt;修改 项目目录下的CNAME文件里的域名&lt;/p&gt;
+&lt;p&gt;原文使用&lt;a href=&#34;https://github.com/jerryc127/hexo-theme-butterfly&#34;&gt;butterfly&lt;/a&gt;,你可以通过hexo 5.0之后的新的安装主题方式使用&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;npm i hexo-theme-butterfly&lt;/code&gt;方式安装自己需要的主题（请参照自己需要主题的安装说明）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;其他文件不需要配置&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第三步-更新文章&#34;&gt;第三步 更新文章&lt;/h4&gt;
+&lt;p&gt;撰写自己的文章&lt;/p&gt;
+&lt;h4 id=&#34;第四步-git推送到github&#34;&gt;第四步 git推送到github&lt;/h4&gt;
+&lt;p&gt;通过一下命令将代码推送到github仓库&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果你是使用git clone方式下载的代码，建议删掉目录下的.git目录再执行如下操作&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git init //初始化仓库。
+git add . //添加文件到暂存区。(注意有点号.)
+git commit -m &amp;quot;更新说明&amp;quot; //将暂存区内容添加到仓库中。标识“更新说明”
+git remote add origin XXXX.git  //添加到远程仓库操作，将xxxx.git设置为远程仓库origin
+git push -u origin master  //推送master分支到origin仓库
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;提示操作成功后，代码将推送到github上的master分支，github自动部署将启动，将hexo文件自动部署到gh-pages分支&lt;/p&gt;
+&lt;h4 id=&#34;第五步-开启pages&#34;&gt;第五步 开启pages&lt;/h4&gt;
+&lt;p&gt;在github仓库 “Settings”选择“GitHub Pages” source项选择Branch:gh-pages
+如图：&lt;img src=&#34;https://base.oribos.city/images/2020/10/20201022095332.png&#34; alt=&#34;github pages设置&#34;&gt;&lt;/p&gt;
+&lt;p&gt;即可使用由github自动部署的 pages 服务。&lt;/p&gt;
+&lt;p&gt;以下是需要用到的内容&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;nodejs安装&#34;&gt;nodejs安装&lt;/h3&gt;
+&lt;h3 id=&#34;ubuntu&#34;&gt;ubuntu&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Installation instructions
+Node.js v15.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_15.x | bash -
+apt-get install -y nodejs
+Node.js v14.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_14.x | bash -
+apt-get install -y nodejs
+Node.js v12.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_12.x | bash -
+apt-get install -y nodejs
+Node.js v10.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_10.x | bash -
+apt-get install -y nodejs
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;centos&#34;&gt;centos&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;
+Installation instructions
+NOTE: If you are using RHEL 6 or CentOS 6, you might want to read about running Node.js on older distros.
+
+Run as root on RHEL, CentOS, CloudLinux or Fedora:
+
+Node.js v15.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_15.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_15.x | sudo bash -
+Node.js v14.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_14.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
+Node.js v12.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
+Node.js v10.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_10.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;git安装&#34;&gt;git安装&lt;/h3&gt;
+&lt;h1 id=&#34;安装git&#34;&gt;安装git&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;yum install -y wget
+
+wget -O /tmp/git-2.21.0.tar.gz https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.21.0.tar.gz
+
+# 安装编译依赖
+yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
+
+# 解压
+tar -zxf /tmp/git-2.21.0.tar.gz -C /tmp/
+
+cd /tmp/git-2.21.0
+
+# 检验相关依赖，设置安装路径
+./configure --prefix=/usr/local/git
+
+# 编译安装
+make &amp;amp;&amp;amp; make install
+
+
+# 删除已有的 git
+yum remove git
+
+# 配置环境变量
+vim /etc/profile
+
+# GIT_HOME
+GIT_HOME=/usr/local/git
+export PATH=$PATH:$GIT_HOME/bin
+
+# 刷新
+source /etc/profile
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;查看防火墙状态
+
+firewall-cmd --state
+1
+停止firewall
+
+systemctl stop firewalld.service
+1
+禁止firewall开机启动
+
+systemctl disable firewalld.service
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
+&lt;p&gt;集成hexo主题，自动部署的源码，萌新可以拿去用，secrets.GITHUB_TOKEN 也不需要自己生成和设置&lt;/p&gt;
+&lt;p&gt;总之，更改CNAME文件里的域名，推送，在github上开启pages就可以了。极其简单的使用由github自动部署的 pages 服务。&lt;/p&gt;
+&lt;p&gt;适合于萌新想用hexo不知道怎么配置的，直接扒源码就可以快速部署自己的hexo博客了&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 博客变更历程</title>
+      <link>/web/note/2020101303.html</link>
+      <pubDate>Tue, 13 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020101303.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;博客变更&#34;&gt;博客变更&lt;/h3&gt;
+&lt;p&gt;记录博客部署的过程&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 引用文件</title>
+      <link>/web/note/2020101217.html</link>
+      <pubDate>Mon, 12 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020101217.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;连续更新的内容&#34;&gt;连续更新的内容&lt;/h3&gt;
+&lt;p&gt;使用&lt;code&gt;https://github.com/Rheaheim/content&lt;/code&gt;的内容作为日常引用文件，一些临时撰写的文章会上传到github，生成&lt;code&gt;https://content.uns.pub/&lt;/code&gt;的页面。并根据需要引入到博客页面。&lt;/p&gt;
+&lt;h3 id=&#34;使用代码&#34;&gt;使用代码：&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;left&amp;quot;&amp;gt;
+      &amp;lt;div id=&amp;quot;div1&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+      &amp;lt;script&amp;gt;
+            $(&amp;quot;#div1&amp;quot;).load(&amp;quot;https://content.uns.pub/test/1.html&amp;quot;);
+      &amp;lt;/script&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: nodejs和git安装</title>
+      <link>/web/note/2020/20201011.html</link>
+      <pubDate>Sun, 11 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020/20201011.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;nodejs安装&#34;&gt;nodejs安装&lt;/h1&gt;
+&lt;h3 id=&#34;ubuntu&#34;&gt;ubuntu&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Installation instructions
+Node.js v15.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_15.x | bash -
+apt-get install -y nodejs
+Node.js v14.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_14.x | bash -
+apt-get install -y nodejs
+Node.js v12.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_12.x | bash -
+apt-get install -y nodejs
+Node.js v10.x:
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_10.x | bash -
+apt-get install -y nodejs
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;centos&#34;&gt;centos&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;
+Installation instructions
+NOTE: If you are using RHEL 6 or CentOS 6, you might want to read about running Node.js on older distros.
+
+Run as root on RHEL, CentOS, CloudLinux or Fedora:
+
+Node.js v15.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_15.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_15.x | sudo bash -
+Node.js v14.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_14.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
+Node.js v12.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
+Node.js v10.x
+
+# As root
+curl -sL https://rpm.nodesource.com/setup_10.x | bash -
+
+# No root privileges 
+curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 连续更新的内容</title>
+      <link>/web/note/2020101000.html</link>
+      <pubDate>Sat, 10 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020101000.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;连续更新的内容&#34;&gt;连续更新的内容&lt;/h3&gt;
+&lt;p&gt;连续更新，内容引用github&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 博客撤销后端服务</title>
+      <link>/web/note/2020100813.html</link>
+      <pubDate>Thu, 08 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020100813.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;撤销后端服务&#34;&gt;撤销后端服务&lt;/h3&gt;
+&lt;p&gt;撤销了测试用的halo ghost等服务端渲染应用&lt;/p&gt;
+&lt;p&gt;关闭所有使用php的服务端渲染站点,包括测试用的wordpress,typecho.和函数计算上的php应用.&lt;/p&gt;
+&lt;h3 id=&#34;博客和单页摒弃web服务器&#34;&gt;博客和单页摒弃web服务器&lt;/h3&gt;
+&lt;p&gt;用来记录和展示日常文章的博客,将不再部署在云服务器,物理服务器,树莓派,NAS上.将以hugo生成html托管在静态站点上或者对象存储服务上.简单的js或功能性页面将在cf的worker或者对象存储上使用.&lt;/p&gt;
+&lt;p&gt;关闭个人云服务器的web服务,关闭个人功能的后端服务.&lt;/p&gt;
+&lt;h3 id=&#34;文章以文件形式部署&#34;&gt;文章以文件形式部署&lt;/h3&gt;
+&lt;p&gt;博客的文章更新以文章的形式保存在git托管上,博客的项目托管在github或coding上,通过定时运行部署,或者api触发 .&lt;/p&gt;
+&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
+&lt;p&gt;由于部署一个前后端分离的应用需要前端服务器和后端服务器同时持续运行,虽然前端服务可以托管在静态服务上,但需要考虑静态服务的托管费用和流量问题.还要关注后端服务的持续运行和维护.这些在项目运行中是有必要的,但博客的作用有限.投入过多的资源并不明智.&lt;/p&gt;
+&lt;p&gt;采用git托管和静态页面部署,配置简单的自动部署和cdn,维持一个长期的网页在线.其他的服务器运行和维护不需要担心.这是必要的.&lt;/p&gt;
+&lt;p&gt;不采用落后的wordpress,typecho等应用,不采用java,python,go项目的服务端渲染应用.一个简单长期的博客,应当尽可能的结构简单,稳定运行.&lt;/p&gt;
+&lt;h3 id=&#34;测试项目另外部署&#34;&gt;测试项目另外部署&lt;/h3&gt;
+&lt;p&gt;之前的博客作用是用来测试项目代码的效果,现在博客作为一个长期维护的项目,就不再作为一个临时的测试的运行状态.所以,不必要的内容应当被剥离.&lt;/p&gt;
+&lt;p&gt;用来测试的项目将另外安排域名和服务器,使博客尽可能不受干扰 .&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: hexo安装步骤</title>
+      <link>/web/note/2020/20201005.html</link>
+      <pubDate>Mon, 05 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020/20201005.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;hexo安装步骤&#34;&gt;hexo安装步骤&lt;/h1&gt;
+&lt;p&gt;在客户端运行和推送&lt;/p&gt;
+&lt;h3 id=&#34;安装nodejs&#34;&gt;安装nodejs&lt;/h3&gt;
+&lt;h3 id=&#34;安装git&#34;&gt;安装git&lt;/h3&gt;
+&lt;h3 id=&#34;安装hexo&#34;&gt;安装hexo&lt;/h3&gt;
+&lt;h3 id=&#34;配置文件&#34;&gt;配置文件&lt;/h3&gt;
+&lt;h3 id=&#34;发布&#34;&gt;发布&lt;/h3&gt;
+&lt;p&gt;hexo d&lt;/p&gt;
+&lt;p&gt;在服务器上运行和部署&lt;/p&gt;
+&lt;h3 id=&#34;推荐安装宝塔面板&#34;&gt;推荐安装宝塔面板&lt;/h3&gt;
+&lt;h3 id=&#34;安装nodejs-1&#34;&gt;安装nodejs&lt;/h3&gt;
+&lt;h3 id=&#34;根据需求安装git&#34;&gt;根据需求安装git&lt;/h3&gt;
+&lt;p&gt;由于是在服务器上安装，就不需要使用git和github代码托管，就没必要安装git。当然使用github托管代码有助于保留源代码，推荐使用。&lt;/p&gt;
+&lt;h3 id=&#34;安装hexo-1&#34;&gt;安装hexo&lt;/h3&gt;
+&lt;h3 id=&#34;配置文件-1&#34;&gt;配置文件&lt;/h3&gt;
+&lt;h3 id=&#34;发布-1&#34;&gt;发布&lt;/h3&gt;
+&lt;p&gt;hexo g&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 中文域名的尴尬</title>
+      <link>/web/note/2020100573.html</link>
+      <pubDate>Mon, 05 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020100573.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;中文域名&#34;&gt;中文域名&lt;/h3&gt;
+&lt;p&gt;类似于 &lt;a href=&#34;http://xn--eqrt2g.xn--vuq861b/&#34;&gt;域名.信息&lt;/a&gt; 的中文域名,看似符合中国文字的习惯,但是域名url的符号&amp;quot;.&amp;ldquo;是英文符号,导致使用中文输入法输入 &lt;code&gt;域名.信息&lt;/code&gt; 时需要输入 中文符号&amp;quot;域名&amp;rdquo;+英文符号&amp;quot;.&amp;quot;+中文符号&amp;quot;信息&amp;quot;,一个简单的域名需要切换至少两次输入法.&lt;/p&gt;
+&lt;p&gt;这种复杂的输入方式导致中文域名的使用难度比英文域名高.在英文域名中,一个字符的差别就会使得域名价格翻十几甚至几十倍价格.中文域名如此尴尬的使用方法实则推广难度大.&lt;/p&gt;
+&lt;h3 id=&#34;中文的符号&#34;&gt;中文的符号&lt;/h3&gt;
+&lt;p&gt;不知道何时,中文排版需要自创 全角符号 ，。代替   .   , 等符号。导致在电脑操作上，两者具有较大不同。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: docker安装宝塔面板</title>
+      <link>/web/note/2020093073.html</link>
+      <pubDate>Wed, 30 Sep 2020 11:09:33 +0800</pubDate>
+      
+      <guid>/web/note/2020093073.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;在使用docker安装宝塔面板之前请先确保服务器已经安装并开启了docker&lt;/p&gt;
+&lt;p&gt;拉取centos基础镜像，用容器启动该基础镜像，直接在这个容器中部署&lt;/p&gt;
+&lt;p&gt;1.拉取纯净系统镜像&lt;/p&gt;
+&lt;p&gt;$ docker pull centos:7.2.1511
+1
+2.启动镜像，映射主机与容器内8888（宝塔面板）、888（PHPMYADMIN）端口&lt;/p&gt;
+&lt;p&gt;$ docker run -d -it -p 8888:8888 -p 888:888 centos:7.2.1511
+1
+可以同时映射进去其它常用端口比如：80、443、3306等&lt;/p&gt;
+&lt;p&gt;$ docker run -d -it -p 8888:8888 -p 888:888 -p 80:80 -p 443:443 -p 3306:3306 centos:7.2.1511
+1
+挂载目录&lt;/p&gt;
+&lt;p&gt;$ docker run -d -it -p 8888:8888 -p 888:888 -p 80:80 -p 443:443 -p 3306:3306 -v /www:/www &amp;ndash;privileged=true  centos:7.2.1511
+1
+3.查看容器id，并进入容器&lt;/p&gt;
+&lt;p&gt;$ docker ps
+1
+$ docker exec -it 容器ID bash
+1
+4.执行宝塔面板Centos安装命令&lt;/p&gt;
+&lt;p&gt;yum install -y wget &amp;amp;&amp;amp; wget -O install.sh &lt;a href=&#34;http://download.bt.cn/install/install.sh&#34;&gt;http://download.bt.cn/install/install.sh&lt;/a&gt; &amp;amp;&amp;amp; sh install.sh
+1
+然后就是等待安装完成。完成后会显示宝塔面板的地址和账号密码，如果打不开请检查防火墙放行端口8888&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 使用docker运行hugo</title>
+      <link>/web/note/2020092313.html</link>
+      <pubDate>Wed, 23 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020092313.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;使用docker运行hugo&#34;&gt;使用docker运行hugo&lt;/h3&gt;
+&lt;p&gt;docker run &amp;ndash;rm -t   -v $(pwd):/src   klakegg/hugo:0.74.3-ext-ubuntu&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 信息拆分</title>
+      <link>/web/note/2020091919.html</link>
+      <pubDate>Sat, 19 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020091919.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;口令&#34;&gt;口令&lt;/h3&gt;
+&lt;p&gt;对文件设置访问口令，口令正确才能访问&lt;/p&gt;
+&lt;h3 id=&#34;字典&#34;&gt;字典&lt;/h3&gt;
+&lt;p&gt;为了避免信息泄露需要将信息拆分，混淆&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;作用特殊的文件夹名称: *7*DA-0001A*7* 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;7&lt;/em&gt;DA-0001A&lt;em&gt;7&lt;/em&gt; 指某一个名称，该名称为保密内容&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;7&lt;/em&gt; 只是其中一个特殊标记，DA指序号&lt;/p&gt;
+&lt;h3 id=&#34;混淆&#34;&gt;混淆&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;*7*DA-0001A*7**7*DA-0001B*7**7*DA-0001A*7*
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;加密信息被无意义的内容填充，或者多个加密信息，只有特定的一个为真&lt;/p&gt;
+&lt;h3 id=&#34;信息拆分&#34;&gt;信息拆分&lt;/h3&gt;
+&lt;p&gt;一个完整的信息被拆分成多个文件，只有这些文件全部集齐才能得到完整信息&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 概念</title>
+      <link>/web/note/2020091913.html</link>
+      <pubDate>Sat, 19 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020091913.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;概念&#34;&gt;概念&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;概念（Idea；Notion；Concept）是人类在认识过程中，从感性认识上升到理性认识，把所感知的事物的共同本质特点抽象出来，加以概括，是自我认知意识的一种表达，形成概念式思维惯性。在人类所认知的思维体系中最基本的构筑单位
+
+心理学上认为，概念是人脑对客观事物本质的反映，这种反映是以词来标示和记载的。概念是思维活动的结果和产物，同时又是思维活动借以进行的单元。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;个人理解&#34;&gt;个人理解&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;物质是真实存在的，概念是虚拟的，抽象的。
+
+唯物主义和唯心主义的不同就是概念的抽象和物质的真实的差别&lt;/code&gt;&lt;/pre&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 网站分拆</title>
+      <link>/web/note/2020091907.html</link>
+      <pubDate>Sat, 19 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020091907.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;问题&#34;&gt;问题&lt;/h3&gt;
+&lt;p&gt;由于网站在coding构建计划推送阿里云oss，同时期望找到到一个可靠的静态托管服务避免不必要的付费。出现以下两个矛盾：&lt;/p&gt;
+&lt;p&gt;1 使用github pages和vercel时会出现下载国内的内容缓慢(子模块中引用coding的git仓库)。&lt;/p&gt;
+&lt;p&gt;2 在coding构建计划中使用npm时出现网络错误，自动部署失败。&lt;/p&gt;
+&lt;h3 id=&#34;原因&#34;&gt;原因：&lt;/h3&gt;
+&lt;p&gt;在国内使用npm和git速度是相当慢，且经常遇到无法下载而停滞的情况。而国内并没有一个完全有效代替npm和git的工具。这就导致在网站项目里使用npm install时，所使用的hugo-bin需要单独从其他地方下载文件时发生网络错误卡住。&lt;/p&gt;
+&lt;h3 id=&#34;解决方法&#34;&gt;解决方法&lt;/h3&gt;
+&lt;p&gt;在国内项目中使用blog仓库，使用的服务和内容均引用国内仓库地址。去除npm命令和项目依赖。在海外项目使用note仓库，使用的服务和内容引用github，bitbucket仓库地址。使用npm命令。&lt;/p&gt;
+&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;
+&lt;p&gt;使用npm可以简化程序代码，使用统一的包管理器。而由于国内糟糕的网络状况。这种方便的形式无法正常使用。且没有一个合适的代替方法。只能添加繁琐复杂的代码，并自行维护。cnpm仅提供基础的缓存，在&lt;code&gt;npm rimraf vendor &amp;amp;&amp;amp; node lib/install&lt;/code&gt;运行时依然出现网络问题。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 从零搭建Spring Boot的Hello World</title>
+      <link>/web/note/2020091801.html</link>
+      <pubDate>Fri, 18 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020091801.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;从零搭建spring-boot的hello-world&#34;&gt;从零搭建Spring Boot的Hello World&lt;/h1&gt;
+&lt;h2 id=&#34;安装java开发环境&#34;&gt;安装Java开发环境&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载并安装JDK8，下载地址参见&lt;a href=&#34;https://www.oracle.com/java/technologies/javase-downloads.html?spm=a2c6h.13858378.0.0.68727178huCoQh&#34;&gt;Java SE 8u261&lt;/a&gt; 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置Java环境变量。&lt;/p&gt;
+&lt;p&gt;a.  打开命令窗口，执行以下命令。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;说明：执行命令前，请修改JAVA_HOME参数C:\Program Files\Java\jdk1.8.0_211为您的JDK安装目录。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```
+setx JAVA_HOME &amp;quot;C:\Program Files\Java\jdk1.8.0_211&amp;quot;
+setx path &amp;quot;%path%;%JAVA_HOME%\bin&amp;quot;
+
+```
+b.执行以下命令，验证环境变量配置是否成功。
+
+```
+java -version
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;安装并配置intellij-idea&#34;&gt;安装并配置IntelliJ IDEA&lt;/h2&gt;
+&lt;p&gt;此步骤主要介绍使用IntelliJ IDEA安装Spring Assistant插件。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载并安装IntelliJ IDEA，下载地址参见 &lt;a href=&#34;https://www.jetbrains.com/idea/download/?spm=a2c6h.13858378.0.0.68727178huCoQh&#34;&gt;IntelliJ IDEA&lt;/a&gt; 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;双击运行IntelliJ IDEA。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在IntelliJ IDEA启动界面，依次单击 Configure &amp;gt; Settings 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB1XKXUO1L2gK0jSZFmXXc7iXXa-999-901.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;单击 Plugins，然后在搜索栏输入spring Assistant。最后单击 Install 安装插件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB1Kx4JOYr1gK0jSZFDXXb9yVXa-1249-880.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;单击 Restart IDE。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB1zjFHOVT7gK0jSZFpXXaTkpXa-1241-872.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;创建spring-boot项目&#34;&gt;创建Spring Boot项目&lt;/h2&gt;
+&lt;p&gt;本步骤主要介绍使用Spring Assistant插件来搭建简单的Spring Boot项目。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在IntelliJ IDEA启动界面，单击 Create New Project。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在左侧单击 Spring Assistant，然后单击 Next。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB1ncFTO8r0gK0jSZFnXXbRRXXa-1086-832.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;如下图所示，依次配置Group Id、Artifact Id、Packaging等，然后单击 Next。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB10M0AOVY7gK0jSZKzXXaikpXa-1085-833.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;在左侧单击 Web，然后勾选 Spring Web，最后单击Next。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB1IWmafGNj0u4jSZFyXXXgMVXa-1087-831.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;单击 Finish，等待项目初始化。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;完整的目录结构如下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB144Cnasieb18jSZFvXXaI3FXa-469-705.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;初始化完成之后，在 com.example.demo 目录下创建 HelloAliyunController.java 文件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB1PZFIOVT7gK0jSZFpXXaTkpXa-610-323.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;在 HelloAliyunController.java 文件中，添加以下代码。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;package com.example.demo;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloAliyunController {
+
+    @RequestMapping(&amp;quot;/&amp;quot;)
+    public String helloAliyun(){
+
+        return &amp;quot;Hello Aliyun!!!&amp;quot;;
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;打包并上传项目到ECS服务器&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打包项目。&lt;/p&gt;
+&lt;p&gt;a.  单击IDEA右上角Maven。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB1coVAOVY7gK0jSZKzXXaikpXa-421-400.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;b.  依次双击 demo&amp;gt;Lifecycle&amp;gt;package，开始打包。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB187pTO8r0gK0jSZFnXXbRRXXa-251-375.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;执行结果如下，图中标记位置为打包后jar包的路径。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB1770IOVT7gK0jSZFpXXaTkpXa-980-633.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;打开终端工具。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Windows：打开命令窗口。
+MAC：打开命令行终端Terminal。
+Windows用户请检查系统中是否安装有SSH工具。检查方法：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a.  在终端中输入命令ssh -V。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;ssh -V
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果显示SSH版本则表示已安装，如下图所示。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB1Am16g639YK4jSZPcXXXrUFXa-306-34.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;b.  如果未安装，请下载安装OpenSSH工具。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;上传jar包到ECS服务器。&lt;/p&gt;
+&lt;p&gt;a.  在命令行中执行以下命令。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;scp C:\Users\Administrator\IdeaProjects\demo\target\demo-0.0.1-SNAPSHOT.jar &lt;a href=&#34;mailto:root@47.xx.xx.xx&#34;&gt;root@47.xx.xx.xx&lt;/a&gt;:/root
+说明: 在执行命令前，请先替换以下参数。&lt;/p&gt;
+&lt;p&gt;C:\Users\Administrator\IdeaProjects\demo\target\demo-0.0.1-SNAPSHOT.jar为jar包存放路径。
+47.xx.xx.xx为ECS实例公网IP。
+执行结果如下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB1mBKKPEz1gK0jSZLeXXb9kVXa-1006-43.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;b.  输入已创建的ECS云服务器的登录密码。
+
+c.  上传成功后，会显示如下信息。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB1N1XKO7L0gK0jSZFAXXcA9pXa-1010-66.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;运行ecs上的java项目&#34;&gt;运行ECS上的Java项目&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;执行以下命令，安装Java运行环境。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;yum -y install java-1.8.0*
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;执行以下命令，运行Java项目。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;java -jar demo-0.0.1-SNAPSHOT.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行结果如下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city//images/2020/09/TB1BKpAO7L0gK0jSZFtXXXQCXXa-1402-380.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 本地博客</title>
+      <link>/web/note/2020091871.html</link>
+      <pubDate>Fri, 18 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020091871.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;本地环境的博客&#34;&gt;本地环境的博客&lt;/h1&gt;
+&lt;p&gt;由于hexo和hugo等静态工具是按照文件形式存放文章，可以用hexo搭建私有个人博客，仅供个人日常日记和图片整理。不对外访问。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 缘起性空</title>
+      <link>/web/note/2020091607.html</link>
+      <pubDate>Wed, 16 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020091607.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;缘起性空&#34;&gt;缘起性空&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;缘起性空是佛教用语。所谓“缘起”，就是说：世间上没有独存性的东西，也没有常住不变的东西，一切都是因缘和合所生起。所谓“性空”，就是说：因缘和合所生起的假有，本性是空的；如果自性不空，则不能有，这就是“真空生妙有”的意义。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;缘起论是佛法中的概念。缘起论认为世间上的事事物物(一切有为法)非凭空而有，不能单独存在，必须依靠种种因缘条件和合才能成立，一旦组成的因缘散失，事物本身也就归于乌有，「 诸法因缘生，诸法因缘灭 」的因果定律，称之为「 缘起 」。&lt;/p&gt;
+&lt;h3 id=&#34;定义&#34;&gt;定义&lt;/h3&gt;
+&lt;p&gt;要明白佛教的义理，就必须从缘起论开始。缘起，是宇宙人生本来的、必然的、普遍的存在，所谓「若佛出世，若未出世，此法常住，法住法界。」当初佛陀在菩提树下金刚座上，因为现观缘起而成佛。「缘起」并非佛陀所「创造」，佛陀只是「发现」了「缘起」这个自然的法则，再将此宇宙人生的真理对众生宣说、开示。
+《中阿含经》云「若此有则彼有，若此生则彼生，若此无则彼无，若此灭则彼灭」，这是对缘起的定义。
+缘起，就是说一切诸法都是由于因缘而生起的。简单地说，就是世界上一切事物、现象的生起都是相对的，都是互相存在的关系和条件。如果没有这个关系和条件，任何事物和现象都无法生起。&lt;/p&gt;
+&lt;h3 id=&#34;因缘果&#34;&gt;因、缘、果&lt;/h3&gt;
+&lt;p&gt;缘起论包括因和缘两个部分。因即因素，缘即条件，其中因是主要的，缘是辅助的。因缘聚则生，因缘散则灭。
+一切法的生灭既由因缘，那么一切法存在或坏灭也就有因可循、有理可据。凡果必有因，怎样的因便产生怎样的果，因果必相应。
+世间一切有为法皆无独立性、恒常性，必须靠「因」、「缘」和合才有「果」。「缘起」法所阐述的，就是因、缘、果的关系，因、缘、果三者是相依相待而存在，没有绝对的独立性。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;个人理解&#34;&gt;个人理解&lt;/h3&gt;
+&lt;p&gt;物质是客观存在的，一个存在本身是确定的，不依赖于其他的决定。&lt;/p&gt;
+&lt;p&gt;比如一个人有许多身份，是学生，是父母，是领导。这些概念和身份只是这个人的客观存在的一些标签，标签可多可少，可加可减。但人的客观存在并没有发生客观上的变化。一个人成为学生和父母，自己的客观存在并没有发生变化。婴儿出生，一个就成为父亲。但这个人可以不用等婴儿出生，认另一个婴儿为“干儿子”他同样成为父亲。另一种婴儿出生之后，这个父亲不知道或者不承认，那么“父亲”这个概念是否影响到这个人的“因缘”？&lt;/p&gt;
+&lt;p&gt;一杯水，尽管水由氢和氧原子构建，但氢和氧生成水以后，氢和氧就不能决定水的存在了，除非电能来破坏水的结构生成氢气和氧气。&lt;/p&gt;
+&lt;p&gt;即：关系，缘分，规则只是来描述客观存在的一种形式和概念，不是决定客观存在的行为。&lt;/p&gt;
+&lt;h3 id=&#34;理论是人们人类世界的工具&#34;&gt;理论是人们人类世界的工具&lt;/h3&gt;
+&lt;p&gt;由于人类的局限性，认识世界并不是全面的和完整的。人类使用的认识工具也必然存在片面，矛盾的。这是由人类本身的局限决定。如果一种方式是全知全能的，那必然不是人类能接受的。视图用有限的理论描述整个世界和解释所有问题是徒劳的。&lt;/p&gt;
+&lt;p&gt;客观世界的存在必然是确定的，对客观事物的描述也只是赋予的概念，并没有改变客观事物的本质。客观事物的存在不依赖于概念和理论。改变和消灭客观事物必须引起能量和物质的改变。&lt;/p&gt;
+&lt;h4 id=&#34;唯物主义&#34;&gt;唯物主义&lt;/h4&gt;
+&lt;p&gt;物质是客观实在的哲学范畴，这种客观实在是人通过感知的，不依赖于我们的感觉而存在，为我们的感觉所复写、摄影、反映。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: heroku</title>
+      <link>/web/note/2020091521.html</link>
+      <pubDate>Tue, 15 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020091521.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;heroku-免費版竟然也可架設-wordpress&#34;&gt;Heroku 免費版，竟然也可架設 WordPress&lt;/h1&gt;
+&lt;h3 id=&#34;heroku-上使用wordpress&#34;&gt;heroku 上使用wordpress&lt;/h3&gt;
+&lt;p&gt;免费使用heroku的php空间和数据库&lt;/p&gt;
+&lt;h2 id=&#34;步骤&#34;&gt;步骤&lt;/h2&gt;
+&lt;h3 id=&#34;安装heroku-cli&#34;&gt;安装heroku CLI&lt;/h3&gt;
+&lt;p&gt;参考地址&lt;a href=&#34;https://devcenter.heroku.com/articles/heroku-cli&#34;&gt;The Heroku CLI&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g heroku
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;由于在服务器上无法打开浏览器，可以使用账户密码登录，登录命令如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;heroku login -i
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;创建wordpress项目&#34;&gt;创建wordpress项目&lt;/h3&gt;
+&lt;p&gt;创建一个项目 &lt;code&gt;example&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用一个add-ons，选择JawsDB MySQ&lt;/p&gt;
+&lt;p&gt;获得数据库的地址和用户名&lt;/p&gt;
+&lt;p&gt;下载wordpress&lt;/p&gt;
+&lt;p&gt;通过heroku cli 部署项目&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ heroku git:clone -a example
+$ cd example
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将wordpress的文件复制到&lt;code&gt;example&lt;/code&gt;文件夹下&lt;/p&gt;
+&lt;p&gt;修改wp-config.php里的数据库连接地址和用户名密码&lt;/p&gt;
+&lt;h3 id=&#34;部署到heroku&#34;&gt;部署到heroku&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ git add .
+$ git commit -am &amp;quot;make it better&amp;quot;
+$ git push heroku master
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;heroku cli将项目部署到heroku&lt;/p&gt;
+&lt;h3 id=&#34;完成&#34;&gt;完成&lt;/h3&gt;
+&lt;p&gt;添加域名解析&lt;/p&gt;
+&lt;p&gt;访问网址&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: learn-termux</title>
+      <link>/web/note/2020091511.html</link>
+      <pubDate>Tue, 15 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020091511.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;learn-termux&#34;&gt;learn-termux&lt;/h1&gt;
+&lt;!-- vim-markdown-toc GFM --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#learn-termux&#34;&gt;learn-termux&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%89%8D%E8%A8%80&#34;&gt;前言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%B8%80%E5%88%87%E6%AD%A7%E9%80%94%E8%87%AA%E6%AD%A4%E8%80%8C%E5%A7%8B-&#34;&gt;第一章 一切歧途，自此而始 ##&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#11-termux%E7%9A%84%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85-&#34;&gt;1.1 termux的下载与安装 ####&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#12-%E9%A2%9C%E5%80%BC%E6%98%AF%E7%AC%AC%E4%B8%80%E7%94%9F%E4%BA%A7%E5%8A%9B-&#34;&gt;1.2 颜值是第一生产力 ####&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#13-%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C&#34;&gt;1.3 简单操作&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#14-%E7%AE%80%E5%8D%95%E6%98%93%E6%87%82%E7%9A%84zsh%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95&#34;&gt;1.4 简单易懂的ZSH配置方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%86%99%E4%BD%9C%E4%B8%8E%E5%90%8C%E6%AD%A5&#34;&gt;第二章 写作与同步&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#21-vim-%E5%92%8C-emacs&#34;&gt;2.1 vim 和 emacs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#22-git%E5%92%8Cgithub&#34;&gt;2.2 git和github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#23-geeknote&#34;&gt;2.3 geeknote&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%BF%9B%E9%98%B6%E7%8E%A9%E6%B3%95&#34;&gt;第三章 进阶玩法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- vim-markdown-toc --&gt;
+&lt;p&gt;RE:从零开始的 termux 学习生活&lt;/p&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Termux 是一款强大的安卓终端模拟 APP，无需 root 直接启动，自动安装最小化 linux 系统，使用 APT 作为包管理工具并提供各种各样的软件包。
+高级终端 Termux 组合了强大的终端模拟和拓展 Linux 包收集支持。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;• 享受bash 和 zsh。&lt;/p&gt;
+&lt;p&gt;• 使用nano 和 vim编辑文件。&lt;/p&gt;
+&lt;p&gt;• 通过ssh访问服务器。&lt;/p&gt;
+&lt;p&gt;• 使用gcc和clang编译代码。&lt;/p&gt;
+&lt;p&gt;• 使用python控制台来作为口袋计算器。&lt;/p&gt;
+&lt;p&gt;• 使用git 和 subversion检查项目。&lt;/p&gt;
+&lt;p&gt;• 使用frotz运行基于文本的游戏。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://termux.com/&#34;&gt;官方网站&lt;/a&gt;&lt;br&gt;
+这个应用真的很有意思，不过对于新手而言不太友好。比如说我，可以说是完全从零开始学习相关的知识。在这里就把我折腾这个应用的经历写一写，做一个学习笔记吧。&lt;br&gt;
+目前我的水平是能够简单地使用这个软件，并使用它做一些简单的操作。比如说我的这篇文章就完全是在termux里完成、修改和上传的。那么我以一个萌新的身份来讲讲 termux 的一些基础使用以及用 termux 写文章的方法。顺带一提我现在对这个应用的理解依然不够深，之后还会不断地进行补充和修改。&lt;/p&gt;
+&lt;h2 id=&#34;第一章-一切歧途自此而始&#34;&gt;第一章 一切歧途，自此而始&lt;/h2&gt;
+&lt;h4 id=&#34;11-termux的下载与安装&#34;&gt;1.1 termux的下载与安装&lt;/h4&gt;
+&lt;p&gt;软件的下载推荐去下面的三个地方。酷安基本上是国内最良心的应用市场了吧，如果出现问题在评论区里留言也有热心的酷友帮忙解决，真的很不错。当然如果你有条件翻墙的话也是很推荐去 Gogle play 下。搜索 termux 除了能找到本体，还有各种插件。可以根据介绍按需下载。f-droid 是开源应用的应用市场，同样可以下载插件，而且无需翻墙。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.coolapk.com/apk/com.termux&#34;&gt;酷安&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.termux&#34;&gt;Google play&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/repository/browse/?fdid=com.termux&#34;&gt;f-droid&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下载后你会发现termux的安装包仅仅只有172.71K。那么这么小的体积是如何实现这么多功能的？其实除了基础的一些功能。上面提到的需要通过自带的包管理器来下载和安装。所以在初次配置时是必须要联网来下载的。当然现在我是有网络，所以直接安装就行了。&lt;/p&gt;
+&lt;p&gt;现在先试试一些基本的操作。&lt;br&gt;
+比如说更新一下软件源以及升级一下软件。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt update
+apt upgrade
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这两步操作可以保证你的软件都是最新的。&lt;br&gt;
+输入clear命令清除上面的内容。&lt;br&gt;
+然后用一下这个指令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt list
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;显示出来的都是可以直接用 apt install 命令进行安装的软件。你可以尝试自己安装看看。&lt;br&gt;
+下载与安装方面就讲的差不多了。这一节就这样结束吧。&lt;br&gt;
+对了，如果不是新手的话，在使用这个应用时是不是觉得少了几个关键的按键？比如说用来补全命令的 TAB 键。显然 termux 也考虑到了这种情况。所以在应用里是提供有这些这些按键的。只不过默认关闭，需要我们自己动手打开。&lt;br&gt;
+打开的方式也很简单。我们按音量上键+ Q 就可以看到，输入法的上方出现了一个按键条，上面就有使用命令行时频繁使用的几个键。&lt;br&gt;
+当然，除此之外也有其他的方法可以使用这几个按键的，比如说黑客键盘就自带有这些按键，但是我的目标是在 termux 里写东西，所以输入中文是必须的。而黑客键盘并不支持中文的输入。而频繁切换输入法显然也不是什么高效的方法。&lt;br&gt;
+所以还是自带的这个按键条更加符合我的要求。而且百度输入法虽然流氓，但经过修改的皮肤用起来确实很方便。或许可以自定义出一个更加方便在 termux 里试用的输入法。不过具体的方法我还在学习当中。只能之后再更新了。&lt;/p&gt;
+&lt;h4 id=&#34;12-颜值是第一生产力&#34;&gt;1.2 颜值是第一生产力&lt;/h4&gt;
+&lt;p&gt;一个赏心悦目(&lt;del&gt;逼格满满&lt;/del&gt;)的外表是愉快地使用一个应用的必要前提，显然现在的 termux 颜值并不高。怎么样才能让我们的 termux 跟电影里的黑客那样呢……不要着急，我们现在就开始让 termux 的颜值上升。&lt;br&gt;
+首先我们要做的是去除每次打开termux都会出现的几行文字。方法在0.48版本的更新日志里有说明。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Remove the dialog for new users in favour of an inline help message at startup (unless ~/.hushlogin exists).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也就是说只要有 ~/.hushlogin 文件存在就不会显示了。要创建文件方法也很简单。因为现在的目录就是 ~ ，所以只要直接用创建命令就好了。我误以为需要创建的是文件夹，所以我当时的操作是这样的。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mkdir .hushlogin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果自然是不行……接着我尝试创建一个文件。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;vi .hushlogin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后输入 :wq 保存退出。&lt;br&gt;
+输入 exit 退出，重新打开。可以看到那几行字已经消失不见了。这就清爽多了。&lt;br&gt;
+之后就是安装 ZSH 以及用来配置 ZSH 的 oh-my-zsh。不过这个下载和安装酷友给出了一个比较方便的方法。具体介绍可以看&lt;a href=&#34;https://github.com/Cabbagec/termux-ohmyzsh&#34;&gt;这里&lt;/a&gt;&lt;br&gt;
+那么根据README.md的介绍我们首先要安装的是curl工具。很简单，直接apt install curl就可以了。在滚完之后就可以安装termux-ohmyzsh了。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sh -c &amp;quot;$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;接着一路确认、回车就好了。不需要修改，因为默认的主题我还挺喜欢的。当然如果不喜欢在之后可以进行更改。&lt;br&gt;
+完成后可以看到，终端已经变成了彩色。&lt;br&gt;
+&lt;img src=&#34;.pic/3.jpg&#34; alt=&#34;这是一个图片&#34;&gt;&lt;/p&gt;
+&lt;p&gt;一款简单美化过的应用就这样完成了。&lt;/p&gt;
+&lt;h4 id=&#34;13-简单操作&#34;&gt;1.3 简单操作&lt;/h4&gt;
+&lt;p&gt;首先是文件的基本操作&lt;/p&gt;
+&lt;p&gt;路径的输入zsh有个方便的操作，路径可以只输入部分特征然后按TAB就可以补全。比如 /root/bash 写成 /r/b 然后按 TAB 键就能变成完整的。&lt;/p&gt;
+&lt;p&gt;还有可以使用 d 然后选择对应的数字来直接跳到经过的某一位置。&lt;/p&gt;
+&lt;p&gt;这里推荐一个tree命令，他可以以树形结构显示文件目录结构。输入tree 回车。因为这时候我们并没有安装，所以会有这样的一个提示。&lt;img src=&#34;./pic/2&#34; alt=&#34;假装这里有图片&#34;&gt;提示上写的很清楚，我们需要先进行安装。而
+且还很贴心地给出了安装的命令。我们对照着打就是了。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt install tree
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这时候试试tree命令。可以看到有一个storage文件夹以及它的子文件夹所链接的文件夹&lt;img src=&#34;.pic/3%E3%80%82png&#34; alt=&#34;假装又有一张图片&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最后再来个小玩意&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt install cmatrix
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后运行一下这个命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cmatrix
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;.pic/4&#34; alt=&#34;这是一个动态图片&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这里来个小提示:在命令后加上-h可以查看命令的一些简单的提醒。&lt;/p&gt;
+&lt;p&gt;试试cmatrix -h命令会有下面的提示&lt;/p&gt;
+&lt;p&gt;可以看到各种可添加的后缀的作用。这是学习一个陌生命令很好的一个方式。除此之外还有man命令：只要在一个命令前加上个man，就能看到这个命令的详细介绍。（当然，全都是英文）&lt;/p&gt;
+&lt;h4 id=&#34;14-简单易懂的zsh配置方法&#34;&gt;1.4 简单易懂的ZSH配置方法&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Zsh 是一款功能强大终端（shell）软件，既可以作为一个交互式终端，也可以作为一个脚本解释器。它在兼容 Bash 的同时 (默认不兼容，除非设置成 emulate sh) 还有提供了很多改进，例如：更高效、更好的自动补全、更好的文件名展开（通配符展开）、更好的数组处理、可定制性高.——&lt;a href=&#34;https://wiki.archlinux.org/index.php/Zsh&#34;&gt;archwiki&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;更详细的说明推荐去zsh的&lt;a href=&#34;https://wiki.archlinux.org/index.php/Zsh&#34;&gt;Wiki&lt;/a&gt;。在这里就不做详细介绍了。&lt;/p&gt;
+&lt;p&gt;除了Zsh还需要一个方便配置Zsh的强大工具，oh-my-zsh。除了可以提高颜值，它还拥有很多的提高效率的插件。真的非常重要。(不过这两个在安装termux-ohmyzsh时已经安装好了，学会使用即可#(二哈))&lt;/p&gt;
+&lt;p&gt;zsh的配置需要用到用户目录下 .zshrc 隐藏文件&lt;/p&gt;
+&lt;p&gt;编辑配置文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;vi .zshrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们可以在里面添加几行配置比如说我的有&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;alias c=&#39;clear&#39;
+alias e=&#39;exit&#39;
+alias ll=&#39;ls -l&#39;
+alias la=&#39;ls -a&#39;
+alias vi=&#39;nvim&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这些是关于别名的设置。当你在zsh里输入&amp;quot;=&amp;ldquo;前面的内容时，zsh会认为你输入的是后面的内容。这可以让一些常用的长命令变短。从而提高效率。&lt;/p&gt;
+&lt;p&gt;lugins=(git)  //zsh 使用的插件，默认开启了git插件。&lt;/p&gt;
+&lt;p&gt;这个插件是.oh-my-zsh/plugins/git/里的一个后缀为.zsh的文件，我们打开看看会发现是一大堆的alias……&lt;img src=&#34;.pic/6&#34; alt=&#34;依然没图&#34;&gt;&lt;/p&gt;
+&lt;p&gt;zsh的tab补全是相当的强大。输入部分命令后双击tab可以看见待补全的列表，再按tab键就可以在选项中进行选择。而且这个选项的选择是支持用方向键来选取的。&lt;/p&gt;
+&lt;p&gt;但是，这并不是最终形态，通过之后的配置可以做到更加强大的补全。&lt;/p&gt;
+&lt;p&gt;千言万语不如一张图:&lt;img src=&#34;http://mimosa-pudica.net/img/zsh.gif&#34; alt=&#34;这次是真的有图了&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在这里我使用了 incr-0.2.zsh 具体介绍可以看&lt;a href=&#34;http://mimosa-pudica.net/zsh-incremental.html&#34;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;第二章-写作与同步&#34;&gt;第二章 写作与同步&lt;/h2&gt;
+&lt;p&gt;在termux里写东西体验其实非常优秀，有它独特的优势。在配置好后完全不输任何的写作应用。比如说方便的版本控制，还有相当优秀的补全(不仅仅是代码)，以及很棒的代码高亮。&lt;/p&gt;
+&lt;p&gt;除了写作，还可以做到更多。比如说 GTD 也是可以在这里做的(不过相对其他的 GTD 应用可能不够方便)&lt;/p&gt;
+&lt;h4 id=&#34;21-vim-和-emacs&#34;&gt;2.1 vim 和 emacs&lt;/h4&gt;
+&lt;p&gt;提到文本编辑器 vim 和 emacs 就是不得不提的存在，两个编辑器间党争也相当激烈。在PC上可能各有优势。但是在手机上使用 Emacs 时，每次打开都需要等待很久的一段时间。&lt;/p&gt;
+&lt;h4 id=&#34;22-git和github&#34;&gt;2.2 git和github&lt;/h4&gt;
+&lt;h4 id=&#34;23-geeknote&#34;&gt;2.3 geeknote&lt;/h4&gt;
+&lt;h2 id=&#34;第三章-进阶玩法&#34;&gt;第三章 进阶玩法&lt;/h2&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: hexo自动部署</title>
+      <link>/web/note/2020091431.html</link>
+      <pubDate>Mon, 14 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020091431.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;测试 hexo自动部署代码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;name: github pages
+
+on:
+  push:
+    branches:
+      - master  # Set a branch to deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive  # Fetch the Docsy theme
+          fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
+
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: &#39;12.x&#39;
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles(&#39;**/package-lock.json&#39;) }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: npm ci
+      - run: hexo g
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages  # default: gh-pages
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: hugo自动部署</title>
+      <link>/web/note/2020091417.html</link>
+      <pubDate>Mon, 14 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020091417.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;travisyml上的配置文件&#34;&gt;.travis.yml上的配置文件&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;language: go
+
+# Specify which branches to build using a safelist
+# 分支白名单限制: 只有hugo分支的提交才会触发构建
+branches:
+  only:
+    - master 
+
+# install:
+# # 安装最新的hugo
+#   - go get github.com/spf13/hugo 
+install:
+    - uname -a
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.74.3/hugo_extended_0.74.3_Linux-64bit.deb
+    - sudo dpkg -i hugo*.deb
+    - hugo version
+    - ls
+    - pwd
+
+
+script:
+# 运行hugo命令
+  - hugo
+
+deploy:
+  provider: pages # 重要，指定这是一份github pages的部署配置
+  skip-cleanup: true # 重要，不能省略
+  local-dir: public # 静态站点文件所在目录
+  target-branch: gh-pages # 要将静态站点文件发布到哪个分支
+  github-token: $GH_TOKEN # 重要，$GITHUB_TOKEN是变量，需要在GitHub上申请、再到配置到Travis
+  #fqdn: blog.yuantops.com # 如果是自定义域名，此处要填
+  keep-history: true # 是否保持target-branch分支的提交记录
+  on:
+    branch: master # 博客源码的分支
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;问题&#34;&gt;问题&lt;/h3&gt;
+&lt;p&gt;.travis.yml 的nodejs版本太低需要更新&lt;/p&gt;
+&lt;h2 id=&#34;netlify&#34;&gt;netlify&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;[build]
+publish = &amp;quot;public&amp;quot;
+command = &amp;quot;hugo --gc --minify&amp;quot;
+
+[context.production.environment]
+HUGO_VERSION = &amp;quot;0.74.3&amp;quot;
+HUGO_ENV = &amp;quot;production&amp;quot;
+HUGO_ENABLEGITINFO = &amp;quot;true&amp;quot;
+
+[context.split1]
+command = &amp;quot;hugo --gc --minify --enableGitInfo&amp;quot;
+
+[context.split1.environment]
+HUGO_VERSION = &amp;quot;0.74.3&amp;quot;
+HUGO_ENV = &amp;quot;production&amp;quot;
+
+[context.deploy-preview]
+command = &amp;quot;hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL&amp;quot;
+
+[context.deploy-preview.environment]
+HUGO_VERSION = &amp;quot;0.74.3&amp;quot;
+
+[context.branch-deploy]
+command = &amp;quot;hugo --gc --minify -b $DEPLOY_PRIME_URL&amp;quot;
+
+[context.branch-deploy.environment]
+HUGO_VERSION = &amp;quot;0.74.3&amp;quot;
+
+[context.next.environment]
+HUGO_ENABLEGITINFO = &amp;quot;true&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 资源分离</title>
+      <link>/web/note/2020091303.html</link>
+      <pubDate>Sun, 13 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020091303.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;仅向github推送源码&#34;&gt;仅向github推送源码&lt;/h2&gt;
+&lt;p&gt;许多人使用hexo,hugo等静态页面生成工具,最会将生成的public文件或者dist推送到github上,属于较落后的方式.&lt;/p&gt;
+&lt;p&gt;将源码推送到github,听过github actions或者travis ci或其他持续集成方式,自动运行源码文件,将public生成并自动发布到gh-pages分支上是推荐的方式.也可以使用netlify,vercel,aws amplify等静态托管服务,自动部署静态页面.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: github</title>
+      <link>/web/note/2020090807.html</link>
+      <pubDate>Tue, 08 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020090807.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;github&#34;&gt;github&lt;/h3&gt;
+&lt;p&gt;部署在github上的构建计划配置代码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;name: Build Hugo
+on:
+  push:
+    branches: [ hugo ]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@master
+    - name: upload sub
+      run: |
+        git submodule init
+        git submodule update
+    - name: Build Hugo
+      uses: lowply/build-hugo@v0.74.1
+    - name: Deploy to GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        target_branch: gh-pages
+        build_dir: deploy/public
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: Travis CI</title>
+      <link>/web/note/2020090803.html</link>
+      <pubDate>Tue, 08 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020090803.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;travis-ci&#34;&gt;Travis CI&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;language: go
+
+# Specify which branches to build using a safelist
+# 分支白名单限制: 只有hugo分支的提交才会触发构建
+branches:
+  only:
+    - hugo 
+
+# install:
+# # 安装最新的hugo
+#   - go get github.com/spf13/hugo 
+install:
+    - uname -a
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.74.3/hugo_extended_0.74.3_Linux-64bit.deb
+    - sudo dpkg -i hugo*.deb
+    - hugo version
+    - ls
+    - pwd
+
+
+script:
+# 运行hugo命令
+  - hugo
+
+deploy:
+  provider: pages # 重要，指定这是一份github pages的部署配置
+  skip-cleanup: true # 重要，不能省略
+  local-dir: deploy/public # 静态站点文件所在目录
+  target-branch: gh-pages # 要将静态站点文件发布到哪个分支
+  github-token: $GH_TOKEN # 重要，$GITHUB_TOKEN是变量，需要在GitHub上申请、再到配置到Travis
+  #fqdn: blog.yuantops.com # 如果是自定义域名，此处要填
+  keep-history: true # 是否保持target-branch分支的提交记录
+  on:
+    branch: hugo # 博客源码的分支
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 360安全卫士</title>
+      <link>/web/note/2020090773.html</link>
+      <pubDate>Mon, 07 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020090773.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;臃肿的安全软件&#34;&gt;臃肿的“安全软件”&lt;/h3&gt;
+&lt;p&gt;用360就是为了在电脑运行出现问题时扫描木马病毒和恶意软件。结果360自己做的臃肿庞大，安装程序一直提示即将完成，运行程序需要安装各类插件，开始扫描半天一直进行所谓的优化修复，稍有些组件不正常就无法运行。&lt;/p&gt;
+&lt;p&gt;自身无法运行，真正的木马病毒不能第一时间清除，只是在不同安装全家桶，优化清理。&lt;/p&gt;
+&lt;p&gt;有问题的不能第一时间处理。而是不停的进行常规扫描&lt;/p&gt;
+&lt;h3 id=&#34;为什么使用360安全卫士&#34;&gt;为什么使用360安全卫士&lt;/h3&gt;
+&lt;p&gt;尽管360安全卫士臃肿缓慢，但必要的时候还是需要这种可以快速扫描隐藏的木马，恶意应用的安全软件。通过360安全卫士，清理掉这些较难清理的应用，然后再将360安全卫士卸载即可。&lt;/p&gt;
+&lt;p&gt;由于360不断推出插件，全家桶，不建议长期使用360安全卫士。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 神秘代码</title>
+      <link>/web/note/2020090611.html</link>
+      <pubDate>Sun, 06 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020090611.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;神秘代码&#34;&gt;神秘代码&lt;/h3&gt;
+&lt;p&gt;阿阿 阿巴阿阿 巴巴巴 阿阿阿巴 阿 巴阿巴阿 阿阿阿阿 阿阿 巴阿 阿巴&lt;/p&gt;
+&lt;p&gt;有人常识将它翻译成以下文字↓&lt;/p&gt;
+&lt;p&gt;.. .-.. &amp;mdash; &amp;hellip;- . -.-. &amp;hellip;. .. -. .-&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: hugo主题配置</title>
+      <link>/web/note/2020090343.html</link>
+      <pubDate>Thu, 03 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020090343.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;安装基础程序&#34;&gt;安装基础程序&lt;/h3&gt;
+&lt;p&gt;确保以下应用安装完毕：
+git&lt;/p&gt;
+&lt;p&gt;hugo &lt;strong&gt;扩展版最佳&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;新建项目&#34;&gt;新建项目&lt;/h3&gt;
+&lt;p&gt;使用&lt;code&gt;hugo new site example&lt;/code&gt; &lt;code&gt;example&lt;/code&gt;为自己的项目名称&lt;/p&gt;
+&lt;p&gt;进入项目目录cd ecample可以看到以下文件
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/denalon/gh-6/image/2020/2020090301.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/denalon/gh-6/image/2020/2020090302.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;进入themes目录，执行git clone &lt;a href=&#34;https://github.com/nmasse-itix/photo-stream.git&#34;&gt;https://github.com/nmasse-itix/photo-stream.git&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/denalon/gh-6/image/2020/2020090303.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;将主题下载下来&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这里可以通过使用git submodule 方式引入&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;将主题内自带的exampleSite 文件夹内文件复制到根目录&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cp themes/photo-stream/exampleSite/config.toml .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/denalon/gh-6/image/2020/2020090304.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;配置文件&#34;&gt;配置文件&lt;/h3&gt;
+&lt;p&gt;在项目根目录下content文件夹下创建第一个项目目录，例如&amp;quot;first&amp;quot;&lt;/p&gt;
+&lt;p&gt;并在first文件夹下创建一个空文件index.md&lt;/p&gt;
+&lt;p&gt;index.md内容为以下内容&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: &amp;quot;beauty&amp;quot;
+date: 2020-09-03T08:22:38+08:00
+# By default, photos are sorted by filename
+sort_by: Name
+# But you can sort instead by EXIF date if you prefer
+# sort_by: Exif.Date
+resources:
+# 
+# You can set the album cover image by setting the param &#39;cover: true&#39;
+# on a photo.
+# 
+# - src: &#39;IMG_1234.jpeg&#39;
+#   params:
+#     cover: true
+#
+- src: &#39;**.jpeg&#39;
+- src: &#39;**.jpg&#39;
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在项目根目录下执行&lt;code&gt;tree&lt;/code&gt;查看文件列表&lt;/p&gt;
+&lt;p&gt;将图片传入content/first文件夹&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/denalon/gh-6/image/2020/2020090307.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;仅支持jpg和jpeg&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;生成public&#34;&gt;生成public&lt;/h3&gt;
+&lt;p&gt;通过在根目录下执行&lt;code&gt;hugo&lt;/code&gt;可在项目根目录下生成public&lt;/p&gt;
+&lt;p&gt;此时如下提示，可以通过更改layout文件夹内文件修改
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/denalon/gh-6/image/2020/2020090305.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/denalon/gh-6/image/2020/2020090306.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: photo代码</title>
+      <link>/web/note/2020090301.html</link>
+      <pubDate>Thu, 03 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020090301.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;photo&#34;&gt;photo&lt;/h3&gt;
+&lt;p&gt;pipeline {
+agent any
+stages {
+stage(&amp;lsquo;检出&amp;rsquo;) {
+steps {
+checkout([
+$class: &amp;lsquo;GitSCM&amp;rsquo;,
+branches: [[name: env.GIT_BUILD_REF]],
+userRemoteConfigs: [[
+url: env.GIT_REPO_URL,
+credentialsId: env.CREDENTIALS_ID
+]]])
+}
+}
+stage(&amp;lsquo;改写ssh&amp;rsquo;) {
+steps {
+sh &amp;lsquo;ls -a&amp;rsquo;
+sh &amp;lsquo;mkdir -p ~/.ssh&amp;rsquo;
+withCredentials([ sshUserPrivateKey(credentialsId:&amp;lsquo;79eea4d2-1079-482a-bb35-0c9963537257&amp;rsquo;,keyFileVariable:&amp;lsquo;SSH&amp;rsquo;)
+]) {
+sh &amp;lsquo;cat ${SSH} &amp;gt; ~/.ssh/id_rsa&amp;rsquo;
+}&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;      sh &#39;chmod 600 ~/.ssh/id_rsa&#39;
+    }
+  }
+  stage(&#39;更新子模块&#39;) {
+    steps {
+      sh &#39;git submodule init&#39;
+      sh &#39;git submodule update&#39;
+      sh &#39;git submodule foreach \&#39;git pull origin master\&#39;&#39;
+    }
+  }
+  stage(&#39;hugo&#39;) {
+    steps {
+      sh &#39;git clone git@e.coding.net:denalon/asset/app.git&#39;
+      dir(&#39;./app&#39;) {
+        sh &#39;tar -zxvf hugo.tar.gz&#39;
+        sh &#39;cp ./hugo /usr/local/bin/&#39;
+      }
+
+      sh &#39;hugo&#39;
+      sh &#39;hugo -d deploy/photo&#39;
+    }
+  }
+  stage(&#39;上传oss&#39;) {
+    steps {
+      sh &#39;wget http://gosspublic.alicdn.com/ossutil/1.6.14/ossutil64&#39;
+      sh &#39;mv ossutil64 ossutil&#39;
+      sh &#39;chmod 755 ossutil&#39;
+      sh &#39;ls -a&#39;
+      sh &#39;./ossutil config -e ${OSS_EP} -i ${OSS_ID} -k ${OSS_KEY}&#39;
+      sh &#39;./ossutil cp ./deploy/photo oss://p2-app-holz/ -rf&#39;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;}&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 进一步完善</title>
+      <link>/web/note/2020090373.html</link>
+      <pubDate>Thu, 03 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020090373.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;进一步完善&#34;&gt;进一步完善&lt;/h3&gt;
+&lt;p&gt;通过研究前后端分离项目，转而想进一步将hugo生成的博客静态页面链接必要的后端服务。需要在页面上增加对前端框架的支持以运行同后端服务api的连接。&lt;/p&gt;
+&lt;h4 id=&#34;为什么非要配置前后端分离&#34;&gt;为什么非要配置前后端分离？&lt;/h4&gt;
+&lt;p&gt;在我看来，以wordpress为代表的服务器渲染式网站，需要复杂服务器环境，消耗大量服务器性能，框架固定保守等等问题，象征着盲目和落后。有些流行的php架构主体已经十多年没有更新，大量新手被忽悠着选择浪费性能的方式制作简单的页面。&lt;/p&gt;
+&lt;p&gt;前后端不分离以为着保守，封闭，落后&lt;/p&gt;
+&lt;h3 id=&#34;进一步使用持续集成&#34;&gt;进一步使用持续集成&lt;/h3&gt;
+&lt;p&gt;服务器使用的hugo vue 和其他应用，将全部提交到持续环境上运行，coding构建计划，github actions 或者vercel netlify自动部署。&lt;/p&gt;
+&lt;p&gt;进一步的持续集成，hugo项目将不再在本地和服务器上保留和推送生成文件。pages所需要的静态页面由该环境自动生成。&lt;/p&gt;
+&lt;p&gt;鉴于本地运行应用多且复杂，针对前端环境特意去配置多种环境是没有必要的，将前端环境打包部署运行在持续集成中，运行在容器里，脱离复杂的个人电脑。&lt;/p&gt;
+&lt;h3 id=&#34;文件备份&#34;&gt;文件备份&lt;/h3&gt;
+&lt;p&gt;以nas git oss 等全方面文件共享和备份。&lt;/p&gt;
+&lt;h3 id=&#34;https&#34;&gt;https&lt;/h3&gt;
+&lt;p&gt;博客，资源全面使用https协议，&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 先写代码后补充内容</title>
+      <link>/tech/develop/2020/2020-09-01-%E5%85%88%E5%86%99%E4%BB%A3%E7%A0%81%E5%90%8E%E8%A1%A5%E5%85%85%E5%86%85%E5%AE%B9/</link>
+      <pubDate>Tue, 01 Sep 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/tech/develop/2020/2020-09-01-%E5%85%88%E5%86%99%E4%BB%A3%E7%A0%81%E5%90%8E%E8%A1%A5%E5%85%85%E5%86%85%E5%AE%B9/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;先写代码后补充内容&#34;&gt;先写代码后补充内容&lt;/h3&gt;
+&lt;p&gt;类似如下的代码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;text-center&amp;quot;&amp;gt;
+      &amp;lt;div id=&amp;quot;div1&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+      &amp;lt;script&amp;gt;
+            $(&amp;quot;#div1&amp;quot;).load(&amp;quot;https://base.oribos.city/function/html/1002.html&amp;quot;);
+      &amp;lt;/script&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;作用&#34;&gt;作用&lt;/h3&gt;
+&lt;p&gt;先将基础代码构建到页面上，嵌入api，html等可以随时变动的内容。这样主页面保持不变情况是，可以灵活变动页面内容。&lt;/p&gt;
+&lt;p&gt;本质上跟前后端分离，css文件引用原理一样。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,881 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>记事本 – 2019</title>
+    <link>/tech/develop/2019/</link>
+    <description>Recent content in 2019 on 记事本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 06 Dec 2019 10:52:02 +0800</lastBuildDate>
+    
+	  <atom:link href="/tech/develop/2019/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Tech: 形象比喻前后端分离</title>
+      <link>/web/raw/2019120601.html</link>
+      <pubDate>Fri, 06 Dec 2019 10:52:02 +0800</pubDate>
+      
+      <guid>/web/raw/2019120601.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;假如网站是一个公司&#34;&gt;假如网站是一个公司&lt;/h3&gt;
+&lt;p&gt;旧时代 我们进去公司前台找人,前台有工作人员接待,工作人员让我们稍等,自己去寻找公司内部的相应人员,搜索,并将相应人员带到前台.&lt;/p&gt;
+&lt;p&gt;前台就是网站,进入前台找人就是一个访问,相应人员就是我们访问网站的内容.一次访问就需要安排一个工作人员寻找,带回要找的人.只要当访客的要求完成,工作人员的工作才完成.&lt;/p&gt;
+&lt;p&gt;后来,公司部署了电话机.&lt;/p&gt;
+&lt;p&gt;新时代,当我们进入公司前台找人的时候,前台工作人员接待,工作人员将一个通讯录交给我们,我们输入自己要找的人,然后拨通相应人员的电话.&lt;/p&gt;
+&lt;p&gt;前台就是网站,前台和工作人员以及提供的通讯录就是 前端内容 .而通讯录里面的内容,以及通讯录电话的维护和更新,电话线路属于 后端内容 .前台工作人员只需要提供给我们一个通讯录的拷贝,我们自己通过通讯录和电话机直接同相应人员沟通.这样前台人员就可以接待下一位访客.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: Gitlab</title>
+      <link>/web/2019112702.html</link>
+      <pubDate>Wed, 27 Nov 2019 18:07:08 +0800</pubDate>
+      
+      <guid>/web/2019112702.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;gitlab的pages功能&#34;&gt;gitlab的pages功能&lt;/h3&gt;
+&lt;p&gt;在gitlab的仓库里，写入一个文件&lt;code&gt; .gitlab-ci.yml&lt;/code&gt; 自动执行对推送的文档的静态网站部署。你可以在&lt;a href=&#34;https://gitlab.com/pages&#34;&gt;pages&lt;/a&gt; 里找到各种应用的模板。&lt;/p&gt;
+&lt;p&gt;此种部署方式跟github，coding略有不同。不过&lt;strong&gt;可以将hexo的源文件同时备份到静态网站的仓库里&lt;/strong&gt;，起到备份作用。&lt;/p&gt;
+&lt;h3 id=&#34;模板&#34;&gt;模板&lt;/h3&gt;
+&lt;p&gt;以下是使用 plain-html &lt;a href=&#34;https://gitlab.com/pages/plain-html&#34;&gt;原生html&lt;/a&gt; 的 &lt;code&gt; .gitlab-ci.yml&lt;/code&gt; 代码。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+  - echo &#39;Nothing to do...&#39;
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;pages&#34;&gt;pages&lt;/h3&gt;
+&lt;p&gt;在pages-设置里填写自定义域名，并在dns里添加解析。用户名.gitlab.io
+&lt;span class=&#34;label label-primary&#34;&gt;提醒：&lt;/span&gt; 首次发布以后，需要等大约30分钟才能使自定义域名生效。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: Hexo的固定链接</title>
+      <link>/web/2019112602.html</link>
+      <pubDate>Tue, 26 Nov 2019 19:07:46 +0800</pubDate>
+      
+      <guid>/web/2019112602.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;hexo页面的固定链接&#34;&gt;hexo页面的固定链接&lt;/h3&gt;
+&lt;p&gt;如果你的文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于 SEO，且 gitment 评论对中文链接也不支持。&lt;/p&gt;
+&lt;p&gt;解决方法：&lt;/p&gt;
+&lt;p&gt;在写每篇md文章的时候，在 Front-matter 里加上&lt;code&gt;:url&lt;/code&gt;：
+比如：&lt;/p&gt;
+&lt;pre&gt;
+title: &#34;Hexo的固定链接&#34;
+date: 2019-11-26T19:07:46+08:00
+draft: false
+url: /web/2019112602.html
+&lt;/pre&gt;
+&lt;p&gt;在 Hexo 根目录下的 _config.yml 文件中，修改以下的配置项：&lt;/p&gt;
+&lt;pre&gt;
+permalink: :url  # url值文章里必须填写，格式0001.html
+permalink_defaults:
+&lt;/pre&gt;
+&lt;p&gt;注意： &lt;code&gt;url&lt;/code&gt; 前面需要有&lt;code&gt;:&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;label label-info&#34;&gt;说明：&lt;/span&gt;因为我即使用hugo又使用hexo，使用url字段里带.html就可以在两个程序之间完美适用。如果使用url值不带.html&lt;/p&gt;
+&lt;p&gt;比如 &lt;code&gt; url: /web/2019112602&lt;/code&gt;,而&lt;code&gt;permalink: url.html&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;就只适用于hexo，在hugo里还需要修改代码。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: App域名的尴尬</title>
+      <link>/web/raw/2019111502.html</link>
+      <pubDate>Fri, 15 Nov 2019 18:14:39 +0800</pubDate>
+      
+      <guid>/web/raw/2019111502.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;app域名需要https才能使用&#34;&gt;.app域名需要https才能使用&lt;/h3&gt;
+&lt;p&gt;由于.app域名需要https才能使用。这样的话如果我用.app域名解析宝塔控制面板，frp后台页面等很多页面就会导致必须设置https。&lt;/p&gt;
+&lt;p&gt;而且，如果我用腾讯云，华为云，亚马逊aws等多家的对象存储服务时，就必须在这些存储桶上传ssl证书，而这些厂商的对象存储有的需要设置cdn才能使用https链接 。&lt;/p&gt;
+&lt;h3 id=&#34;app域名无法在国内服务器上使用&#34;&gt;.app域名无法在国内服务器上使用&lt;/h3&gt;
+&lt;p&gt;由于.app域名未接入可备案的域名，暂时无法正常解析到国内的存储桶，云服务器上。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;无法备案并不是最大问题，问题事这个域名我即便想用到所有项目上，但其强制性ssl要求导致不得不放弃无法使用ssl的项目。实用性不强，所以，新的海外域名hbsys.io用来代替之前的专用海外域名efs.app。或许一年到期后，这两个域名将放弃一个。&lt;/p&gt;
+&lt;p&gt;hbsys.io将用来解析海外的各类服务。包括临时主机，至于长期的对象存储桶，由于一年后必须放弃一个。还没想好以哪个使用为主。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 多个git同步</title>
+      <link>/web/raw/2019111402.html</link>
+      <pubDate>Thu, 14 Nov 2019 19:18:57 +0800</pubDate>
+      
+      <guid>/web/raw/2019111402.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;多个git同步&#34;&gt;多个git同步&lt;/h3&gt;
+&lt;p&gt;日志网站的源代码放在目录A中，hugo运行以后，在目录A里生成一个public目录。这个public是直接发布到coding上。这个目录需要做成git仓库同步。但是源代码的目录A也想通过git仓库同步，在不同电脑上可以操作。这就需要将目录A做成仓库。&lt;/p&gt;
+&lt;p&gt;1 不想上传public文件夹两次。&lt;/p&gt;
+&lt;p&gt;2 coding pages能否直接发布仓库里public文件夹的内容？&lt;/p&gt;
+&lt;p&gt;3 如何将目录A的仓库，分离一个分支，存放public？&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: Discuz归来</title>
+      <link>/web/raw/2019111401.html</link>
+      <pubDate>Thu, 14 Nov 2019 10:12:45 +0800</pubDate>
+      
+      <guid>/web/raw/2019111401.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;dicuz论坛发文归来&#34;&gt;dicuz！论坛发文归来&lt;/h3&gt;
+&lt;p&gt;2019年11月13日在discuz！论坛一篇文章引起热议
+&lt;a href=&#34;https://www.discuz.net/thread-3847247-1-1.html&#34; title=&#34;Discuz! 回来了&#34;&gt;Discuz! 回来了&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Discuz!将发布另一款产品Discuz！Q。是更轻的，更易变现的，更移动端的，更开放的和更易于二次开发的社区产品。Discuz! Q第一个alpha版本，将于农历新年前后发布。&lt;/p&gt;
+&lt;p&gt;而此时另一款著名的cms产品wordpress已经持续数周无法正常访问。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 对象存储服务的选择</title>
+      <link>/web/raw/2019111301.html</link>
+      <pubDate>Wed, 13 Nov 2019 11:01:56 +0800</pubDate>
+      
+      <guid>/web/raw/2019111301.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;阿里云oss的问题&#34;&gt;阿里云oss的问题&lt;/h3&gt;
+&lt;p&gt;阿里云oss存储桶内的文件，无法重定向子目录的index.html。如果想把hugo的静态网站部署到oss里就很麻烦，需要指定url。然而必要的分类，标签，目录无法指定rul。&lt;/p&gt;
+&lt;h3 id=&#34;使用腾讯云cos部署hugo&#34;&gt;使用腾讯云cos部署hugo&lt;/h3&gt;
+&lt;p&gt;腾讯云的cos可以重定向子目录的index.html文件。尽管在云服务器的选择和网站备案上不想选择腾讯云服务。然而在对象存储的选择上暂时找不到更合适的，只能使用腾讯云cos。&lt;br&gt;
+使用cos部署静态网站，暂时无法像阿里云那样使用ssl证书。由于.app域名必须使用https访问，使用ssl就需要在cdn里进行配置。&lt;/p&gt;
+&lt;h3 id=&#34;为什么不使用华为云的obs&#34;&gt;为什么不使用华为云的obs&lt;/h3&gt;
+&lt;p&gt;在使用腾讯云cos之前就在考虑华为云的对象存储服务obs，而且我的很多资料都是备份在obs里的，由于主要服务器就是华为云产品，obs也是需要长期保持的服务。但是在部署静态文件的时候，发现其cdn的配置异常的慢，甚至长达十几分钟，严重怀疑其产品专业能力。鉴于部署和修改需要耗费大量的时候等待配置。暂不考虑使用华为云obs服务部署静态网站。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;更新&#34;&gt;更新&lt;/h3&gt;
+&lt;p&gt;尽管有意重新使用腾讯云的cos部署一些访问量不大的页面，但是发现，https的设置出现无法直接使用自定义域名的https链接。导致访问直接转向cos地址。效果欠佳。无奈放弃完全使用腾讯云cos&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 静态资源的引用</title>
+      <link>/web/raw/2019111201.html</link>
+      <pubDate>Tue, 12 Nov 2019 09:55:43 +0800</pubDate>
+      
+      <guid>/web/raw/2019111201.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;样式文件和js使用oss内容&#34;&gt;样式文件和js使用oss内容&lt;/h2&gt;
+&lt;p&gt;网站，单独页面需要的css，js，图片等静态资源均引用自oss内容。并使用https安全协议。静态资源使用一个公开访问的oss存储桶。&lt;/p&gt;
+&lt;h2 id=&#34;应用程序备份到oss里&#34;&gt;应用程序备份到oss里&lt;/h2&gt;
+&lt;p&gt;经常使用的（主要时海外资源）应用程序app，应保留在oss里。当其他应用需要安装时，引用oss里，加快传输速度。国内资源可直接引用原资源。&lt;/p&gt;
+&lt;h2 id=&#34;长期备份文件保存在oss里&#34;&gt;长期备份文件保存在oss里&lt;/h2&gt;
+&lt;p&gt;定期将网站内容备份到oss存储桶里，包括一些必要的个人文件。此oss存储桶为私有访问权限。&lt;/p&gt;
+&lt;h2 id=&#34;oss的作用&#34;&gt;oss的作用&lt;/h2&gt;
+&lt;p&gt;私有桶 资源冗余 资源长期备份
+公共桶 静态文件 文件中转加速&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: Coding和阿里云code的选择</title>
+      <link>/web/raw/2019111101.html</link>
+      <pubDate>Mon, 11 Nov 2019 16:29:33 +0800</pubDate>
+      
+      <guid>/web/raw/2019111101.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;git托管的两个国内站点&#34;&gt;git托管的两个国内站点&lt;/h2&gt;
+&lt;p&gt;国内的git托管站点有gitee，阿里云code，腾讯云coding等站点。目前在阿里云code和腾讯云coding上做选择。个人的很多数据都优先阿里云上，但是阿里云code没有pages功能。静态网站无法部署在其上代替网站服务器。而coding功能强大，有pages功能。但是个人不想选择腾讯云的服务，包括之前购买的云服务器都在腾讯云上退订了。&lt;/p&gt;
+&lt;h2 id=&#34;个人网站转移至coding&#34;&gt;个人网站转移至coding&lt;/h2&gt;
+&lt;p&gt;由于个人使用的服务器做精简，纯粹的网站服务器被裁减，个人网站由wordpress改为hugo，生成静态网站部署在coding上，具有pages的coding成为优先使用的git托管中心。&lt;/p&gt;
+&lt;h2 id=&#34;数据集中&#34;&gt;数据集中&lt;/h2&gt;
+&lt;p&gt;由于个人网站转移至coding，基于数据集中的原则，相应的图片，音乐等外接资源也将优先考虑腾讯云服务。必要的git同步也将倾向于coding。阿里云code保留使用某些应用。&lt;/p&gt;
+&lt;h2 id=&#34;github的必要性&#34;&gt;github的必要性&lt;/h2&gt;
+&lt;p&gt;github项目较多，在github上的项目可以考虑复制到阿里云code或coding上使用。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 部署点改变</title>
+      <link>/web/raw/2019111102.html</link>
+      <pubDate>Mon, 11 Nov 2019 16:14:34 +0800</pubDate>
+      
+      <guid>/web/raw/2019111102.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;从云服务器转变为coding&#34;&gt;从云服务器转变为coding&lt;/h3&gt;
+&lt;p&gt;日志的更新从云服务器转变为coding上发布&lt;/p&gt;
+&lt;h3 id=&#34;固定链接&#34;&gt;固定链接&lt;/h3&gt;
+&lt;p&gt;为了适应网站部署方式的改变，每篇文章都要规定固定链接地址。必须定义url。（主要应对阿里云oss无法自动重定向到index.html）。保障文章能正确采用url地址访问。
+&lt;span class=&#34;label label-warning&#34;&gt;注意：&lt;/span&gt;在hexo和hugo里post文章里使用url 应做为基本操作。&lt;/p&gt;
+&lt;h3 id=&#34;对于部署方式变更后的备份问题&#34;&gt;对于部署方式变更后的备份问题&lt;/h3&gt;
+&lt;p&gt;之前的备份是根据服务器的主要目录，统一备份到oss里。现在文件从云服务器转为coding。然而，coding上放置的是经过hugo渲染后的html文件。源文件并没有同步到coding上面。源文件是保存在本地电脑上的！就需要一种方式，确保这些源文件能妥善备份。当业务转移时，在其他地方也能渲染生成整站文件。&lt;/p&gt;
+&lt;p&gt;问题时这些文件是在不同电脑上的。而且不同电脑上操作的也不尽相同，步骤，内容并不同步。就需要同步到git托管中心上。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;1将源文件同步到git托管中心&lt;/p&gt;
+&lt;p&gt;2在电脑A上拉取源代码&lt;/p&gt;
+&lt;p&gt;3在电脑A上修改源代码&lt;/p&gt;
+&lt;p&gt;4使用hugo命令生成public文件，推送public文件到 coding&lt;/p&gt;
+&lt;p&gt;5 推送源文件到git托管中心&lt;/p&gt;
+&lt;p&gt;6电脑B需要操作时，从git托管中心拉取源代码&lt;/p&gt;
+&lt;p&gt;7重复3-5的步骤。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: ZeroTier虚拟内网</title>
+      <link>/web/raw/2019103107.html</link>
+      <pubDate>Thu, 31 Oct 2019 13:10:32 +0000</pubDate>
+      
+      <guid>/web/raw/2019103107.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;内网ID &lt;strong&gt;3efa5cb78a1e1784&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1 centos安装&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code&gt;创建.repo
+vi /etc/yum.repos.d/zerotier.repo
+
+将以下内容粘贴到文件中
+[zerotier]
+name=ZeroTier, Inc. RPM Release Repository
+baseurl=http://download.zerotier.com/redhat/el/$releasever
+enabled=1
+gpgcheck=0
+
+
+执行yum命令
+
+yum clean all
+yum install zerotier-one
+
+启动服务
+
+zerotier-one -d
+
+查看服务状态
+
+zerotier-cli status
+
+
+加入内网 
+zerotier-cli join Network ID
+
+内网ID 3efa5cb78a1e1784&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2 windows 安装&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code&gt;通过以下地址 选择下载 https://www.zerotier.com/download/&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 图床所在的服务器退订，图床网站撤销</title>
+      <link>/web/raw/2019103102.html</link>
+      <pubDate>Thu, 31 Oct 2019 02:59:54 +0000</pubDate>
+      
+      <guid>/web/raw/2019103102.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;服务器撤销&#34;&gt;服务器撤销&lt;/h3&gt;
+&lt;p&gt;photo.ufs.pub作为支持网站图片内容的支援站点，由于托管的服务器退订，图床服务暂时取消。原有内容转移到oss暂时保存。&lt;/p&gt;
+&lt;h3 id=&#34;使用picgo制作图片链接&#34;&gt;使用picgo制作图片链接&lt;/h3&gt;
+&lt;p&gt;使用picgo上传图片到阿里云oss里，oss做cdn处理。oss访问地址保持同之前图床服务器地址一样，原有图床内的资源仍保持不变。后续可能备份到其他地方，暂时以阿里云oss为主。&lt;/p&gt;
+&lt;h3 id=&#34;资源服务均从服务器上撤离&#34;&gt;资源服务均从服务器上撤离&lt;/h3&gt;
+&lt;p&gt;由于服务器性能和资源有限，大量资源不宜放在服务器上，静态资源均放置在对象存储中，避免占用服务器资源。同时也是在服务器做迁移时避免转移大量文件。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 一个虚拟主机放多个网站</title>
+      <link>/web/raw/2019102401.html</link>
+      <pubDate>Thu, 24 Oct 2019 15:47:00 +0800</pubDate>
+      
+      <guid>/web/raw/2019102401.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;一个虚拟主机放多个网站&#34;&gt;一个虚拟主机放多个网站&lt;/h1&gt;
+&lt;p&gt;阿里云虚拟主机只能放一个网站，为了能够搭建多个网站就要使用到伪静态文件.htaccess 文件。&lt;/p&gt;
+&lt;p&gt;阿里云虚拟机提供一个网站文件夹，也就是根目录里面可以放一个 A 网站，那么要想多放一个 B 网站，假设域名是 &lt;a href=&#34;http://www.ensu.cc&#34;&gt;www.ensu.cc&lt;/a&gt;，还要建立一个文件夹，名字随便起，我这里叫 bweb 也就是 B 网站的根目录。&lt;/p&gt;
+&lt;p&gt;1、在阿里云虚拟主机根目录建立一个.htaccess 文件，内容如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www.ensu.cc$ [NC]
+RewriteCond %{REQUEST_URI} !^/bweb
+RewriteRule ^(.*)$ /bweb/$1 [L]
+#要绑定多个网站，需重复上面三行代码并更改对应域名”www.ensu.cc”、目录名”/bweb”
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2、在 bweb 文件夹内建立一个.htaccess 文件，内容如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www.ensu.cc$ [NC]
+RewriteRule (.*) https://www.ensu.cc/$1 [L,R=301]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;3、如果还想建立第三个网站，就把 1 中的那三行再次复制粘贴到下面，同时修改对应的域名和文件夹名字即可。&lt;/p&gt;
+&lt;p&gt;4、只要是 apache 环境下能使用.htaccess 的虚拟主机都可以用这个方法实现多网站共存。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: centos 7.x-64x 安装 hugo</title>
+      <link>/web/raw/2019102406.html</link>
+      <pubDate>Thu, 24 Oct 2019 15:44:45 +0800</pubDate>
+      
+      <guid>/web/raw/2019102406.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;centos-7x-64x-安装-hugo&#34;&gt;centos 7.x-64x 安装 hugo&lt;/h1&gt;
+&lt;p&gt;先安装golang&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;yum -y install golang
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;查看版本,安装成功&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;go version
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;添加epel repo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/etc/yum.repos.d/hugo.repo
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt; vim /etc/yum.repos.d/hugo.repo 
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[daftaupe-hugo]
+
+name=Copr repo for hugo owned by daftaupe
+
+baseurl=https://copr-be.cloud.fedoraproject.org/results/daftaupe/hugo/epel-7-$basearch/
+
+type=rpm-md
+
+skip_if_unavailable=True
+
+gpgcheck=1
+
+gpgkey=https://copr-be.cloud.fedoraproject.org/results/daftaupe/hugo/pubkey.gpg
+
+repo_gpgcheck=0
+
+enabled=1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行安装 hugo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;yum -y install hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;查看版本&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo version
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 新增frp服务器</title>
+      <link>/web/raw/2019102203.html</link>
+      <pubDate>Tue, 22 Oct 2019 03:45:06 +0000</pubDate>
+      
+      <guid>/web/raw/2019102203.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;为群晖NAS和本地服务器增加frp服务，以直接开通web访问。域名使用已经备案都网站域名。只负责二级域名对博客的内容补充和后端计算。&lt;/p&gt;
+&lt;p&gt;新增的nas域名初步设置为&lt;/p&gt;
+&lt;p&gt;web.ufs.pub 群晖nas上的web服务&lt;/p&gt;
+&lt;p&gt;nabase.oribos.city 群晖nas管理界面&lt;/p&gt;
+&lt;p&gt;m.ufs.pub 群晖图片应用服务&lt;/p&gt;
+&lt;h2 id=&#34;开始安装&#34;&gt;开始安装&lt;/h2&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code&gt;# 下载frp可执行包
+wget https://github.com/fatedier/frp/releases/download/v0.27.0/frp_0.27.0_linux_amd64.tar.gz
+
+# 解压
+tar zxf frp_0.27.0_linux_amd64.tar.gz
+
+# 进入文件
+cd frp_0.27.0_linux_amd64/
+# 修改配置
+vi frps.ini 
+# 内容如下：
+[common]
+# tunnel port通信管道
+bind_port = 7000
+# http和https
+vhost_http_port = 80
+vhost_https_port = 443
+# 连接认证token
+#token = 123456
+
+# 子域名
+subdomain_host = frp.kioye.cn
+
+# 自定义404 页面，要用绝对路径哦！
+custom_404_page = /root/frp_0.27.0_linux_amd64/404.html
+
+# dashboard图形管理页面
+dashboard_port = 81 
+
+dashboard_user = admin
+dashboard_pwd = admin
+
+# ---设置完成----
+# 启动
+./frps -c frps.ini
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;设置frps服务自启动&#34;&gt;设置frps服务自启动&lt;/h2&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code&gt;# 创建后台启动模版
+vi /etc/systemd/system/frp.service
+# 内容如下：
+[Unit]
+Description=frps
+After=network.target
+
+[Service]
+ExecStart=/root/frp_0.27.0_linux_amd64/frps -c /root/frp_0.27.0_linux_amd64/frps.ini 
+
+[Install]
+WantedBy=multi-user.target
+
+
+# 启动测试
+systemctl start frp.service
+# 查看启动状态
+systemctl status frp.service
+# 开机自启
+systemctl enable frp.service&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: ubunut 安装go</title>
+      <link>/web/raw/2019102207.html</link>
+      <pubDate>Tue, 22 Oct 2019 02:03:32 +0000</pubDate>
+      
+      <guid>/web/raw/2019102207.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;获取最新的软件包源，并添加至当前的apt库&lt;/p&gt;
+&lt;p&gt;add-apt-repository ppa:longsleep/golang-backports&lt;/p&gt;
+&lt;p&gt;更新 apt库&lt;/p&gt;
+&lt;p&gt;apt-get update&lt;/p&gt;
+&lt;p&gt;安装go&lt;/p&gt;
+&lt;p&gt;sudo apt-get install golang-go&lt;/p&gt;
+&lt;p&gt;鉴定是否安装成功&lt;/p&gt;
+&lt;p&gt;go version&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: centos 7防火墙指令</title>
+      <link>/web/raw/2019102105.html</link>
+      <pubDate>Mon, 21 Oct 2019 14:20:34 +0800</pubDate>
+      
+      <guid>/web/raw/2019102105.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;centos-7防火墙指令&#34;&gt;centos 7防火墙指令&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;#进程与状态相关
+systemctl start firewalld.service            #启动防火墙  
+systemctl stop firewalld.service             #停止防火墙  
+firewall-cmd --state                         #查看防火墙状态  
+firewall-cmd --reload                        #更新防火墙规则  
+firewall-cmd --state                         #查看防火墙状态  
+firewall-cmd --reload                        #重载防火墙规则  
+firewall-cmd --list-ports                    #查看所有打开的端口  
+firewall-cmd --list-services                 #查看所有允许的服务  
+firewall-cmd --get-services                  #获取所有支持的服务  
+
+#区域相关
+firewall-cmd --list-all-zones                    #查看所有区域信息  
+firewall-cmd --get-active-zones                  #查看活动区域信息  
+firewall-cmd --set-default-zone=public           #设置public为默认区域  
+firewall-cmd --get-default-zone                  #查看默认区域信息  
+firewall-cmd --zone=public --add-interface=eth0  #将接口eth0加入区域public
+
+#接口相关
+firewall-cmd --zone=public --remove-interface=eth0       #从区域public中删除接口eth0  
+firewall-cmd --zone=default --change-interface=eth0      #修改接口eth0所属区域为default  
+firewall-cmd --get-zone-of-interface=eth0                #查看接口eth0所属区域  
+
+#端口控制
+firewall-cmd --add-port=80/tcp --permanent               #永久添加80端口例外(全局)
+firewall-cmd --remove-port=80/tcp --permanent            #永久删除80端口例外(全局)
+firewall-cmd --add-port=65001-65010/tcp --permanent      #永久增加65001-65010例外(全局)  
+
+firewall-cmd  --zone=public --add-port=80/tcp --permanent            #永久添加80端口例外(区域public)
+firewall-cmd  --zone=public --remove-port=80/tcp --permanent         #永久删除80端口例外(区域public)
+firewall-cmd  --zone=public --add-port=65001-65010/tcp --permanent   #永久增加65001-65010例外(区域public) 
+注：如果某个接口不属于任何Zone，那么这个接口的所有数据包使用默认的Zone的规则。
+
+命令含义：
+--zone #作用域
+--add-port=80/tcp #添加端口，格式为：端口/通讯协议
+--permanent #永久生效，没有此参数重启后失效
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;systemctl命令&#34;&gt;Systemctl命令：&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;systemctl start firewalld.service               #启动服务
+systemctl stop firewalld.service                #关闭服务
+systemctl reloadt firewalld.service             #重载配置
+systemctl restart firewalld.service             #重启服务
+systemctl status firewalld.service              #显示服务的状态
+systemctl enable firewalld.service              #在开机时启用服务
+systemctl disable firewalld.service             #在开机时禁用服务
+systemctl is-enabled firewalld.service          #查看服务是否开机启动
+systemctl list-unit-files|grep enabled          #查看已启动的服务列表
+systemctl --failed                              #查看启动失败的服务列表
+关闭CentOS7自带Firewall启用iptables：
+yum install iptables-services           #安装iptables  
+systemctl stop firewalld.service        #停止firewalld  
+systemctl mask firewalld.service        #禁止自动和手动启动firewalld  
+systemctl start iptables.service        #启动iptables
+systemctl start ip6tables.service       #启动ip6tables  
+systemctl enable iptables.service       #设置iptables自启动  
+systemctl enable ip6tables.service      #设置ip6tables自启动  
+注：静态防火墙规则配置文件是 /etc/sysconfig/iptables 以及 /etc/sysconfig/ip6tables    
+ 
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 新增frp服务器</title>
+      <link>/web/raw/2019101901.html</link>
+      <pubDate>Sat, 19 Oct 2019 10:30:50 +0800</pubDate>
+      
+      <guid>/web/raw/2019101901.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;新增frp服务器&#34;&gt;新增frp服务器&lt;/h3&gt;
+&lt;p&gt;为群晖NAS和本地服务器增加frp服务，以直接开通web访问。域名使用已经备案都网站域名。只负责二级域名对博客的内容补充和后端计算。&lt;/p&gt;
+&lt;h3 id=&#34;更换为nps&#34;&gt;更换为nps&lt;/h3&gt;
+&lt;p&gt;frp配置复杂,改用nps内网穿透&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 对网站适当的规划</title>
+      <link>/web/unc/1369.html</link>
+      <pubDate>Thu, 17 Oct 2019 08:48:56 +0000</pubDate>
+      
+      <guid>/web/unc/1369.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;之所以网站内容迟迟无法更新，是因为自己分不清那个网站是正式访问，那个网站是临时测试内容的。往往将很多资料放到一个网站。又因为一些过激的试验导致文件和数据库破坏。没有按照部署-发布的步骤合理规划。而且本地电脑的文件由于不同的环境致使文件繁杂，混乱。&lt;/p&gt;
+&lt;h2 id=&#34;文件的管理-ufs-文件系统的统一规划&#34;&gt;文件的管理 UFS 文件系统的统一规划&lt;/h2&gt;
+&lt;p&gt;app 图片 音乐 视频 代码 云存储 git托管更新都需要进行必要的区分，规划。&lt;/p&gt;
+&lt;h2 id=&#34;硬件的管理-服务器规划&#34;&gt;硬件的管理 服务器规划&lt;/h2&gt;
+&lt;p&gt;个人使用的云服务器，公司使用的服务器，数据库，物理服务器都要进一步规整，管理。&lt;/p&gt;
+&lt;h2 id=&#34;云数据的管理-oss和文件服务器&#34;&gt;云数据的管理 OSS和文件服务器&lt;/h2&gt;
+&lt;p&gt;重新规划个人和公司在用的oss存储桶，快照，备份。&lt;/p&gt;
+&lt;h2 id=&#34;建立个人仓库&#34;&gt;建立个人仓库&lt;/h2&gt;
+&lt;p&gt;建立个人仓库，存放各类网络资源，素材，模板。并同步到阿里云或华为云对象存储服务里。做长期分享。当然是合法，健康可以公开分享的信息。比如字体，css，各类设计素材。&lt;/p&gt;
+&lt;p&gt;目前是建立长期的，稳定的共享资源。&lt;/p&gt;
+&lt;p&gt;个人的站点并非仅使用一个域名。目前持有hbn.pub ufs.pub paas.pub hbnote.com uns.pub iufs.app域名。其中，主要的站点均以hbn.pub域名为主，ufs.pub作为文件服务的专用域名，提供文件服务，oss桶域名。iufs.app由于无法在国内取得备案号，仅用于海外服务器。paas.pub和uns.pub暂时保留。其中www.hbnote.com &lt;a href=&#34;http://www.hbn.pub&#34;&gt;www.hbn.pub&lt;/a&gt; &lt;a href=&#34;http://www.ufs.pub&#34;&gt;www.ufs.pub&lt;/a&gt; 仅作为个人网站展示使用。&lt;/p&gt;
+&lt;p&gt;主要更新的博客文件先在b.hbn.pub发表，并根据类型转载到以上三个网站。三个博客网站发布不同类型的文章。某些待完善的文章仅发表在iufs.app网页上，再根据情况转载到其他网站。 无论是海外站点还是国内站点，由于对防垃圾评论的功能支持不足，所有的博客站点均暂时关闭评论和留言功能。由于技术和风险限制，可能需要的支付类型也仅以支付宝（alipay）为主。&lt;/p&gt;
+&lt;h2 id=&#34;原则&#34;&gt;原则&lt;/h2&gt;
+&lt;p&gt;1 遵守相关法律法规 2 数据和资源掌握在自己手里 3 在可靠的地方上做长期备份 4 服务持续 5 构建简单&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 宝塔上设置https，然后用阿里云的cdn，提示重定向过多</title>
+      <link>/web/raw/2019101601.html</link>
+      <pubDate>Wed, 16 Oct 2019 03:30:06 +0000</pubDate>
+      
+      <guid>/web/raw/2019101601.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;宝塔上设置https，只能开启强制ssl。然后用阿里云的cdn，提示重定向过多。&lt;/p&gt;
+&lt;p&gt;解决方法：第一步关闭宝塔上的强制ssl，第二步 重新设置阿里云CDN的时候，端口选择443，CDN强制跳转选 默认&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: git托管中心由转入国内</title>
+      <link>/web/raw/2019100103.html</link>
+      <pubDate>Tue, 01 Oct 2019 03:30:28 +0000</pubDate>
+      
+      <guid>/web/raw/2019100103.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;1 git托管中心由github转入国内&lt;/p&gt;
+&lt;p&gt;尽管github功能更多，但由于网络不稳定，将自己使用的git托管中心转入国内。初步使用阿里云的code或者腾讯的cloud studio。以追求更稳定的网络和更快的速度。代码库将陆续克隆。&lt;/p&gt;
+&lt;p&gt;使用efs.app域名或其他无法在国内正常使用的项目和域名将继续留在github上。事实上，长期的项目仍然以github为主。&lt;/p&gt;
+&lt;p&gt;2 整理git版本&lt;/p&gt;
+&lt;p&gt;移除多余的，不需要在git托管中心上保存的项目。存档并备份到内部服务器上。git托管中心只出现必要的内容，避免项目太乱。&lt;/p&gt;
+&lt;p&gt;取消不经常使用的托管，gitee上项目移除，gitlab上项目移除。目前主要在阿里云，腾讯云上保留。&lt;/p&gt;
+&lt;p&gt;3 关闭 自建和内部git托管&lt;/p&gt;
+&lt;p&gt;关闭群晖nas上的git托管，关闭云服务器上git.hbnote.com的git服务 ，&lt;/p&gt;
+&lt;p&gt;更新：&lt;/p&gt;
+&lt;p&gt;移除 gitlab github gitee coding上的git托管内容。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 阿里云CDN加速和全站加速的区别</title>
+      <link>/web/raw/2019093003.html</link>
+      <pubDate>Mon, 30 Sep 2019 06:42:57 +0000</pubDate>
+      
+      <guid>/web/raw/2019093003.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;以下是阿里云CDN和全站CDN加速的区别&lt;/p&gt;
+&lt;p&gt;CDN仅支持静态内容加速（比如：图片/CSS/文件等）；全站CDN加速支持同时静态和动态内容同时加速。&lt;br&gt;
+加速方式：将您服务器上的静态内容缓存在阿里云CDN节点上供用户就近访问。全站CND加速：静态内容使用CDN加速。动态内容通过智能路由、协议优化等动态加速技术快速访问您的服务器源站获取。&lt;br&gt;
+源站适配：建议您对服务器源站的动静态内容进行分离，静态内容使用CDN加速，动态内容不使用CDN。全站CDN您无需对服务器源站上的资源进行改造，全站加速会智能区分动静态内容并分别加速。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 将两个站点内容互换</title>
+      <link>/web/unc/1336.html</link>
+      <pubDate>Mon, 30 Sep 2019 06:42:00 +0000</pubDate>
+      
+      <guid>/web/unc/1336.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;将www.hbn.pub和www.ufs.pub站点内容互换，主要域名仍为www.hbn.pub，www.ufs.pub仅提供基础的文件服务。&lt;/p&gt;
+&lt;p&gt;原有的www.ufs.pub犹豫数据库里的css文件错误，导致页面显示不正常，不得不重新安装。而www.hbn.pub采用wordpress在设置里修改一下域名就完成了。内容并没有丢失。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: git托管中心的变更</title>
+      <link>/web/2019092907.html</link>
+      <pubDate>Sun, 29 Sep 2019 13:30:49 +0800</pubDate>
+      
+      <guid>/web/2019092907.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;git托管中心的变更&#34;&gt;git托管中心的变更&lt;/h1&gt;
+&lt;p&gt;优先选择可靠的git托管中心，某些访问量大的，对带宽要求高的项目可以转移到国内的git托管中心。避免使用海外托管中心而出现的访问速度慢，不稳定的现象。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: centos 7.x-64x 安装 hugo</title>
+      <link>/web/raw/2019092501.html</link>
+      <pubDate>Wed, 25 Sep 2019 09:14:01 +0000</pubDate>
+      
+      <guid>/web/raw/2019092501.html</guid>
+      <description>
+        
+        
+        &lt;pre class=&#34;wp-block-preformatted&#34;&gt;先安装golang
+ yum -y install golang
+ 查看版本,安装成功
+ go version
+ 添加epel repo
+ touch /etc/yum.repos.d/hugo.repo
+编辑repo
+ vim /etc/yum.repos.d/hugo.repo 
+
+[daftaupe-hugo]
+name=Copr repo for hugo owned by daftaupe
+baseurl=https://copr-be.cloud.fedoraproject.org/results/daftaupe/hugo/epel-7-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://copr-be.cloud.fedoraproject.org/results/daftaupe/hugo/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+
+ 执行安装 hugo
+ yum -y install hugo
+ 查看版本
+ hugo version&lt;/pre&gt;&lt;blockquote&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 为网站开启CDN</title>
+      <link>/web/info/1306.html</link>
+      <pubDate>Mon, 23 Sep 2019 09:00:58 +0000</pubDate>
+      
+      <guid>/web/info/1306.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;日志&#34;&gt;日志&lt;/h3&gt;
+&lt;p&gt;正式为博客开启CDN，暂时只能使用http协议访问，https访问正在设置。对暂时使用带宽按量计费的服务器都开启CDN，避免异常流量造成高费用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;各类网站部署形式&#34;&gt;各类网站部署形式&lt;/h3&gt;
+&lt;p&gt;使用物理服务器&lt;/p&gt;
+&lt;p&gt;固定ip&lt;/p&gt;
+&lt;p&gt;内网穿透&lt;/p&gt;
+&lt;p&gt;使用虚拟机&lt;/p&gt;
+&lt;p&gt;使用docker&lt;/p&gt;
+&lt;p&gt;使用对象存储&lt;/p&gt;
+&lt;p&gt;使用git托管中心pages&lt;/p&gt;
+&lt;p&gt;使用虚拟主机&lt;/p&gt;
+&lt;p&gt;使用云服务器&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 建立个人仓库</title>
+      <link>/web/info/1118.html</link>
+      <pubDate>Thu, 12 Sep 2019 14:54:13 +0000</pubDate>
+      
+      <guid>/web/info/1118.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;建立个人仓库，存放各类网络资源，素材，模板。并同步到阿里云或华为云对象存储服务里。做长期分享。当然是合法，健康可以公开分享的信息。比如字体，css，各类设计素材。&lt;/p&gt;
+&lt;p&gt;目前是建立长期的，稳定的共享资源。&lt;/p&gt;
+&lt;p&gt;个人的站点并非仅使用一个域名。目前持有hbn.pub ufs.pub paas.pub hbnote.com uns.pub iufs.app域名。其中，主要的站点均以hbn.pub域名为主，ufs.pub作为文件服务的专用域名，提供文件服务，oss桶域名。iufs.app由于无法在国内取得备案号，仅用于海外服务器。paas.pub和uns.pub暂时保留。其中www.hbnote.com &lt;a href=&#34;http://www.hbn.pub&#34;&gt;www.hbn.pub&lt;/a&gt; &lt;a href=&#34;http://www.ufs.pub&#34;&gt;www.ufs.pub&lt;/a&gt; 仅作为个人网站展示使用。&lt;/p&gt;
+&lt;p&gt;主要更新的博客文件先在b.hbn.pub发表，并根据类型转载到以上三个网站。三个博客网站发布不同类型的文章。某些待完善的文章仅发表在iufs.app网页上，再根据情况转载到其他网站。 无论是海外站点还是国内站点，由于对防垃圾评论的功能支持不足，所有的博客站点均暂时关闭评论和留言功能。由于技术和风险限制，可能需要的支付类型也仅以支付宝（alipay）为主。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: dns和网络异常</title>
+      <link>/web/raw/20190903.html</link>
+      <pubDate>Sat, 07 Sep 2019 14:32:28 +0000</pubDate>
+      
+      <guid>/web/raw/20190903.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;我使用域名paas.pub做泛解析*.paas.pub到海外主机上，然后在主机上开启新的子域名vip.paas.pub。&lt;/p&gt;
+&lt;p&gt;出现了异常情况。使用联通光纤。输入vip.paas.pub被解析到一个联通ip &lt;a href=&#34;http://218.28.144.38/&#34;&gt;218.28.144.38&lt;/a&gt; ，然后通过网络上其他网站的dns检测。解析ip为真正IP。唯独在联通光纤上出现莫名其妙的联通IP。&lt;/p&gt;
+&lt;p&gt;换用阿里云的dns 223.5.5.5 223.6.6.6 通过命令行 nslookup查询，解析的IP地址正确。&lt;/p&gt;
+&lt;p&gt;然后使用域名vip.paas.pub浏览器出现错误，无法访问。&lt;figure class=&#34;wp-block-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/wp-content/uploads/2019/09/IZ7X58FRK28NNNM0-1024x656.png&#34; alt=&#34;&#34; class=&#34;wp-image-1094&#34; /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后使用手机，切换掉wifi，使用手机流量上网访问。&lt;/p&gt;
+&lt;p&gt;页面正常。&lt;/p&gt;
+&lt;p&gt;然后切换成wifi访问，出现无法连接。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 服务器关闭数据库对外访问</title>
+      <link>/web/raw/2019081301.html</link>
+      <pubDate>Tue, 13 Aug 2019 08:35:50 +0000</pubDate>
+      
+      <guid>/web/raw/2019081301.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;web服务器自带的数据库仅供自身使用，不再向外部提供数据库服务&lt;/p&gt;
+&lt;p&gt;2019-8-13的服务器解析的变更&lt;/p&gt;
+&lt;p&gt;所有文件服务均有ufs.pub提供，之前的其他服务器暂时保持不变，后续新建的文件服务器和对象存储服务均有ufs.pub提供。&lt;/p&gt;
+&lt;p&gt;收回hbn.pub的其他对外服务端口。非必要端口全部从安全组排除。&lt;/p&gt;
+&lt;p&gt;收回hbnote.com的除www和git服务以外的所有web访问。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 针对需要长期保存的文件，转移至云存储服务上。</title>
+      <link>/web/raw/2019080703.html</link>
+      <pubDate>Wed, 07 Aug 2019 09:51:45 +0000</pubDate>
+      
+      <guid>/web/raw/2019080703.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;将一些需要重点保存的文件，存放在各大云服务的对象存储服务上。个别文件要求5年以上保存。购买合适的存储包，对重要文件进行长期保存。避免过往的照片，文稿丢失。需要的时候再同步下来。纸质或实体材料，扫描以后上传电子档。&lt;/p&gt;
+&lt;p&gt;现在的问题是，有三个网站正在使用。还有四个域名正在进行备案阶段。这些网站里有只需要静态网页的。有需要配置运行环境的。&lt;/p&gt;
+&lt;p&gt;现在有两个云主机，一个web服务虚拟主机。虚拟主机将逐步取消，在虚拟主机上的网站将迁移到云主机上。&lt;/p&gt;
+&lt;p&gt;CRM应用占据一个云主机，并同时提供web服务。Web服务使用一个云主机，提供绝大多数web服务。&lt;/p&gt;
+&lt;p&gt;完全静态的网站，将迁移到OSS里做静态页面。事实上，仅提供基本网络访问的网站都进行静态化处理。全部迁移到OSS里。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 自建网站的意义</title>
+      <link>/web/note/2019080201.html</link>
+      <pubDate>Fri, 02 Aug 2019 09:00:03 +0000</pubDate>
+      
+      <guid>/web/note/2019080201.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;尽管随着微信，微博，贴吧等SNS的兴起， qq空间用户都在减少。 个人博客的热度大不如前。但是某些不可控的因素导致，网盘，SNS相继关闭，限制甚至封禁销号。个人的数据在厂商面前是微不足道的。 个人的文章和资料应该尽可能的掌握在自己手里。 所以私有云的NAS，个人网站的博客让大有市场。&lt;/p&gt;
+&lt;p&gt;需要注意的是，个人网站并不是为了逃避审核，而是为了让自己的数据可靠放心，用户自己掌握文章，资料是必需和必要的。某些需要长期保存的可以考虑放在对象存储或者刻录成耐用性光盘。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 内部资源同外部资源分开放置</title>
+      <link>/web/raw/2019072901.html</link>
+      <pubDate>Mon, 29 Jul 2019 10:28:16 +0000</pubDate>
+      
+      <guid>/web/raw/2019072901.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;网站的内容一般放置在hbn.pub的web服务器上，而网站需要调用的图片，音乐等外部文件一般使用hbnote.com域名，放置在oss或其他数据存储服务器上。&lt;/p&gt;
+&lt;p&gt;为什么要这么做？&lt;/p&gt;
+&lt;p&gt;1 hbnote.com里的文件可以及时备份，转移。避免web服务器出现故障后导致大量文件损失。&lt;/p&gt;
+&lt;p&gt;2 服务器的硬盘有限（或者说极小）无法保存太多的文件，特别是较大的文件。&lt;/p&gt;
+&lt;p&gt;3 较大文件也意味着流量消耗。而服务器的流量是收费的。带宽越大费用越高。&lt;/p&gt;
+&lt;p&gt;4 本服务器一般不保存.exe文件。所有的需要引用的.exe文件均引用自其他权威网站。&lt;/p&gt;
+&lt;p&gt;基于以上的对资源的隔离放置，导致公共域名hbn.pub和内部服务域名出现混乱情况。既有ufs.hbn.pub又有ufs.hbnote.com。因此，对于域名的作用做更详细的要求。使用较多的域名为了避免繁杂两个域名均指向一个服务器。功能一样，设置一样。&lt;/p&gt;
+&lt;p&gt;内部的服务均以功能命名，比如data，mysql。外部访问的服务均以提供的服务类型命名，比如web，blog，cloud。&lt;/p&gt;
+&lt;p&gt;网站&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 使用gitlab社区版自建git服务器</title>
+      <link>/web/note/2019071001.html</link>
+      <pubDate>Wed, 10 Jul 2019 01:37:50 +0000</pubDate>
+      
+      <guid>/web/note/2019071001.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;使用gitlab社区版自建git服务器，不用把文件更新到github或者码云上，文件放在自己的服务器上。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;刚入门的时候，想自建git托管中心，负责个人代码保管。但是后来使用coding的各项功能后，发现没必要耗费一个服务器资源搭建。使用github和coding更方便。&lt;/p&gt;
+&lt;p&gt;尽管github作为非常流行的git托管中心，但是大部分人选择github并不是一个好现象。特别是一个国外的服务器，导致国内服务不稳定和传输慢，导致乐意去顺应这个潮流。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

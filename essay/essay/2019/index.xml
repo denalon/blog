@@ -1,0 +1,565 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>记事本 – 2019</title>
+    <link>/essay/essay/2019/</link>
+    <description>Recent content in 2019 on 记事本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 20 Dec 2019 10:25:02 +0800</lastBuildDate>
+    
+	  <atom:link href="/essay/essay/2019/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Essay: 三星手机混合密码</title>
+      <link>/web/raw/2019122001.html</link>
+      <pubDate>Fri, 20 Dec 2019 10:25:02 +0800</pubDate>
+      
+      <guid>/web/raw/2019122001.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;新买手机被锁&#34;&gt;新买手机被锁&lt;/h3&gt;
+&lt;p&gt;开机设置好以后,正常使用.为了添加指纹解锁需要一个混合密码或者屏幕图像.密码设置好以后可以正常使用,成功添加指纹.
+然而再次添加指纹时提示输入混合密码.怎么输都不对.&lt;/p&gt;
+&lt;p&gt;此密码可能是设置错了或者忘记了,总之完全不能用,需要重置.&lt;/p&gt;
+&lt;h3 id=&#34;尝试使用网络服务解锁&#34;&gt;尝试使用网络服务解锁&lt;/h3&gt;
+&lt;p&gt;登录 &lt;a href=&#34;https://findmymobile.samsung.cn/&#34;&gt;https://findmymobile.samsung.cn/&lt;/a&gt; 网络解锁手机,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/2019122001.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;但是-网络解锁功能并不是默认开启的&#34;&gt;但是 网络解锁功能并不是默认开启的&lt;/h3&gt;
+&lt;p&gt;1 强制关键 使用 电源键和音量- 一起按10秒钟&lt;/p&gt;
+&lt;p&gt;2 然后手机在关机的状态下同时按住手机的（电源键 + 音量增加键 + Bixby键） 手机屏幕有反应时震动一下的时候仅松开 电源键 即可（其它两键不要松，直至手机进入recovery界面）如下图:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/1Z2443247-0.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;3 在recovery界面中，接音量上下键选择 【wipe data/factory reset】，然后按电源键确认，接着按音量键选择Yes，按电源键确认(清空数据，相当于出厂设置)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/1Z2442003-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/1Z24422V-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;4 在recovery界面中，按音量上下键选择 【wipe cache partition】，然后按电源键确认，接着再选择Yes，按电源键确认(清空缓存)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/1Z2443039-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/1Z2441628-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: flash助手推荐广告</title>
+      <link>/web/2019112901.html</link>
+      <pubDate>Fri, 29 Nov 2019 21:06:29 +0800</pubDate>
+      
+      <guid>/web/2019112901.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;莫名其妙的广告&#34;&gt;莫名其妙的广告&lt;/h3&gt;
+&lt;p&gt;电脑里经常会弹出一个叫做FF新推荐的广告弹窗，是由Flash插件弹出的&lt;/p&gt;
+&lt;p&gt;不得不说Flash中国版正是流氓透了！现在就教大家怎么彻底解决掉这个弹窗~
+&lt;img src=&#34;https://base.oribos.city/images/2020/060828381f30e924f1c26d7342086e061d95f70a.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;解决方法&#34;&gt;解决方法：&lt;/h3&gt;
+&lt;p&gt;首先，等弹窗弹出，别关掉它！关了也没关系，直接跳到第4步就行啦&lt;/p&gt;
+&lt;p&gt;打开任务管理器，找到FlashHelperService.exe这个进程&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/1ad5ad6eddc451da8766fda9b8fd5266d11632db.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;右键单击，有个打开文件的位置，点开，就会自动定位到那个位置啦！&lt;/p&gt;
+&lt;p&gt;上面已经关掉的看这里，文件的位置是：C:\Windows\SysWOW64\Macromed\Flash （这是64位的，32位的把里面的SysWOW64换成System32即可~~~）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020f9dcd100baa1cd11801e8262b712c8fcc2ce2dcc.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;现在把弹窗关掉，然后直接删除FlashHelperService.exe这个文件即可，以后就不会有这个弹窗啦！&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;触目惊心的真相&#34;&gt;触目惊心的真相&lt;/h3&gt;
+&lt;p&gt;那么问题是，这个广告软件是怎么进入用户电脑的？&lt;/p&gt;
+&lt;p&gt;Flash技术即将会淘汰,然后Adobe flash想要赚最后一波，被国内2144代理，如果不从代理那装,最近更新会一直提示‘此Flash Player 与您的地区不相容，请重新安装Flash’。（Flash Helper Service服务是国内版特有且不可禁用的，）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/33668.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后翻阅这个用户协议，这份协议厚颜无耻的将所有责任强加给用户
+&lt;img src=&#34;https://base.oribos.city/images/2020/33669.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 日志</title>
+      <link>/web/2019112801.html</link>
+      <pubDate>Thu, 28 Nov 2019 15:39:45 +0800</pubDate>
+      
+      <guid>/web/2019112801.html</guid>
+      <description>
+        
+        
+        &lt;h4 id=&#34;github-pages功能&#34;&gt;github pages功能&lt;/h4&gt;
+&lt;p&gt;github pages的功能原本是用来展示在github上的项目里的文档说明。
+描述仓库里各个项目的用途，方法的说明文档，是用户文档性质的网页。&lt;/p&gt;
+&lt;p&gt;有些人研究出一套生成静态文件，部署在github pages作为全静态的博客网站。
+甚至用上js开发各类接口，实现前后端分离的项目。一个简单的网页服务编程的媲美
+云服务器的web服务。&lt;/p&gt;
+&lt;p&gt;同样，gitlab、coding、gitee都有类似的功能。通过hexo、hugo、vuepress等
+静态网页生成工具，可以轻松发布全静态网页做成网站。这样的网站不用繁琐的后台编程语言
+和各类数据库。甚至不用担心后台被破解和网站攻击。&lt;/p&gt;
+&lt;p&gt;使用node.js vue.js等各类框架，工具、api等可以使用评论、搜素、存储等各类功能。&lt;/p&gt;
+&lt;h4 id=&#34;网站备案&#34;&gt;网站备案&lt;/h4&gt;
+&lt;p&gt;因为gitlab github coding等业务都可以在国外服务器，国内的gitee 的pages
+使用的是gitee.io域名居然是已经备案的，虽然不用考虑备案问题，但是需要收费。
+相比而言。还是coding方便。&lt;/p&gt;
+&lt;p&gt;由于不少git托管中心都推出pages功能。作为简单的个人博客，就没必要购买服务器，
+更不用考虑备案问题。（事实上个人网站备案有些地方居然不能带“博客”关键词）&lt;/p&gt;
+&lt;p&gt;使用海外的对象存储和空间，使用海外的git托管的pages功能。不用考虑数据库和动态网站技术，
+只需要写简单易读的markdown文档就可以发布博客。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;新入手域名 ufs.im  暂时使用占位符网站&lt;a href=&#34;http://www.ufs.im&#34;&gt;ufs.im&lt;/a&gt;。后续再为其设定内容
+，用来代替域名不易读的某些域名。比如临时域名 ofs.pub 备用域名 paas.pub&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;尝试使用hexo，但是由于某些内容需要修改的代码繁多，个人对网页的要求过于极端，还是使用简洁的
+hugo pure发布文章好用。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: centos上运行hexo</title>
+      <link>/web/2019112701.html</link>
+      <pubDate>Wed, 27 Nov 2019 12:23:20 +0800</pubDate>
+      
+      <guid>/web/2019112701.html</guid>
+      <description>
+        
+        
+        &lt;h4 id=&#34;centos安装git&#34;&gt;centos安装git&lt;/h4&gt;
+&lt;p&gt;centos 使用yum安装的版本过低，甚至有文章介绍先卸载自带的低版本git，然后使用yum -y install git，结果还是安装的旧版本的笑话。&lt;/p&gt;
+&lt;p&gt;只能使用其他安装源：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;yum install &lt;a href=&#34;http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm&#34;&gt;http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm&lt;/a&gt; &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;安装git &lt;code&gt;yum install git &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;更新git &lt;code&gt;yum update git &lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;centos-安装nodejs&#34;&gt;centos 安装node.js&lt;/h4&gt;
+&lt;p&gt;在centos上安装node.js，只有源码安装，从&lt;a href=&#34;https://nodejs.org/en/download/current/&#34;&gt;node.js&lt;/a&gt; 下载。&lt;/p&gt;
+&lt;h4 id=&#34;centos-安装hexo&#34;&gt;centos 安装hexo&lt;/h4&gt;
+&lt;p&gt;在&lt;a href=&#34;https://hexo.io/&#34;&gt;hexo&lt;/a&gt;下载，或通过以下代码安装&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ npm install -g hexo-cli&lt;/code&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 文档类型</title>
+      <link>/web/2019112601.html</link>
+      <pubDate>Tue, 26 Nov 2019 09:13:37 +0800</pubDate>
+      
+      <guid>/web/2019112601.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;txt-md-html三种文件类型&#34;&gt;txt md html三种文件类型&lt;/h3&gt;
+&lt;p&gt;txt是一种纯文本的格式，txt的内容不影响功能，最基础的代码。&lt;/p&gt;
+&lt;p&gt;md是使用部分样式的标记语言。简洁明了，易于使用。&lt;/p&gt;
+&lt;p&gt;html使用复杂样式，是分散的Internet资源整合在一块的组织形式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/txtmdhtml.png&#34; alt=&#34;三种格式区别&#34; title=&#34;txtmdhtml&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;扁平化&#34;&gt;扁平化&lt;/h3&gt;
+&lt;p&gt;为什么流行md，跟扁平化设计趋势一样。突出数据本身，描述简单格式又方便设计。
+扁平化概念的核心意义是：去除冗余、厚重和繁杂的装饰效果。而具体表现在去掉了多余的透视、纹理、渐变以及能做出3D效果的元素，这样可以让“信息”本身重新作为核心被凸显出来。同时在设计元素上，则强调了抽象、极简和符号化&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 更换主题</title>
+      <link>/web/raw/2019112503.html</link>
+      <pubDate>Mon, 25 Nov 2019 15:12:02 +0800</pubDate>
+      
+      <guid>/web/raw/2019112503.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;更换主题&#34;&gt;更换主题&lt;/h3&gt;
+&lt;p&gt;尽管之前的主题已经使用了bootstrap的css和js，但是字体、样式等文件还是差强人意。考虑到需要修改的代码过多，还是换一个主题合适。&lt;/p&gt;
+&lt;p&gt;新的主题同样存在多少不足，很多地方的自定义代码发生变化。一直找不到完美点的主题。可能hugo本身就是不够漂亮。&lt;/p&gt;
+&lt;h3 id=&#34;新主题&#34;&gt;新主题&lt;/h3&gt;
+&lt;p&gt;新主题默认支持bootstrap，&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 文档管理</title>
+      <link>/web/raw/2019112501.html</link>
+      <pubDate>Mon, 25 Nov 2019 09:39:23 +0800</pubDate>
+      
+      <guid>/web/raw/2019112501.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;关于文件命名和文件等级&#34;&gt;关于文件命名和文件等级&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;内容&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;文件夹名称&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;等级&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;主目录&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ufs&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;备份文件&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;backup&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;本地应用&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;app&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;下载文件&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;download&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;工作&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;work&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;文档&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;documents&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;媒体库&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;mms&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;关于文件备份位置&#34;&gt;关于文件备份位置&lt;/h3&gt;
+&lt;p&gt;1 区分重要性和冗余类型&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1类 本地电脑存储+nas+对象存储私有桶
+    必要情况下，需要在多个对象存储里备份。长期备份文件需要在对象存储里选
+    择归档存储。长期备份的文档进行更迭时，1类文件不可删除。
+
+2类 nas或者对象存储私有桶
+    大容量文件需要在nas保留一份复制，保障在需要时候及时查阅，不用从对象存储上下载花费流量费用。
+
+3类 本地电脑或web服务器存储+对象存储公有桶
+
+
+4类 对象存储公有桶或web服务器目录
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;文件版本号以及持续性&#34;&gt;文件版本号以及持续性&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;已经归档的文件需要标注归档版本号和上一次备份时间。
+
+应在目录下记录备份的时间，位置，版本号。
+
+记录的备份位置不应做不必要的修改。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;文件备份原则&#34;&gt;文件备份原则&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;并非所有的资料都需要备份，只有有价格的、重要的内容才需要备份
+
+资料备份的同时还是注重索引和搜索。大量文件里找到自己需要的文件是极
+其困难的，所以就需要必要的关键字、目录索引、搜索设置、文件分类等设置。
+
+本地电脑的文件，在不备份的情况下属于不可靠的。
+
+图片，视频等可以在windows文件管理器里预览的文件名可以不用严格命
+名。不能预览的文件需要严格命名。
+&lt;/code&gt;&lt;/pre&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 华为云cdn差评</title>
+      <link>/web/raw/2019112203.html</link>
+      <pubDate>Fri, 22 Nov 2019 17:28:42 +0800</pubDate>
+      
+      <guid>/web/raw/2019112203.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;华为云cdn-问题&#34;&gt;华为云cdn 问题&lt;/h3&gt;
+&lt;p&gt;华为云cdn的配置时间太长，一次配置需要十几分钟。如果配置出错或者其他原因需要调整参数，那就是连续不断的十几分钟。还真遇到过华为云cdn设置时候莫名其妙的问题，obs存储设置完毕，自定义域名，静态网站开启。使用自定义域名test.ufs.pub可以正常访问。
+&lt;img src=&#34;https://base.oribos.city/images/2020/1122012.png&#34; alt=&#34;配置时间太长&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后，设置cdn，开启cdn，等待十几分钟。然后访问test.ufs.pub居然无法访问。刚开始以为是配置问题，但是无意间使用test.ufs.pub/index.html 是完全可以访问的。也就是说obs的静态网站是开启的，cdn的域名解析也是正确的。但是就是无法访问首页。&lt;/p&gt;
+&lt;p&gt;针对这一问题，不断的配置cdn参数，来回配置需要无数个十几分钟。最终无法正常使用。&lt;/p&gt;
+&lt;p&gt;然而，使用新的域名test2.ufs.pub。配置静态网站：正常。配置cdn正常！同样的参数，cdn自定义域名正常访问。test2.ufs.pub 正常访问！而test.ufs.pub却不行。&lt;/p&gt;
+&lt;p&gt;进行第三部，给自定义域名设置cdn上的https，然后不出意外，https://test2.ufs.pub 无法正常使用！跟test.ufs.pub效果一样。首页不加index.html无法正常浏览！&lt;/p&gt;
+&lt;p&gt;同样，来回配置，再等无数个十几分钟的配置时间。&lt;/p&gt;
+&lt;p class=&#34;text-warning&#34;&gt;问题依然没有解决！&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 日志</title>
+      <link>/web/2019112205.html</link>
+      <pubDate>Fri, 22 Nov 2019 09:41:09 +0800</pubDate>
+      
+      <guid>/web/2019112205.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;日志&#34;&gt;日志&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;对计算和存储分离&#34;&gt;对计算和存储分离&lt;/h4&gt;
+&lt;p&gt;pc的作用是处理，计算，运行各类应用。考虑到安全，稳定等各种情况。pc的作用类似容器的“运行”。存储各类应用，配置文件等内容。而各类资源，源文件，配置文件应该分开存储在文件服务器上。做到计算和存储分离。在网站设计上同样存在“动静分离”。&lt;/p&gt;
+&lt;h4 id=&#34;文件服务&#34;&gt;文件服务&lt;/h4&gt;
+&lt;p&gt;长期储存的文件在NAS服务器上。同时采用华为云obs和阿里云oss对象储存对文件进行长期备份。近期处理的资料使用coding代码托管临时处理。&lt;/p&gt;
+&lt;h3 id=&#34;oss问题&#34;&gt;oss问题&lt;/h3&gt;
+&lt;p&gt;尽管oss的流量费用在低使用率情况下，费用微乎其微。但不分类型，完全依赖oss也不可取，根据需求可以选择coding或github上的文件使用。或者web服务器存储文件提供对外访问。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;label label-danger&#34;&gt;注意：&lt;/span&gt;对于oss必须注意异常突发流量带来的费用问题。&lt;/p&gt;
+&lt;/p&gt; 
+&lt;hr&gt;
+&lt;p&gt;基于以上计算和存储分离原则，按量带宽的云服务器提供尽可能少的存储和对外访问。大容量存储可设置专用存储服务器，此类服务器采用固定带宽流量。&lt;/p&gt;
+&lt;p class=&#34;text-danger&#34;&gt;为什么强调计算和存储分离？&lt;/p&gt;
+原因很简单：费用问题！云服务器使用固定带宽成本过高，
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2019/11/20191122113939.png&#34; alt=&#34;弹性ip价格&#34;&gt;&lt;/p&gt;
+&lt;p&gt;而采用按量计费就可以尽可能的降低费用。在高负载情况下还能对带宽进行适当调整。云服务器的带宽按量价格要远高于oss流量价格。所以将云服务器流量转移到oss里成本将相应降低。&lt;/p&gt;
+&lt;p&gt;另一个原因是对文件的备份，迁移。专用的存储更合适备份，防灾。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 使用bootstrap</title>
+      <link>/web/raw/2019112101.html</link>
+      <pubDate>Thu, 21 Nov 2019 15:34:49 +0800</pubDate>
+      
+      <guid>/web/raw/2019112101.html</guid>
+      <description>
+        
+        
+        &lt;style&gt;
+&lt;!-- 新 Bootstrap4 核心 CSS 文件 --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css&#34;&gt;
+&lt;/style&gt;
+&lt;!-- jQuery文件。务必在bootstrap.min.js 之前引入 --&gt;
+&lt;script src=&#34;https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js --&gt;
+&lt;script src=&#34;https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js&#34;&gt;&lt;/script&gt;
+&lt;!-- 最新的 Bootstrap4 核心 JavaScript 文件 --&gt;
+&lt;script src=&#34;https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;采用bootstrap框架&#34;&gt;采用bootstrap框架&lt;/h3&gt;
+&lt;p&gt;对于基本内容，结构，样式直接采用bootstrap框架进行设计。Bootstrap 提供了一个带有网格系统、链接样式、背景的基本结构。&lt;/p&gt;
+&lt;h3 id=&#34;支持组件&#34;&gt;支持组件&lt;/h3&gt;
+&lt;p&gt;Bootstrap中包含了丰富的Web组件，根据这些组件，可以快速的搭建一个漂亮、功能完备的网站。其中包括以下组件：
+下拉菜单、按钮组、按钮下拉菜单、导航、导航条、路径导航、分页、排版、缩略图、警告对话框、进度条、媒体对象等。&lt;/p&gt;
+&lt;h3 id=&#34;支持插件&#34;&gt;支持插件&lt;/h3&gt;
+&lt;p&gt;Bootstrap自带了13个jQuery插件，这些插件为Bootstrap中的组件赋予了“生命”。其中包括：
+模式对话框、标签页、滚动条、弹出框等。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span class=&#34;label label-default&#34;&gt;默认标签&lt;/span&gt;
+&lt;span class=&#34;label label-primary&#34;&gt;主要标签&lt;/span&gt;
+&lt;span class=&#34;label label-success&#34;&gt;成功标签&lt;/span&gt;
+&lt;span class=&#34;label label-info&#34;&gt;信息标签&lt;/span&gt;
+&lt;span class=&#34;label label-warning&#34;&gt;警告标签&lt;/span&gt;
+&lt;span class=&#34;label label-danger&#34;&gt;危险标签&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;bootstrap 4 标签&lt;/p&gt;
+&lt;p&gt;&lt;button type=&#34;button&#34; class=&#34;btn&#34;&gt;基本按钮&lt;/button&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn btn-primary&#34;&gt;主要按钮&lt;/button&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn btn-secondary&#34;&gt;次要按钮&lt;/button&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn btn-success&#34;&gt;成功&lt;/button&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn btn-info&#34;&gt;信息&lt;/button&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn btn-warning&#34;&gt;警告&lt;/button&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn btn-danger&#34;&gt;危险&lt;/button&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn btn-dark&#34;&gt;黑色&lt;/button&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn btn-light&#34;&gt;浅色&lt;/button&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn btn-link&#34;&gt;链接&lt;/button&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 日志</title>
+      <link>/web/2019112001.html</link>
+      <pubDate>Wed, 20 Nov 2019 13:42:23 +0800</pubDate>
+      
+      <guid>/web/2019112001.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;github-desktop&#34;&gt;github desktop&lt;/h3&gt;
+&lt;p&gt;图形化的git操作，通过简单操作代替了代码输入，更有效的使用git仓库内容。&lt;/p&gt;
+&lt;p&gt;git项目里的用户名、邮箱、账户的区别。在windows的凭证管理器里保存有github desktop的用户名和密码。&lt;/p&gt;
+&lt;p&gt;使用visual studio code，添加git插件，也可以使用git操作。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&#34;row&#34; &gt;
+        &lt;div class=&#34;col-md-6 col-xs-6 col-sm-3&#34;&gt;
+            &lt;p&gt;测试 bootstrap的分列&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-md-6 col-xs-6 col-sm-3&#34; &gt;
+            &lt;p&gt;测试代码
+            &lt;/p&gt;
+            &lt;p&gt;两段文字并排。
+            &lt;/p&gt;
+         &lt;/div&gt;
+         &lt;div class=&#34;col-md-12 col-xs-12 col-sm-6&#34; &gt;
+            &lt;p&gt;测试代码
+            &lt;/p&gt;
+            &lt;p&gt;合并一列
+            &lt;/p&gt;
+         &lt;/div&gt;
+ &lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 存储桶的命名</title>
+      <link>/web/raw/2019111403.html</link>
+      <pubDate>Thu, 14 Nov 2019 10:41:47 +0800</pubDate>
+      
+      <guid>/web/raw/2019111403.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;存储桶的分类和命名&#34;&gt;存储桶的分类和命名&lt;/h3&gt;
+&lt;p&gt;1 首先需要一个专门备份文件和收集重要资料的存储桶。私有权限，长期保存，不经常删减文件。至少需要一个。&lt;/p&gt;
+&lt;p&gt;2 业务需要，一个公开访问的存储桶。公共读取权限，根据应用设置时间和内容级别。必要时对文件进行删减。至少需要一个。&lt;/p&gt;
+&lt;p&gt;3 临时中转，一个私有权限存储桶。放置app，压缩包或其他类型文件。这种临时中转的文件，可能需要长期保存，也可能只是周转一下就删除。也可能涉及重要安全权限，需要单独放置。需要一个或多个。&lt;/p&gt;
+&lt;p&gt;4 业务信息，一个由各类系统生成或存储各类日志，记录的存储桶。作为系统文件的存放点。私有权限，这些文件甚至从来没有被使用过。但是需要保留以备某些时候查阅。需要一个或多个。&lt;/p&gt;
+&lt;h3 id=&#34;公开桶的命名&#34;&gt;公开桶的命名&lt;/h3&gt;
+&lt;p&gt;1 公开桶的名字需要跟私有桶完全区分。必要时，需要给公开桶设置自定义访问域名。个人使用.ufs.pub作为所有公开访问的存储桶的域名。&lt;/p&gt;
+&lt;p&gt;2 私有桶在需要时也需要自定义域名，个人使用.hbnote.com作为私有桶的域名。私有桶的域名在一般情况下无法直接通过浏览器访问或者访问时权限受限。&lt;/p&gt;
+&lt;p&gt;3 临时桶，原则上来讲，临时的存储桶不需要专门设置自定义域名。但不排除必要情况下，长期使用临时桶使用。个人使用.ofs.pub作为所有临时业务的域名。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 专门用来测试代码的站点</title>
+      <link>/web/raw/2019101502.html</link>
+      <pubDate>Tue, 15 Oct 2019 14:46:26 +0000</pubDate>
+      
+      <guid>/web/raw/2019101502.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;ofs.pub将作为专门用来测试代码的网站，临时站点均放置在放在.ofs.pub上。意味着hbn.pub将不再解析临时站点。&lt;/p&gt;
+&lt;p&gt;当然，为了测试代码不影响正常网站和公司业务，测试将在独立的服务器上运行，alpha站点。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 关于ICP备案的误区</title>
+      <link>/web/876.html</link>
+      <pubDate>Mon, 02 Sep 2019 01:03:40 +0000</pubDate>
+      
+      <guid>/web/876.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;需要备案的是服务器，不是域名。比如你个人信息备案，登记的是你人的信息。至于你叫张三李四是可以随便起的。&lt;/p&gt;
+&lt;p&gt;域名不需要备案就能直接使用，但是网站访问需要备案。(以http协议访问web服务器)&lt;/p&gt;
+&lt;p&gt;访问国内web服务器需要备案，备案时需要一个域名对应，好比个人需要名字。但本质上关键的是域名对应的网站，不是域名。&lt;/p&gt;
+&lt;p&gt;备案后网站同域名本质是绑定的，但实际情况并没有严格要求。只要网站内容同备案域名对应（你个人，至于你是天然的还是克隆的甚至外边是人实际是机器人无关紧要）&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 由于进行的项目太多，域名解析已经不够用</title>
+      <link>/web/786.html</link>
+      <pubDate>Wed, 21 Aug 2019 03:08:39 +0000</pubDate>
+      
+      <guid>/web/786.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;hbn.pub用于的项目太多，解析条目太多，很多常用的名字已经使用。急需新域名的补充，而新域名由于备案问题迟迟无法获得网站备案号。导致一直未能正常使用。&lt;/p&gt;
+&lt;p&gt;关于域名的安排，需要将正式应用的域名同资源服务的域名分开，做多方面准备。用来代替hbn.pub的是ofs.pub 专门测试临时页面。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 当初想着建个网站搞点有意义的事</title>
+      <link>/web/note/2019080101.html</link>
+      <pubDate>Thu, 01 Aug 2019 02:29:57 +0000</pubDate>
+      
+      <guid>/web/note/2019080101.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;        当初想着搞个网站，放点文章，分享点有用的技术，创意，有价值的东西。做点有意义的事。结果不晓得是懒得更新还是想到其他东西，网站一直没动过。&lt;/p&gt;
+&lt;p&gt;        当然，更新博客也行，只是博客吗，毕竟筛查，审核太严。一点点不对劲就是删文章，封号的。现在说个话，点个赞就要担心人身安全。&lt;/p&gt;
+&lt;p&gt;        目前网站只是用来测试不同的建站环境，远程sql server服务器和mysql服务器的连接。云服务器的容量有限。图片，视频那样的大容量文件不放在云服务器上，放在阿里云或华为云的对象存储服务上。目前网站不考虑做CDN&lt;/p&gt;
+&lt;p&gt;需要理解的一点是：个人网站应该全力放在网站本身的数据上。提供给访问者有价值的信息，而不是将精力投入花哨的装饰，配件上。现在社会的信息爆炸时代，过于繁杂的设计，装饰会让人焦虑不安。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 学习容器技术</title>
+      <link>/web/note/2019071601.html</link>
+      <pubDate>Tue, 16 Jul 2019 10:15:04 +0000</pubDate>
+      
+      <guid>/web/note/2019071601.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;2019-7-17创建： 通过设置该网站域名b.hbn.pub 可以使用kms激活服务器，该服务器是安装在docker上的一个容器。&lt;/p&gt;
+&lt;p&gt;2019-7-19更新：已经可以使用docker部署基本的服务器，但是测试数据库功能的时候，发现wordpress的安装程序始终无法连接在docker里的mysql或者mariaDB数据库。此wordpress安装也是在docker里，可以正常连接专门的数据库服务器，但是无法连接docker里面的数据库服务器。或许是什么地方设置问题，但是此问题一直未能解决。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 第一篇文章</title>
+      <link>/web/note/2019062601.html</link>
+      <pubDate>Wed, 26 Jun 2019 10:18:01 +0000</pubDate>
+      
+      <guid>/web/note/2019062601.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;这是一篇文章&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;这篇文章记录这个站点的发布时间。&lt;/p&gt;
+&lt;hr&gt;
+  &lt;div class=&#34;alert alert-secondary alert-dismissible&#34;&gt;
+    &lt;button type=&#34;button&#34; class=&#34;close&#34; data-dismiss=&#34;alert&#34;&gt;&amp;times;&lt;/button&gt;
+    &lt;strong&gt;次要的!&lt;/strong&gt; 显示一些不重要的信息。
+  &lt;/div&gt;
+&lt;hr&gt;
+  &lt;div class=&#34;col-md-6&#34;style=&#34;backgroud-color:white;&#34;&gt;
+			&lt;div class=&#34;alert alert-success&#34;&gt;
+				&lt;strong&gt;成功!&lt;/strong&gt; 指定操作成功提示信息。
+			&lt;/div&gt;
+			&lt;div class=&#34;alert alert-success&#34;&gt;
+				&lt;strong&gt;注意：&lt;/strong&gt;测试代码
+			&lt;/div&gt;
+			&lt;div class=&#34;alert alert-info&#34;&gt;
+				&lt;strong&gt;信息!&lt;/strong&gt; 请注意这个信息。
+			&lt;/div&gt;
+			&lt;div class=&#34;alert alert-warning&#34;&gt;
+				&lt;strong&gt;警告!&lt;/strong&gt; 设置警告信息。
+			&lt;/div&gt;
+			&lt;div class=&#34;alert alert-danger&#34;&gt;
+				&lt;strong&gt;错误!&lt;/strong&gt; 失败的操作
+			&lt;/div&gt;
+			&lt;div class=&#34;alert alert-primary&#34;&gt;
+				    &lt;strong&gt;首选!&lt;/strong&gt; 这是一个重要的操作信息。
+			&lt;/div&gt;
+			&lt;div class=&#34;alert alert-secondary&#34;&gt;
+				    &lt;strong&gt;次要的!&lt;/strong&gt; 显示一些不重要的信息。
+			&lt;/div&gt;
+			&lt;div class=&#34;alert alert-dark&#34;&gt;
+				    &lt;strong&gt;深灰色!&lt;/strong&gt; 深灰色提示框。
+			&lt;/div&gt;
+			&lt;div class=&#34;alert alert-light&#34;&gt;
+				    &lt;strong&gt;浅灰色!&lt;/strong&gt;浅灰色提示框。
+			&lt;/div&gt;
+			&lt;div class=&#34;alert alert-secondary alert-dismissible&#34;&gt;
+				&lt;button type=&#34;button&#34; class=&#34;close&#34; data-dismiss=&#34;alert&#34;&gt;&amp;times;&lt;/button&gt;
+				&lt;strong&gt;次要的!&lt;/strong&gt; 显示一些不重要的信息。
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&#34;col-md-6&#34;style=&#34;backgroud-color:white;&#34;&gt;
+		&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

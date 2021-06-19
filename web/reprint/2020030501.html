@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="zh-Hans-CN" class="no-js">
+  <head>
+    <!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.82.0" />
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+
+<link rel="shortcut icon" href="/favicon.ico" >
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<title>简单实现 Google Fonts 的异步加载 | 记事本</title><meta property="og:title" content="简单实现 Google Fonts 的异步加载" />
+<meta property="og:description" content="引用自reuixiy
+ 在 Web 中，中文一般是不推荐使用网络字体的——因为汉字庞大的字符数让中文网络字体的体积异常庞大。但是，如果你经常浏览国外的英文网站，你会发现——使用了网络字体的网页是真的很美！所以，为何中文网页不能一样美呢？
+技术进步带来的字体子集化和用户网络带宽的普遍提升，中文网页其实已经可以开始尝试网络字体了。不知你是否注意到，苹果的中文官网其实就已经在使用中文网络字体了。就在昨天1，Google Fonts 推出了全新的设计，以庆祝其 10 岁的生日，而其中一个重要的新亮点，就是添加了可变字体（Variable Fonts）的支持。
+所以，中文网络字体的普及是刻不容缓的。这需要字体设计师的努力，也需要网页开发者的努力。作为开发者，尝试使用网络字体其实也是我们的一个职责——Making the Web Beautiful!
+ 21 2  - &lt;link rel=&#34;stylesheet&#34; href=&#34;style.css&#34;&gt; &#43; &lt;link rel=&#34;stylesheet&#34; href=&#34;style.css&#34; media=&#34;print&#34; onload=&#34;this.media=&#39;all&#39;&#34;&gt;   参考：
+ Defer non-critical CSS | web.dev Can I use &lt;link rel=&quot;preload&quot;&gt;? loadCSS | GitHub How to load CSS Asynchronously | Stack Overflow The Simplest Way to Load CSS Asynchronously | Filament Group, Inc.     https://twitter." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/web/reprint/2020030501.html" /><meta property="article:section" content="tech" />
+<meta property="article:published_time" content="2020-03-05T21:22:26&#43;08:00" />
+<meta property="article:modified_time" content="2020-03-05T21:22:26&#43;08:00" /><meta property="og:site_name" content="记事本" />
+
+<meta itemprop="name" content="简单实现 Google Fonts 的异步加载">
+<meta itemprop="description" content="引用自reuixiy
+ 在 Web 中，中文一般是不推荐使用网络字体的——因为汉字庞大的字符数让中文网络字体的体积异常庞大。但是，如果你经常浏览国外的英文网站，你会发现——使用了网络字体的网页是真的很美！所以，为何中文网页不能一样美呢？
+技术进步带来的字体子集化和用户网络带宽的普遍提升，中文网页其实已经可以开始尝试网络字体了。不知你是否注意到，苹果的中文官网其实就已经在使用中文网络字体了。就在昨天1，Google Fonts 推出了全新的设计，以庆祝其 10 岁的生日，而其中一个重要的新亮点，就是添加了可变字体（Variable Fonts）的支持。
+所以，中文网络字体的普及是刻不容缓的。这需要字体设计师的努力，也需要网页开发者的努力。作为开发者，尝试使用网络字体其实也是我们的一个职责——Making the Web Beautiful!
+ 21 2  - &lt;link rel=&#34;stylesheet&#34; href=&#34;style.css&#34;&gt; &#43; &lt;link rel=&#34;stylesheet&#34; href=&#34;style.css&#34; media=&#34;print&#34; onload=&#34;this.media=&#39;all&#39;&#34;&gt;   参考：
+ Defer non-critical CSS | web.dev Can I use &lt;link rel=&quot;preload&quot;&gt;? loadCSS | GitHub How to load CSS Asynchronously | Stack Overflow The Simplest Way to Load CSS Asynchronously | Filament Group, Inc.     https://twitter."><meta itemprop="datePublished" content="2020-03-05T21:22:26&#43;08:00" />
+<meta itemprop="dateModified" content="2020-03-05T21:22:26&#43;08:00" />
+<meta itemprop="wordCount" content="68">
+<meta itemprop="keywords" content="web,typography," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="简单实现 Google Fonts 的异步加载"/>
+<meta name="twitter:description" content="引用自reuixiy
+ 在 Web 中，中文一般是不推荐使用网络字体的——因为汉字庞大的字符数让中文网络字体的体积异常庞大。但是，如果你经常浏览国外的英文网站，你会发现——使用了网络字体的网页是真的很美！所以，为何中文网页不能一样美呢？
+技术进步带来的字体子集化和用户网络带宽的普遍提升，中文网页其实已经可以开始尝试网络字体了。不知你是否注意到，苹果的中文官网其实就已经在使用中文网络字体了。就在昨天1，Google Fonts 推出了全新的设计，以庆祝其 10 岁的生日，而其中一个重要的新亮点，就是添加了可变字体（Variable Fonts）的支持。
+所以，中文网络字体的普及是刻不容缓的。这需要字体设计师的努力，也需要网页开发者的努力。作为开发者，尝试使用网络字体其实也是我们的一个职责——Making the Web Beautiful!
+ 21 2  - &lt;link rel=&#34;stylesheet&#34; href=&#34;style.css&#34;&gt; &#43; &lt;link rel=&#34;stylesheet&#34; href=&#34;style.css&#34; media=&#34;print&#34; onload=&#34;this.media=&#39;all&#39;&#34;&gt;   参考：
+ Defer non-critical CSS | web.dev Can I use &lt;link rel=&quot;preload&quot;&gt;? loadCSS | GitHub How to load CSS Asynchronously | Stack Overflow The Simplest Way to Load CSS Asynchronously | Filament Group, Inc.     https://twitter."/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.c7c493d84fc5c6d6cc5a8188190d10f546e9cae7cb23c400dfc194a17091d981.css" as="style">
+<link href="/scss/main.min.c7c493d84fc5c6d6cc5a8188190d10f546e9cae7cb23c400dfc194a17091d981.css" rel="stylesheet" integrity="">
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/css/zoomify.min.css">
+
+
+
+
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  crossorigin="anonymous"></script>
+
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+<meta itemprop="name" content="云上记事本" />	
+
+<meta itemprop="image" content="https://base.oribos.city/images/avatar.png" />
+
+<meta name="description" itemprop="description" content="存放各类网络资源，素材，模板" />
+
+
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="navbar-custom js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span><span class="text-nav-head font-weight-bold">记事本</span>
+		</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/tech/" ><span class="active">技术</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/essay/" ><span>随笔</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/about/" ><span>关于</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; 站内搜索…"
+  aria-label="站内搜索…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.ac73ee7a3e67b17ecb8cabab12e37f63407be751474851fdfb2adf449db6d3d2f62036088f67808e3d73f1c43fab732379c870da71d927e6eb23a00d493ae867.json"
+  data-offline-search-base-href="/"
+>
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-default td-outer">
+      <main role="main" class="td-main">
+        
+
+<blockquote>
+<p>引用自<a href="https://io-oi.me/">reuixiy</a></p>
+</blockquote>
+<p>在 Web 中，中文一般是不推荐使用网络字体的——因为汉字庞大的字符数让中文网络字体的体积异常庞大。但是，如果你经常浏览国外的英文网站，你会发现——使用了网络字体的网页是真的很美！所以，为何中文网页不能一样美呢？</p>
+<p>技术进步带来的字体子集化和用户网络带宽的普遍提升，中文网页其实已经可以开始尝试网络字体了。不知你是否注意到，<a href="https://www.apple.com.cn/">苹果的中文官网</a>其实就已经在使用中文网络字体了。就在昨天<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>，<a href="https://fonts.google.com/">Google Fonts</a> 推出了全新的设计，以庆祝其 10 岁的生日，而其中一个重要的新亮点，就是添加了可变字体（Variable Fonts）的支持。</p>
+<p>所以，中文网络字体的普及是刻不容缓的。这需要字体设计师的努力，也需要网页开发者的努力。作为开发者，尝试使用网络字体其实也是我们的一个职责——<em>Making the Web Beautiful!</em></p>
+<hr>
+<p><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup><img src="https://base.oribos.city/images/2020/07/google-fonts-optimization-comparison.png" alt="google-fonts-optimization-comparison.png" title="前后对比"></p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">- <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">link</span> <span style="color:#c4a000">rel</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;stylesheet&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;style.css&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
++ <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">link</span> <span style="color:#c4a000">rel</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;stylesheet&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;style.css&#34;</span> <span style="color:#c4a000">media</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;print&#34;</span> <span style="color:#c4a000">onload</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;this.media=&#39;all&#39;&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>参考：</p>
+<ol>
+<li><a href="https://web.dev/defer-non-critical-css/">Defer non-critical CSS | web.dev</a></li>
+<li><a href="https://caniuse.com/#feat=link-rel-preload">Can I use <code>&lt;link rel=&quot;preload&quot;&gt;</code>?</a></li>
+<li><a href="https://github.com/filamentgroup/loadCSS">loadCSS | GitHub</a></li>
+<li><a href="https://stackoverflow.com/a/46750893/8889158">How to load CSS Asynchronously | Stack Overflow</a></li>
+<li><a href="https://www.filamentgroup.com/lab/load-css-simpler/">The Simplest Way to Load CSS Asynchronously | Filament Group, Inc.</a></li>
+</ol>
+<hr>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://twitter.com/googlefonts/status/1234967000193150978">https://twitter.com/googlefonts/status/1234967000193150978</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>测试前需要前往 Network 将 <code>Disable cache</code> 勾选。 <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+
+      </main>
+      
+<footer class="bg-dark py-5 row d-print-none footer-bg">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="联系" aria-label="联系">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="mailto:denalon@qq.com">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="备用站点" aria-label="备用站点">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://denalon.js.org">
+      <i class="fa fa-paperclip"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="本站源码" aria-label="本站源码">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://denalon.coding.net/public/code/blog/git/files">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="反馈" aria-label="反馈">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://github.com/denalon/denalon/issues">
+      <i class="fa fa-commenting"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2021 denalon 版权所有</small>
+        <br>
+        <small class="text-white"><a class="theme-link text-white" href="http://beian.miit.gov.cn/">ICP备案号：豫ICP备2020027870号-2</a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+      <div class="container-fluid">
+    <div class="shareBtn">
+            <a  id="upBtn"  href="javascript:topFunction()" title="向上"> <i class="fa fa-arrow-up fa-2x text-warning"></i></a>
+    </div>
+</div>
+
+    </div>
+    <script src="/js/zoomify.min.js"></script>
+<script src="/js/app.js"></script>
+<link rel="stylesheet" href="https://base.oribos.city/css/monokai_sublime.min.css">
+<script src="https://style.oribos.city/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.3b172c13b62c2bea8b1c9d2599cddc8cf89718a92d792c680871c81ba43d8c85.js" integrity="sha256-OxcsE7YsK&#43;qLHJ0lmc3cjPiXGKkteSxoCHHIG6Q9jIU=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,2062 @@
+<!doctype html>
+<html lang="zh-Hans-CN" class="no-js">
+  <head>
+    <!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.82.0" />
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+
+<link rel="shortcut icon" href="/favicon.ico" >
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<title>Markdown | 记事本</title><meta property="og:title" content="Markdown" />
+<meta property="og:description" content="介绍轻量级标记语言Markdown" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/web/share/markdown.html" /><meta property="article:section" content="tech" />
+<meta property="article:published_time" content="2021-04-01T09:01:40&#43;08:00" />
+<meta property="article:modified_time" content="2021-04-01T09:01:40&#43;08:00" /><meta property="og:site_name" content="记事本" />
+
+<meta itemprop="name" content="Markdown">
+<meta itemprop="description" content="介绍轻量级标记语言Markdown"><meta itemprop="datePublished" content="2021-04-01T09:01:40&#43;08:00" />
+<meta itemprop="dateModified" content="2021-04-01T09:01:40&#43;08:00" />
+<meta itemprop="wordCount" content="337">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Markdown"/>
+<meta name="twitter:description" content="介绍轻量级标记语言Markdown"/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.c7c493d84fc5c6d6cc5a8188190d10f546e9cae7cb23c400dfc194a17091d981.css" as="style">
+<link href="/scss/main.min.c7c493d84fc5c6d6cc5a8188190d10f546e9cae7cb23c400dfc194a17091d981.css" rel="stylesheet" integrity="">
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/css/zoomify.min.css">
+
+
+
+
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  crossorigin="anonymous"></script>
+
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+<meta itemprop="name" content="云上记事本" />	
+
+<meta itemprop="image" content="https://base.oribos.city/images/avatar.png" />
+
+<meta name="description" itemprop="description" content="存放各类网络资源，素材，模板" />
+
+
+
+  </head>
+  <body class="td-page td-blog">
+    <header>
+      
+<nav class="navbar-custom js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span><span class="text-nav-head font-weight-bold">记事本</span>
+		</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/tech/" ><span class="active">技术</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/essay/" ><span>随笔</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/about/" ><span>关于</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; 站内搜索…"
+  aria-label="站内搜索…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.ac73ee7a3e67b17ecb8cabab12e37f63407be751474851fdfb2adf449db6d3d2f62036088f67808e3d73f1c43fab732379c870da71d927e6eb23a00d493ae867.json"
+  data-offline-search-base-href="/"
+>
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; 站内搜索…"
+  aria-label="站内搜索…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.ac73ee7a3e67b17ecb8cabab12e37f63407be751474851fdfb2adf449db6d3d2f62036088f67808e3d73f1c43fab732379c870da71d927e6eb23a00d493ae867.json"
+  data-offline-search-base-href="/"
+>
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/tech/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">技术</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="tech">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/tech/develop/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">develop</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="techdevelop">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/tech/develop/2021/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">2021</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="techdevelop2021">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021061601html" href="/web/note/2021/2021061601.html">github的api</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webshare2021061603html" href="/web/share/2021061603.html">一个mongodb的事例</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021061001html" href="/web/note/2021/2021061001.html">k8s安装和部署</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021053105html" href="/web/note/2021/2021053105.html">20210531</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021052701html" href="/web/note/2021/2021052701.html">docker构建和运行jar</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021052402html" href="/web/note/2021/2021052402.html">容器镜像加速</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021052406html" href="/web/note/2021/2021052406.html">零星的记录</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021051501html" href="/web/note/2021/2021051501.html">容器应用</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021051401html" href="/web/note/2021/2021051401.html">用于持续运行的数据库</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021051001html" href="/web/note/2021/2021051001.html">docker项目的配置文件备份</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webme20212021050801html" href="/web/me/2021/2021050801.html">一键导入iconfont</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webme20212021051301html" href="/web/me/2021/2021051301.html">docker部署hello图床</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webcoursegithtml" href="/web/course/git.html">入门git教程</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021041307html" href="/web/note/2021/2021041307.html">魔改主题</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webchip2021041102html" href="/web/chip/2021041102.html">适用于萌新的hexo自动部署</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webchip2021040903html" href="/web/chip/2021040903.html">易于分享的模块代码</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webchip2021040702html" href="/web/chip/2021040702.html">git隐藏文件</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webchip2021040701html" href="/web/chip/2021040701.html">github加速</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webchip2021040501html" href="/web/chip/2021040501.html">炫彩按键</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webchip2021040401html" href="/web/chip/2021040401.html">GitHub Actions 入门教程</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webchip2021040703html" href="/web/chip/2021040703.html">减少彩色的使用</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-websharemarkdownhtml" href="/web/share/markdown.html">Markdown</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021052507html" href="/web/note/2021/2021052507.html">SSH 容器直通</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/tech/develop/2020/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">2020</a>
+  </li>
+  <ul>
+    <li class="collapse " id="techdevelop2020">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090673html" href="/web/note/2020090673.html">0906归纳</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020081313html" href="/web/note/2020081313.html">0813</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020083143html" href="/web/note/2020083143.html">域名的充分使用</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020080503html" href="/web/note/2020080503.html">心理问题</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020080407html" href="/web/note/2020080407.html">忒修斯之船</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020081113html" href="/web/note/2020081113.html">操作系统</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020080401html" href="/web/note/2020080401.html">记录</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020080511html" href="/web/note/2020080511.html">防止信息泄露</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021043001html" href="/web/note/2021/2021043001.html">迁移asp.net项目</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021042901html" href="/web/note/2021/2021042901.html">20210429</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021041102html" href="/web/note/2021/2021041102.html">适用于萌新的hexo自动部署</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020120317html" href="/web/note/2020120317.html">https协议</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020112873html" href="/web/note/2020112873.html">前后端分离架构</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020111808html" href="/web/note/2020111808.html">日记2020-11-18</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020111714html" href="/web/note/2020111714html/">日记2020-11-17</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020111305html" href="/web/note/2020111305.html">日记20201115</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020111005html" href="/web/note/2020111005.html">腾讯云函数计算备案</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webprotest2020110502html" href="/web/pro/test/2020110502.html">wordpress测试</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020110101html" href="/web/note/2020110101.html">相册</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020102701html" href="/web/note/2020102701.html">收敛型和发散型知识</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020102705html" href="/web/note/2020102705.html">记录hugo配置</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020102117html" href="/web/note/2020102117.html">萌新专用hexo教程.</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020101303html" href="/web/note/2020101303.html">博客变更历程</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020101217html" href="/web/note/2020101217.html">引用文件</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote202020201011html" href="/web/note/2020/20201011.html">nodejs和git安装</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020101000html" href="/web/note/2020101000.html">连续更新的内容</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020100813html" href="/web/note/2020100813.html">博客撤销后端服务</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote202020201005html" href="/web/note/2020/20201005.html">hexo安装步骤</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020100573html" href="/web/note/2020100573.html">中文域名的尴尬</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020093073html" href="/web/note/2020093073.html">docker安装宝塔面板</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020092313html" href="/web/note/2020092313.html">使用docker运行hugo</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091919html" href="/web/note/2020091919.html">信息拆分</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091913html" href="/web/note/2020091913.html">概念</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091907html" href="/web/note/2020091907.html">网站分拆</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091801html" href="/web/note/2020091801.html">从零搭建Spring Boot的Hello World</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091871html" href="/web/note/2020091871.html">本地博客</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091607html" href="/web/note/2020091607.html">缘起性空</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091521html" href="/web/note/2020091521.html">heroku</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091511html" href="/web/note/2020091511.html">learn-termux</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091431html" href="/web/note/2020091431.html">hexo自动部署</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091417html" href="/web/note/2020091417.html">hugo自动部署</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091303html" href="/web/note/2020091303.html">资源分离</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090807html" href="/web/note/2020090807.html">github</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090803html" href="/web/note/2020090803.html">Travis CI</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090773html" href="/web/note/2020090773.html">360安全卫士</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090611html" href="/web/note/2020090611.html">神秘代码</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090343html" href="/web/note/2020090343.html">hugo主题配置</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090301html" href="/web/note/2020090301.html">photo代码</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090373html" href="/web/note/2020090373.html">进一步完善</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-techdevelop20202020-09-01-e58588e58699e4bba3e7a081e5908ee8a1a5e58585e58685e5aeb9" href="/tech/develop/2020/2020-09-01-%E5%85%88%E5%86%99%E4%BB%A3%E7%A0%81%E5%90%8E%E8%A1%A5%E5%85%85%E5%86%85%E5%AE%B9/">先写代码后补充内容</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020083103html" href="/web/note/2020083103.html">blog代码</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020083107html" href="/web/note/2020083107.html">index代码</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020083113html" href="/web/note/2020083113.html">分享呆萌头像</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020083003html" href="/web/note/2020083003.html">有限控制</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020083171html" href="/web/note/2020083171.html">此消彼长</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082801html" href="/web/note/2020082801.html">Cloudflare Workers 发起 http 请求</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082811html" href="/web/note/2020082811.html">web端被打压</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082891html" href="/web/note/2020082891.html">世界观</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082831html" href="/web/note/2020082831.html">大公司的恶行</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082817html" href="/web/note/2020082817.html">微信令人讨厌之处</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082897html" href="/web/note/2020082897.html">方法论</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082401html" href="/web/note/2020082401.html">字母解释法</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082431html" href="/web/note/2020082431.html">观看视频和文章的原则</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020081911html" href="/web/note/2020/2020081911.html">页面新规则</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020081713html" href="/web/note/2020081713.html">计算机的束缚</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020081501html" href="/web/note/2020081501.html">换位思考</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020081901html" href="/web/note/2020081901.html">数量级的差距</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020081301html" href="/web/note/2020081301.html">腾讯乱七八糟的登陆方式</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020073119html" href="/web/note/2020/2020073119.html">内容分拆和规划</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090203html" href="/web/note/2020090203.html">内容组件</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020202003151html" href="/web/note/2020/202003151.html">区分资源块</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020073111html" href="/web/note/2020/2020073111.html">博客内容划分</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082111html" href="/web/note/2020082111.html">博客架构</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020082151html" href="/web/note/2020082151.html">字母表</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020090103html" href="/web/note/2020090103.html">封闭的互联网</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020073191html" href="/web/note/2020/2020073191.html">日志</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020080613html" href="/web/note/2020080613.html">注意别人说法时的出发点</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020073017html" href="/web/note/2020/2020073017.html">jsdelivr403问题</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020072911html" href="/web/note/2020/2020072911.html">假如动物为人类投票</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020072717html" href="/web/note/2020/2020072717.html">黑暗森林法则</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020072111html" href="/web/note/2020/2020072111.html">记录</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020072001html" href="/web/note/2020/2020072001.html">域名调整</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020071717html" href="/web/note/2020/2020071717.html">内嵌页面</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020071731html" href="/web/note/2020071731.html">种植向日葵失败</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webvalue20202020071513html" href="/web/value/2020/2020071513.html">认识和看法2</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020071301html" href="/web/note/2020/2020071301.html">内容分离</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020071303html" href="/web/note/2020/2020071303.html">控制力</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020071319html" href="/web/note/2020/2020071319.html">各种设计2</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020071111html" href="/web/note/2020/2020071111.html">标准化的url地址</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020070911html" href="/web/note/2020/2020070911.html">新版本</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020070711html" href="/web/note/2020/2020070711.html">在coding构建计划里使用凭证</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070405html" href="/web/docs/2020/2020070405.html">004</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070411html" href="/web/docs/2020/2020070411.html">2020 07 04预期</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs2020202070471html" href="/web/docs/2020/202070471.html">文件管理</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs2020202070307html" href="/web/docs/2020/202070307.html">2020 07 03代码分散</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070313html" href="/web/docs/2020/2020070313.html">2020 07 03继承</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070201html" href="/web/docs/2020/2020070201.html">2020 07 02理念</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070283html" href="/web/docs/2020/2020070283.html">2020 07 02进步是无法回头的</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020063011html" href="/web/docs/2020/2020063011.html">2020 06 30 奇妙的空间</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020062907html" href="/web/note/2020/2020062907.html">最后生还者2</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/tech/develop/2019/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">2019</a>
+  </li>
+  <ul>
+    <li class="collapse " id="techdevelop2019">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019120601html" href="/web/raw/2019120601.html">形象比喻前后端分离</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2019112702html" href="/web/2019112702.html">Gitlab</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2019112602html" href="/web/2019112602.html">Hexo的固定链接</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111502html" href="/web/raw/2019111502.html">App域名的尴尬</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111402html" href="/web/raw/2019111402.html">多个git同步</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111401html" href="/web/raw/2019111401.html">Discuz归来</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111301html" href="/web/raw/2019111301.html">对象存储服务的选择</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111201html" href="/web/raw/2019111201.html">静态资源的引用</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111101html" href="/web/raw/2019111101.html">Coding和阿里云code的选择</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111102html" href="/web/raw/2019111102.html">部署点改变</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019103107html" href="/web/raw/2019103107.html">ZeroTier虚拟内网</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019103102html" href="/web/raw/2019103102.html">图床所在的服务器退订，图床网站撤销</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019102401html" href="/web/raw/2019102401.html">一个虚拟主机放多个网站</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019102406html" href="/web/raw/2019102406.html">centos 7.x-64x 安装 hugo</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019102203html" href="/web/raw/2019102203.html">新增frp服务器</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019102207html" href="/web/raw/2019102207.html">ubunut 安装go</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019102105html" href="/web/raw/2019102105.html">centos 7防火墙指令</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019101901html" href="/web/raw/2019101901.html">新增frp服务器</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webunc1369html" href="/web/unc/1369.html">对网站适当的规划</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019101601html" href="/web/raw/2019101601.html">宝塔上设置https，然后用阿里云的cdn，提示重定向过多</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019100103html" href="/web/raw/2019100103.html">git托管中心由转入国内</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019093003html" href="/web/raw/2019093003.html">阿里云CDN加速和全站加速的区别</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webunc1336html" href="/web/unc/1336.html">将两个站点内容互换</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2019092907html" href="/web/2019092907.html">git托管中心的变更</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019092501html" href="/web/raw/2019092501.html">centos 7.x-64x 安装 hugo</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webinfo1306html" href="/web/info/1306.html">为网站开启CDN</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webinfo1118html" href="/web/info/1118.html">建立个人仓库</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw20190903html" href="/web/raw/20190903.html">dns和网络异常</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019081301html" href="/web/raw/2019081301.html">服务器关闭数据库对外访问</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019080703html" href="/web/raw/2019080703.html">针对需要长期保存的文件，转移至云存储服务上。</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2019080201html" href="/web/note/2019080201.html">自建网站的意义</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019072901html" href="/web/raw/2019072901.html">内部资源同外部资源分开放置</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2019071001html" href="/web/note/2019071001.html">使用gitlab社区版自建git服务器</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/tech/develop/reuixiy/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">reuixiy</a>
+  </li>
+  <ul>
+    <li class="collapse " id="techdevelopreuixiy">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint001html" href="/web/reprint/001.html">一个简单的 Service Worker</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2020081802html" href="/web/reprint/2020081802.html">简化博客</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2020081605html" href="/web/reprint/2020081605.html">使用 GitHub Actions 部署 Hugo 博客到 GitHub Pages</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2020070206html" href="/web/reprint/2020070206.html">树莓派 &#43; 延时摄影</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint006html" href="/web/reprint/006.html">ENS 尝鲜</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2020030601html" href="/web/reprint/2020030601.html">一个更自然原生的渐变顶栏</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2020030501html" href="/web/reprint/2020030501.html">简单实现 Google Fonts 的异步加载</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2020022901html" href="/web/reprint/2020022901.html">可变字体（Variable Fonts）尝鲜</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2020022701" href="/web/reprint/2020022701/">三类优秀的程序员</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint002html" href="/web/reprint/002.html">引号的逻辑的哲学</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2019120306html" href="/web/reprint/2019120306.html">使用 GitHub Issues 持续写作</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint010html" href="/web/reprint/010.html">Hugo 与 Hexo 的异同</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint011html" href="/web/reprint/011.html">Hugo 主题 MemE 文档</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2019100704html" href="/web/reprint/2019100704.html">使用 SSH 连接到 GitHub（多帐号）</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2019100108html" href="/web/reprint/2019100108.html">利用 Workbox 实现博客的 PWA</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2019091804html" href="/web/reprint/2019091804.html">将博客部署到星际文件系统（IPFS）</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint004html" href="/web/reprint/004.html">在开发一个 Hugo 主题</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2019061205html" href="/web/reprint/2019061205.html">解决 Win10 下 DNS 问题导致的无法上网</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2019060903html" href="/web/reprint/2019060903.html">将 Hexo 静态博客部署到 Netlify</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2019060301html" href="/web/reprint/2019060301.html">博客重构：极简主义！</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint008html" href="/web/reprint/008.html">Google Fonts 已支持思源宋体！</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2018113007html" href="/web/reprint/2018113007.html">开源：创造世界！</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2018090503html" href="/web/reprint/2018090503.html">网页字体排版的哲学：段首缩排或段间距</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint007html" href="/web/reprint/007.html">GitHub Pages 绑定个人域名，免 Cloudflare 支持 HTTPS</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint003html" href="/web/reprint/003.html">在 NexT 中使用 Valine 评论系统</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2018053001html" href="/web/reprint/2018053001.html">加速 Hexo 博客</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint009html" href="/web/reprint/009.html">Hexo 中 MathJax 的静态显示（svg）</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2017121105html" href="/web/reprint/2017121105.html">浅谈博客文章的两种分类方式</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2017100206html" href="/web/reprint/2017100206.html">如何安装 GNOME Shell 插件？</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2017092301html" href="/web/reprint/2017092301.html">解决更新 Kali Linux 后网易云音乐歌词乱码的问题</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2017090105html" href="/web/reprint/2017090105.html">零网（ZeroNet）初探</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint005html" href="/web/reprint/005.html">重建博客：rm 的悲剧</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webreprint2017020204html" href="/web/reprint/2017020204.html">我的小 Web 服务器树莓派在搭建 WordPress 时遇到的问题</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#开始使用">开始使用</a>
+      <ul>
+        <li></li>
+        <li><a href="#参考资料">参考资料</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+    
+    
+    
+</div>
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role="main">
+            
+            
+<div class="td-content">
+	<h2 class="text-uppercase">Markdown</h2>
+	<hr class="hr-colorful">
+	<div class="lead">介绍轻量级标记语言Markdown</div>
+	<div class="td-byline mb-4">
+		作者 <b>Spoience</b> |
+		<time datetime="2021-04-01" class="text-muted">Thursday, April 01, 2021</time>
+	</div>
+	<h2 id="简介">简介</h2>
+<blockquote>
+<p>Markdown是一种轻量级标记语言，以纯文本格式编写文档，然后转换成有效的XHTML/HTML内容</p>
+</blockquote>
+<ul>
+<li>语法简洁明了、易读易写</li>
+<li>轻量、纯文本、跨平台、兼容性极强</li>
+<li>可以转换为HTML/XHTML、EPUB、PDF、Word、纂写Gitbook</li>
+<li>广泛使用：
+<ul>
+<li>Github</li>
+<li>简书</li>
+<li>Typecho</li>
+<li>WordPress（需编辑器插件）</li>
+<li>Reddit</li>
+<li>Diaspora</li>
+<li>Apollo</li>
+<li>Moodle</li>
+<li>more &hellip;&hellip;</li>
+</ul>
+</li>
+<li>创造者：<a href="http://www.aaronsw.com/"><strong>Aaron Swartz</strong></a>和<a href="https://daringfireball.net/"><strong>John Gruber</strong></a>共同设计</li>
+</ul>
+<p><strong>Aaron Swartz</strong>（1986年11月8日－2013年1月11日）</p>
+<p>Markdown主要贡献者，Aaron Hillel Swartz（全名）的维基百科介绍为：美国程序员、企业家、作者、政治活动者、互联网黑客主义者，点击查看更多关于这位天才的<a href="%5Bhttps://zh.wikipedia.org/zh-hans/%E4%BA%9A%E4%BC%A6%C2%B7%E6%96%AF%E6%B2%83%E8%8C%A8#%5D(https://zh.wikipedia.org/zh-hans/%E4%BA%9A%E4%BC%A6%C2%B7%E6%96%AF%E6%B2%83%E8%8C%A8#)">完整生平</a></p>
+<h2 id="开始使用">开始使用</h2>
+<ul>
+<li>编辑器：Typora、Sublime Text、VS code&hellip;</li>
+<li>首推跨平台、所见即所得的<a href="https://typora.io/">Typora</a>编辑器</li>
+</ul>
+<h4 id="标题">标题</h4>
+<p>一般的，Markdown使用<code>#</code>可以表示1-6级标题</p>
+<blockquote>
+<p># 这是一级标题
+## 这是二级标题
+### 这是三级标题
+#### 这是四级标题
+##### 这是五级标题</p>
+</blockquote>
+<p>对于一级和二级标题，还可以使用<code>-</code>和·<code>=</code>来标记</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-MarkDown" data-lang="MarkDown">这是一级标题
+=====
+这是二级标题
+----------
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="列表">列表</h4>
+<h5 id="无序列表">无序列表</h5>
+<p>使用<code>-</code>、<code>*</code>、<code>+</code>来标记无序列表，下面以<code>-</code>为例</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-MarkDown" data-lang="MarkDown"><span style="color:#204a87;font-weight:bold">-</span> 这是第一项
+<span style="color:#204a87;font-weight:bold">-</span> 这是第二项
+<span style="color:#204a87;font-weight:bold">-</span> 这是第三项
+</code></pre></td></tr></table>
+</div>
+</div><p>显示效果：</p>
+<blockquote>
+<ul>
+<li>这是第一项</li>
+<li>这是第二项</li>
+<li>这是第三项</li>
+</ul>
+</blockquote>
+<h5 id="有序列表">有序列表</h5>
+<p>在阿拉伯数字后面加上<code>.</code>来标记</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-MarkDown" data-lang="MarkDown"><span style="color:#204a87;font-weight:bold">1.</span> 这是第一项
+<span style="color:#204a87;font-weight:bold">2.</span> 这是第二项
+<span style="color:#204a87;font-weight:bold">3.</span> 这是第三项
+</code></pre></td></tr></table>
+</div>
+</div><p>显示效果：</p>
+<blockquote>
+<ol>
+<li>这是第一项</li>
+<li>这是第二项</li>
+<li>这是第三项</li>
+</ol>
+</blockquote>
+<h5 id="列表嵌套">列表嵌套</h5>
+<p>在子级列表前加4个<kbd>空格</kbd>来标记</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-MarkDown" data-lang="MarkDown"><span style="color:#204a87;font-weight:bold">1.</span> 第一项：
+    <span style="color:#204a87;font-weight:bold">-</span> 第一项嵌套的第一个元素
+    <span style="color:#204a87;font-weight:bold">-</span> 第一项嵌套的第二个元素
+    <span style="color:#204a87;font-weight:bold">-</span> 第一项嵌套的第三个元素
+<span style="color:#204a87;font-weight:bold">2.</span> 第二项：
+    <span style="color:#204a87;font-weight:bold">-</span> 第二项嵌套的第一个元素
+    <span style="color:#204a87;font-weight:bold">-</span> 第二项嵌套的第二个元素
+    <span style="color:#204a87;font-weight:bold">-</span> 第二项嵌套的第三个元素
+<span style="color:#204a87;font-weight:bold">3.</span> 第三项：
+    <span style="color:#204a87;font-weight:bold">-</span> 第三项嵌套的第一个元素
+    <span style="color:#204a87;font-weight:bold">-</span> 第三项嵌套的第二个元素
+    <span style="color:#204a87;font-weight:bold">-</span> 第三项嵌套的第三个元素
+</code></pre></td></tr></table>
+</div>
+</div><p>显示效果：</p>
+<blockquote>
+<ol>
+<li>第一项：</li>
+</ol>
+<ul>
+<li>第一项嵌套的第一个元素</li>
+<li>第一项嵌套的第二个元素</li>
+<li>第一项嵌套的第三个元素</li>
+</ul>
+<ol start="2">
+<li>第二项：</li>
+</ol>
+<ul>
+<li>第二项嵌套的第一个元素</li>
+<li>第二项嵌套的第二个元素</li>
+<li>第二项嵌套的第三个元素</li>
+</ul>
+<ol start="3">
+<li>第三项：</li>
+</ol>
+<ul>
+<li>第三项嵌套的第一个元素</li>
+<li>第三项嵌套的第二个元素</li>
+<li>第三项嵌套的第三个元素</li>
+</ul>
+</blockquote>
+<h4 id="段落">段落</h4>
+<p>一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行，对于大部分现代的Markdown编辑器（比如Typora），你完全不用关心，写作怎么换行就这么换行就好</p>
+<h4 id="反转义">反转义</h4>
+<p>使用反斜杠<code>\</code>使标记符号成为普通符号</p>
+<p>可以在以下符号前加上<code>\</code>来标识</p>
+<ul>
+<li>
+<p>\   反斜线</p>
+</li>
+<li>
+<p>` 反引号</p>
+</li>
+<li>
+<p>* 星号</p>
+</li>
+<li>
+<p>_  底线</p>
+</li>
+<li>
+<p>{}  花括号</p>
+</li>
+<li>
+<p>[]  方括号</p>
+</li>
+<li>
+<p>()  括弧</p>
+</li>
+<li>
+<p>#   井字号</p>
+</li>
+<li>
+<p>+ 加号</p>
+</li>
+<li>
+<p>- 减号</p>
+</li>
+<li>
+<p>.  英文句点</p>
+</li>
+<li>
+<p>!   惊叹号</p>
+</li>
+</ul>
+<h4 id="字体格式">字体格式</h4>
+<h5 id="粗体">粗体</h5>
+<p>使用<code>**</code>或<code>__</code>来标记被加粗的文本</p>
+<blockquote>
+<p>**这是被加粗的文本**
+__这也是被加粗的文本__</p>
+</blockquote>
+<p>显示效果：</p>
+<blockquote>
+<p><strong>这是被加粗的文本</strong>
+<strong>这也是被加粗的文本</strong></p>
+</blockquote>
+<h5 id="斜体">斜体</h5>
+<p>使用<code>*</code>或<code>_</code>来标记倾斜的文本</p>
+<blockquote>
+<p>*这是倾斜的文本*
+_这也是倾斜的文本_</p>
+</blockquote>
+<p>显示效果：</p>
+<blockquote>
+<p><em>这是倾斜的文本</em>
+<em>这也是倾斜的文本</em></p>
+</blockquote>
+<h5 id="粗斜体">粗斜体</h5>
+<p>使用<code>***</code>或<code>___</code>来标记粗斜体文本</p>
+<blockquote>
+<p>***这是一段粗斜体***
+___这也是一段粗斜体___</p>
+</blockquote>
+<p>显示效果：</p>
+<blockquote>
+<p><em><strong>这是一段粗斜体</strong></em>
+<em><strong>这也是一段粗斜体</strong></em></p>
+</blockquote>
+<h4 id="删除线">删除线</h4>
+<p>使用两个<code>~</code>来标记删除线文本</p>
+<blockquote>
+<p>~~这是加删除线的文本~~</p>
+</blockquote>
+<p>显示效果：</p>
+<blockquote>
+<p><del>这是加删除线的文本</del></p>
+</blockquote>
+<h4 id="分割线">分割线</h4>
+<p>在单独的一行使用三个或三个以上的<code>*</code>或<code>-</code>来标记分割线</p>
+<blockquote>
+<p>***</p>
+<p>我被夹在分割线里</p>
+<p>***</p>
+<p>-&ndash;</p>
+<p>我被夹在另一条分割线里</p>
+<p>-&ndash;</p>
+</blockquote>
+<p>显示效果：</p>
+<blockquote>
+<hr>
+<p>我被夹在分割线里</p>
+<hr>
+<hr>
+<p>我被夹在另一条分割线里</p>
+<hr>
+</blockquote>
+<h4 id="下划线">下划线</h4>
+<p>使用两个<code>&lt;u&gt;</code>标记添加下划线的文本</p>
+<blockquote>
+<p>&lt;u&gt;这是被下划线标记的文本&lt;/u&gt;</p>
+</blockquote>
+<p>显示效果：</p>
+<blockquote>
+<p><u>这是被下划线标记的文本</u></p>
+</blockquote>
+<h4 id="脚注">脚注</h4>
+<p>使用<code>[^这是注明的信息]</code>来标记脚注</p>
+<p>比如：</p>
+<blockquote>
+<p>这是一段文字<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+</blockquote>
+<h4 id="区块引用">区块引用</h4>
+<p>Markdown 标记区块引用是使用类似 email 中用 <code>&gt;</code> 的引用方式</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-MarkDown" data-lang="MarkDown">&gt;这是一段被引用的内容
+</code></pre></td></tr></table>
+</div>
+</div><p>显示效果：</p>
+<blockquote>
+<p>这是一段被引用的内容</p>
+</blockquote>
+<p><strong>嵌套引用</strong></p>
+<blockquote>
+<p>&gt; 最外层
+&gt; &gt; 第一层嵌套
+&gt; &gt; &gt; 第二层嵌套</p>
+</blockquote>
+<p>显示效果：</p>
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+<blockquote>
+<p>第二层嵌套</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4 id="代码区块">代码区块</h4>
+<p><strong>短代码</strong></p>
+<p>对于短代码，使用<kbd>`</kbd>包裹住</p>
+<p>比如：<code>printf</code>、<code>scanf</code></p>
+<p><strong>代码块</strong></p>
+<p>一般的在代码块前使用4个空格或者一个TAB键：</p>
+<p><kbd>Space</kbd><kbd>Space</kbd><kbd>Space</kbd><kbd>Space</kbd>或者<kbd>TAB</kbd></p>
+<p>但是比较常用的是使用```包住代码块，在开头的```后还可以标记代码的语言类型，比如：</p>
+<blockquote>
+<p>```JavaScript
+$(document).ready(function () {
+alert(&lsquo;RUNOOB&rsquo;);
+});
+```</p>
+</blockquote>
+<p>显示效果为</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">document</span><span style="color:#000;font-weight:bold">).</span><span style="color:#000">ready</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">alert</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;RUNOOB&#39;</span><span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000;font-weight:bold">});</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="链接">链接</h4>
+<p>一般的，Markdown链接有两种：</p>
+<blockquote>
+<p>[这是链接名称](这是链接地址)</p>
+<p>&lt;这是自动链接&gt;</p>
+</blockquote>
+<p>比如：</p>
+<blockquote>
+<p>这是我的博客<a href="https://spoience.com">Spoience</a></p>
+<p>这是Spoience的博客<a href="https://spoience.com">https://spoience.com</a></p>
+<p>这是邮箱：<a href="mailto:example@mail.com">example@mail.com</a></p>
+</blockquote>
+<p>稍微复杂一点的高级链接有点类似于Markdown的脚注,实际注明的链接类似于脚注在文末引用，比如：</p>
+<blockquote>
+<p>这是[谷歌]<a href="https://www.google.com/">2</a></p>
+<p>这是[百度]<a href="https://www.baidu.com/">3</a></p>
+</blockquote>
+<p>显示效果为：</p>
+<blockquote>
+<p>这是<a href="https://www.google.com/">谷歌</a></p>
+<p>这是<a href="https://www.baidu.com/">百度</a></p>
+</blockquote>
+<h4 id="图片">图片</h4>
+<p>一般的，引用图片，其中<code>图片标题</code>跟<code>alt属性文本</code>可以不写</p>
+<blockquote>
+<p>![alt 属性文本](图片地址 &ldquo;图片标题&rdquo;)</p>
+</blockquote>
+<p>比如：</p>
+<blockquote>
+<p>![](https://spoience.com/images/avatar.webp)</p>
+</blockquote>
+<p>显示为一张图片</p>
+<p><img src="http://spoience.com/images/avatar.webp" alt=""></p>
+<h4 id="表格">表格</h4>
+<p>对于最基础的表格，仅仅用到<code>|</code>和<code>-</code>来标记表格的基本结构</p>
+<p>比如：</p>
+<blockquote>
+<p>|表头1|表头2|
+|&mdash;&mdash;&ndash;|&mdash;&mdash;&ndash;|
+|单元格1|单元格2|
+|单元格3|单元格4|</p>
+</blockquote>
+<p>显示为：</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单元格1</td>
+<td>单元格2</td>
+</tr>
+<tr>
+<td>单元格3</td>
+<td>单元格4</td>
+</tr>
+<tr>
+<td>在基础的表格功能上，我们还可以使用<code>:</code>和<code>-</code>来设置表格的对齐方式</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<ul>
+<li><strong>-:</strong> 设置内容和标题栏居右对齐</li>
+<li><strong>:-</strong> 设置内容和标题栏居左对齐</li>
+<li><strong>:-:</strong> 设置内容和标题栏居中对齐</li>
+</ul>
+<p>下面以表格居中为例，比如：</p>
+<blockquote>
+<p>|表头1|表头2|
+|:&mdash;&mdash;&ndash;:|:&mdash;&mdash;&ndash;:|
+|单元格1|单元格2|
+|单元格3|单元格4|</p>
+</blockquote>
+<p>显示为：</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">表头1</th>
+<th style="text-align:center">表头2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">单元格1</td>
+<td style="text-align:center">单元格2</td>
+</tr>
+<tr>
+<td style="text-align:center">单元格3</td>
+<td style="text-align:center">单元格4</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h4 id="更多姿势">更多姿势</h4>
+<p>其实，上面就是Markdown一般技巧，也是最常使用的。一般的，Markdown写作最直接转换的就是HTML文本，所以，Markdown显然也可以支援一些HTML属性，比如：</p>
+<blockquote>
+<p>&lt;kdb&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</p>
+</blockquote>
+<p>像有些网站的<code>html</code>嵌入代码，有些在Markdown也是支持的，但不是全部，具体还要看Markdown的编辑器和渲染器是否支持，像网易云音乐的<code>HTML</code>嵌入代码大部分使用MD解析的程序可以支持。</p>
+<p>对于数学公式，Markdown支持使用两个<code>$$</code>包裹<code>TeX</code>、<code>LateX</code>或<code>Mathjax</code>的数学公式，因为个人使用不是很多，这里不做叙述😛</p>
+<h3 id="参考资料">参考资料</h3>
+<ul>
+<li><a href="http://younghz.github.io/Markdown/">Markdown基本语法</a></li>
+<li><a href="https://www.jianshu.com/p/q81RER">简书-献给写作者的 Markdown 新手指南</a></li>
+<li><a href="https://www.runoob.com/Markdown/md-tutorial.html">菜鸟教程-Markdown教程</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Markdown">维基百科-Markdown</a></li>
+<li><a href="https://www.appinn.com/Markdown/">Markdown 语法说明 (简体中文版)</a></li>
+</ul>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>看文末，这是一段注释 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+	
+
+	<div>
+    <p class="hr-text text-warning">END</p>
+</div>
+
+<div>
+  <p class="text-warning col-12 text-center">此文章版权归原作者  Spoience 所有，内容为作者个人观点</p>
+  
+</div>
+	
+
+
+
+	
+	
+  
+	
+	
+	
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <div class="container-fluid">
+    <div class="shareBtn">
+            <a  id="upBtn"  href="javascript:topFunction()" title="向上"> <i class="fa fa-arrow-up fa-2x text-warning"></i></a>
+    </div>
+</div>
+
+      
+<footer class="bg-dark py-5 row d-print-none footer-bg">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="联系" aria-label="联系">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="mailto:denalon@qq.com">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="备用站点" aria-label="备用站点">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://denalon.js.org">
+      <i class="fa fa-paperclip"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="本站源码" aria-label="本站源码">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://denalon.coding.net/public/code/blog/git/files">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="反馈" aria-label="反馈">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://github.com/denalon/denalon/issues">
+      <i class="fa fa-commenting"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2021 denalon 版权所有</small>
+        <br>
+        <small class="text-white"><a class="theme-link text-white" href="http://beian.miit.gov.cn/">ICP备案号：豫ICP备2020027870号-2</a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://style.oribos.city/unit/files/iconfont.js"></script>
+    <script src="https://style.oribos.city/unit/vsc/iconfont.js"></script>
+    <script src="/js/zoomify.min.js"></script>
+<script src="/js/app.js"></script>
+<link rel="stylesheet" href="https://base.oribos.city/css/monokai_sublime.min.css">
+<script src="https://style.oribos.city/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.3b172c13b62c2bea8b1c9d2599cddc8cf89718a92d792c680871c81ba43d8c85.js" integrity="sha256-OxcsE7YsK&#43;qLHJ0lmc3cjPiXGKkteSxoCHHIG6Q9jIU=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

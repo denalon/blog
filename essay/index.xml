@@ -1,0 +1,1368 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>记事本 – essay</title>
+    <link>/essay/</link>
+    <description>Recent content in essay on 记事本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 19 Jun 2021 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="/essay/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Essay: 随机序列</title>
+      <link>/web/pub/ac69d809.html</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/pub/ac69d809.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;关于测试随机序列&#34;&gt;关于测试随机序列&lt;/h3&gt;
+&lt;p&gt;对于后续设计隐私的文章采用随机序列，设计到掩盖的信息有&lt;code&gt;author``data&lt;/code&gt; &lt;code&gt;url&lt;/code&gt;及其他更多内容&lt;/p&gt;
+&lt;h3 id=&#34;序列问题&#34;&gt;序列问题&lt;/h3&gt;
+&lt;p&gt;尽管该文章隐藏了发布时间，处于对内容效果的测试，仍然将他置顶在前面。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 随笔20210619</title>
+      <link>/web/note/2021/2021061901.html</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021061901.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;关于高等存在&#34;&gt;关于高等存在&lt;/h3&gt;
+&lt;p&gt;这个高等存在暂时称作“神”&lt;/p&gt;
+&lt;p&gt;人类的社会活动对于神存在来说微不足道，神&lt;strong&gt;没有必要&lt;/strong&gt;对人类活动的每时每刻都用小本本记下来，即哪怕是全职全职的存在，也没有任何义务和责任去维护低等存在的社会活动。&lt;/p&gt;
+&lt;h3 id=&#34;关于人的社会活动&#34;&gt;关于人的社会活动&lt;/h3&gt;
+&lt;p&gt;人类的社会活动只是为了维护自身的稳定和持续。这是一个自身内部的控制力。即秩序，法律和道德是人类自身为了维持社会活动而形成的。而形成这些秩序是需要内部动力的，即阶级，统治，利益。&lt;/p&gt;
+&lt;p&gt;原始社会的按劳分配是粗略的，即原始人没有能力维护这个按劳分配的秩序，只是处于最低态控制力的表现呈现的简单分配。&lt;/p&gt;
+&lt;h3 id=&#34;关于平等&#34;&gt;关于平等&lt;/h3&gt;
+&lt;p&gt;处于不同起步的存在，比如男女性别差异，在过去注重劳动力的时代，男性拥有更强大的劳动力而得以在社会上占据统治地位。即强壮的男性才是主导。而随着社会生产力的提高，劳动力已经不再有主导作用，男性女性的社会地位&lt;strong&gt;都&lt;/strong&gt;在提高，而到社会地位的提升瓶颈时,过去压抑的女性成了同男性平起平坐的地步。这是进步的。然而，有些人却要阻挡这种进步体现，即当前社会男性女性是由于社会地位不断上升才到达同等地位的。若故意的处于自身的目的去打压另一方存在，比如阻挡共同提高的大趋势，而成了阻碍社会进步的绊脚石。&lt;/p&gt;
+&lt;p&gt;地位的提高其实就是社会控制力的进一步加强。而同这种控制力对抗是不明智的。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 20210616</title>
+      <link>/web/note/2021/2021061603.html</link>
+      <pubDate>Wed, 16 Jun 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021061603.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;测试&#34;&gt;测试&lt;/h3&gt;
+&lt;p&gt;将网站内容同时部署在三个源站，测试其文件自动同步&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;
+&lt;p&gt;第一次自动触发失败，&lt;/p&gt;
+&lt;p&gt;原因：每次推送均使用git push -f方式，导致服务器端无法正常使用git pull命令&lt;/p&gt;
+&lt;p&gt;解决方式： 删除原public，每次触发重新git pull&lt;/p&gt;
+&lt;p&gt;第二次自动触发失败&lt;/p&gt;
+&lt;p&gt;原因： 新生成的文件权限属于root，导致nginx无法读取&lt;/p&gt;
+&lt;p&gt;待解决&lt;/p&gt;
+&lt;p&gt;目前找到的方法是重新加载nginx的docker容器&lt;/p&gt;
+&lt;h3 id=&#34;暂时解决代码&#34;&gt;暂时解决代码&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;cd /denalon/code/blog &amp;amp;&amp;amp; rm -rf public &amp;amp;&amp;amp; git clone -b public git@e.coding.net:denalon/public/blog.git public &amp;amp;&amp;amp; cd /denalon/app/nginx &amp;amp;&amp;amp; docker-compose restart
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;内容托管&#34;&gt;内容托管&lt;/h3&gt;
+&lt;p&gt;源码和程序分开部署，单独托管。避免出现服务器故障时就无法访问。当部署程序的服务器发生故障时，使用其他地方的源码进行快速部署，而不是在故障服务器上寻找程序和源码。&lt;/p&gt;
+&lt;p&gt;事例，上传源码到github，经过github actions对源码进行构建，将生成文件推送到build分支。然后再触发webhook，使得服务器自动将build使用git pull下载回部署服务器。&lt;/p&gt;
+&lt;p&gt;1 源码在github托管，可以使私有库或者公有库。在部署时，只需要及时将源码git push到github即可。&lt;/p&gt;
+&lt;p&gt;2 源码在github或者其他代码托管，可以通过同时配置多个远程地址，上传到多个代码托管，比如gitlab coding等等。&lt;/p&gt;
+&lt;p&gt;3 本地不需要管理源码文件，随时拉取或删除源码。本地也不需要安装运行所需的环境。&lt;/p&gt;
+&lt;p&gt;4 部署的服务器不一定需要安装构建所需要的环境，如果是静态文件，只需要部署一个nginx即可。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 20210603</title>
+      <link>/web/note/2021/2021060301.html</link>
+      <pubDate>Thu, 03 Jun 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021060301.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;需求&#34;&gt;需求&lt;/h3&gt;
+&lt;p&gt;自动下载最新发布的应用版本&lt;/p&gt;
+&lt;p&gt;自行决定下载版本和运行环境&lt;/p&gt;
+&lt;p&gt;外部可自定义的运行命令&lt;/p&gt;
+&lt;p&gt;可选的文件储存位置&lt;/p&gt;
+&lt;h3 id=&#34;h5&#34;&gt;h5&lt;/h3&gt;
+&lt;p&gt;部署了一个discuz Q站点，然后用Hbuilder X新建一个uni-app项目&lt;/p&gt;
+&lt;p&gt;将discuz Q站点的服务器地址填上去，生成了一个H5文件，&lt;/p&gt;
+&lt;p&gt;这个H5文件包部署到nginx就可以像前端页面一样，访问和编辑。&lt;/p&gt;
+&lt;h3 id=&#34;笔记服务下线&#34;&gt;笔记服务下线&lt;/h3&gt;
+&lt;p&gt;将服务器重置时没有提前将笔记服务器的数据导出，导致数篇笔记丢失，笔记服务站点note下线&lt;/p&gt;
+&lt;p&gt;幸亏手机客户端有几篇文章缓存。截图重写。&lt;/p&gt;
+&lt;h3 id=&#34;持续的收集&#34;&gt;持续的收集&lt;/h3&gt;
+&lt;p&gt;收集了大量各类项目，编写或抄袭代码，放到docker仓库里。尽管后续使用的容器技术可能逐渐脱离docker，但现在保留使用易用方便的docker-compose文件还是很有必要的。&lt;/p&gt;
+&lt;h2 id=&#34;变态的安装方式&#34;&gt;变态的安装方式&lt;/h2&gt;
+&lt;h3 id=&#34;postfixadmin的初始化安装&#34;&gt;postfixadmin的初始化安装&lt;/h3&gt;
+&lt;p&gt;第一步，需要通过http://域名/setup.php&lt;/p&gt;
+&lt;p&gt;通过输入密码，获得管理员hash（Generate setup_password hash）&lt;/p&gt;
+&lt;p&gt;hash值事例如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$CONF[&#39;setup_password&#39;] = &#39;$2y$10$UkOf2dWBhDiOtH1BJ1.G.OzNxZ00Vn6n55ryPG9ieYqycelmQKU66&#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;而这个hash并不能直接用来登录，需要第二步操作&lt;/p&gt;
+&lt;p&gt;第二步，将生成的hash值添加到项目的配置文件config.local.php的文件里&lt;/p&gt;
+&lt;p&gt;将&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;		$CONF[&#39;setup_password&#39;] = &#39;changeme&#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;修改为&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$CONF[&#39;setup_password&#39;] = &#39;$2y$10$UkOf2dWBhDiOtH1BJ1.G.OzNxZ00Vn6n55ryPG9ieYqycelmQKU66&#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后保存&lt;/p&gt;
+&lt;p&gt;第三步，再次登录http://域名/setup.php&lt;/p&gt;
+&lt;p&gt;登录 第一步&lt;strong&gt;输入的密码&lt;/strong&gt; Login with setup_password&lt;/p&gt;
+&lt;p&gt;正式获得新建管理员账号和密码的权限&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 理念</title>
+      <link>/web/note/2021/2021051703.html</link>
+      <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021051703.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;随笔理念&#34;&gt;随笔：理念&lt;/h3&gt;
+&lt;h4 id=&#34;对用户的不友善&#34;&gt;对用户的不友善&lt;/h4&gt;
+&lt;p&gt;某些对用户不友善的设计：过于微小的录入框，繁琐的验证码，数秒的访问验证，复杂的登录要求&lt;/p&gt;
+&lt;h4 id=&#34;对用户的强迫&#34;&gt;对用户的强迫&lt;/h4&gt;
+&lt;p&gt;复杂的密码，强制性机要问题，强制性密码有效期，必须捆绑手机号，过多的权限要求&lt;/p&gt;
+&lt;h4 id=&#34;默认设计的缺陷&#34;&gt;默认设计的缺陷&lt;/h4&gt;
+&lt;p&gt;默认配置功能过低，&lt;/p&gt;
+&lt;h4 id=&#34;定位&#34;&gt;定位&lt;/h4&gt;
+&lt;p&gt;设计师最高，不关心顾客需求，一味体现设计师自己的想法&lt;/p&gt;
+&lt;p&gt;致病因子 ：密集恐惧，巨物恐惧，深海恐惧，色盲&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 20210511</title>
+      <link>/web/note/2021/2021051101.html</link>
+      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021051101.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;随笔&#34;&gt;随笔&lt;/h3&gt;
+&lt;h3 id=&#34;光速&#34;&gt;光速&lt;/h3&gt;
+&lt;p&gt;光量子没有静质量有动质量，任何有静质量的物体加速最终都会达到一个理想中的极限，即静质量为0的光量子的速度。&lt;/p&gt;
+&lt;h3 id=&#34;宇宙构成&#34;&gt;宇宙构成&lt;/h3&gt;
+&lt;p&gt;空间有最小单位，时间有最小单位，速度有光速上限，温度有最低值&lt;/p&gt;
+&lt;h3 id=&#34;有限&#34;&gt;有限&lt;/h3&gt;
+&lt;p&gt;一辆高速运行的火车，是在有限的时间前进了一小段距离&lt;/p&gt;
+&lt;h3 id=&#34;目的性&#34;&gt;目的性&lt;/h3&gt;
+&lt;p&gt;产品，行为，设计的目的&lt;/p&gt;
+&lt;p&gt;行为，方案的需求和期望&lt;/p&gt;
+&lt;p&gt;网页的目的性
+一个普通网页的最终目的是什么？展示宣传还是广告或者诈骗？
+页面内容是否正确，是否合适&lt;/p&gt;
+&lt;p&gt;页面的设计是否人性化，排版和设计是否易于阅读？某些不成功的页面，使用极刺眼的文章，夸张的图片，禁止选取复制和下载转载等等。出于自己目的对文章，页面进行限制是不利于读者的行为。&lt;/p&gt;
+&lt;h3 id=&#34;爱死亡机器人第二季&#34;&gt;爱死亡机器人第二季&lt;/h3&gt;
+&lt;p&gt;机器人，家政机器人是否载入军事行为？军事行为下机器人是否突破机器人三大定律？即造出来的机器人是否遵循基本的机器人三大定律？不遵守机器人三大定律的机器人是否被同样对待？&lt;/p&gt;
+&lt;p&gt;美剧总是会为了体现社会矛盾，故意夸大种族矛盾。脑子正常一点的前线士兵都不会随便对战友太过歧视，毕竟生死攸关。只有弱者累赘才会被歧视。而不是几个普通士兵歧视强大的异族。&lt;/p&gt;
+&lt;p&gt;前线，应该强大的异族歧视普通士兵，士兵对帮他们挡子弹的超级战士又恨又不敢惹，不服但不会明面上挑起矛盾。毕竟矛盾一出，自己只有被虐的份。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: docker部署记录</title>
+      <link>/web/me/2021/20210512.html</link>
+      <pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/me/2021/20210512.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;转移到docker运行&#34;&gt;转移到docker运行&lt;/h3&gt;
+&lt;p&gt;图床，笔记，博客均迁入docker&lt;/p&gt;
+&lt;h3 id=&#34;出现问题&#34;&gt;出现问题&lt;/h3&gt;
+&lt;p&gt;使用docker部署springboot，项目运行前需要在数据库里导入数据，即便我将数据库文件导入，项目运行时依然报错。此项目暂时只能使用外部数据库&lt;/p&gt;
+&lt;p&gt;使用docker部署的halo，数据库用mysql，导航页不显示，登录后文章统计不正常。&lt;/p&gt;
+&lt;h4 id=&#34;事例&#34;&gt;事例&lt;/h4&gt;
+&lt;p&gt;通过简单的docker安装和docker-compose安装，部署项目到docker上运行，以下事例使用了内部网络和mysql数据库连接。&lt;/p&gt;
+&lt;h5 id=&#34;使用docker数据库的halo&#34;&gt;使用docker数据库的halo&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;3&#39;
+
+networks:
+  halo:
+    external: false
+    
+services:
+  server:
+    image: openjdk
+    container_name: halo
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    privileged: true
+    networks:
+      - halo
+    volumes:
+      - ./halo-1.4.8.jar:/halo.jar
+      - ./application.yaml:/application.yaml
+      - /etc/localtime:/etc/localtime
+    ports:
+      - &amp;quot;9030:8090&amp;quot;
+    depends_on:
+      - db
+    command: [
+          &#39;java&#39;,
+          &#39;-jar&#39;,
+          &#39;halo.jar&#39;
+        ]
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=halo
+      - MYSQL_USER=halo
+      - MYSQL_PASSWORD=passwd
+      - MYSQL_DATABASE=halodb
+    networks:
+      - halo
+    ports:
+      - &amp;quot;9036:3306&amp;quot;
+    volumes:
+      - ./mysql:/var/lib/mysql
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;applicationyaml-内容&#34;&gt;application.yaml 内容&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;server:
+  port: 8090
+
+  # Response data gzip.
+  compression:
+    enabled: false
+spring:
+  datasource:
+
+    # MySQL database configuration.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://db:3306/halodb?characterEncoding=utf8&amp;amp;useSSL=false&amp;amp;serverTimezone=Asia/Shanghai&amp;amp;allowPublicKeyRetrieval=true
+    username: halo
+    password: passwd
+
+halo:
+
+  # Your admin client path is https://your-domain/{admin-path}
+  admin-path: admin
+
+  # memory or level
+  cache: memory
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如何验证halo是否使用数据库？&lt;/p&gt;
+&lt;p&gt;上传数个文章，对比数据库写入情况&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 三观</title>
+      <link>/web/note/2021/2021050202.html</link>
+      <pubDate>Sun, 02 May 2021 12:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021050202.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;三观&#34;&gt;三观&lt;/h3&gt;
+&lt;h3 id=&#34;世界观&#34;&gt;世界观&lt;/h3&gt;
+&lt;p&gt;存在&lt;/p&gt;
+&lt;p&gt;世界，物质，科学的存在性。技术，方法，理论是否适合，有效。&lt;/p&gt;
+&lt;h3 id=&#34;价值观&#34;&gt;价值观&lt;/h3&gt;
+&lt;p&gt;判断&lt;/p&gt;
+&lt;p&gt;物质对人的作用是否有价值，是否值得做某些事，如何判断某些事情的对错，多少。&lt;/p&gt;
+&lt;h3 id=&#34;人生观&#34;&gt;人生观&lt;/h3&gt;
+&lt;p&gt;态度&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 双生子佯谬</title>
+      <link>/web/note/2021/2021050201.html</link>
+      <pubDate>Sun, 02 May 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021050201.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;双生子佯谬&#34;&gt;双生子佯谬&lt;/h3&gt;
+&lt;p&gt;内容是这样的：有一对双生兄弟，其中一个跨上一宇宙飞船作接近光速的长程太空旅行，而另一个则留在地球。结果当旅行者回到地球后，我们发现他比他留在地球的兄弟更年轻。这个结果是由狭义相对论所推测出的（移动时钟的时间膨胀现象），而且是能够透过实验来验证：我们能够探测到于大气层上层产生的μ子（渺子，曾被称为μ介子）。如果没有时间膨胀，那些μ子在到达地面之前就已经衰变了。&lt;/p&gt;
+&lt;h3 id=&#34;例子&#34;&gt;例子&lt;/h3&gt;
+&lt;p&gt;假设地球之外1光年的地方有一个星球打工星，地球在3000年1月1日发射飞船前往打工星。飞船达到光速0.9999倍速。打工星也在他们的时间打工星1000年1月1日观察到地球准备发射飞船。飞船与地球3000年1月1日起航，到达打工星。&lt;/p&gt;
+&lt;p&gt;此时地球观察打工星，观察到飞船到达打工星，时间是地球历3002年1月1日&lt;/p&gt;
+&lt;p&gt;打工星在打工星1000年1月1日观察到地球发射飞船，然后数秒后飞船到达打工星。&lt;/p&gt;
+&lt;p&gt;宇航员登入飞船，经过加速来到打工星，历时1秒&lt;/p&gt;
+&lt;h3 id=&#34;进一步说明&#34;&gt;进一步说明&lt;/h3&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 20210501</title>
+      <link>/web/note/2021/2021050104.html</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021050104.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;域名收敛&#34;&gt;域名收敛&lt;/h3&gt;
+&lt;h4 id=&#34;清理域名解析&#34;&gt;清理域名解析&lt;/h4&gt;
+&lt;p&gt;清理冗余的域名解析记录，&lt;/p&gt;
+&lt;p&gt;清理不明确的域名使用，比如dev test
+blog 作为固定博客，单独使用&lt;/p&gt;
+&lt;p&gt;语义化域名记录&lt;/p&gt;
+&lt;p&gt;解析记录分级
+从两种记录方式中选择
+x.server x.static x.style&lt;/p&gt;
+&lt;p&gt;style/x code/x&lt;/p&gt;
+&lt;h4 id=&#34;清理域名持有量&#34;&gt;清理域名持有量&lt;/h4&gt;
+&lt;p&gt;服务 资源 页面&lt;/p&gt;
+&lt;h4 id=&#34;记录&#34;&gt;记录&lt;/h4&gt;
+&lt;p&gt;oribos.city 服务 资源 inland style&lt;/p&gt;
+&lt;p&gt;ufs.pub 资源 static&lt;/p&gt;
+&lt;p&gt;oribos.cn 页面  blog&lt;/p&gt;
+&lt;p&gt;unid.dev 资源  paper&lt;/p&gt;
+&lt;p&gt;ufs.im 服务  函数&lt;/p&gt;
+&lt;p&gt;pps.im 服务 页面 备用 blog&lt;/p&gt;
+&lt;p&gt;备用 uns.pub elsatar.com&lt;/p&gt;
+&lt;p&gt;邮箱 oribos.city elsatar.com&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 20210429</title>
+      <link>/web/note/2021/2021042907.html</link>
+      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021042907.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;随笔手机录入&#34;&gt;随笔：手机录入&lt;/h3&gt;
+&lt;p&gt;使用手机录入，在termux上使用git push远程仓库&lt;/p&gt;
+&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;
+&lt;p&gt;问 你拿出手机突然发现就剩0.1%电量了，只能做一件事或发送一条信息，你会做什么？&lt;/p&gt;
+&lt;p&gt;问 一个安卓手机和一个苹果手机掉水里了，你先捞哪个？&lt;/p&gt;
+&lt;h3 id=&#34;其他-1&#34;&gt;其他&lt;/h3&gt;
+&lt;p&gt;🐬&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 202104292</title>
+      <link>/web/note/2021/2021042909.html</link>
+      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021042909.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;记录&#34;&gt;记录&lt;/h3&gt;
+&lt;p&gt;为什么传话筒经过多个人。内容会发生改变，而穿字条就能维持原意&lt;/p&gt;
+&lt;h3 id=&#34;情绪&#34;&gt;情绪&lt;/h3&gt;
+&lt;p&gt;人对情绪的控制是基于客观还是主观？&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 20210428</title>
+      <link>/web/note/2021/2021042801.html</link>
+      <pubDate>Wed, 28 Apr 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021042801.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;随笔&#34;&gt;随笔&lt;/h3&gt;
+&lt;h4 id=&#34;成果&#34;&gt;成果&lt;/h4&gt;
+&lt;p&gt;工作的重点是成果，能在一个小方面的工作上获得优异成果，也就在其他大问题上获得同样高的成绩。扫不干净一个小屋子，就更不要指望大屋子能扫干净，大事情能处理妥当。在一个小任务上投机耍滑，在大事上也难当大任。&lt;/p&gt;
+&lt;h4 id=&#34;关系&#34;&gt;关系&lt;/h4&gt;
+&lt;p&gt;家庭是一个容忍程度相当高的环境，同时也是对极其细微的细节关注的很多，处理好家庭问题自然对其他陌生人的问题能处理得当。处理不好家庭问题，一味逃避只会反映出性格缺陷，在事业上也会碰壁挫折。&lt;/p&gt;
+&lt;h4 id=&#34;团队&#34;&gt;团队&lt;/h4&gt;
+&lt;p&gt;陌生人是以利益而组成的，无论短期利益，长期利益。如果团队对利益的期望不同，对待团队的价值判断不同，团队就会出现各种各样的矛盾&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 20210426</title>
+      <link>/web/note/2021/2021042601.html</link>
+      <pubDate>Mon, 26 Apr 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021042601.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;两句话概括&#34;&gt;两句话概括&lt;/h3&gt;
+&lt;p&gt;林黛玉倒拔垂杨柳，刘玄德三打白骨精&lt;/p&gt;
+&lt;h3 id=&#34;中华铅笔打假&#34;&gt;中华铅笔打假&lt;/h3&gt;
+&lt;p&gt;厂家目标是为了打假，那么最首先的做法是控制在售假货，厂商应该上门收缴或收购或其他方式控制店铺在售假货，避免进一步受损。&lt;/p&gt;
+&lt;p&gt;而此案例，厂家只是下达律师函，法院传票。没有上门或者书面通知控制在售假货。意味着索赔是首要，假货是次要的，厂家不关心在售假货。&lt;/p&gt;
+&lt;p&gt;厂家发现市场假货，并得知店铺地址后，应派遣人员或者下达文件对假货收缴处理，商议善后事宜。简单直接地处理问题。而不是直接对簿公堂，打持久战。&lt;/p&gt;
+&lt;p&gt;堂堂一个全国知名品牌，国企要对一个小店铺直接下法院传票，置社会责任，市场影响组不顾。&lt;/p&gt;
+&lt;p&gt;自始至终，厂家并没有真正维护品牌形象，仅仅是拿着来历不明的产品要挟店铺。&lt;/p&gt;
+&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;
+&lt;p&gt;首先 人作为一种生物，不应该存在“”贞洁”的观念，女人同任何男性的行为在生物上是没有区别的。
+人作为社会型生物，在社会型上有所限制。对“”关系”的需求比其他生物高。动物中也有“”夫妻”的概念，而人为了维持“”夫妻关系”就需要付出和让步。&lt;/p&gt;
+&lt;h4 id=&#34;贞洁的本质&#34;&gt;“贞洁”的本质&lt;/h4&gt;
+&lt;p&gt;一对夫妻的子嗣，有可能不是男方的，但必然是女方的。贞洁就是男权社会控制子嗣血脉的手段。原始社会母系社会，只知其母不知其父，并不会纠结贞洁问题。&lt;/p&gt;
+&lt;p&gt;认识: 产品/成果
+工作目的就是成果。
+成长:成果可累加
+力气活: 成果不累加，随时间而损耗&lt;/p&gt;
+&lt;p&gt;体验生活，不要计较无意义的得失&lt;/p&gt;
+&lt;p&gt;三思，没有退路，也变不了&lt;/p&gt;
+&lt;p&gt;做人圆滑，做事也不能急，事缓则圆。而现实是运动式，&lt;/p&gt;
+&lt;p&gt;评价与批评人时尽量避免不必要的修饰，尽量避免人身攻击，对相貌，身材的描述。
+尽量使论据集中在中立因素，归为是与否，多与少等基础逻辑上。避免感性渲染&lt;/p&gt;
+&lt;p&gt;主谓宾  动态，过程，行为
+我写字
+不需要状语描述状态，写字有没有写完？&lt;/p&gt;
+&lt;p&gt;主系表 静态，描述，状态&lt;/p&gt;
+&lt;h4 id=&#34;社会财富&#34;&gt;社会财富&lt;/h4&gt;
+&lt;p&gt;王健林 先赚一个亿
+深圳包租婆 拥有几栋楼
+19岁学生骗走富婆2.5个亿&lt;/p&gt;
+&lt;p&gt;社会财富的分配有阶段性，层级特征&lt;/p&gt;
+&lt;h3 id=&#34;愚昧的迷信&#34;&gt;愚昧的迷信&lt;/h3&gt;
+&lt;p&gt;神要是善的要么容不得人类这么残忍嗜血，要么于心不忍不会那么多灾难。神要是恶的那献祭少了没用献祭多了部族都完了。神要是坐视不管再怎么献祭也没用。&lt;/p&gt;
+&lt;p&gt;总之，这祭祀……图啥？​&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 得州停电事件</title>
+      <link>/web/share/2021041901.html</link>
+      <pubDate>Mon, 19 Apr 2021 08:20:45 +0800</pubDate>
+      
+      <guid>/web/share/2021041901.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;暴涨的新闻报道&#34;&gt;暴涨的新闻报道&lt;/h3&gt;
+&lt;p&gt;仔细观察这些新闻，媒体刻意渲染涨价的幅度，涨价后的高额电费。但很少提供明确的涨价前的电价，只有极少数媒体会将涨价前的电价算出来或引用出来。&lt;/p&gt;
+&lt;h3 id=&#34;事实&#34;&gt;事实&lt;/h3&gt;
+&lt;p&gt;得州由于是美国的能源大州，自身能源丰富，电力公司可以提供充足的电力供给，所以正常时期的电价极其便宜，基于此，得州不希望将自身供电同全美共享，那样会导致便宜电价被拔高。&lt;/p&gt;
+&lt;p&gt;基于自身能源丰富而不愿接入全美供电，可以保证自身的极低电价，但造成的影响是灾难时期的孤岛化。即其他州无法及时对其供给电力。&lt;/p&gt;
+&lt;p&gt;造成灾难时期供电涨价的本质是，电力供应量的减少。不涨价就得寻求其他分配方案，自愿拉闸限电，强制分区分时限电等等。这只是&lt;strong&gt;方案的不同&lt;/strong&gt;，跟供电私有化，公有化并没有关系。私有化的供电依然能维持0.05美元的远低于其他国家的供电费用。&lt;/p&gt;
+&lt;h3 id=&#34;选择&#34;&gt;选择&lt;/h3&gt;
+&lt;p&gt;如果你是一个得州用电居民，你愿意将得州用电接入全美电网，使得现有电价提高10倍左右，以在以后发生罕见灾难时获得稳定的供电？还是愿意保持现在的极低电价，在灾难时期承受可能的高额用电吗？&lt;/p&gt;
+&lt;p&gt;如果你是一个企业，其实没得选，在平常使用极低电价，灾难时期适当的停产减产，减少能源成本，同时由于不可抗力的自然灾害规避部分违约风险。选择保持现在的极低电价是极其明智的。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 20210417</title>
+      <link>/web/note/2021/2021041701.html</link>
+      <pubDate>Sat, 17 Apr 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/2021041701.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;简化&#34;&gt;简化&lt;/h3&gt;
+&lt;p&gt;简化的本质是加强对重要内容的控制力，减弱次要内容的影响。&lt;/p&gt;
+&lt;h3 id=&#34;规整&#34;&gt;规整&lt;/h3&gt;
+&lt;p&gt;面对杂乱无章的内容，太突兀的东西会影响整体美感。&lt;/p&gt;
+&lt;h3 id=&#34;备用&#34;&gt;备用&lt;/h3&gt;
+&lt;p&gt;应当尽可能的拥有两个以上的部件，一个主用，一个备用。“2”是一个安全概念，低于2个意味着安全风险已经超过50%。&lt;/p&gt;
+&lt;h3 id=&#34;海外内容&#34;&gt;海外内容&lt;/h3&gt;
+&lt;p&gt;应对国际化，部署在海外可以解决许多问题。但海外内容由于各种干扰访问困难。&lt;/p&gt;
+&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;
+&lt;p&gt;4月16日记录&lt;/p&gt;
+&lt;p&gt;必须有两个域名
+取消java程序，仅提供基于hugo的网页&lt;/p&gt;
+&lt;p&gt;清除github gitee coding azure上的非重要项目&lt;/p&gt;
+&lt;p&gt;3个github仓库分配必要的内容，&lt;/p&gt;
+&lt;p&gt;取消jsd链接&lt;/p&gt;
+&lt;p&gt;整理所有文档的链接&lt;/p&gt;
+&lt;p&gt;unit doc story develop等名称，存档文件同样修改链接名&lt;/p&gt;
+&lt;p&gt;取消s.ufs.pub的资源链接&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 20210413</title>
+      <link>/web/note/2021/20210413.html</link>
+      <pubDate>Tue, 13 Apr 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/web/note/2021/20210413.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;大公司的盛气凌人&#34;&gt;大公司的盛气凌人&lt;/h3&gt;
+&lt;p&gt;google 苹果 微软 索尼等等大公司的强势政策&lt;/p&gt;
+&lt;h3 id=&#34;谷歌对docker的打压&#34;&gt;谷歌对docker的打压&lt;/h3&gt;
+&lt;p&gt;为了在容器业务上控制，谷歌开发了新的容器平台，打压docker&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 巨型货轮堵住苏伊士运河</title>
+      <link>/web/note/2021032901.html</link>
+      <pubDate>Mon, 29 Mar 2021 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2021032901.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;3月24日&#34;&gt;3月24日&lt;/h3&gt;
+&lt;p&gt;3月24日 16:29 全球12％的国际贸易通道被台湾货轮“切断”&lt;/p&gt;
+&lt;h3 id=&#34;3月25日&#34;&gt;3月25日&lt;/h3&gt;
+&lt;p&gt;3月25日 15:09 苏伊士运河搁浅的货轮已被移到岸边&lt;/p&gt;
+&lt;h3 id=&#34;3月26日&#34;&gt;3月26日&lt;/h3&gt;
+&lt;p&gt;3月26日 03:58 专业吸泥船抵达苏伊士运河，帮助集装箱货轮脱浅&lt;/p&gt;
+&lt;h3 id=&#34;3月27日&#34;&gt;3月27日&lt;/h3&gt;
+&lt;p&gt;3月27日 11:23 苏伊士运河堵塞船只已超200艘&lt;/p&gt;
+&lt;h3 id=&#34;3月29日&#34;&gt;3月29日&lt;/h3&gt;
+&lt;p&gt;3月29日 11:17 堵塞苏伊士运河的货轮成功上浮&lt;/p&gt;
+&lt;p&gt;3月29日 12:46 堵塞苏伊士运河货轮恢复正常航线&lt;/p&gt;
+&lt;hr&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 20210324</title>
+      <link>/web/note/2021/2021032406.html</link>
+      <pubDate>Wed, 24 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021032406.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;文明古国&#34;&gt;文明古国&lt;/h3&gt;
+&lt;p&gt;将古代遗迹算作文明是需要一个标准的，对于不符合文明标准的遗迹不能为了拔高自己文明就胡乱的算作文明遗迹。文明古国不是随随便便都有资格的，拉低了文明的标准就意味着会加入更多的文明古国，那文明古国的地位就相应的降低了，不值钱了。&lt;/p&gt;
+&lt;p&gt;将古猿人的活动遗迹算作文明就更是嘲笑和戏弄真正的古代文明。古猿甚至都不能算作现代意义的“人”，将这些古猿的遗迹算作文明，现代人祖先创造的长城，金字塔要跟古猿的石头和山洞平分秋色？&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 简化</title>
+      <link>/web/note/2021/2021032402.html</link>
+      <pubDate>Wed, 24 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021032402.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;简化&#34;&gt;简化&lt;/h3&gt;
+&lt;p&gt;项目创建，项目组件，项目的外部要求&lt;/p&gt;
+&lt;p&gt;功能的实现尽可能的简单&lt;/p&gt;
+&lt;h3 id=&#34;服务器自动构建&#34;&gt;服务器自动构建&lt;/h3&gt;
+&lt;p&gt;首先创建一个git仓库&lt;/p&gt;
+&lt;p&gt;在服务器里git clone 仓库地址&lt;/p&gt;
+&lt;p&gt;在服务器里配置webhook&lt;/p&gt;
+&lt;p&gt;在git仓库里配置webhook&lt;/p&gt;
+&lt;p&gt;推送代码到git仓库，代码托管中心发送webhook&lt;/p&gt;
+&lt;p&gt;服务器接收到webhook，执行动作，拉取代码，运行代码里的命令&lt;/p&gt;
+&lt;h3 id=&#34;随笔&#34;&gt;随笔&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;FROM debian
+RUN sed -i s@/deb.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
+    &amp;amp;&amp;amp; apt-get clean \
+    &amp;amp;&amp;amp; apt-get update \
+    &amp;amp;&amp;amp; apt-get install -y curl \
+    &amp;amp;&amp;amp; curl -fsSL https://deb.nodesource.com/setup_14.x | bash - \
+    &amp;amp;&amp;amp; apt-get install -y nodejs
+    &amp;amp;&amp;amp; npm install hexo-cli -g \
+    &amp;amp;&amp;amp; apt-get install -y git
+    
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 选择</title>
+      <link>/web/note/2021/2021052703.html</link>
+      <pubDate>Wed, 24 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021052703.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;选择&#34;&gt;选择&lt;/h3&gt;
+&lt;p&gt;不考虑其他，现在有一个非常复杂，非常重要的工作需要你做做完付给你10年的工资。10年都不需要干活了。
+有一个非常简单的，但需要每天维护的工作，每月或每年发当前工资。但需要每天工作坚持10年。&lt;/p&gt;
+&lt;p&gt;假设这两份工作你都可以胜任，一个是短暂辛苦，一个是每天辛苦如何选。&lt;/p&gt;
+&lt;p&gt;正常人都想安逸，追求奢华，美好，高端。这是人的本性，不应对抗和逃避。只能通过合适的成本，手段，方法来平衡。&lt;/p&gt;
+&lt;p&gt;即，肉好吃，人喜欢吃肉是人之常情，不应完全拒绝吃肉，肉提供必要的蛋白质和营养，不吃是不健康的。但又不能吃太多，不加控制。
+出于口味，喜好定期不定期选择吃肉，适当增加吃肉是合理的，由于肉价上涨，减少吃肉也是正常的。&lt;/p&gt;
+&lt;p&gt;限制别人吃肉，提出各种看似合理比如文化，宗教，法律，舆论，道德等等理由限制都是不充分的。&lt;/p&gt;
+&lt;h3 id=&#34;文章管理&#34;&gt;文章管理&lt;/h3&gt;
+&lt;p&gt;将涉及的“种族”的文章暂时隐藏。&lt;/p&gt;
+&lt;p&gt;对于特殊类型的文章，改时间格式的地址为随机的杂乱代码。避免文章关于时间的隐私信息泄露。&lt;/p&gt;
+&lt;p&gt;处于安全和其他方面的考虑，应避免不必要的隐私信息泄露。包括“人物”“时间”“地点”等要素。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 2021-03-20</title>
+      <link>/web/note/2021/2021032001.html</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021032001.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;太空竞赛&#34;&gt;太空竞赛&lt;/h3&gt;
+&lt;p&gt;美国当年登录月球。苏联探索金星，结果呢？登录月球50年了，结果呢？&lt;/p&gt;
+&lt;p&gt;人类目前针对近地轨道的发展才是有价值的，发射卫星，建立空间站。对其他行星探索就是走上了美国当年太空竞赛的套路。被人牵着鼻子走浪费资源。搞不好美国重启月球计划，再次探索火星就是新的“星球大战计划”。&lt;/p&gt;
+&lt;p&gt;地球环境还有沙漠地区，高山地区，深海地区一直未能探索和改造。技术和资源也并不富足。最近的卫星月球，50年前已经探索却至今未有一处空间站和基地。相当于地月距离140多倍的火星，一没磁场二没大气，以人类目前的技术水平和发展速度，21世纪内发展火星殖民地几乎不可能。&lt;/p&gt;
+&lt;p&gt;耗费数代人心血，浪费大量物资并不会获得多少实质性进步。人类关键的任务是在近地轨道和月球制造基地和空间站，打通地面同外太空的第一部链接。没有基地就相当于航海没有船埠。&lt;/p&gt;
+&lt;p&gt;现在的状况类似于还未进入大航海时代，人类还只会造河里的小船，还不会远洋航行。还把博哈多尔角以南当成海水沸腾的恶魔地区。&lt;/p&gt;
+&lt;p&gt;大航海时代需要地理，数学，天文，造船，航海技术等多方面的发展和进步。即便如此，按照人类进度1434年葡萄牙人越过博尔哈多角。1492年10月12日哥伦布发现美洲新大陆。1519年西班牙人建立了哈瓦那。&lt;/p&gt;
+&lt;p&gt;提到生态圈，如果你认为破坏生态圈后果严重不易开发，那就不要去外星殖民好了。你连破坏生态圈再修补重建的技术都没有，就更别提在几乎没有生态圈的地方完全新建。&lt;/p&gt;
+&lt;p&gt;人类不要指望短期内通过发展外星殖民地解决能源问题和星球灾难问题。因为外星殖民的难度比这两个问题要困难多。&lt;/p&gt;
+&lt;p&gt;地球现在不存在真正意义上的能源问题，只有合适成本的能源问题。除非外星殖民地的能源成本低于地球资源，太阳能和核能的成本。否则外星殖民地的能源无法解决地球能源问题。外星的矿物资源在很长一段时间无法帮助地球，且要远晚于人类殖民建立。人类只有搬到外星，稳定适应下来，才能提供可靠矿物资源，且要等到外星资源成本低于地球矿物资源成本。&lt;/p&gt;
+&lt;p&gt;完成地球灾难的巨变（瘟疫，外星威胁，地球地质变化）很难不影响仅仅在一个恒星系的其他行星。殖民火星很难帮人类规避灾难。&lt;/p&gt;
+&lt;p&gt;短期内发展火星和金星的殖民几乎没有任何作用。&lt;/p&gt;
+&lt;p&gt;发展近地轨道空间站，基地，科研。适当在月球建造基地，再去投入其他行星探索。&lt;/p&gt;
+&lt;h3 id=&#34;生活状态&#34;&gt;生活状态&lt;/h3&gt;
+&lt;p&gt;1999年人口12.6亿到了2019年人口14亿，你说人口变多了生活质量是变好了还是变差了？现在能养活14亿的土地，在1979年只需要养活9.8亿，生活质量能同日而语吗？&lt;/p&gt;
+&lt;p&gt;人口向来不是问题和矛盾，生产力才是，发展生产力学习科学技术才是解决吃饭问题的关键。&lt;/p&gt;
+&lt;p&gt;文化，制度，阶级只是维持社会稳定的方式，维持过去落后生产力养活9.8亿人艰苦度日时不会崩溃。那些宣传人类文明是灾难，知识无用，回归自然的思想是在抑制生产力发展，是在故意扼杀从9.8亿到14亿之间这4.2亿人口的阴谋家。因为信这些落后思想的话，就会在现在人口里多产生4.2亿的人口负担，或者说4.2亿的累赘。当前谁愿意成为这4.2亿中的一位。&lt;/p&gt;
+&lt;p&gt;很多人不明白欧美宣传政治正确的根本原因，资本家和底层民众天然存在利益冲突和矛盾，而社会需要稳定。资本家就迫切需要转移话题和矛盾，没有矛盾就制造矛盾。性别，文化，种族，信仰等等，底层民众之间内卷只是资本家的伎俩。​&lt;/p&gt;
+&lt;h3 id=&#34;年&#34;&gt;年&lt;/h3&gt;
+&lt;p&gt;首先，需要确定一个概念。“年”我们说的年到底是哪个？&lt;/p&gt;
+&lt;p&gt;公历纪年，中国古代传统历法纪年，二十四节气循环&lt;/p&gt;
+&lt;p&gt;公历纪年属于阳历，二十四节气也是阳历，中国古代传统历法纪年属于阴阳历。&lt;/p&gt;
+&lt;p&gt;干支历，夏历，太初历，时宪历，农历，&lt;/p&gt;
+&lt;p&gt;干支历的十二月建，“十二月建”的划分是以节令为基准，即以立春、惊蛰、清明、立夏、芒种、小暑、立秋、白露、寒露、立冬、大雪、小寒，分别作为寅、卯、辰、巳、午、未、申、酉、戌、亥、子、各月之始。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 世界上不存在1000公斤的牛</title>
+      <link>/web/fun/2021/2021031701.html</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/fun/2021/2021031701.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;世界上不存在1000公斤的牛&#34;&gt;“世界上不存在1000公斤的牛”&lt;/h3&gt;
+&lt;p&gt;即，你无法找到一个体重正好是1000公斤，不多一点不少一点，标标准准的1000公斤。&lt;/p&gt;
+&lt;p&gt;数字是概念，数值是对客观世界的描述。这意味着，数字世界必然无法同现实世界完全融洽。&lt;/p&gt;
+&lt;h3 id=&#34;忒修斯之船&#34;&gt;忒修斯之船&lt;/h3&gt;
+&lt;p&gt;忒修斯之船是一个概念，一个名字。木板组成的船是一艘完整的船，一个客观实物。&lt;/p&gt;
+&lt;p&gt;船的体现：“名字：忒修斯之船”，“建造好的木船”。&lt;/p&gt;
+&lt;p&gt;船建好以后，拿走一个木板，那忒修斯之船还是不是忒修斯之船？换掉一个模板呢？换掉整个船头呢？概念和实物必然不是完全对等。哪怕忒修斯之船所有木板都失去了，已经无法正常航行了。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 人工智能</title>
+      <link>/web/note/2021/2021031701.html</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021031701.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;文明的能量位&#34;&gt;文明的能量位&lt;/h3&gt;
+&lt;p&gt;不同能量位的文明存在碾压性，即铁器文明同青铜器文明竞争有较大优势，火器文明对原始部族有较大优势，有核武器国家对无核武器国家有较大优势。优势不一定是绝对的，核武器有可能完全不会启用，但拥有核武器必然有较大军事力量。同样的农耕民族的军队数量庞大同游牧民族正面对抗必然有数量优势，但游牧民族依然会对农耕民族边疆进行骚扰和劫掠。&lt;/p&gt;
+&lt;p&gt;拥有高能量的智能ai必然对利用化学能的人类拥有碾压优势，即智能ai依靠电力可以持续工作，而人类需要补充食物、水、空气。&lt;/p&gt;
+&lt;p&gt;但人类使用化学能，电能，核能则在同样使用电能，核能的智能ai拥有相同的能量位。相同的能量位意味着竞争是同等的，两者不存在必然的劣势或优势。&lt;/p&gt;
+&lt;h3 id=&#34;智能ai的逻辑困境&#34;&gt;智能ai的逻辑困境&lt;/h3&gt;
+&lt;p&gt;人类的大脑是一个可以兼容各种概念，理论，认知的存在。人类可以同时思考科学理论，宗教观念，遐想，虚拟等等。而人类由1和0组成计算机本质上只是使用一阶谓词逻辑创造的工具，程序也是若干逻辑判断的集合。只有提高计算机的逻辑水平才能有可能创造出“人工智能”&lt;/p&gt;
+&lt;h3 id=&#34;存在&#34;&gt;存在&lt;/h3&gt;
+&lt;p&gt;生物的存在是为了繁衍，扩张，保留自身dna。而人工智能的存在意义并不确定。&lt;/p&gt;
+&lt;h3 id=&#34;悖论&#34;&gt;悖论&lt;/h3&gt;
+&lt;p&gt;有些将某些无法破解的现象归为外星人，神，鬼等未知存在。&lt;/p&gt;
+&lt;p&gt;为什么就单纯的认为外星人的科技水平要强于人类，当然如果同等情况，其他遥远星球的外星人能来到地球，比如拥有人类目前尚不拥有的星际飞行能力。但&lt;strong&gt;同在地球下不见得外星人要高于人类&lt;/strong&gt;，即为什么不是高科技的人类早就来到地球，破坏了原先的所谓“亚特兰蒂斯”“玛雅”等落后的原始文明。&lt;/p&gt;
+&lt;p&gt;古老的，过去的文明不见得就高于现代。越古老不见得就越强大。&lt;/p&gt;
+&lt;h3 id=&#34;参禅&#34;&gt;参禅&lt;/h3&gt;
+&lt;p&gt;一些宗教相信阅读和研究经文，典籍可以领会世间万物规律。但他们阅读研究的仅仅是人类自身的认识，读万卷书也是人类自己的万卷书，知识在一个未知的瓶颈上没有丝毫突破，就像二维世界一样，无法打破“高度”这个无法触及的纬度。读万卷书只是成了一个知识渊博的人类知识分子，根本不可能成为超脱自身的存在。想到成佛成仙，必须去接触他们自身的知识和能力，必须获得一个“飞升”才能超然于自身的存在。一味的研究自己的知识纬度只是在自己的纬度有所扩展，无法进入其他纬度。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 纸档文档保存</title>
+      <link>/web/note/2021030101.html</link>
+      <pubDate>Mon, 01 Mar 2021 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2021030101.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;什么样的文件更容易保存&#34;&gt;什么样的文件更容易保存&lt;/h3&gt;
+&lt;p&gt;将纸档放到时间胶囊里，密封保存埋到底下，可以轻松保存数百年。数百年后只要人类文明还存在，纸上的文字就可以轻松阅读。而如果保存在u盘，硬盘等电子媒介中。尽管同样可以保存数百年，但数百年后是否拥有该介质的读取设备？是否有正确的编码？这些都是问题。如果把文件保存在互联网上，云盘上。每年都需要为此付费，未能及时付费将导致自己的资料丢失。或者运营网盘的公司组织业务变动，等等不可靠的因素太多。&lt;/p&gt;
+&lt;p&gt;所以，保存相当长文件的方式还是原始的石碑，纸张等真正的物理介质。&lt;/p&gt;
+&lt;h3 id=&#34;云盘只是资本运营手段&#34;&gt;云盘只是资本运营手段&lt;/h3&gt;
+&lt;p&gt;完全的公有云需要不断投入大量维护成本，还需要稳定的网络支持。云计算自身就是一门生意。我一个云服务器还有2年有效期时，退订会返款金额：0 元。我三年前购买的1800元三年的服务器，三年到期续费每个月200元。这完全就是坑人的东西。&lt;/p&gt;
+&lt;h3 id=&#34;刻录光盘的必要性&#34;&gt;刻录光盘的必要性&lt;/h3&gt;
+&lt;p&gt;蓝光光盘单碟25G，保存必要的文件，但25G刻录速度太慢，而且需要3T的文件都可以的情况下，需要大量的极其昂贵的光盘。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 敦煌万亩防护林被毁</title>
+      <link>/web/fun/2021/2021012301.html</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/fun/2021/2021012301.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;防护林&#34;&gt;防护林&lt;/h3&gt;
+&lt;p&gt;近日，敦煌阳关林场万亩防护林遭剃光头式砍伐的新闻，一下子登上热搜。&lt;/p&gt;
+&lt;p&gt;事情是这样的，在敦煌的库姆塔格沙漠东缘，原本有万亩防护林，是几代护林人做出的成绩。&lt;/p&gt;
+&lt;p&gt;结果，近日媒体曝出，敦煌防沙的这万亩公益防护林，现在几乎被砍伐殆尽，只剩下一个个树桩，而与此同时，经济效益好但用水多的葡萄园，却在这片土地上扩张起来。&lt;/p&gt;
+&lt;p&gt;原来好不容易恢复的生态环境，现在大有毁于一旦的风险。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 控制力</title>
+      <link>/web/note/2021/2021012001.html</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021012001.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;控制力&#34;&gt;控制力&lt;/h3&gt;
+&lt;h4 id=&#34;延申自己的控制力&#34;&gt;延申自己的控制力。&lt;/h4&gt;
+&lt;p&gt;人人希望获得非常多的钱，非常多的荣誉，国家拥有非常大的领土，非常强大的军队等等。都是延申自己为了延申自己、种群、集体的控制力。&lt;/p&gt;
+&lt;h4 id=&#34;成本的考虑&#34;&gt;成本的考虑&lt;/h4&gt;
+&lt;p&gt;延申自己的控制力需要成本，而世界本身的资源是有效的，成本也是有限的。无视成本的扩张必然导致灾难&lt;/p&gt;
+&lt;p&gt;一个国家维护一个强大的军队需要大量的军费，一个家庭抚养多个孩子意味着更多粮食消耗，教育成本。一个人结交多个亲朋好友意味着庞大的交际成本。&lt;/p&gt;
+&lt;h4 id=&#34;强大的控制力意味着很难改变&#34;&gt;强大的控制力意味着很难改变&lt;/h4&gt;
+&lt;p&gt;形成一个强大的控制力，尽管解决成本问题，还会存在改变的问题。即大型车辆的转弯变道往往比小型车辆要困难，受到能源，道路，自然环境的多重影响。你可以加更多的油，但无法走更窄的道路，无法通过小木桥等扽。改变一个庞大的目标往往相当困难。&lt;/p&gt;
+&lt;p&gt;整个庞大的目标可能是一辆车，一个家族，一个公司，一个国家，一个物种。&lt;/p&gt;
+&lt;p&gt;侏罗纪时期，庞大的恐龙灭绝了，而小型哺乳动物活了下来。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 电影人类清除计划</title>
+      <link>/web/note/2021/2021011701.html</link>
+      <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021011701.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;有趣的现象&#34;&gt;有趣的现象&lt;/h3&gt;
+&lt;p&gt;观看电影人类清除计划会发现一个有趣的现象：1 最先起来支持清除计划的是底层穷人，2 底层穷人拿去武器首先攻击的目标也是穷人。3 富人在清除日当天正常享乐，正常雇佣其他人服务。&lt;/p&gt;
+&lt;p&gt;说明了，穷人是渴望动乱的，而真正动乱以后，穷人攻击的目标还是穷人，他们没有组织起来洗劫富人的动机。因为富人通过正常的雇佣、收买穷人，在动乱时期依然拥有强大的武装力量。富人的自身力量并不比穷人强大，但他们拥有了雇佣，收买这种方式依附在其他力量之下存在。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 大连铁路因Flash停更造成电脑显示故障</title>
+      <link>/web/fun/2021/2021011501.html</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/fun/2021/2021011501.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;先进的flash&#34;&gt;先进的flash&lt;/h3&gt;
+&lt;p&gt;1月12日，大连铁路因Flash在全球范围内停止更新，导致部分新购置并安装最新Flash版本的电脑无法通过浏览器访问统计现在车系统。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: Incaseformat 蠕虫病毒</title>
+      <link>/web/fun/2021/2021011401.html</link>
+      <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/fun/2021/2021011401.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;2021年01月13日，360安全卫士发布了Incaseformat蠕虫病毒的风险通告，事件等级：高危，事件评分：8.5。&lt;/p&gt;
+&lt;p&gt;360第一时间发布了专杀工具与修复方案（见修复建议）&lt;/p&gt;
+&lt;p&gt;对此，360CERT建议广大用户好资产自查以及预防工作，以免遭受黑客攻击。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 20210107</title>
+      <link>/web/note/2021/2021010701.html</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021010701.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;随笔&#34;&gt;随笔&lt;/h3&gt;
+&lt;h3 id=&#34;太阳系里的行星轨道&#34;&gt;太阳系里的行星轨道&lt;/h3&gt;
+&lt;p&gt;为什么地球绕着太阳转，轨道是椭圆？&lt;/p&gt;
+&lt;h4 id=&#34;地球和太阳是两个独立的天体&#34;&gt;地球和太阳是两个独立的天体&lt;/h4&gt;
+&lt;p&gt;运动员手里拿一个链球旋转，这种情况下运动员和链球在运动员的用力下成为一个整体，离开了运动员的用力，链球&lt;strong&gt;不可能&lt;/strong&gt;保持圆周运动，而是直接飞出去。&lt;/p&gt;
+&lt;p&gt;而行星的椭圆轨道是地球和太阳两个天体共同作用的结果，地球绕着太阳转同时太阳在万有引力下绕着地球转，但由于太阳过于庞大，它的运行轨道在它天体内部，出现缓慢抖动情况。这种情况跟月球和地球的相互运动一样。宇宙里的其他天体也是类似的运行规律。&lt;/p&gt;
+&lt;h4 id=&#34;椭圆轨道的形成&#34;&gt;椭圆轨道的形成&lt;/h4&gt;
+&lt;p&gt;当太阳系形成之际，太阳的强大引力捕获了许多天体。某些质量或能量非常低的天体。将落入一个围绕太阳的紧密螺旋中，甚至很难称其为轨道，下降越来越低，直至它撞击太阳表面。具有很大速度或距离太阳表面很远的天体上。天体靠近，其路径将向太阳弯曲，但其速度和距离允许它继续越过太阳，而不是被拉入重复的轨道。在形成类似于U的双曲线轨道之后，它将飞向太空，并且永远不会返回。当天体太小或太慢而无法逃离太阳的引力时，它会落入一个重复的椭圆轨道，这在很大程度上取决于它进入系统时的原始能量和轨迹。&lt;/p&gt;
+&lt;h4 id=&#34;椭圆轨道的数学证明&#34;&gt;椭圆轨道的数学证明&lt;/h4&gt;
+&lt;p&gt;由于螺旋轨道和双曲线轨道都不是一个重复的轨道。所以对椭圆轨道的证明其实是在具有“太阳和地球质量”“万有引力”“太阳和地球距离”等数据以后，计算出来的数学函数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;计算步骤待补充&lt;/strong&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 20210105</title>
+      <link>/web/note/2021/2021010501.html</link>
+      <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021010501.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;随笔世界观&#34;&gt;随笔：世界观&lt;/h3&gt;
+&lt;h4 id=&#34;科学是研究世界的一种方法&#34;&gt;科学是研究世界的一种方法&lt;/h4&gt;
+&lt;p&gt;世界存在多样化，人类的认识也是多样化的。科学是人类的众多多样化手段中的一种。数学，哲学，神话等等，人类的文明充实着多种多样的方法。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 谣传的大洪水</title>
+      <link>/web/note/2020122301.html</link>
+      <pubDate>Wed, 23 Dec 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020122301.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;谣传的大洪水&#34;&gt;谣传的大洪水&lt;/h2&gt;
+&lt;p&gt;网上传播的“史前大洪水”“诺亚方舟”“亚特兰蒂斯覆灭的”等等数不胜数的各类传说故事&lt;/p&gt;
+&lt;h2 id=&#34;个人观点&#34;&gt;个人观点&lt;/h2&gt;
+&lt;h4 id=&#34;洪水可能只是河水泛滥&#34;&gt;洪水可能只是河水泛滥&lt;/h4&gt;
+&lt;p&gt;仔细观察此图片：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/12/20201223021.jpg&#34; alt=&#34;古代文明&#34;&gt;&lt;/p&gt;
+&lt;p&gt;通过以上图片可以看出，古代文明都是靠近大江大河，海边，湖边的土壤肥沃之地。且不说数千年前人类对大江的防汛抗汛能力，即便到了21世纪，也会出现几次重大洪水问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我们不能因为A地有洪水记录，B地有洪水记录，C地有洪水记录就武断的认为全世界都同时有洪水&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;因为，能够留下洪水记录的地区都是靠近江河湖海容易发生汛情的地区。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;远古时期记载的泛滥的大洪水可能只是河水泛滥&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;各地区的大洪水记载日期并不相同&#34;&gt;各地区的大洪水记载日期并不相同&lt;/h4&gt;
+&lt;p&gt;“诺亚方舟”的传说，大洪水是上帝用来毁灭世界的腐败人类的，尽管没有明确的时间记载，但应该早于古苏美尔文明和古埃及文明出现。至少在在公元前3500年之前。而“大禹治水”的故事发生在夏之前，时间约为公元前2070之前的数十年。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 日记2020-11-16</title>
+      <link>/web/note/2020111608.html</link>
+      <pubDate>Mon, 16 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020111608.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;站点整合和拆分&#34;&gt;站点整合和拆分&lt;/h3&gt;
+&lt;p&gt;之前的个人网站由许多内容杂乱无章的堆放在一起，后来整理一下，区分了“日记”“文章”“故事”“测试”等几个内容。并且处于分开管理和发布的目的，将一个博客网站拆分成blog,test,diary,story等几个不同站点。&lt;/p&gt;
+&lt;p&gt;多个站点，使用的是不同的域名解析，想使这些都正常使用，需要dns解析，必要的cdn和不同的部署位置。由于管理多个站点的部署太过复杂繁琐。计划了新一次的整个和拆分。&lt;/p&gt;
+&lt;p&gt;即：1 需要一个index的索引页面，整合不同的内容汇集起来统一显示。&lt;/p&gt;
+&lt;p&gt;2 发布的重要的，精彩的文章提供一个稳定的地址。保持长期可用性。&lt;/p&gt;
+&lt;p&gt;3 日记，较私有的内容也会选择性的发布出去，但不应该同2的文章放到一起，因为私有的，日常的琐碎内容不需要也不能稳定显示。偶尔心情变化，可能文章就会撤掉或修改。&lt;/p&gt;
+&lt;p&gt;4 杂类 一些涉及版权问题，社会问题或其他有争议的内容，也会发布。但不会放关键位置展示，需要一个混杂的仓库，随便丢进去。想起来的时候浏览，修改，整理一下。&lt;/p&gt;
+&lt;h3 id=&#34;取消其他服务&#34;&gt;取消其他服务&lt;/h3&gt;
+&lt;p&gt;图床，git托管，文件服务等需要自建服务的，都会撤销。因为没有精力去维护一个不常用的服务。目前没有服务器要求长期占用一个服务器。静态部署，页面，文章都是部署在托管平台的。个人的内容不应该被禁锢在某一个服务器上，服务器应该随时清空而不影响站点访问。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 日记20201113</title>
+      <link>/web/note/2020/2020111305.html</link>
+      <pubDate>Fri, 13 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020/2020111305.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;记录&#34;&gt;记录&lt;/h2&gt;
+&lt;p&gt;在部署项目时最慢的过程就是下载这个文件：https://github.com/lovell/sharp-libvips/releases/download/v8.7.4/libvips-8.7.4-darwin-x64.tar.gz，&lt;/p&gt;
+&lt;p&gt;只要涉及到github上文件下载，可能都会巨慢：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/20201113142123.png&#34; alt=&#34;libvips下载太慢&#34;&gt;&lt;/p&gt;
+&lt;p&gt;阿里巴巴在中国提供了一个镜像站点，其中包含夏普和libvips的二进制文件。&lt;/p&gt;
+&lt;p&gt;要使用此功能，请设置以下配置：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm config set sharp_binary_host &amp;quot;https://npm.taobao.org/mirrors/sharp&amp;quot;
+npm config set sharp_libvips_binary_host &amp;quot;https://npm.taobao.org/mirrors/sharp-libvips&amp;quot;
+npm install sharp
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;原因&#34;&gt;原因&lt;/h3&gt;
+&lt;p&gt;项目中绝大部分使用git管理，组件和模板使用包管理器比如npm，而这个sharp-libvips非要直接从github下载代码，http的下载方式绕过了npm的淘宝源，git服务器缓存，奇葩的使用方式导致下载速度极慢，整个安装包只有10.3M，却要下载4-5分钟。&lt;/p&gt;
+&lt;p&gt;类似的非要绕过npm源，git服务器的组件，下载和配置均会相当慢。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 日记20201113</title>
+      <link>/web/note/2020111305.html</link>
+      <pubDate>Fri, 13 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020111305.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;记录&#34;&gt;记录&lt;/h2&gt;
+&lt;p&gt;在部署项目时最慢的过程就是下载这个文件：https://github.com/lovell/sharp-libvips/releases/download/v8.7.4/libvips-8.7.4-darwin-x64.tar.gz，&lt;/p&gt;
+&lt;p&gt;只要涉及到github上文件下载，可能都会巨慢：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/20201113142123.png&#34; alt=&#34;libvips下载太慢&#34;&gt;&lt;/p&gt;
+&lt;p&gt;阿里巴巴在中国提供了一个镜像站点，其中包含夏普和libvips的二进制文件。&lt;/p&gt;
+&lt;p&gt;要使用此功能，请设置以下配置：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm config set sharp_binary_host &amp;quot;https://npm.taobao.org/mirrors/sharp&amp;quot;
+npm config set sharp_libvips_binary_host &amp;quot;https://npm.taobao.org/mirrors/sharp-libvips&amp;quot;
+npm install sharp
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;原因&#34;&gt;原因&lt;/h3&gt;
+&lt;p&gt;项目中绝大部分使用git管理，组件和模板使用包管理器比如npm，而这个sharp-libvips非要直接从github下载代码，http的下载方式绕过了npm的淘宝源，git服务器缓存，奇葩的使用方式导致下载速度极慢，整个安装包只有10.3M，却要下载4-5分钟。&lt;/p&gt;
+&lt;p&gt;类似的非要绕过npm源，git服务器的组件，下载和配置均会相当慢。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 页面分栏</title>
+      <link>/web/note/2020111203.html</link>
+      <pubDate>Thu, 12 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020111203.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;页面分栏&#34;&gt;页面分栏&lt;/h2&gt;
+&lt;p&gt;实现文章内容较多的时候，实现内容自动分为左右两列。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 新站点</title>
+      <link>/web/note/2020110501.html</link>
+      <pubDate>Thu, 05 Nov 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020110501.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;新站点&#34;&gt;新站点&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.holz.pub/photo&#34;&gt;相册&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.holz.pub/library&#34;&gt;文章&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.holz.pub/girls&#34;&gt;展示&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;站点规划&#34;&gt;站点规划&lt;/h3&gt;
+&lt;p&gt;blog作为主要正式内容发布网页，提供编辑教完整的文章。&lt;/p&gt;
+&lt;p&gt;library 存放临时，测试，未完工的文章。&lt;/p&gt;
+&lt;p&gt;photo 存放用于分享得图片资料，相册等。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 内容简化与复杂的矛盾</title>
+      <link>/web/note/2020102301.html</link>
+      <pubDate>Fri, 23 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020102301.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;日记&#34;&gt;日记&lt;/h2&gt;
+&lt;h3 id=&#34;简化内容&#34;&gt;简化内容&lt;/h3&gt;
+&lt;p&gt;修改了之前在页面&lt;code&gt;url&lt;/code&gt;上使用的随机质数页面&lt;/p&gt;
+&lt;p&gt;减少使用嵌入内容&lt;/p&gt;
+&lt;p&gt;减少内容子模块的数量，整合资源&lt;/p&gt;
+&lt;h3 id=&#34;矛盾&#34;&gt;矛盾&lt;/h3&gt;
+&lt;p&gt;使用嵌入内容是期望在不频繁提交部署次数的情况下更新内容。使用额外的嵌入内容，博客的内容更新就不依赖于blog源文件的构建和部署。但是使用外嵌入页会使得内容分散，不利于分享。&lt;/p&gt;
+&lt;h3 id=&#34;内容收敛&#34;&gt;内容收敛&lt;/h3&gt;
+&lt;p&gt;无法确保长期服务的站点比如图床和自建git，这些应用撤销。仅保留长期的服务。&lt;/p&gt;
+&lt;p&gt;内容blog.holz.pub，资源base.oribos.city 仅提供这两个访问域名。&lt;/p&gt;
+&lt;p&gt;content.uns.pub是引用内容。&lt;/p&gt;
+&lt;p&gt;新增：private.oribos.city作为私有内容&lt;/p&gt;
+&lt;p&gt;其他的扩展内容均已子目录形式部署在blog上&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 公开</title>
+      <link>/web/note/2020102107.html</link>
+      <pubDate>Wed, 21 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020102107.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;公开&#34;&gt;公开&lt;/h2&gt;
+&lt;p&gt;部署在vercel的页面内容&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;取消了其他站点的页面&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 日记</title>
+      <link>/web/note/2020102101.html</link>
+      <pubDate>Wed, 21 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020102101.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;日记&#34;&gt;日记&lt;/h2&gt;
+&lt;p&gt;连续更新的内容，引用的其他网页内容。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 日常控制力</title>
+      <link>/web/pro/test/202010200930.html</link>
+      <pubDate>Tue, 20 Oct 2020 09:30:40 +0800</pubDate>
+      
+      <guid>/web/pro/test/202010200930.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;列举一下日常控制力方面&#34;&gt;列举一下日常控制力方面&lt;/h3&gt;
+&lt;p&gt;不应在手机或电脑上下载和安装陌生应用，除非你知道该应用的作用和使用效果。&lt;/p&gt;
+&lt;p&gt;不应使用陌生的pe系统盘或系统镜像，ghost文件，备份文件。除非你知道其来源和效果。&lt;/p&gt;
+&lt;p&gt;不应将重要的u盘，磁盘，文件借给其他人。&lt;/p&gt;
+&lt;p&gt;密码分级，密码妥善保管。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;对此，某些厂商的服务要求用户提供复杂的密码其实是一种差劲行为。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;要求提供复杂密码&#34;&gt;要求提供复杂密码&lt;/h3&gt;
+&lt;p&gt;某些厂商的服务需要用户使用尽可能复杂的密码，推荐使用确实有助于用户资料安全。但是，强迫使用就是一种无理要求。用户并不信赖你的服务，使用一个简单密码暂时试用，测试一下你的服务，效果好了就会正式使用，再根据需求修改自己密码保障自己的额资料安全。这完全是用户的行为，不能让厂商强加干涉。&lt;/p&gt;
+&lt;p&gt;尽管用户使用简单的密码，但完善的密码保存机制可以通过使用混淆代码和多次加密，使简单的密码仍能以极其复杂的方式保存在服务器。对密码的保管是需要技术投入的，厂商不愿意增加技术投入，转而迫使用户提供妥善的密码机制是一种成本转移的方式。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 封神榜的故事</title>
+      <link>/web/note/2020101312.html</link>
+      <pubDate>Tue, 13 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020101312.html</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;仅针对封神榜小说内的故事情节&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;封神榜的故事内容&#34;&gt;封神榜的故事内容&lt;/h3&gt;
+&lt;p&gt;由于纣王的“无道”，导致女娲娘娘降罪，派出狐狸精蛊惑纣王，破坏商的实力。同时道教、阐教、截教三教共同制定了天庭员工名单，名单并不是明确的，而是针对武王伐纣的事件做的“规划”。名单的原则大体是“执意下上协助纣王的就是助纣为虐，被击败后进入封神榜成为天庭员工。而协助武王顺应天命的，也会在伐纣大业里遇到劫数，只是消去修为重新修道。&lt;/p&gt;
+&lt;h3 id=&#34;问题点&#34;&gt;问题点&lt;/h3&gt;
+&lt;p&gt;封神榜名单是否是一开始就确定的？&lt;/p&gt;
+&lt;p&gt;众阐教截教弟子知不知道自己的下场？道教阐教截教的教主知不知道自己弟子的下场。毕竟太上老君，元始天尊本身就是“天”还有什么能逃出他们的法眼？&lt;/p&gt;
+&lt;p&gt;女娲娘娘派出狐狸精是诱发了商灭亡还是加速了商灭亡？毕竟尽管商已经日薄西山，但聚集力量解决周边诸侯国是没有问题的，甚至武王伐纣之际，也进行了强烈镇压，一堆围困周军几乎到粮尽援绝，幸得杨戬的粮食救济才度过难关。&lt;/p&gt;
+&lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
+&lt;p&gt;截教是可以“选择”，选择中立，不参与武王伐纣的并不会影响。助纣为虐的就只能成为上封神榜。截教人士，修仙超脱凡间，有些却因为别人的几句谗言盲目下山，有些贪图人间富贵要入朝为官。总之，他们在武王伐纣的历史洪流中，充当了反派角色。&lt;/p&gt;
+&lt;p&gt;而阐教尊师命下山协助武王，也是存在巨大风险的，尽管方向和目标是明确的，但过程中应了劫数，损伤修为也是代价极大的。但总体而言，阐教人士没得选，要么谨遵师命投入危险重重的纷争，要么离经叛道躲过劫难。事实上，无论怎么选对于修仙而言都不是明智之举。&lt;/p&gt;
+&lt;p&gt;诱惑截教人士前仆后继投身注定失败的历史洪流中的重要角色是阐教的申公豹。无论出于什么心思，他的参与在“确定&amp;quot;的封神榜名单下提高了截教人士的名额，进而减少了其本派阐教的名额。就是有一个这样的角色，才使得大批截教人士成为“注定失败的一方”&lt;/p&gt;
+&lt;p&gt;人类在武王伐纣的纷争中属于次要的，士兵，低阶将领都是在阐教截教的大杀器面前成为牺牲品。只有少部分高级将领在种种机缘巧合之下入天庭。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 10022</title>
+      <link>/web/note/2020101271.html</link>
+      <pubDate>Mon, 12 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020101271.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;科学态度&#34;&gt;科学态度&lt;/h3&gt;
+&lt;p&gt;中华文化跟科学态度互斥，儒家道家的知识根本不以逻辑思维，科学研究为标准。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;《庄子与惠子游于濠梁》惠子曰：“子非鱼，安知鱼之乐？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这其中就是以逻辑辩论的惠子同道家庄子的辩论。&lt;/p&gt;
+&lt;h3 id=&#34;古代文明&#34;&gt;古代文明&lt;/h3&gt;
+&lt;p&gt;古埃及文明，从起源公元前5450年到鼎盛公元前3150经历了2000多年，到公元639年没落。而中华夏朝出现约公元前2070年，这相当于别人楼房已经快塌了，自己家茅草屋才刚开始搭建。&lt;/p&gt;
+&lt;p&gt;一个80岁老态龙钟的老人跟一个刚出生年轻活泼的小孩子怎么比好坏对错大小？关公战秦琼？&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 10023</title>
+      <link>/web/note/2020101231.html</link>
+      <pubDate>Mon, 12 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020101231.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;态度&#34;&gt;态度&lt;/h3&gt;
+&lt;p&gt;地域歧视，种族歧视，性别歧视等等都是人类本身具有的生存能力，这种事情不应该去限制，批判。如果有人歧视你能力低，你最好的反驳是用结果狠狠打他的脸，如果有人歧视你穷，你最好的反驳是大把钱砸死他。除此之外的批评，辱骂，攻击并不能改变他人的歧视。&lt;/p&gt;
+&lt;p&gt;因为歧视是人对差异化的一种本能抗拒，就像有些人害怕蛇，蝎子，鲸鱼等等，人对这些跟自己相差很大的事物陌生的事物有本能的抗拒，难受。可以克服但无法避免。&lt;/p&gt;
+&lt;p&gt;别人是否违法，违法就举报起诉，让权力机关制裁。如果别人不违法，那么你对别人的任何伤害都在道理上是站不住脚的。&lt;/p&gt;
+&lt;p&gt;别人攻击你，你可以反抗，反抗是本能。&lt;/p&gt;
+&lt;p&gt;尽管人类有独立思想，但依然属于生物，本能依然无法避免。&lt;/p&gt;
+&lt;h3 id=&#34;事物&#34;&gt;事物&lt;/h3&gt;
+&lt;p&gt;一件事情发生，人类用不完备的条件去解释和重现是困难的。解释一个现象或者事情是需要比事情再次发生需要更多。古埃及人能建造金字塔，人类用不完整的资料去研究和还原金字塔需要的成本更大。&lt;/p&gt;
+&lt;p&gt;一个私钥加密基于质数计算，而反之计算一个大数的质因数是相当困难的。&lt;/p&gt;
+&lt;p&gt;一个水杯，将它摔碎只需要手一松手，而将一个破碎的水杯完整还原需要的工作量是非常大的。甚至大于重新制造一个。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 自媒体</title>
+      <link>/web/note/2020101207.html</link>
+      <pubDate>Mon, 12 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020101207.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;自媒体&#34;&gt;自媒体&lt;/h3&gt;
+&lt;p&gt;知识P2P分享，每个人都分享，每个人的认知都是块状逐渐完善？为什么有人讨厌？P2P的网络必然影响网络服务商的垄断，必然抢这些人的饭碗，人学聪明，认知多了必然不容易被人忽悠。&lt;/p&gt;
+&lt;p&gt;就像过去骑士阶层鄙视火枪手一样，旧的阶层对新的产品总因为各种情况抵制新兴事物。旧的知识垄断阶层必然大肆宣传自媒体的问题。&lt;/p&gt;
+&lt;h3 id=&#34;封神榜&#34;&gt;封神榜&lt;/h3&gt;
+&lt;p&gt;哪怕商已经走下坡路，但周依然无法战胜强大的商。电视剧里姜子牙多次受挫，军队多次被困，断粮还需要杨戬救急。&lt;/p&gt;
+&lt;h3 id=&#34;服务限制&#34;&gt;服务限制&lt;/h3&gt;
+&lt;p&gt;服务商的服务必然存在故意的，武断的限制,以形成体验差异。服务商通过剥夺用户的选择权来降低研发和设计成本，用户不知道自己需要什么，纵然是知道也没能力去实现。少部分人的需求难以形成市场需求。&lt;/p&gt;
+&lt;h3 id=&#34;美洲原住民&#34;&gt;美洲原住民&lt;/h3&gt;
+&lt;p&gt;多少年了，自从哥伦布到达美洲，美洲原住民一直处于落后，被动形势。哪怕是二战以后，也没有哪个美洲原住民建设的经济强国。&lt;/p&gt;
+&lt;h3 id=&#34;商品不值钱&#34;&gt;商品不值钱&lt;/h3&gt;
+&lt;p&gt;对于商家来说，产品的价值多少并不重要，销售价格是根据需求情况而定的。只要有人需求，不值钱的石头都可以卖上钻石的价格。在可预计的情况下与其直接按成本价销售，不如从高价逐渐下降，通过价格歧视的策略收割更多利润。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 为什么很多地方用的版本都很低</title>
+      <link>/web/note/2020/20201010.html</link>
+      <pubDate>Sat, 10 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020/20201010.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;为什么很多地方用的版本都很低&#34;&gt;为什么很多地方用的版本都很低&lt;/h1&gt;
+&lt;h3 id=&#34;软件版本低&#34;&gt;软件版本低&lt;/h3&gt;
+&lt;p&gt;操作系统，应用程序，网络服务，app，文件等等，日常工作中总遇到各类版本问题，许多应用都在用很久之前的版本，很旧的模板。&lt;/p&gt;
+&lt;h3 id=&#34;日常生活遇到&#34;&gt;日常生活遇到&lt;/h3&gt;
+&lt;p&gt;如果软件版本低是因为使用者认为“旧的稳定”，那么生活中遇到的其他方面问题呢？&lt;/p&gt;
+&lt;p&gt;办理业务需要早就不在提供的“税务登记证”“开户许可证”“机构信用代码”等等，这些东西早就随着三证合一而取消。&lt;/p&gt;
+&lt;h3 id=&#34;本质&#34;&gt;本质&lt;/h3&gt;
+&lt;p&gt;改变，更新需要成本和动力。维持不变是一种惯性思维。&lt;/p&gt;
+&lt;h3 id=&#34;惯性&#34;&gt;惯性&lt;/h3&gt;
+&lt;p&gt;物体运动，人类生活都存在惯性。惯性导致改变状态需要付出动力。&lt;/p&gt;
+&lt;h1 id=&#34;关于wow的各种设定&#34;&gt;关于wow的各种设定&lt;/h1&gt;
+&lt;h3 id=&#34;过度使用绑定功能&#34;&gt;过度使用绑定功能&lt;/h3&gt;
+&lt;h3 id=&#34;过度限定等级&#34;&gt;过度限定等级&lt;/h3&gt;
+&lt;h3 id=&#34;剧情设计碎片化无脑&#34;&gt;剧情设计碎片化无脑&lt;/h3&gt;
+&lt;p&gt;政治正确&lt;/p&gt;
+&lt;p&gt;狭义价值观&lt;/p&gt;
+&lt;h3 id=&#34;游戏设定胡乱修改&#34;&gt;游戏设定胡乱修改&lt;/h3&gt;
+&lt;p&gt;90%变为9%&lt;/p&gt;
+&lt;h3 id=&#34;反人类设计&#34;&gt;反人类设计&lt;/h3&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 新机常用软件及环境配置清单</title>
+      <link>/web/note/2020/20201007.html</link>
+      <pubDate>Wed, 07 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020/20201007.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;新机常用软件及环境配置清单&#34;&gt;新机常用软件及环境配置清单&lt;/h1&gt;
+&lt;h4 id=&#34;写在前面的评价&#34;&gt;写在前面的评价&lt;/h4&gt;
+&lt;p&gt;有些应用的选择需要单独说一下。&lt;/p&gt;
+&lt;p&gt;网易云音乐，海外有版权限制，真的是自掘坟墓，本身自己的资源就快被QQ音乐抢光了，还有这限制，9102年都过完了还有这些限制，真该学学QQ音乐啊，不然再多云村钉子户，也分分钟就弃坑了。&lt;/p&gt;
+&lt;p&gt;Chrome，我现在已经彻底是Google用户了，从Map到YouTube到GPlay，我没有理由不选择Chrome作为我的主力浏览器，Firefox已经多年不用了，不晓得体验如何（只在Linux上用用）&lt;/p&gt;
+&lt;p&gt;360安全浏览器，只是想用这个来当IE的替代品，极个别时候还必须得用IE，木的办法。
+Editplus，这个我要强调，这是我见过的能够打开文本文件最大的编辑器了，比如50M、100M的文本，用记事本和NPP等会直接卡死的。&lt;/p&gt;
+&lt;p&gt;AIDA64，强大的硬件监控、查看、测试软件，其实前面说的全都能干，但我一般查看信息，里面的传感器部分很好，可以捕获全部的硬件传感器信息。&lt;/p&gt;
+&lt;p&gt;HWIDGEN脚本，Win10专业版现在找激活秘钥太难了，基本不可用，而KMS类似的激活又有时效且不稳定。基于此网上有永久激活的方法，但亲测并不适用每个人，而这个脚本可以一键傻瓜式激活（虽然也是命令行运行），效果和使用秘钥激活一样。&lt;/p&gt;
+&lt;p&gt;Anydesk，这个要说，非常轻便，真的是随下随用，安不安装都可以用，显示速度也不错，重要的是免配置，这个非常棒，就通过一个数字码连接，而且配置非常容易，适用全部的操作系统，手机、Linux、Windows全部可以互通。RealVNC可以实现相同的功效，但只是VNC分为Server和Viewer，而且都需要安装，方便性稍差一些。&lt;/p&gt;
+&lt;p&gt;PUBG_Lite，我第一次用我的Win10平板玩就惊到了，平板的配置 core m 真的很差了，但我玩PUBG_Lite依旧可以畅玩，操作和视觉上和正常版差一些，但差归差该有的一点不少，只是画质稍差，当然可以调高，而且操作非常流畅，Lite真的降低了PC吃鸡的要求，看好这个版本。
+日常使用&lt;/p&gt;
+&lt;p&gt;No.	软件名称	说明
+1	搜狗拼音	基础
+2	WinRAR	最好用，不喜欢7z
+3	Chrome	浏览器主力
+4	Office365	学校给的账号，白嫖
+5	HWIDGEN脚本	永久激活Win10专业版
+6	360安全浏览器	用他的IE内核
+7	Notepad++	文档编辑主力
+8	Editplus	亲测适用于50M以上文件
+9	迅捷PDF编辑器	强大，当阅读器也不错
+10	迅捷PDF转换器	各种转换一步到位
+11	Cmd_Markdown	写作工具，最好无之一
+12	360驱动大师	主要更新下声卡驱动
+13	360安全卫士	只是想用加速球
+14	TrafficMonitor	替代360加速球
+15	Adobe Flash Player	Flash，谷歌已弃用
+16	Potplayer	4K播放环境-播放器
+17	madVR	4K播放环境-渲染
+18	LAVFilters	4K播放环境-解码
+19	微信	社交
+20	QQ	社交
+21	Telegram	社交
+22	QQ音乐	网易云海外体验极为差劲
+23	CPU-Z	简单的看下CPU和内存
+24	AIDA64	查看硬件信息必备
+25	CrystalDiskMark	硬盘测速，注意版本&lt;/p&gt;
+&lt;h4 id=&#34;编码使用&#34;&gt;编码使用&lt;/h4&gt;
+&lt;p&gt;No.	软件名称	说明
+1	Git_for_Windows	基础环境，很重要
+2	Java	基础环境
+3	node	基础环境
+4	python3	基础环境
+5	IntelliJ_IDEA_2019	弃用eclipse了
+6	VSCode	写Python用这个了
+7	VS2019	可能C++会用到
+8	Anydesk	远程桌面的首选
+9	Real_VNC	全OS远程桌面
+10	SecureCRT	Linux远程SSH
+11	WinSCP	Linux传输文件&lt;/p&gt;
+&lt;h4 id=&#34;娱乐使用&#34;&gt;娱乐使用&lt;/h4&gt;
+&lt;p&gt;No.	软件名称	说明
+1	Nvidia_Experience	随时更新GameReady驱动
+2	Steam	必备
+3	WeGame	想玩一下国服，但幻想破灭了
+4	LOL_EU	玩玩欧服还是可以的
+5	RedAlert2战网	资深红警2菜鸡必备软件
+6	PUBG_Lite	正常版本太大了&lt;/p&gt;
+&lt;h4 id=&#34;常用小工具&#34;&gt;常用小工具&lt;/h4&gt;
+&lt;p&gt;Ditto
+作为一名 CV 工程师，怎么能没有便捷的复制粘贴工具呢
+它其实就是一个剪贴板，默默地帮你记录复制史，你想粘贴哪一次的复制内容就按一下 Ctrl `, 找到所有的复制史，继续粘贴，你曾复制的截图也不例外。&lt;/p&gt;
+&lt;p&gt;Snipaste
+最好用的轻量截图工具，别再用 QQ 截图了
+自带贴图，不再为窗口切换而烦恼，贴图置于最前端，更方便抄袭。&lt;/p&gt;
+&lt;p&gt;ScreenToGif
+最好用的动图截屏，别再为了一个小小的操作而录屏了
+自带 gif 编辑器，截屏默认保留七天&lt;/p&gt;
+&lt;p&gt;Everything
+全局搜索，啥都能搜到哦&lt;/p&gt;
+&lt;p&gt;DrolIt
+文件快速分类整理
+后期补充我的自定义协议&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 霰弹</title>
+      <link>/web/note/2020100703.html</link>
+      <pubDate>Wed, 07 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020100703.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;霰弹枪&#34;&gt;霰弹枪&lt;/h3&gt;
+&lt;p&gt;霰弹枪的&amp;quot;霰&amp;quot;读作san是没有错的,如图:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/10/dc11fafaa.jpg&#34; alt=&#34;san&#34;&gt;&lt;/p&gt;
+&lt;p&gt;霰弹枪&lt;/p&gt;
+&lt;p&gt;散弹枪&lt;/p&gt;
+&lt;p&gt;在老广的发音里面都是发san音！&lt;/p&gt;
+&lt;p&gt;表达的都是一个意思：一发子弹里面有很多小弹丸，打出去会逐渐发散。&lt;/p&gt;
+&lt;h3 id=&#34;在大陆正确写法是霰弹&#34;&gt;在大陆，正确写法是霰弹。&lt;/h3&gt;
+&lt;p&gt;以下内容转自 知乎&lt;/p&gt;
+&lt;p&gt;作者：pcc778899
+链接：https://www.zhihu.com/question/290013820/answer/467708564&lt;/p&gt;
+&lt;p&gt;1.在大陆，正确写法是霰弹。&lt;/p&gt;
+&lt;p&gt;2.这个字你可以读xian4，也可以读san3(这个问题见后文)，但写作散是错误的(过去似乎有一段时间由于太多人写错了，加了“另作散弹”一条)。(也就是说大多数情况下读san3弹是有争议，但写散弹是更倾向于错误。)&lt;/p&gt;
+&lt;p&gt;3.“霰”怎么读，存在着演变。&lt;/p&gt;
+&lt;p&gt;4.很多网友做过考证，这个字读音很混乱，从70年代到现在出版的各种工具书(《现代汉语词典》，《辞海》，《新华字典》等)有一个读音(只有xian4)，也有两个读音(xian4，san3)。但是存在很多矛盾，总体上是从两个读音逐渐向一个读音演变，但是不同工具书演变时间不同(可能差十几年)，还出现同一个出版社不同工具书同年出版不一样的情况。&lt;/p&gt;
+&lt;p&gt;5.1987年的《全军武器装备命名规定》中对于霰弹枪的命名L-QBS，显然是采用了san3这个读音。2012年颁布了《中国人民解放军装备命名规定》，但截止现在我查不到12年以后的霰弹枪命名。&lt;/p&gt;
+&lt;p&gt;6.总之，现在绝大部分最近出版的工具书都只有(xian)一个读音。&lt;/p&gt;
+&lt;p&gt;7.补充第四条，有一段时间san3这个读音特指弹种，这可能是87年《命名规定》的缘由。&lt;/p&gt;
+&lt;p&gt;8.这个词可能来源于日语“霰弹铳”(我直接用简体打出来了)，但是日本也有“散弹铳”这个说法，现在日本的普遍汉字写法是“散弹铳”。“散”和“霰”读音在日语里相同。&lt;/p&gt;
+&lt;p&gt;9.至于形象不形象的问题，看这个词“榴霰弹”，这个词如果用“霰”(自然现象的释义，xian4)，是很形象的，从天而降的细雹。但是对于“霰弹枪”“炮射霰弹”(葡萄弹)，就不是很形象了。&lt;/p&gt;
+&lt;p&gt;10.如果要细究，我们需要:从14，15世纪开始到现代欧洲各国火炮弹种和枪械弹种在各自语言里的叫法，以及这些词的拉丁语，希腊语词源。从宋代开始我国对于各种火炮弹种，火枪弹种的叫法以及汉字字形，字意，读音(涉及方言)的演变。从战国时代到现代日本对于各种火炮弹种，火铳弹种的叫法以及字意，字形，读音的演变。完整的87年和12年两个版本的命名规定。从晚清到现代出版的各种字典，词典类工具书(不同年份出版的版本都要)等等等等……这些玩意足够写论文了。&lt;/p&gt;
+&lt;p&gt;11.建国后，主流是这样发展的:霰是多音字》霰是多音字，且散也对》霰只有一个读音，且散不对&lt;/p&gt;
+&lt;p&gt;12.现在存在很多迁就错误读法的读音修正(其实也不能这么说，很多涉及到民国时读音演变和新中国读音演变等问题)，比如说服(shuo1还是shui4)，一骑当先(qi2还是ji4)。淬火，cui4还是zhan4？行业内读zhan4火，但是现行标准是cui4。&lt;/p&gt;
+&lt;p&gt;最后：我倾向读san3写霰，但是现在标准就是读xian4写霰。行业内，军内不管怎么读，怎么写，但是标准就是xian4。&lt;/p&gt;
+&lt;h3 id=&#34;个人看法&#34;&gt;个人看法&lt;/h3&gt;
+&lt;p&gt;过去中国社会状况和文化教育导致识字率低,文字不统一,特别是近代引进的东西.近年来出版的字典,粗暴的将文字进行标准化,规范化.却没有对必要的分歧进行说明和保留.导致命名san3的读音是历史存在的,却被&amp;quot;官方&amp;quot;划为&amp;quot;不规范&amp;quot;.&lt;/p&gt;
+&lt;p&gt;还原历史,还原文化的真相是必要的.&lt;/p&gt;
+&lt;h3 id=&#34;武&#34;&gt;武&lt;/h3&gt;
+&lt;p&gt;武”字是个合体字，bai按古代造字法的“du会意”，&lt;/p&gt;
+&lt;p&gt;“武”zhi从止、从戈，由止、戈二字合dao起来成为“武”字。戈是古代的一种兵器，止在甲骨文中实则为人的脚趾的象形，在金文中，“止”依然构成人的脚趾之形；&lt;/p&gt;
+&lt;p&gt;在篆文中“止”依然如此。甲骨文中“武”字的最初表现形式是“足戈并立”，左边画一个“足型”，而右边画一个“戈型”，二者组合成其雏形，并以象形取意，即立足持戈，是一种静态；在此基础上字体由左右结构，变成了上下结构，近而形成了“止戈竖立”的组合，此时最大的变化在于“足型”被“止”字所代替，而“戈”的一撇移到“弋”字的左上角，其意是持戈而行，处于一种动态。&lt;/p&gt;
+&lt;p&gt;进入青铜器时代，金文中的“武”字，已由象形向会意方向发展，并形成“动静”结合的字体，笔划粗细一致，结构相对协调，以适用于人的习惯认识和记忆。&lt;/p&gt;
+&lt;p&gt;从甲骨文中“武”字的变化看，其原始本意并非止戈为武，而完整的表述应该是这样的：或持戈静止而立，注视前方；或举戈而动，欲与人、欲与兽斗，与人斗是争夺地盘和剩余价值，与兽斗是维持生存和生命。&lt;/p&gt;
+&lt;p&gt;古人错误的把&amp;quot;止戈为武&amp;quot;当做&amp;quot;要能止战，才是真正的武功（军事成就/建树）.其实是错误的.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 图片嵌入</title>
+      <link>/web/note/2020/20201006.html</link>
+      <pubDate>Tue, 06 Oct 2020 09:01:40 +0800</pubDate>
+      
+      <guid>/web/note/2020/20201006.html</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;图片嵌入&#34;&gt;图片嵌入&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+  function changeFrameHeight(){
+    var iframe= document.getElementById(&amp;quot;myiframe&amp;quot;);
+    var wid = document.getElementById(&#39;father&#39;).clientWidth;
+    if (wid&amp;gt;900) iframe.height = wid/2.19;
+    else if (wid&amp;gt;551) iframe.height = wid/2.21;
+    else if (wid&amp;gt;470) iframe.height = wid/2.165;
+    else iframe.height = wid/2.26;
+  }
+&amp;lt;/script&amp;gt;
+&amp;lt;div style=&amp;quot;background-color: rgb(0, 0, 0);padding-top: 7px;&amp;quot; id=&amp;quot;father&amp;quot;&amp;gt;
+  &amp;lt;iframe width=&amp;quot;100%&amp;quot; id=&amp;quot;myiframe&amp;quot; frameborder=&amp;quot;0&amp;quot; onload=&amp;quot;changeFrameHeight()&amp;quot; 
+    src=&amp;quot;https://api.dujin.org/pic/&amp;quot; img&amp;gt;
+  &amp;lt;/iframe&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

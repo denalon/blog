@@ -1,0 +1,77 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>记事本 – develop</title>
+    <link>/tech/develop/</link>
+    <description>Recent content in develop on 记事本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 16 Jun 2021 11:55:45 +0800</lastBuildDate>
+    
+	  <atom:link href="/tech/develop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Tech: 2021</title>
+      <link>/tech/develop/2021/</link>
+      <pubDate>Wed, 16 Jun 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/tech/develop/2021/</guid>
+      <description>
+        
+        
+        &lt;p&gt;##2021&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 2020</title>
+      <link>/tech/develop/2020/</link>
+      <pubDate>Fri, 30 Apr 2021 11:55:45 +0800</pubDate>
+      
+      <guid>/tech/develop/2020/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;2020&#34;&gt;2020&lt;/h2&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 2019</title>
+      <link>/tech/develop/2019/</link>
+      <pubDate>Fri, 06 Dec 2019 10:52:02 +0800</pubDate>
+      
+      <guid>/tech/develop/2019/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;2019&#34;&gt;2019&lt;/h2&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: reuixiy</title>
+      <link>/tech/develop/reuixiy/</link>
+      <pubDate>Wed, 19 Aug 2020 23:29:45 +0800</pubDate>
+      
+      <guid>/tech/develop/reuixiy/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;引用自reuixiy&#34;&gt;引用自reuixiy&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;引用自&lt;a href=&#34;https://io-oi.me/&#34;&gt;reuixiy&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

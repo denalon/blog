@@ -1,0 +1,1396 @@
+<!doctype html>
+<html lang="zh-Hans-CN" class="no-js">
+  <head>
+    <!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.82.0" />
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+
+<link rel="shortcut icon" href="/favicon.ico" >
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<title>记录 | 记事本</title><meta property="og:title" content="记录" />
+<meta property="og:description" content="记录" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/web/deploy/2020/2020070317.html" /><meta property="article:section" content="essay" />
+<meta property="article:published_time" content="2020-07-03T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2020-07-03T00:00:00&#43;00:00" /><meta property="og:site_name" content="记事本" />
+
+<meta itemprop="name" content="记录">
+<meta itemprop="description" content="记录"><meta itemprop="datePublished" content="2020-07-03T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-07-03T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="42">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="记录"/>
+<meta name="twitter:description" content="记录"/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.c7c493d84fc5c6d6cc5a8188190d10f546e9cae7cb23c400dfc194a17091d981.css" as="style">
+<link href="/scss/main.min.c7c493d84fc5c6d6cc5a8188190d10f546e9cae7cb23c400dfc194a17091d981.css" rel="stylesheet" integrity="">
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/css/zoomify.min.css">
+
+
+
+
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  crossorigin="anonymous"></script>
+
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+<meta itemprop="name" content="云上记事本" />	
+
+<meta itemprop="image" content="https://base.oribos.city/images/avatar.png" />
+
+<meta name="description" itemprop="description" content="存放各类网络资源，素材，模板" />
+
+
+
+  </head>
+  <body class="td-page td-blog">
+    <header>
+      
+<nav class="navbar-custom js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span><span class="text-nav-head font-weight-bold">记事本</span>
+		</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/tech/" ><span>技术</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/essay/" ><span class="active">随笔</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/about/" ><span>关于</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; 站内搜索…"
+  aria-label="站内搜索…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.ac73ee7a3e67b17ecb8cabab12e37f63407be751474851fdfb2adf449db6d3d2f62036088f67808e3d73f1c43fab732379c870da71d927e6eb23a00d493ae867.json"
+  data-offline-search-base-href="/"
+>
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; 站内搜索…"
+  aria-label="站内搜索…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.ac73ee7a3e67b17ecb8cabab12e37f63407be751474851fdfb2adf449db6d3d2f62036088f67808e3d73f1c43fab732379c870da71d927e6eb23a00d493ae867.json"
+  data-offline-search-base-href="/"
+>
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/essay/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">随笔</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="essay">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/essay/essay/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">essay</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="essayessay">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/essay/essay/first/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">最初</a>
+  </li>
+  <ul>
+    <li class="collapse " id="essayessayfirst">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20182018051171html" href="/web/docs/2018/2018051171.html">科学是有条件的</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20182018050201html" href="/web/docs/2018/2018050201.html">左与右</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20182018050207html" href="/web/docs/2018/2018050207.html">方法论</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20182020050107html" href="/web/docs/2018/2020050107.html">某个理想国</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20182018050117html" href="/web/docs/2018/2018050117.html">民众</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20182018050171html" href="/web/docs/2018/2018050171.html">生产是服务的一种表现</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs2018050131html" href="/web/docs/2018/050131.html">重塑三观</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-weblink006html" href="/web/link/006.html">不要拿自己不熟悉的东西去竞争</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-weblink001html" href="/web/link/001.html">内容列表</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-weblink017html" href="/web/link/017.html">向来有点自大</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-weblink015html" href="/web/link/015.html">归纳法</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-weblink018html" href="/web/link/018.html">很早之前的伊拉克断网事件</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-weblink016html" href="/web/link/016.html">技术进步</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-weblink004html" href="/web/link/004.html">日志</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-weblink019html" href="/web/link/019.html">没有能力主宰一切市场行为</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-weblink014html" href="/web/link/014.html">海淘</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-weblink009html" href="/web/link/009.html">认识</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-weblink007html" href="/web/link/007.html">问题</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/essay/essay/2018/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">2018</a>
+  </li>
+  <ul>
+    <li class="collapse " id="essayessay2018">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2018112204html" href="/web/2018112204.html">人的控制欲</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2018101507html" href="/web/raw/2018101507.html">自建mysql数据库</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2018092906html" href="/web/raw/2018092906.html">资源整理和区分</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2018091308html" href="/web/raw/2018091308.html">科学是人类认识世界改造世界的工具和方法</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2018081304html" href="/web/raw/2018081304.html">杂谈-文件管理</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2018080201html" href="/web/raw/2018080201.html">可证伪</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/essay/essay/2019/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">2019</a>
+  </li>
+  <ul>
+    <li class="collapse " id="essayessay2019">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019122001html" href="/web/raw/2019122001.html">三星手机混合密码</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2019112901html" href="/web/2019112901.html">flash助手推荐广告</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2019112801html" href="/web/2019112801.html">日志</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2019112701html" href="/web/2019112701.html">centos上运行hexo</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2019112601html" href="/web/2019112601.html">文档类型</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019112503html" href="/web/raw/2019112503.html">更换主题</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019112501html" href="/web/raw/2019112501.html">文档管理</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019112203html" href="/web/raw/2019112203.html">华为云cdn差评</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2019112205html" href="/web/2019112205.html">日志</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019112101html" href="/web/raw/2019112101.html">使用bootstrap</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2019112001html" href="/web/2019112001.html">日志</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019111403html" href="/web/raw/2019111403.html">存储桶的命名</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webraw2019101502html" href="/web/raw/2019101502.html">专门用来测试代码的站点</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web876html" href="/web/876.html">关于ICP备案的误区</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web786html" href="/web/786.html">由于进行的项目太多，域名解析已经不够用</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2019080101html" href="/web/note/2019080101.html">当初想着建个网站搞点有意义的事</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2019071601html" href="/web/note/2019071601.html">学习容器技术</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2019062601html" href="/web/note/2019062601.html">第一篇文章</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/essay/essay/2020/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">2020</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="essayessay2020">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020122301html" href="/web/note/2020122301.html">谣传的大洪水</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020111608html" href="/web/note/2020111608.html">日记2020-11-16</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020111305html" href="/web/note/2020/2020111305.html">日记20201113</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020111305html" href="/web/note/2020111305.html">日记20201113</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020111203html" href="/web/note/2020111203.html">页面分栏</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020110501html" href="/web/note/2020110501.html">新站点</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020102301html" href="/web/note/2020102301.html">内容简化与复杂的矛盾</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020102107html" href="/web/note/2020102107.html">公开</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020102101html" href="/web/note/2020102101.html">日记</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webprotest202010200930html" href="/web/pro/test/202010200930.html">日常控制力</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020101312html" href="/web/note/2020101312.html">封神榜的故事</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020101271html" href="/web/note/2020101271.html">10022</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020101231html" href="/web/note/2020101231.html">10023</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020101207html" href="/web/note/2020101207.html">自媒体</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote202020201010html" href="/web/note/2020/20201010.html">为什么很多地方用的版本都很低</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote202020201007html" href="/web/note/2020/20201007.html">新机常用软件及环境配置清单</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020100703html" href="/web/note/2020100703.html">霰弹</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote202020201006html" href="/web/note/2020/20201006.html">图片嵌入</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020100511html" href="/web/note/2020100511.html">一点认识</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020100303html" href="/web/note/2020100303.html">1003日记</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020111201html" href="/web/note/2020/2020111201.html">日记20201112</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020100219html" href="/web/note/2020100219.html">1002日记</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020092572html" href="/web/note/2020092572.html">日记01</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020091903html" href="/web/note/2020091903.html">0919日记</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webprotest2020082837html" href="/web/pro/test/2020082837.html">方法论</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020080311html" href="/web/note/2020/2020080311.html">分拆博客-剔除kor</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020071111html" href="/web/note/2020071111.html">奇葩做法</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webvalue20202020071013html" href="/web/value/2020/2020071013.html">记录资本行为</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070301html" href="/web/docs/2020/2020070301.html">001</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070302html" href="/web/docs/2020/2020070302.html">002</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070303html" href="/web/docs/2020/2020070303.html">003</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070229html" href="/web/docs/2020/2020070229.html">2020 07 02中医</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070297html" href="/web/docs/2020/2020070297.html">2020 07 02新的更新方法</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070341html" href="/web/docs/2020/2020070341.html">2020 07 03 制度</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070361html" href="/web/docs/2020/2020070361.html">2020 07 03 文化</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-webdeploy20202020070317html" href="/web/deploy/2020/2020070317.html">2020 07 03 记录</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020070331html" href="/web/docs/2020/2020070331.html">2020 07 03 设计</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webblog2020202070203html" href="/web/blog/2020/202070203.html">2020 07 02 日记</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020062901html" href="/web/note/2020/2020062901.html">日记</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-essayessay20202020-06-27-e697a5e8aeb03" href="/essay/essay/2020/2020-06-27-%E6%97%A5%E8%AE%B03/">0627日记</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020062413html" href="/web/note/2020/2020062413.html">日记</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020062307html" href="/web/note/2020/2020062307.html">日记</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020062201html" href="/web/note/2020/2020062201.html">日记</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020062013html" href="/web/note/2020/2020062013.html"> 2020 06 20 日记</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs2020202006181html" href="/web/docs/2020/202006181.html">2020 06 14 模板</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs202020200614691html" href="/web/docs/2020/20200614691.html">2020 06 14 可笑的种族歧视</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020061319html" href="/web/docs/2020/2020061319.html">2020 06 13 看法</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs2020202006132html" href="/web/docs/2020/202006132.html">2020 06 13 资源集中</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdeploy2020202006127html" href="/web/deploy/2020/202006127.html">2020 06 12 随笔</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs20202020072801html" href="/web/docs/2020/2020072801.html">名称也成了商品</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020061071html" href="/web/note/2020/2020061071.html">2020 06 10 测试</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webvalue2020202006091html" href="/web/value/2020/202006091.html">2020 06 09 功利心</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webvalue20202020060711html" href="/web/value/2020/2020060711.html">2020 06 07 何为入侵者</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webvalue20202020060519html" href="/web/value/2020/2020060519.html">2020 06 05 认识和看法</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdeploy20202020060511html" href="/web/deploy/2020/2020060511.html">2020 06 05 对于不确定的厌恶</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webblog2020note2020051801html" href="/web/blog/2020/note/2020051801.html">2020 05 18 记录</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webblog20202020051601html" href="/web/blog/2020/2020051601.html">2020 05 16 日记</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webblog2020note2020051405html" href="/web/blog/2020/note/2020051405.html">2020 05 14 过于霸道的某些产品</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs2020note2020051105html" href="/web/docs/2020/note/2020051105.html">2020 05 11 人工智能</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs2020noteaskquestionhtml" href="/web/docs/2020/note/askquestion.html">2020-05-09 提问的智慧</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-weblambdatest20202020050809html" href="/web/lambda/test/2020/2020050809.html">2020 05 08 效果测试页面</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webblog2020note2020050802html" href="/web/blog/2020/note/2020050802.html">2020 05 08 部署记录01</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-weblambdatest20202020050803html" href="/web/lambda/test/2020/2020050803.html">2020 05 08 文章</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webblog2020note2020050601html" href="/web/blog/2020/note/2020050601.html">2020 05 06 科幻小说情节</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20202020050202html" href="/web/note/2020/2020050202.html">2020 05 02 单页模板</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdocs2020note2020042901html" href="/web/docs/2020/note/2020042901.html">2020 04 29 控制欲</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webhb2020031001html" href="/web/hb/2020031001.html">测试001</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2020030901html" href="/web/note/2020030901.html">2020随笔</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webfun202012230301html" href="/web/fun/202012230301.html">魔兽世界的衰落</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2020030601html" href="/web/2020030601.html">新文件</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2020030501html" href="/web/2020030501.html">大乐章</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-web2020020113html" href="/web/2020020113.html">日志</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/essay/essay/2021/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">2021</a>
+  </li>
+  <ul>
+    <li class="collapse " id="essayessay2021">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webpubac69d809html" href="/web/pub/ac69d809.html">随机序列</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021061901html" href="/web/note/2021/2021061901.html">随笔20210619</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021061603html" href="/web/note/2021/2021061603.html">20210616</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021060301html" href="/web/note/2021/2021060301.html">20210603</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021051703html" href="/web/note/2021/2021051703.html">理念</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021051101html" href="/web/note/2021/2021051101.html">20210511</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webme202120210512html" href="/web/me/2021/20210512.html">docker部署记录</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021050202html" href="/web/note/2021/2021050202.html">三观</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021050201html" href="/web/note/2021/2021050201.html">双生子佯谬</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021050104html" href="/web/note/2021/2021050104.html">20210501</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021042907html" href="/web/note/2021/2021042907.html">20210429</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021042909html" href="/web/note/2021/2021042909.html">202104292</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021042801html" href="/web/note/2021/2021042801.html">20210428</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021042601html" href="/web/note/2021/2021042601.html">20210426</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webshare2021041901html" href="/web/share/2021041901.html">得州停电事件</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021041701html" href="/web/note/2021/2021041701.html">20210417</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote202120210413html" href="/web/note/2021/20210413.html">20210413</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2021032901html" href="/web/note/2021032901.html">巨型货轮堵住苏伊士运河</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021032406html" href="/web/note/2021/2021032406.html">20210324</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021032402html" href="/web/note/2021/2021032402.html">简化</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021052703html" href="/web/note/2021/2021052703.html">选择</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021032001html" href="/web/note/2021/2021032001.html">2021-03-20</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webfun20212021031701html" href="/web/fun/2021/2021031701.html">世界上不存在1000公斤的牛</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021031701html" href="/web/note/2021/2021031701.html">人工智能</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote2021030101html" href="/web/note/2021030101.html">纸档文档保存</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webfun20212021012301html" href="/web/fun/2021/2021012301.html">敦煌万亩防护林被毁</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021012001html" href="/web/note/2021/2021012001.html">控制力</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021011701html" href="/web/note/2021/2021011701.html">电影人类清除计划</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webfun20212021011501html" href="/web/fun/2021/2021011501.html">大连铁路因Flash停更造成电脑显示故障</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webfun20212021011401html" href="/web/fun/2021/2021011401.html">Incaseformat 蠕虫病毒</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021010701html" href="/web/note/2021/2021010701.html">20210107</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021010501html" href="/web/note/2021/2021010501.html">20210105</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#胡格诺">胡格诺</a></li>
+        <li><a href="#古巴导弹危机">古巴导弹危机</a></li>
+        <li><a href="#双枪老太婆">双枪老太婆</a></li>
+        <li><a href="#中东">中东</a></li>
+        <li><a href="#历朝历代">历朝历代</a></li>
+        <li><a href="#三国对峙">三国对峙</a></li>
+        <li><a href="#谁是卖国贼谁是碍国贼">谁是卖国贼，谁是碍国贼。</a></li>
+        <li><a href="#权力的集中">权力的集中</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+    
+    
+    
+</div>
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role="main">
+            
+            
+<div class="td-content">
+	<h2 class="text-uppercase">记录</h2>
+	<hr class="hr-colorful">
+	<div class="lead">记录</div>
+	<div class="td-byline mb-4">
+		作者 <b>denalon</b> |
+		<time datetime="2020-07-03" class="text-muted">Friday, July 03, 2020</time>
+	</div>
+	<h3 id="胡格诺">胡格诺</h3>
+<p>由于胡格诺派的不妥协的强硬态度，使该事件成为法国宗教战争的转折点。
+1572年8月24日凌晨，巴黎数万名天主教民伙同警察士兵对城内的胡格诺教徒进行血腥的大屠杀，他们根据事先画在胡格诺教徒居所门前的白十字记号闯进屋去，把多数还浓睡未醒的人尽行杀戮，然后将尸体抛进塞纳河中。 包括科利尼上将在内的高官贵族都被处死，连查理九世的妹夫亨利及孔德亲王都被迫改宗天主教。继巴黎大屠杀之后，许多其他法国城镇也发生了屠杀胡格诺教徒的事件。由此又引发了一场旷日持久的宗教战争， 直到1598 年南特赦令颁布后才告停息。</p>
+<h3 id="古巴导弹危机">古巴导弹危机</h3>
+<p>古巴危机是现代历史中的一个转折。两个超级大国都认识到，“强权政治”已经进入了死胡同：没有哪个国家敢于使用原子武器，如果它不想毁灭自己和整个人类的话。也就是说，双方都知道无法战胜对方的。所有参与者都清楚，必须在相当长的时间里和平共处。莫斯科和华盛顿之间建立了“热线”，以便有可能在危机时刻尽快达成谅解。同时也开始了犹豫的停止军备竞赛的尝试。两个超级大国的关系，从攻击性的对立变成了“和平共处”。</p>
+<h3 id="双枪老太婆">双枪老太婆</h3>
+<p>真实的被民间传颂的 抗日英雄 双枪老太婆 于1950年被解放军处决，现在的双枪老太婆形象是1957年写出来的，根据多个共产党员实际艺术加工，杜撰出来的形象。</p>
+<h3 id="中东">中东</h3>
+<p>整个中东都是阿拉伯人的，人家满世界流浪的以色列人辛辛苦苦找到一块地，面积只有1.54万平方公里。阿拉伯人就不愿意了。叙利亚18万 约旦9万 伊拉克 沙特阿拉伯就更不用说了都是一个相比幅员辽阔的国家，怎么就容不得人家以色列人？归根究底就是阿拉伯人的贪婪和野蛮，从人肉炸弹就能看出来阿拉伯人的本性。
+沙特阿拉伯富的流油，奢华程度是世界都不能比的，而坐视饱受战乱的同为阿拉伯人的巴勒斯坦人挣扎而坐视不管，黎巴嫩整天内乱不断，殃及以色列人，以色列进攻黎巴嫩。这个弹丸小国，中东因为这个整天自己打自己的国家，平白增添了多少冲突和战争。</p>
+<h3 id="历朝历代">历朝历代</h3>
+<p>历朝历代都一样 找一个合理的借口利用老百姓夺权 利用完以后给老百姓一点甜头 无知的老百姓就乖乖当顺民 当权者很舒服的统治天下 享受富贵 玩弄权力 爱民如子听的多了 也没见过哪个帝王将相真的像父母一样自己舍不得吃穿 把好东西都留给子女的</p>
+<h3 id="三国对峙">三国对峙</h3>
+<pre><code>  美国 俄罗斯  中国作为目前世界三大具有核武器打击能力的国家，目前的对峙属于动态平衡的三足鼎立态势。三个国家谁也无法完全击败对方，任意一国利益受损将严重影响这个平衡态势。三个国家很长一段时间不可能出现大规模的冲突。美国面对公开的对手俄罗斯，无意将中国进一步推向绝路。中国的实力无法对抗强大的工业国家，不可能主动挑起事端。俄罗斯同中国是公开的友邦，不希望美国一方做大，又不可能不提防中国超越自己。三国像三个共同扛着一颗巨石的巨人，这个巨石名为战争，三个巨人中谁离开都将给剩下的两人带来更重的负担，谁都不希望巨石砸到自己。
+  大规模冲突不会发生，但是小范围摩擦还是有的。南海问题，台湾问题，朝鲜半岛问题。这些地区摩擦是可以通过协商，缓和的。但是近期朝鲜的核武器行动已经在朝鲜半岛问题上太过激进，朝鲜本身没有参与三国竞争的理由，但是现在却脱离三个大国一意孤行的扰乱三国动态平衡的态势，将朝鲜半岛变成火药桶，中国方面对此面对选择是尽一切可能熄灭这个导火索还是放任不管让他点燃战争的火药桶。基于三国动态平衡的态势，中国出面禁止朝鲜核试验或者放弃对朝鲜的支持是为仅剩的解决方案。
+</code></pre>
+<h3 id="谁是卖国贼谁是碍国贼">谁是卖国贼，谁是碍国贼。</h3>
+<p>经常有人给评论社会问题的人贴上汉奸，卖国贼，美分的标签。其实这类现象是有计划的将国内社会矛盾转移到对外矛盾上，以此来转移人民群众对社会问题的注意力。对指出贪污腐败，钱权交易，舆论控制的不公的人员打击成国家敌人，外国间谍以国家的力量保障既得利益者，这种手段自古以来都习以为常，而且全世界统治阶级都会。</p>
+<p>那些评价社会问题的人不见得就对美国一些西方国家抱有什么幻想，没有一个土生土长的中国人希望被鹰勾鼻高白脸的外国人统治，他们的民主自由理念不见得在中国大陆能水土适宜。中国就应该走中国自己的路。他们不是国家的敌人，只是有人出自自己私心，基于狭义的利益关系而被推向舆论的对立面。社会，历史，有识之士终究会给他们一个公道。</p>
+<h3 id="权力的集中">权力的集中</h3>
+<p>专制本质上是权力的集中，民主本质上是权力的分散。专制社会的主流思想是集体主义，强调集体，社会，国家的团结和服从。民主社会的主流思想是自由主义，强调个人的权益，自由竞争。我们不能简单的从表象看待这两种社会差异，任何一种制度它能出现而且稳定发展都有它历史，政治，社会的种种原因。任何一个制度统治社会都有它无法控制的成本问题。专制社会由于权力太过集中独断，其统治成本是腐败问题。腐败导致资源分配不公，社会矛盾。民主社会的统治成本是权力滞后，因为权力过于分散，在事情的处理繁琐，延迟。社会改革缓慢和资源分散。</p>
+<p>其实，这两种制度都是人类发展历程产生的，专制制度在人类历史上已经有数千年，人类并非就在这种制度下会民不聊生。无论民主于专制，人民群众的生活状况都是基于对社会资源分配，只要这种分配还是讲究公正严明，人民生活就有保障。</p>
+<p>意识形态决定于社会主流思想。我们在一个集体利益高于个人利益的社会里，不去改变观念，而盲目的引进西方民主思想，势必会带来冲突和矛盾。民主思想要在一个国家生根发芽，社会主流思想，舆论导向起到决定作用。</p>
+
+
+	
+
+	<div>
+    <p class="hr-text text-warning">END</p>
+</div>
+
+<div>
+  <p class="text-warning col-12 text-center">此文章版权归原作者  denalon 所有，内容为作者个人观点</p>
+  
+</div>
+	
+
+
+
+	
+	
+  
+	
+	
+	
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <div class="container-fluid">
+    <div class="shareBtn">
+            <a  id="upBtn"  href="javascript:topFunction()" title="向上"> <i class="fa fa-arrow-up fa-2x text-warning"></i></a>
+    </div>
+</div>
+
+      
+<footer class="bg-dark py-5 row d-print-none footer-bg">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="联系" aria-label="联系">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="mailto:denalon@qq.com">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="备用站点" aria-label="备用站点">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://denalon.js.org">
+      <i class="fa fa-paperclip"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="本站源码" aria-label="本站源码">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://denalon.coding.net/public/code/blog/git/files">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="反馈" aria-label="反馈">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://github.com/denalon/denalon/issues">
+      <i class="fa fa-commenting"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2021 denalon 版权所有</small>
+        <br>
+        <small class="text-white"><a class="theme-link text-white" href="http://beian.miit.gov.cn/">ICP备案号：豫ICP备2020027870号-2</a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://style.oribos.city/unit/files/iconfont.js"></script>
+    <script src="https://style.oribos.city/unit/vsc/iconfont.js"></script>
+    <script src="/js/zoomify.min.js"></script>
+<script src="/js/app.js"></script>
+<link rel="stylesheet" href="https://base.oribos.city/css/monokai_sublime.min.css">
+<script src="https://style.oribos.city/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.3b172c13b62c2bea8b1c9d2599cddc8cf89718a92d792c680871c81ba43d8c85.js" integrity="sha256-OxcsE7YsK&#43;qLHJ0lmc3cjPiXGKkteSxoCHHIG6Q9jIU=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>
